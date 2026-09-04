@@ -1,0 +1,1210 @@
+/* ========================================================================== 
+   PLANO DE ESTUDO MATEMÁTICO — VERSÃO DEFINITIVA 3.1
+   Identidade canônica derivada da Versão 3.0 e das Regras Gerais 2.1.
+   ========================================================================== */
+
+.theme--math {
+    --primary: #252B5E;
+    --secondary: #3657A7;
+    --accent: #6558A6;
+    --support: #7396C8;
+    --soft: #EEF2F8;
+    --border: #C5CEDD;
+    --text: #252A33;
+    --muted: #6F7583;
+    --paper: #FBFCFE;
+    --white: #FFFFFF;
+    --screen: #E5E9F0;
+
+    --page-width: 210mm;
+    --page-height: 297mm;
+    --page-top: 12mm;
+    --page-right: 17mm;
+    --page-bottom: 7mm;
+    --page-left: 20mm;
+
+    --font-heading: Arial, "Liberation Sans", "DejaVu Sans", sans-serif;
+    --font-body: Georgia, "Times New Roman", "Liberation Serif", serif;
+    --font-math: "Cambria Math", "STIX Two Math", "DejaVu Math TeX Gyre", serif;
+
+    --text-size: 9.55pt;
+    --text-line: 1.39;
+    --text-small: 8.2pt;
+    --text-micro: 7.25pt;
+
+    --title-cover: 31pt;
+    --title-part: 19.5pt;
+    --title-section: 13.2pt;
+    --title-subsection: 10.2pt;
+    --title-minor: 8.5pt;
+
+    --line-thin: 0.24mm;
+    --line-regular: 0.34mm;
+    --line-medium: 0.78mm;
+    --line-strong: 1.3mm;
+}
+
+* , *::before, *::after { box-sizing: border-box; }
+html {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    background: var(--screen);
+}
+body {
+    margin: 0;
+    background: var(--screen);
+    color: var(--text);
+    font-family: var(--font-body);
+    font-size: var(--text-size);
+    line-height: var(--text-line);
+    overflow-x: auto;
+}
+main, section, article, header, footer, div { min-width: 0; }
+p, ul, ol, figure, table { margin-top: 0; }
+p { margin-bottom: .68em; orphans: 3; widows: 3; }
+ul, ol { margin-top: .45em; margin-bottom: .72em; padding-left: 1.35em; }
+li { margin-bottom: .22em; orphans: 2; widows: 2; }
+b, strong { color: var(--primary); }
+
+@page { size: A4; margin: 0; }
+
+/* --- tela e páginas --- */
+.document {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    width: 100%;
+    padding: 24px 0;
+}
+.page {
+    position: relative;
+    display: grid;
+    grid-template-rows: auto minmax(0, 1fr) auto;
+    width: var(--page-width);
+    height: var(--page-height);
+    padding: var(--page-top) var(--page-right) var(--page-bottom) var(--page-left);
+    overflow: visible;
+    background: var(--paper);
+    box-shadow: 0 5px 18px rgb(37 42 51 / 12%);
+    break-after: page;
+    page-break-after: always;
+}
+.page-content {
+    min-height: 0;
+    min-width: 0;
+    padding-top: 4.2mm;
+    padding-bottom: 3.8mm;
+    overflow: visible;
+}
+
+
+/* --- cabeçalho e rodapé: localização / identidade --- */
+.page-header, .page-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8mm;
+    color: var(--muted);
+    font-family: var(--font-heading);
+    font-size: 7.35pt;
+    line-height: 1.15;
+    letter-spacing: .035em;
+    text-transform: uppercase;
+}
+.page-header {
+    padding-bottom: 2.2mm;
+    border-bottom: var(--line-thin) solid var(--border);
+}
+.page-footer {
+    padding-top: 1.8mm;
+    border-top: var(--line-thin) solid var(--border);
+}
+.page-header > span:last-child, .page-footer > span:last-child { text-align: right; }
+.page-number { min-width: 8mm; font-variant-numeric: tabular-nums; }
+
+/* --- capa: preservar identidade 3.0 --- */
+.page--cover {
+    display: grid;
+    grid-template-rows: 101mm minmax(0, 1fr);
+    padding: 0;
+    background: var(--paper);
+}
+.cover-top {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 18mm 24mm 15mm;
+    background: var(--primary);
+    color: var(--white);
+}
+.cover-top::after {
+    content: "";
+    position: absolute;
+    inset: auto 0 0;
+    height: 4mm;
+    border-top: 1.6mm solid var(--secondary);
+    border-bottom: 1.6mm solid var(--accent);
+    background: var(--support);
+}
+.cover-collection {
+    color: var(--white);
+    font-family: var(--font-heading);
+    font-size: 9pt;
+    font-weight: 700;
+    letter-spacing: .095em;
+    text-transform: uppercase;
+}
+.cover-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20mm 24mm 19mm;
+}
+.cover-title {
+    color: var(--primary);
+    font-family: var(--font-heading);
+    font-size: var(--title-cover);
+    font-weight: 700;
+    line-height: 1.01;
+    letter-spacing: -.026em;
+    text-transform: uppercase;
+}
+.cover-rule {
+    display: grid;
+    grid-template-columns: 64mm 28mm;
+    width: 92mm;
+    height: 1.4mm;
+    margin-top: 7mm;
+}
+.cover-rule span:first-child { background: var(--secondary); }
+.cover-rule span:last-child { background: var(--accent); }
+.cover-subtitle {
+    margin-top: 5mm;
+    color: var(--secondary);
+    font-family: var(--font-heading);
+    font-size: 13pt;
+    font-weight: 700;
+    line-height: 1.22;
+}
+.cover-description { margin-top: 3mm; font-size: 11pt; font-style: italic; }
+.cover-version {
+    margin-top: 2.3mm;
+    color: var(--muted);
+    font-family: var(--font-heading);
+    font-size: 8.2pt;
+    font-weight: 700;
+    letter-spacing: .08em;
+}
+
+/* --- aberturas --- */
+.section-opening {
+    margin-bottom: 4.2mm;
+    padding-left: 4mm;
+    border-left: var(--line-strong) solid var(--secondary);
+}
+.section-label, .part-label {
+    margin-bottom: .8mm;
+    color: var(--muted);
+    font-family: var(--font-heading);
+    font-size: var(--text-micro);
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+}
+.section-title, .part-title {
+    margin: 0;
+    color: var(--primary);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -.018em;
+}
+.section-title { font-size: 19pt; }
+.part-title { font-size: var(--title-part); }
+.part-opening {
+    margin-bottom: 4.3mm;
+    padding: 4.6mm 5.5mm 4.3mm;
+    border-top: 1.4mm solid var(--primary);
+    border-bottom: var(--line-regular) solid var(--border);
+    background: var(--white);
+}
+.part-opening::after {
+    content: "";
+    display: block;
+    width: 44mm;
+    height: var(--line-medium);
+    margin-top: 2.8mm;
+    background: var(--support);
+}
+.part-opening .part-label { color: var(--accent); }
+
+/* --- apresentação --- */
+.presentation-content {
+    font-size: 9.15pt;
+    line-height: 1.34;
+}
+.presentation-content p { margin-bottom: .58em; }
+.compact-numbered { margin: .3em 0 .6em; padding-left: 1.45em; }
+.compact-numbered li { margin-bottom: .12em; }
+.callout {
+    margin: 2.5mm 0;
+    padding: 2.8mm 3.8mm;
+    border: var(--line-regular) solid var(--border);
+    border-left: 1.2mm solid var(--accent);
+    background: var(--soft);
+}
+.callout-title {
+    margin-bottom: 1mm;
+    color: var(--secondary);
+    font-family: var(--font-heading);
+    font-size: 8.8pt;
+    font-weight: 700;
+    letter-spacing: .045em;
+    text-transform: uppercase;
+}
+.callout p:last-child { margin-bottom: 0; }
+.callout-note { font-size: 8.35pt; color: #3a3f4c; }
+.curricular-dimension {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 5mm;
+    margin: 2mm 0 2.8mm;
+    padding: 2mm 0;
+    border-top: var(--line-medium) solid var(--accent);
+    border-bottom: var(--line-thin) solid var(--border);
+    font-family: var(--font-heading);
+}
+.curricular-dimension div {
+    color: var(--secondary);
+    font-size: 8.4pt;
+    font-weight: 700;
+    letter-spacing: .045em;
+}
+.curricular-dimension strong { font-size: 10.5pt; }
+.presentation-section { margin-top: 2.6mm; }
+.presentation-section--compact { margin-top: 2mm; }
+.visual-section-title {
+    margin-bottom: 1.6mm;
+    padding-bottom: 1mm;
+    border-bottom: var(--line-regular) solid var(--border);
+    color: var(--secondary);
+    font-family: var(--font-heading);
+    font-size: 11.6pt;
+    font-weight: 700;
+}
+.progression-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.5mm;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.progression-grid li {
+    position: relative;
+    display: flex;
+    min-height: 12.3mm;
+    align-items: center;
+    margin: 0;
+    padding: 2.5mm 2.3mm 2.1mm 6.2mm;
+    border: var(--line-regular) solid var(--border);
+    border-top: var(--line-medium) solid var(--support);
+    background: var(--white);
+    color: var(--primary);
+    font-family: var(--font-heading);
+    font-size: 7.1pt;
+    line-height: 1.12;
+}
+.progression-grid li span {
+    position: absolute;
+    top: 1.8mm;
+    left: 2mm;
+    color: var(--accent);
+    font-size: 6.2pt;
+    font-weight: 700;
+}
+.progression-grid li b { font-weight: 700; }
+.progression-bridge { margin: 1.6mm 0 .9mm !important; font-size: 8.2pt; }
+.progression-branches {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2mm;
+    margin-bottom: 1mm;
+}
+.progression-branches div {
+    padding: 1.8mm 2.4mm;
+    border-top: var(--line-thin) solid var(--border);
+    border-bottom: var(--line-thin) solid var(--border);
+    background: var(--white);
+}
+.progression-branches span {
+    display: block;
+    margin-bottom: .5mm;
+    color: var(--accent);
+    font-family: var(--font-heading);
+    font-size: 6.7pt;
+    font-weight: 700;
+    letter-spacing: .055em;
+}
+.progression-branches b { font-family: var(--font-heading); font-size: 7.15pt; line-height: 1.15; }
+.small-note { color: var(--muted); font-size: 7.7pt; }
+.movement-strip {
+    margin: 1.2mm 0 1.5mm;
+    padding: 2mm 2.3mm;
+    border-top: var(--line-thin) solid var(--border);
+    border-bottom: var(--line-thin) solid var(--border);
+    color: var(--primary);
+    font-family: var(--font-math);
+    font-size: 8.3pt;
+    line-height: 1.3;
+    text-align: center;
+}
+.movement-strip i { color: var(--support); font-style: normal; font-weight: 700; }
+.callout--proportion { margin-top: 2.2mm; padding-top: 2.2mm; padding-bottom: 2.2mm; }
+
+/* --- currículo sinótico: oito macroestruturas / 52 tópicos em uma página --- */
+.curriculum-content { padding-top: 3.3mm; }
+.curriculum-content > .part-opening { margin-bottom: 3mm; }
+.macro-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: .86fr 1.08fr 1.30fr .86fr;
+    gap: 2.6mm 4mm;
+    height: 218mm;
+}
+.macro-card { overflow: hidden; min-height: 0; }
+.macro-card-header {
+    display: grid;
+    grid-template-columns: 9.5mm minmax(0, 1fr);
+    gap: 2.2mm;
+    align-items: start;
+    padding-bottom: 1.2mm;
+    border-bottom: var(--line-thin) solid var(--border);
+}
+.macro-num {
+    color: var(--accent);
+    font-family: var(--font-heading);
+    font-size: 10pt;
+    font-weight: 700;
+    line-height: 1;
+}
+.macro-label {
+    margin-bottom: .45mm;
+    color: var(--muted);
+    font-family: var(--font-heading);
+    font-size: 6.2pt;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+.macro-title {
+    color: var(--primary);
+    font-family: var(--font-heading);
+    font-size: 8.55pt;
+    font-weight: 700;
+    line-height: 1.05;
+}
+.macro-subtitle {
+    margin-top: .5mm;
+    color: var(--secondary);
+    font-size: 7.1pt;
+    font-style: italic;
+    line-height: 1.12;
+}
+.macro-topics {
+    margin: 1.2mm 0 0;
+    padding: 0;
+    list-style: none;
+    font-size: 6.95pt;
+    line-height: 1.15;
+}
+.macro-topics li {
+    position: relative;
+    margin: 0 0 .40mm;
+    padding-left: 3.1mm;
+}
+.macro-topics li::before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    color: var(--support);
+}
+
+/* --- método: fluxo canônico de uma coluna --- */
+.method-page-content {
+    font-size: var(--text-size);
+    line-height: var(--text-line);
+}
+.unit { width: 100%; }
+.unit--paragraph { margin: 0; }
+.unit--paragraph p { margin-bottom: .64em; }
+.unit--part-opening { margin-bottom: 1.8mm; }
+.method-part-opening { margin-bottom: 1.8mm; }
+
+.unit--major-heading {
+    margin-top: 3.8mm;
+    padding-top: 2.5mm;
+    border-top: var(--line-regular) solid var(--border);
+}
+.unit--major-heading:first-child { margin-top: 0; }
+.major-heading-title {
+    margin: 0;
+    color: var(--secondary);
+    font-family: var(--font-heading);
+    font-size: var(--title-section);
+    line-height: 1.12;
+    letter-spacing: -.006em;
+}
+.unit--subsection-heading {
+    margin-top: 3mm;
+    padding-top: 1.8mm;
+    border-top: var(--line-thin) solid var(--border);
+}
+.subsection-heading-title {
+    color: var(--secondary);
+    font-family: var(--font-heading);
+    font-size: var(--title-subsection);
+    font-weight: 700;
+    line-height: 1.16;
+}
+.unit--minor-heading { margin-top: 2.2mm; }
+.minor-heading-title {
+    color: var(--accent);
+    font-family: var(--font-heading);
+    font-size: var(--title-minor);
+    font-weight: 700;
+    line-height: 1.17;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+}
+.unit--triad-label { margin-top: 1.7mm; }
+.triad-label {
+    color: var(--secondary);
+    font-family: var(--font-heading);
+    font-size: 9.3pt;
+    font-weight: 700;
+}
+.unit--list { margin-bottom: .2mm; }
+.text-list { margin-top: .25em; margin-bottom: .7em; padding-left: 1.45em; }
+.text-list li { margin-bottom: .17em; }
+.numbered { padding-left: 1.55em; }
+.question-line { font-style: italic; }
+
+/* representações simples sem converter a prosa em infográfico */
+.unit--sequence { margin: 1.6mm 0 2mm; }
+.concept-sequence {
+    padding: 2.2mm 3mm;
+    border-top: var(--line-thin) solid var(--border);
+    border-bottom: var(--line-thin) solid var(--border);
+    background: var(--white);
+    color: var(--primary);
+    font-family: var(--font-math);
+    font-size: 9.05pt;
+    line-height: 1.35;
+    text-align: center;
+}
+.unit--flow-symbol { margin: .1mm 0; text-align: center; }
+.flow-symbol {
+    color: var(--support);
+    font-family: var(--font-heading);
+    font-size: 10pt;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.unit--ending { margin-top: 2.8mm; }
+.document-ending {
+    padding-top: 2mm;
+    border-top: var(--line-medium) solid var(--primary);
+    color: var(--primary);
+    font-family: var(--font-heading);
+    font-size: 8.2pt;
+    font-weight: 700;
+    letter-spacing: .055em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* --- impressão --- */
+@media print {
+    html, body { background: #fff; }
+    .document { gap: 0; padding: 0; }
+    .page { box-shadow: none; break-after: page; page-break-after: always; }
+    .page:last-of-type { break-after: auto; page-break-after: auto; }
+}
+
+/* --- tela pequena: mantém a página inteira, sem criar uma margem direita artificial --- */
+@media screen and (max-width: 900px) {
+    .document { align-items: flex-start; }
+    .page { transform-origin: top left; }
+}
+
+/* --- composições conceituais deliberadas --- */
+.unit--concept-figure {
+    margin: 1.8mm 0 2.2mm;
+}
+.two-stage-flow {
+    display: grid;
+    grid-template-columns: 1fr 8mm 1fr;
+    align-items: stretch;
+    gap: 2mm;
+}
+.two-stage-flow > div {
+    padding: 2.8mm 3mm;
+    border-top: var(--line-regular) solid var(--support);
+    border-bottom: var(--line-thin) solid var(--border);
+    background: var(--white);
+    text-align: center;
+}
+.two-stage-flow b,
+.two-stage-flow span {
+    display: block;
+}
+.two-stage-flow b {
+    color: var(--secondary);
+    font-family: var(--font-heading);
+    font-size: 8.7pt;
+    letter-spacing: .035em;
+}
+.two-stage-flow span { margin-top: .6mm; font-size: 8.4pt; }
+.two-stage-flow i {
+    align-self: center;
+    color: var(--support);
+    font-family: var(--font-heading);
+    font-size: 12pt;
+    font-style: normal;
+    font-weight: 700;
+    text-align: center;
+}
+
+.pipeline-flow {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 2.1mm;
+    counter-reset: pipe;
+}
+.pipeline-stage {
+    position: relative;
+    display: flex;
+    min-height: 15mm;
+    align-items: center;
+    justify-content: center;
+    padding: 2.2mm 2mm;
+    border-top: var(--line-medium) solid var(--support);
+    border-bottom: var(--line-thin) solid var(--border);
+    background: var(--white);
+    color: var(--primary);
+    font-family: var(--font-heading);
+    font-size: 7.4pt;
+    font-weight: 700;
+    line-height: 1.14;
+    text-align: center;
+    counter-increment: pipe;
+}
+.pipeline-stage:not(:last-child)::after {
+    content: "→";
+    position: absolute;
+    right: -2.5mm;
+    z-index: 2;
+    color: var(--support);
+    font-size: 8.5pt;
+}
+
+.representation-triad {
+    display: grid;
+    grid-template-columns: 1fr 7mm 1fr 7mm 1fr;
+    align-items: stretch;
+    gap: 1.5mm;
+}
+.representation-triad > div {
+    padding: 2.8mm 3mm;
+    border-top: var(--line-medium) solid var(--support);
+    border-bottom: var(--line-thin) solid var(--border);
+    background: var(--white);
+    text-align: center;
+}
+.representation-triad b,
+.representation-triad span { display: block; }
+.representation-triad b {
+    color: var(--secondary);
+    font-family: var(--font-heading);
+    font-size: 9pt;
+}
+.representation-triad span { margin-top: .7mm; font-size: 8.15pt; line-height: 1.25; }
+.representation-triad i {
+    align-self: center;
+    color: var(--support);
+    font-family: var(--font-heading);
+    font-size: 11pt;
+    font-style: normal;
+    font-weight: 700;
+    text-align: center;
+}
+
+.convergence-flow {
+    padding: .8mm 0 .5mm;
+    text-align: center;
+}
+.convergence-inputs {
+    display: grid;
+    grid-template-columns: 1fr 8mm 1fr;
+    align-items: center;
+    gap: 2mm;
+}
+.convergence-inputs span,
+.convergence-middle,
+.convergence-output {
+    padding: 1.2mm 3mm;
+    border-top: var(--line-regular) solid var(--support);
+    border-bottom: var(--line-thin) solid var(--border);
+    background: var(--white);
+    color: var(--primary);
+    font-family: var(--font-heading);
+    font-size: 8.2pt;
+    font-weight: 700;
+}
+.convergence-inputs i {
+    color: var(--accent);
+    font-family: var(--font-heading);
+    font-size: 11pt;
+    font-style: normal;
+    font-weight: 700;
+}
+.convergence-arrow {
+    margin: .15mm 0;
+    color: var(--support);
+    font-family: var(--font-heading);
+    font-size: 10pt;
+    font-weight: 700;
+}
+.convergence-middle {
+    width: 70%;
+    margin: 0 auto;
+    font-weight: 400;
+}
+.convergence-output {
+    width: 34%;
+    margin: 0 auto;
+    border-top-color: var(--accent);
+}
+
+.feedback-flow {
+    display: grid;
+    grid-template-columns: 1fr 6mm 1fr 6mm 1fr 6mm 1fr;
+    align-items: center;
+    gap: 1mm;
+    padding: 2mm 0;
+}
+.feedback-flow span {
+    padding: 2mm 2.2mm;
+    border-top: var(--line-thin) solid var(--border);
+    border-bottom: var(--line-thin) solid var(--border);
+    color: var(--primary);
+    font-family: var(--font-heading);
+    font-size: 7.7pt;
+    font-weight: 700;
+    line-height: 1.18;
+    text-align: center;
+}
+.feedback-flow i {
+    color: var(--support);
+    font-family: var(--font-heading);
+    font-size: 9pt;
+    font-style: normal;
+    font-weight: 700;
+    text-align: center;
+}
+
+.synthesis-flow {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 2.2mm;
+}
+.synthesis-stage {
+    position: relative;
+    padding: 2.8mm 2.5mm;
+    border-top: var(--line-medium) solid var(--support);
+    border-bottom: var(--line-thin) solid var(--border);
+    background: var(--white);
+}
+.synthesis-stage:not(:last-child)::after {
+    content: "→";
+    position: absolute;
+    top: 50%;
+    right: -2.6mm;
+    transform: translateY(-50%);
+    z-index: 2;
+    color: var(--support);
+    font-family: var(--font-heading);
+    font-size: 9pt;
+    font-weight: 700;
+}
+.synthesis-stage b,
+.synthesis-stage span { display: block; }
+.synthesis-stage b {
+    color: var(--secondary);
+    font-family: var(--font-heading);
+    font-size: 8.2pt;
+}
+.synthesis-stage span {
+    margin-top: .8mm;
+    font-size: 7.6pt;
+    line-height: 1.22;
+}
+
+/* --- semântica de outline sem alterar a identidade visual --- */
+.section-label {
+    margin: 0 0 .8mm;
+}
+.semantic-section-heading {
+    font-family: var(--font-heading);
+    font-size: var(--text-micro);
+    line-height: 1.15;
+}
+.part-heading {
+    margin: 0;
+    font: inherit;
+}
+.part-heading .part-label,
+.part-heading .part-title {
+    display: block;
+}
+
+
+/* ========================================================================== 
+   VERSÃO DEFINITIVA — GRAMÁTICA VISUAL CONCEITUAL E PAGINAÇÃO SEMÂNTICA
+   ========================================================================== */
+
+.pagination-source { display: none; }
+.pagination-block { width: 100%; break-inside: avoid; }
+.pagination-block + .pagination-block { margin-top: 0; }
+.page--overflow-warning { outline: 2px solid #b00020 !important; }
+
+/* Hierarquia curricular: Bloco e Parte são explicitamente adaptáveis. */
+.curriculum-hierarchy {
+    width: 92mm;
+    margin: 1.8mm auto 2.4mm;
+    text-align: center;
+}
+.hierarchy-level {
+    width: 72mm;
+    margin: 0 auto;
+    padding: 2.1mm 3mm;
+    border-top: var(--line-regular) solid var(--support);
+    border-bottom: var(--line-thin) solid var(--border);
+    background: var(--white);
+}
+.hierarchy-level span, .hierarchy-level small { display: block; }
+.hierarchy-level span {
+    color: var(--secondary);
+    font-family: var(--font-heading);
+    font-size: 8.7pt;
+    font-weight: 700;
+    letter-spacing: .035em;
+}
+.hierarchy-level small { margin-top: .45mm; color: var(--muted); font-size: 7.2pt; }
+.hierarchy-level--adaptive {
+    width: 58mm;
+    border-top-color: var(--accent);
+    background: var(--soft);
+}
+.hierarchy-level--adaptive span { color: var(--accent); }
+.hierarchy-arrow {
+    padding: .25mm 0;
+    color: var(--support);
+    font-family: var(--font-heading);
+    font-size: 10pt;
+    font-weight: 700;
+    line-height: 1;
+}
+.hierarchy-arrow--adaptive { color: var(--accent); }
+
+/* Apostila: materialização editorial, não quinto nível curricular. */
+.materialization-figure {
+    margin: 2mm 0 2.6mm;
+    padding: 2.4mm 3mm 2.6mm;
+    border-top: var(--line-thin) solid var(--border);
+    border-bottom: var(--line-thin) solid var(--border);
+    background: var(--white);
+    text-align: center;
+}
+.materialization-label {
+    margin-bottom: 1.2mm;
+    color: var(--muted);
+    font-family: var(--font-heading);
+    font-size: 6.9pt;
+    font-weight: 700;
+    letter-spacing: .07em;
+}
+.materialization-chain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.7mm;
+    color: var(--primary);
+    font-family: var(--font-heading);
+    font-size: 7.7pt;
+    font-weight: 700;
+}
+.materialization-chain i { color: var(--support); font-style: normal; }
+.materialization-chain .optional {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--accent);
+    line-height: 1.02;
+}
+.materialization-chain .optional b { font: inherit; }
+.materialization-chain .optional small {
+    margin-top: .35mm;
+    color: var(--muted);
+    font-family: var(--font-heading);
+    font-size: 5.6pt;
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+.materialization-arrow {
+    margin: 1.2mm 0 .9mm;
+    color: var(--support);
+    font-family: var(--font-heading);
+    font-size: 10pt;
+    font-weight: 700;
+    line-height: 1.05;
+}
+.materialization-arrow small {
+    display: block;
+    margin-top: .25mm;
+    color: var(--muted);
+    font-size: 6.8pt;
+    font-weight: 400;
+}
+.materialization-apostila {
+    width: 92mm;
+    margin: 0 auto;
+    padding: 2.3mm 3.2mm;
+    border-top: var(--line-medium) solid var(--accent);
+    border-bottom: var(--line-thin) solid var(--border);
+    background: var(--soft);
+}
+.materialization-apostila b, .materialization-apostila span { display: block; }
+.materialization-apostila b {
+    color: var(--primary);
+    font-family: var(--font-heading);
+    font-size: 9pt;
+}
+.materialization-apostila span { margin-top: .6mm; font-size: 7.5pt; }
+
+/* Percursos teóricos: alternativas equivalentes, não sequência única. */
+.theory-pathways { margin: 1.8mm 0 2.4mm; }
+.pathway {
+    display: grid;
+    grid-template-columns: 22mm minmax(0, 1fr);
+    align-items: center;
+    gap: 3mm;
+    padding: 1.8mm 2.6mm;
+    border-top: var(--line-thin) solid var(--border);
+}
+.pathway:last-child { border-bottom: var(--line-thin) solid var(--border); }
+.pathway b {
+    color: var(--accent);
+    font-family: var(--font-heading);
+    font-size: 7.2pt;
+    letter-spacing: .04em;
+}
+.pathway span { color: var(--primary); font-family: var(--font-math); font-size: 8.15pt; }
+.pathway i { color: var(--support); font-style: normal; font-weight: 700; }
+
+/* Exemplo concreto verbal ↔ simbólico ↔ intervalo ↔ visual. */
+.representation-example {
+    margin: 2mm 0 2.7mm;
+    padding: 2.4mm 2.8mm 2.2mm;
+    border-top: var(--line-regular) solid var(--support);
+    border-bottom: var(--line-thin) solid var(--border);
+    background: var(--white);
+}
+.representation-example figcaption,
+.algebra-flow figcaption {
+    margin-bottom: 1.8mm;
+    color: var(--secondary);
+    font-family: var(--font-heading);
+    font-size: 7.2pt;
+    font-weight: 700;
+    letter-spacing: .055em;
+    text-align: center;
+}
+.representation-example-grid {
+    display: grid;
+    grid-template-columns: 1.45fr 5mm .72fr 5mm .78fr 5mm 1.2fr;
+    align-items: stretch;
+    gap: 1mm;
+}
+.repr-cell {
+    min-height: 19mm;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2mm 2.1mm;
+    background: var(--soft);
+    text-align: center;
+}
+.repr-cell b {
+    color: var(--secondary);
+    font-family: var(--font-heading);
+    font-size: 6.7pt;
+    letter-spacing: .05em;
+}
+.repr-cell span { margin-top: .8mm; font-size: 7.6pt; line-height: 1.2; }
+.repr-cell--math span { color: var(--primary); font-family: var(--font-math); font-size: 12pt; }
+.repr-link {
+    align-self: center;
+    color: var(--support);
+    font-family: var(--font-heading);
+    font-size: 10pt;
+    font-weight: 700;
+    text-align: center;
+}
+.number-line {
+    position: relative;
+    width: 30mm;
+    height: 9mm;
+    margin-top: 1mm;
+}
+.number-line-segment {
+    position: absolute;
+    left: 4mm;
+    right: 4mm;
+    top: 4mm;
+    height: .42mm;
+    background: var(--secondary);
+}
+.number-line-arrow {
+    position: absolute;
+    left: 0;
+    top: 1.15mm;
+    color: var(--secondary);
+    font-family: var(--font-heading);
+    font-size: 11pt;
+    font-weight: 700;
+}
+.number-line-dot {
+    position: absolute;
+    right: 3.3mm;
+    top: 2.8mm;
+    width: 2.8mm;
+    height: 2.8mm;
+    border-radius: 50%;
+    background: var(--accent);
+}
+.number-line-tick {
+    position: absolute;
+    right: 4.45mm;
+    top: 2.1mm;
+    width: .35mm;
+    height: 5.3mm;
+    background: var(--accent);
+}
+.number-line-label {
+    position: absolute;
+    right: 3.2mm;
+    top: 6.5mm;
+    color: var(--primary);
+    font-family: var(--font-math);
+    font-size: 7pt;
+}
+.figure-note {
+    margin: 1.5mm 0 0 !important;
+    color: var(--muted);
+    font-size: 7.25pt;
+    text-align: center;
+}
+
+/* Transformação simbólica concreta. */
+.algebra-flow {
+    width: 118mm;
+    margin: 2mm auto 2.6mm;
+    padding: 1.2mm 3mm;
+    border-top: var(--line-regular) solid var(--support);
+    border-bottom: var(--line-thin) solid var(--border);
+    background: var(--white);
+}
+.algebra-row {
+    display: grid;
+    grid-template-columns: 42mm minmax(0, 1fr);
+    align-items: baseline;
+    gap: 5mm;
+    padding: 1.25mm 0;
+}
+.algebra-row + .algebra-row { border-top: var(--line-thin) solid var(--soft); }
+.equation {
+    color: var(--primary);
+    font-family: var(--font-math);
+    font-size: 12.2pt;
+    text-align: right;
+}
+.reason { color: var(--muted); font-size: 7.6pt; }
+
+/* Arquitetura conceitual demonstrada por três microcomposições. */
+.page-architecture-demo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3mm;
+    margin: 2mm 0 2.6mm;
+}
+.architecture-case {
+    min-height: 31mm;
+    padding: 2.5mm 2.5mm 2.1mm;
+    border-top: var(--line-regular) solid var(--support);
+    border-bottom: var(--line-thin) solid var(--border);
+    background: var(--white);
+    text-align: center;
+}
+.architecture-case > b {
+    color: var(--secondary);
+    font-family: var(--font-heading);
+    font-size: 7pt;
+    letter-spacing: .04em;
+}
+.architecture-case > small { display: block; margin-top: 1mm; color: var(--muted); font-size: 6.8pt; }
+.comparison-demo {
+    display: grid;
+    grid-template-columns: 1fr .4mm 1fr;
+    align-items: center;
+    gap: 3mm;
+    width: 32mm;
+    margin: 4mm auto 2mm;
+}
+.comparison-demo span { color: var(--primary); font-family: var(--font-math); font-size: 11pt; }
+.comparison-demo i { height: 8mm; background: var(--border); }
+.branch-demo { margin: 2.2mm auto 0; font-family: var(--font-heading); }
+.branch-demo span { display: block; }
+.branch-demo .origin { color: var(--primary); font-size: 7.5pt; font-weight: 700; }
+.branch-demo .branch-lines { color: var(--support); font-size: 11pt; line-height: 1.15; }
+.branch-demo .branch-options { color: var(--primary); font-size: 8pt; }
+.containment-demo { margin: 2.7mm auto .5mm; }
+.containment-demo .outer {
+    position: relative;
+    display: inline-flex;
+    width: 27mm;
+    height: 13mm;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 1.1mm 1.7mm;
+    border: var(--line-regular) solid var(--secondary);
+    color: var(--secondary);
+    font-family: var(--font-math);
+    font-size: 8pt;
+}
+.containment-demo .inner {
+    position: absolute;
+    right: 3mm;
+    bottom: 2.3mm;
+    display: flex;
+    width: 12mm;
+    height: 6.5mm;
+    align-items: center;
+    justify-content: center;
+    border: var(--line-regular) solid var(--accent);
+    color: var(--accent);
+}
+
+/* Fontes: três funções comparáveis em paralelo. */
+.source-functions {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0,1fr));
+    gap: 2.8mm;
+    margin: 2mm 0 2.7mm;
+}
+.source-function {
+    padding: 2.5mm 2.6mm 2mm;
+    border-top: var(--line-medium) solid var(--support);
+    border-bottom: var(--line-thin) solid var(--border);
+    background: var(--white);
+}
+.source-function--pedagogy { border-top-color: var(--accent); }
+.source-function--practice { border-top-color: var(--secondary); }
+.source-function b, .source-function span { display: block; }
+.source-function b {
+    color: var(--secondary);
+    font-family: var(--font-heading);
+    font-size: 7.2pt;
+    letter-spacing: .035em;
+}
+.source-function span { margin: .8mm 0 1mm; color: var(--muted); font-size: 7.15pt; }
+.source-function ul { margin: 0; padding-left: 1.25em; font-size: 6.95pt; line-height: 1.25; }
+.source-function li { margin-bottom: .35mm; }
+
+/* Fontes: confronto não é acumulação linear. */
+.source-confrontation {
+    width: 124mm;
+    margin: 2mm auto 2.8mm;
+    text-align: center;
+}
+.source-confrontation-inputs {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 4mm;
+}
+.source-confrontation-inputs span,
+.source-confrontation-middle,
+.source-confrontation-output {
+    padding: 2mm 2.5mm;
+    border-top: var(--line-regular) solid var(--support);
+    border-bottom: var(--line-thin) solid var(--border);
+    background: var(--white);
+    color: var(--primary);
+    font-family: var(--font-heading);
+    font-size: 7.6pt;
+    font-weight: 700;
+}
+.source-confrontation-arrows,
+.source-confrontation-arrow {
+    margin: .3mm 0;
+    color: var(--support);
+    font-family: var(--font-heading);
+    font-size: 11pt;
+    font-weight: 700;
+}
+.source-confrontation-middle { width: 86mm; margin: 0 auto; border-top-color: var(--accent); }
+.source-confrontation-output { width: 70mm; margin: 0 auto; border-top-color: var(--primary); }
+.source-confrontation-middle small,
+.source-confrontation-output small {
+    display: block;
+    margin-top: .55mm;
+    color: var(--muted);
+    font-family: var(--font-body);
+    font-size: 6.9pt;
+    font-weight: 400;
+}
+
+/* Cabeçalhos longos não devem competir com a página. */
+.page-header .header-context { max-width: 92mm; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+/* Impressão: páginas físicas permanecem suporte; conteúdo semântico não é cortado. */
+@media print {
+    .page { overflow: visible; }
+    .page-content { overflow: visible; }
+    .page--overflow-warning { outline: none !important; }
+}
+
+/* Correção cirúrgica: consistência tipográfica de conectores/símbolos. */
+.repr-link, .representation-triad i, .flow-symbol, .hierarchy-arrow,
+.materialization-chain i, .materialization-arrow, .source-confrontation-arrows,
+.source-confrontation-arrow, .branch-lines { font-family: "DejaVu Math TeX Gyre", var(--font-math); }
+
+/* Texto semântico exclusivo do outline; não altera a composição visual. */
+.outline-only {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+

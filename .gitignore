@@ -1,0 +1,16 @@
+# Arquivos temporários
+*.tmp
+*.temp
+*.log
+
+# Diretórios temporários
+temp/
+tmp/
+_cache/
+
+# Sistema
+Thumbs.db
+.DS_Store
+
+# VS Code local
+.vscode/

@@ -1,0 +1,1520 @@
+REGRAS GERAIS PARA CRIAÇÃO DE HTML/CSS
+Plano de Estudo Matemático
+Versão Definitiva 2.2 — 2026
+
+Estas regras orientam a construção dos documentos HTML/CSS destinados às apostilas do Plano de Estudo Matemático.
+
+Seu objetivo não é impor um molde rígido a todos os conteúdos. O objetivo é preservar uma identidade editorial comum, estabelecer decisões técnicas suficientemente claras e garantir que texto, linguagem matemática, representação visual, paginação e navegação cooperem com a estrutura conceitual do material.
+
+REGRA SUPERIOR
+
+A forma deve servir ao conteúdo. O conteúdo não deve ser expandido, fragmentado, reduzido ou deformado para preencher a forma.
+
+A flexibilidade do método não autoriza improvisação arbitrária.
+
+
+======================================================================
+I — STATUS, ESCOPO E PRECEDÊNCIA
+======================================================================
+
+1. ESTAS REGRAS CONSTITUEM O PADRÃO CANÔNICO ATUAL
+
+As Regras Gerais 2.2 substituem as versões anteriores para novas produções e revisões do Plano Matemático.
+
+Soluções antigas permanecem válidas quando forem compatíveis com estas regras e já tiverem sido aprovadas.
+
+
+2. ORDEM DE PRECEDÊNCIA
+
+Diante de uma decisão editorial ou estrutural, deve-se consultar, nesta ordem:
+
+1. o conteúdo mestre aprovado;
+2. as Regras Gerais vigentes;
+3. os HTML/CSS canônicos do Plano Matemático;
+4. as apostilas definitivas já aprovadas, quando houver precedente comparável;
+5. instruções específicas dadas para o documento em produção.
+
+Uma referência secundária não deve substituir silenciosamente uma regra de nível superior.
+
+
+3. SOLUÇÕES CANÔNICAS DEVEM SER PRESERVADAS
+
+Quando uma solução já aprovada continuar adequada, ela deve ser mantida.
+
+Não redesenhar arbitrariamente:
+
+- capa;
+- fluxo textual;
+- estrutura curricular;
+- cabeçalhos;
+- rodapés;
+- outline;
+- grandes aberturas;
+- componentes recorrentes;
+- identidade tipográfica;
+- identidade cromática.
+
+Uma mudança precisa possuir motivo conceitual, editorial ou técnico identificável.
+
+
+======================================================================
+II — CONTROLE DE DECISÕES E NÃO-IMPROVISAÇÃO
+======================================================================
+
+4. A AUSÊNCIA DE INSTRUÇÃO NÃO AUTORIZA A CRIAÇÃO DE UMA NOVA CONVENÇÃO
+
+Se algo não estiver explicitamente definido, isso não significa liberdade para inventar uma estrutura diferente.
+
+Primeiro deve-se procurar precedente canônico.
+
+
+5. NA DÚVIDA, PRESERVAR É PREFERÍVEL A REINVENTAR
+
+Quando houver uma solução anterior aprovada e nenhuma nova necessidade real, conservar a solução existente.
+
+
+6. AMBIGUIDADES ESTRUTURAIS RELEVANTES DEVEM SER INTERROMPIDAS
+
+Quando conteúdo mestre, regras e precedentes não forem suficientes para decidir algo que possa alterar significativamente o documento, deve-se solicitar orientação antes de prosseguir.
+
+Quando útil, podem ser propostas alternativas concretas e suas consequências.
+
+
+7. SÃO DECISÕES ESTRUTURAIS RELEVANTES
+
+Entre outras:
+
+- criar ou remover blocos e partes;
+- alterar ordem conceitual;
+- modificar layout-base;
+- mudar fluxo de uma para duas colunas;
+- alterar composição curricular;
+- criar nova convenção visual recorrente;
+- modificar cabeçalho ou rodapé;
+- alterar outline;
+- remover conteúdo;
+- mudar tratamento de grandes Partes;
+- substituir soluções canônicas de capa;
+- introduzir uma representação que altere a interpretação.
+
+
+8. MICRODECISÕES NÃO EXIGEM CONSULTA
+
+Podem ser resolvidas durante a produção:
+
+- pequenos ajustes de espaçamento;
+- microtipografia;
+- posição exata de rótulos;
+- pequenos recuos;
+- correção de quebra desagradável;
+- alinhamento;
+- correção evidente de overflow;
+- espessura discreta de linha;
+- pequenos ajustes de escala que não alterem a estrutura.
+
+
+======================================================================
+III — APOSTILA, CONTEÚDO MESTRE E ARTEFATOS
+======================================================================
+
+9. A APOSTILA É A UNIDADE EDITORIAL
+
+Uma apostila é o documento por meio do qual determinado conteúdo assume forma material.
+
+Pode materializar:
+
+- um bloco;
+- um tópico;
+- um conjunto coerente de conteúdos;
+- o próprio Plano Matemático;
+- outro documento metodológico ou curricular.
+
+
+10. APOSTILA NÃO É NÍVEL CURRICULAR
+
+A hierarquia:
+
+Macroestrutura → Tópico → Bloco → Parte
+
+organiza o conteúdo.
+
+A apostila organiza sua materialização editorial.
+
+
+11. O CONTEÚDO MESTRE É INDEPENDENTE DA DIAGRAMAÇÃO
+
+O texto aprovado deve existir independentemente do HTML/CSS.
+
+A etapa visual pode:
+
+- distribuir;
+- alinhar;
+- separar;
+- organizar;
+- transformar relações previstas em diagramas;
+- corrigir apresentação;
+- melhorar legibilidade.
+
+Não pode introduzir silenciosamente:
+
+- novas definições;
+- novas conclusões;
+- novas relações;
+- novas condições;
+- novos argumentos.
+
+
+12. PROBLEMAS CONCEITUAIS ENCONTRADOS DURANTE A DIAGRAMAÇÃO RETORNAM AO TEXTO MESTRE
+
+Não corrigir silenciosamente uma deficiência de conteúdo somente no HTML.
+
+
+13. HTML É ARTEFATO DE PRODUÇÃO; PDF É PRODUTO FINAL DE ESTUDO
+
+O HTML existe principalmente para:
+
+- edição;
+- semântica;
+- composição;
+- controle visual;
+- paginação;
+- geração previsível do PDF.
+
+Não deve ser tratado como site ou aplicação web.
+
+
+14. HTML E CSS PERMANECEM SEPARADOS
+
+O HTML concentra:
+
+- conteúdo;
+- semântica;
+- estrutura.
+
+O CSS concentra:
+
+- identidade visual;
+- tipografia;
+- paginação;
+- espaçamento;
+- acabamento.
+
+
+15. NÃO UTILIZAR COMPONENTES DE APLICAÇÃO WEB SEM FUNÇÃO DOCUMENTAL
+
+Evitar:
+
+- menus;
+- botões;
+- barras de navegação;
+- interfaces interativas;
+- componentes ornamentais típicos de sites.
+
+
+======================================================================
+IV — IDENTIDADE VISUAL CANÔNICA
+======================================================================
+
+16. PALETA MATEMÁTICA
+
+A identidade cromática principal permanece:
+
+- Índigo — #252B5E
+- Cobalto — #3657A7
+- Violeta — #6558A6
+- Azul claro — #7396C8
+- Neblina — #EEF2F8
+- Cinza-azulado — #C5CEDD
+- Grafite — #252A33
+- Cinza editorial — #6F7583
+- Branco editorial — #FBFCFE
+
+Novas cores não devem ser introduzidas arbitrariamente.
+
+
+17. TIPOGRAFIA CANÔNICA
+
+Como regra geral:
+
+Arial ou equivalente confiável
+→ títulos, rótulos, números, cabeçalhos, rodapés e componentes editoriais.
+
+Georgia
+→ corpo discursivo.
+
+Cambria Math, STIX ou equivalente matemático confiável
+→ notação e expressões quando necessário.
+
+
+18. MESMA IDENTIDADE NÃO SIGNIFICA MESMO LAYOUT
+
+Lógica, Álgebra, Geometria, Estatística e outros conteúdos podem possuir disposições diferentes.
+
+A unidade nasce de:
+
+- tipografia;
+- paleta;
+- hierarquia;
+- espaçamento;
+- linguagem de linhas e destaques;
+- cabeçalho;
+- rodapé;
+- acabamento.
+
+Não da repetição mecânica da mesma página.
+
+
+19. MUDANÇAS DE IDENTIDADE PERTENCEM AO SISTEMA
+
+Uma alteração estrutural em fonte, capa, cor, tamanho, componente ou linguagem editorial não deve aparecer isoladamente numa única apostila sem decisão deliberada de atualização do sistema.
+
+
+======================================================================
+V — CAPA, GEOMETRIA A4 E FLUXO DA PÁGINA
+======================================================================
+
+20. A CAPA SEGUE A IDENTIDADE CANÔNICA JÁ APROVADA
+
+Preservar como princípio:
+
+- região institucional superior;
+- região editorial de identificação do conteúdo;
+- forte hierarquia;
+- poucos elementos;
+- ausência de ornamentação desnecessária.
+
+
+21. A FAIXA INSTITUCIONAL NÃO RECEBE NÚMERO DE TÓPICO OU BLOCO
+
+Ela identifica o projeto.
+
+Informações específicas pertencem à região própria de identificação do conteúdo.
+
+
+22. TODA APOSTILA DEVE SER CONCEBIDA DESDE O INÍCIO PARA A4
+
+O PDF final deve usar:
+
+@page {
+    size: A4;
+}
+
+A composição deve respeitar a área útil já determinada pelas margens.
+
+
+23. NÃO CRIAR OVERFLOW HORIZONTAL
+
+Evitar combinar uma largura física completa de 210mm no conteúdo com margens de @page que reduzam a área disponível.
+
+Nenhum elemento pode ultrapassar a largura útil da página.
+
+
+24. O FLUXO TEXTUAL CANÔNICO É DE UMA ÚNICA COLUNA
+
+Toda prosa discursiva, explicativa ou argumentativa começa na margem esquerda da área útil e segue até a margem direita.
+
+Quando termina, continua abaixo.
+
+Não dividir a continuidade normal do texto entre colunas.
+
+
+25. COLUNAS SÃO EXCEÇÃO CONCEITUAL
+
+Duas ou mais colunas podem ser utilizadas quando a simultaneidade possuir função:
+
+- comparação;
+- contraste;
+- representações paralelas;
+- tabelas;
+- dois casos independentes;
+- estruturas que precisam ser confrontadas.
+
+Nunca apenas para preencher espaço.
+
+
+26. NÃO TRANSFORMAR TEXTOS NORMAIS EM COMPOSIÇÃO EDITORIAL ESPECIAL
+
+Se um parágrafo funciona naturalmente como parágrafo, ele deve permanecer um parágrafo.
+
+
+======================================================================
+VI — ESCALA DE ESPAÇAMENTO E RITMO
+======================================================================
+
+27. EXISTEM TRÊS NÍVEIS PRINCIPAIS DE ABERTURA
+
+NÍVEL A — GRANDE PARTE
+
+Pode possuir:
+
+- quebra deliberada;
+- grande espaço;
+- abertura forte.
+
+Exemplo:
+
+PARTE I — CURRÍCULO MATEMÁTICO
+
+
+NÍVEL B — SEÇÃO PRINCIPAL
+
+Segue o fluxo natural.
+
+Utilizar:
+
+- espaçamento moderado;
+- título;
+- linha fina quando ajudar.
+
+
+NÍVEL C — SUBSEÇÃO
+
+Utilizar:
+
+- pequeno espaçamento;
+- título subordinado;
+- divisória discreta quando realmente necessária.
+
+
+28. SUBSEÇÃO NÃO DEVE PARECER ABERTURA DE PARTE
+
+Não criar grandes vazios antes de:
+
+- 2.1;
+- 2.2;
+- 7.1;
+- pequenas subdivisões internas.
+
+
+29. ESPAÇO EM BRANCO É O PRIMEIRO RECURSO DE SEPARAÇÃO
+
+Antes de adicionar:
+
+- caixa;
+- linha;
+- fundo;
+- borda;
+
+verificar se o próprio espaçamento resolve.
+
+
+30. ESPAÇO PODE POSSUIR FUNÇÃO CONCEITUAL
+
+Pode:
+
+- separar movimentos;
+- impedir falsa associação;
+- marcar encerramento;
+- criar pausa;
+- destacar estrutura.
+
+Espaço sem função não deve ser produzido artificialmente.
+
+
+31. NÃO PREENCHER PÁGINAS ARTIFICIALMENTE
+
+Não aumentar:
+
+- texto;
+- diagrama;
+- entrelinha;
+- espaço;
+
+somente porque sobrou área branca.
+
+
+32. EXPRESSÕES MATEMÁTICAS NÃO DEVEM CRIAR RITMO VERTICAL ARTIFICIAL
+
+A simples presença de notação matemática não justifica:
+
+- grande margem superior ou inferior;
+- bloco destacado;
+- linhas decorativas;
+- centralização;
+- fundo próprio.
+
+Uma expressão curta deve ocupar apenas o espaço necessário à sua leitura e à função que exerce no raciocínio.
+
+Quebra de linha, recuo, centralização e destaque são decisões independentes.
+
+
+======================================================================
+VII — CABEÇALHO E RODAPÉ
+======================================================================
+
+33. TODA PÁGINA INTERNA DEVE POSSUIR CABEÇALHO CONTEXTUAL
+
+O cabeçalho responde:
+
+Onde estou dentro desta apostila?
+
+
+34. ESTRUTURA GERAL DO CABEÇALHO
+
+À esquerda:
+
+PLANO DE ESTUDO — MATEMÁTICA
+
+À direita:
+
+a posição atual.
+
+Exemplos:
+
+TEXTO TEÓRICO · PARTE 2
+
+TEXTO PRÁTICO · EXERCÍCIOS
+
+GABARITO COMENTADO
+
+No próprio Plano:
+
+PARTE I · CURRÍCULO MATEMÁTICO
+
+PARTE II · MÉTODO DE ESTUDO MATEMÁTICO
+
+
+35. CABEÇALHO DEVE MUDAR QUANDO O CONTEXTO MUDAR
+
+Não manter um cabeçalho genérico por páginas que já pertencem claramente a outra unidade.
+
+
+36. O CABEÇALHO DEVE SER DISCRETO
+
+Ele orienta.
+
+Não compete com os títulos.
+
+
+37. TODA PÁGINA INTERNA DEVE POSSUIR RODAPÉ
+
+O rodapé responde:
+
+Qual apostila estou lendo?
+
+
+38. ESTRUTURA GERAL DO RODAPÉ
+
+À esquerda, identidade da apostila.
+
+No Plano:
+
+PLANO DE ESTUDO MATEMÁTICO
+
+Num bloco:
+
+TÓPICO 1.1 · BLOCO I — PROPOSIÇÕES E VALOR LÓGICO
+
+À direita:
+
+número da página
+
+
+39. CABEÇALHO E RODAPÉ POSSUEM FUNÇÕES DIFERENTES
+
+Cabeçalho = localização interna
+
+Rodapé = identidade documental
+
+Não devem ser tratados como duplicações um do outro.
+
+
+======================================================================
+VIII — SEMÂNTICA HTML E OUTLINE
+======================================================================
+
+40. HIERARQUIA VISUAL E SEMÂNTICA NÃO SÃO A MESMA COISA
+
+Algo pode parecer visualmente um título sem precisar participar do document outline.
+
+
+41. BOOKMARKS REPRESENTAM UNIDADES DE NAVEGAÇÃO
+
+Não cada título existente.
+
+Antes de criar um bookmark, perguntar:
+
+- o leitor procurará diretamente esta unidade?
+- ela possui extensão relevante?
+- melhora a navegação?
+- sua inclusão polui ou esclarece a árvore?
+
+
+42. OUTLINE DE APOSTILA DE BLOCO
+
+Como regra geral:
+
+Texto Teórico
+- Partes reais
+
+Texto Prático
+- Exemplos
+- Quiz, quando houver
+- Exercícios
+- Gabarito Comentado
+
+Não criar bookmark para:
+
+- cada exemplo;
+- cada exercício;
+- cada erro;
+- cada pequena subseção.
+
+
+43. OUTLINE DE PLANO DE ESTUDO
+
+Deve ser ainda mais econômico.
+
+Como orientação:
+
+Apresentação
+
+Parte I — Currículo Matemático
+
+Parte II — Método de Estudo Matemático
+- grandes seções metodológicas realmente úteis à navegação
+
+As macroestruturas individuais não recebem bookmark apenas porque possuem títulos, especialmente quando pertencem à mesma página ou unidade.
+
+O Plano Geográfico é uma referência válida desse tipo de economia estrutural.
+
+
+44. NÃO CRIAR BOOKMARK INDIVIDUAL PARA ELEMENTOS QUE PERTENCEM CLARAMENTE À MESMA PÁGINA SINÓTICA
+
+Exemplo: oito macroestruturas apresentadas conjuntamente como currículo.
+
+
+45. HEADINGS SEMÂNTICOS DEVEM SER PLANEJADOS A PARTIR DO OUTLINE
+
+Não utilizar <h1>, <h2>, <h3> apenas porque determinado texto precisa parecer grande.
+
+Títulos visuais fora do outline podem usar elementos semânticos apropriados com classes editoriais próprias.
+
+
+46. O DOCUMENT OUTLINE DEVE SER COMPATÍVEL COM A GERAÇÃO EM CHROMIUM
+
+Não depender de propriedades CSS experimentais ou não confiáveis quando a semântica HTML pode estabelecer a hierarquia.
+
+
+======================================================================
+IX — CONSTRUÇÃO VERBAL, SIMBÓLICA E VISUAL
+======================================================================
+
+47. TEXTO, SÍMBOLO E VISUAL FORMAM UM SISTEMA EXPLICATIVO ÚNICO
+
+Verbal
+→ significado e argumento.
+
+Simbólico
+→ precisão, generalização e transformação.
+
+Visual
+→ percepção de estruturas e relações.
+
+Nenhum deve existir apenas para produzir variedade estética.
+
+
+48. A PROSA CONTINUA SENDO O CONDUTOR DO RACIOCÍNIO
+
+Um visual não deve carregar sozinho:
+
+- definição delicada;
+- condição;
+- demonstração;
+- justificativa;
+- conclusão;
+
+quando a formulação verbal ainda é necessária.
+
+
+49. UM VISUAL DEVE PARTICIPAR DO ARGUMENTO
+
+Movimento recomendado:
+
+texto prepara → visual revela/organiza → texto interpreta/continua
+
+Não inserir figura independente apenas entre dois parágrafos.
+
+
+50. A LINGUAGEM MATEMÁTICA TAMBÉM POSSUI ARQUITETURA
+
+Quando necessário, a disposição das expressões deve tornar visíveis:
+
+- componentes;
+- agrupamentos;
+- alcance;
+- precedência;
+- equivalências;
+- transformações;
+- operação principal.
+
+
+51. A MATEMÁTICA POSSUI HIERARQUIA EDITORIAL FUNCIONAL
+
+A notação matemática deve ser tratada conforme a função que exerce no raciocínio, e não simplesmente por conter símbolos.
+
+Como orientação, distinguir:
+
+- matemática inline;
+- expressão autônoma simples;
+- relação ou fórmula estrutural;
+- definição ou princípio conceitual.
+
+Essas categorias não devem receber automaticamente o mesmo tratamento visual.
+
+
+52. MATEMÁTICA INLINE É O PADRÃO QUANDO A EXPRESSÃO PERTENCE NATURALMENTE À FRASE
+
+Expressões curtas devem permanecer integradas à prosa quando puderem ser lidas naturalmente como parte da sentença.
+
+Exemplos:
+
+Como 6+3=9, a proposição 6+3=10 é falsa.
+
+Se p é verdadeira, então ¬p é falsa.
+
+Nesses casos, não criar caixa, fundo, linhas, centralização ou grande espaçamento vertical.
+
+
+53. EXPRESSÃO AUTÔNOMA SIMPLES PODE OCUPAR LINHA PRÓPRIA SEM SER CENTRALIZADA
+
+Quando uma expressão for o objeto imediato da análise, ela pode aparecer isolada em uma linha.
+
+Exemplo:
+
+Considere:
+
+p: 5+4=9
+
+O padrão é manter essa expressão alinhada à esquerda, eventualmente com pequeno recuo, sem fundo, moldura ou linhas decorativas.
+
+A decisão de quebrar a linha não implica a decisão de centralizar.
+
+
+54. CENTRALIZAÇÃO MATEMÁTICA É EXCEÇÃO, NÃO PADRÃO
+
+Centralizar somente quando a disposição espacial:
+
+- tornar uma estrutura mais perceptível;
+- organizar uma relação importante;
+- facilitar comparação ou transformação;
+- funcionar como síntese conceitual;
+- possuir função pedagógica identificável.
+
+Não centralizar apenas para tornar uma expressão mais chamativa.
+
+Antes de centralizar, perguntar:
+
+A posição central ajuda a compreender uma estrutura ou apenas produz ênfase visual?
+
+Se for apenas ênfase, preservar o fluxo normal.
+
+
+55. TRANSFORMAÇÕES DEVEM SER ACOMPANHÁVEIS
+
+A organização espacial pode mostrar:
+
+estado inicial → transformação → forma equivalente → resultado
+
+A disposição mostra o movimento.
+
+O texto ou anotação explica sua validade.
+
+
+56. TRADUÇÃO ENTRE REPRESENTAÇÕES DEVE SER EXPLICITADA QUANDO FIZER PARTE DA APRENDIZAGEM
+
+Exemplos:
+
+verbal ↔ simbólico
+
+expressão ↔ tabela ↔ gráfico
+
+conjunto ↔ intervalo ↔ reta
+
+figura ↔ relação ↔ expressão
+
+dados ↔ tabela ↔ representação estatística
+
+
+57. A PÁGINA PODE REPRESENTAR RELAÇÕES CONCEITUAIS
+
+Quando houver correspondência verdadeira:
+
+Relação                 Forma possível
+Comparação              Paralelismo
+Alternativa             Ramificação
+Hierarquia              Níveis
+Alcance                 Agrupamento
+Sequência               Encadeamento
+Transformação           Estado → operação → resultado
+Inclusão                Contenção
+Interseção              Sobreposição
+Dependência             Conexão
+Variação                Eixos e escalas
+
+Isso não constitui um catálogo obrigatório.
+
+
+======================================================================
+X — FIDELIDADE DA REPRESENTAÇÃO
+======================================================================
+
+58. REPRESENTAÇÃO NÃO PODE ELIMINAR CONDIÇÃO NECESSÁRIA
+
+Simplificar não significa retirar informação necessária à interpretação.
+
+
+59. REPRESENTAÇÃO NÃO PODE ACRESCENTAR RELAÇÃO INEXISTENTE
+
+Não sugerir por:
+
+- seta;
+- alinhamento;
+- proximidade;
+- cor;
+- tamanho;
+- contenção;
+
+uma:
+
+- causalidade;
+- equivalência;
+- prioridade;
+- hierarquia;
+- dependência;
+- oposição;
+
+que não esteja estabelecida.
+
+
+60. NÃO DEPENDER EXCLUSIVAMENTE DE COR
+
+Diferenças importantes devem usar também:
+
+- posição;
+- rótulo;
+- forma;
+- tipografia;
+- contorno;
+- padrão.
+
+
+61. FIGURAS ESQUEMÁTICAS DEVEM DECLARAR LIMITAÇÕES RELEVANTES
+
+Se uma figura não estiver necessariamente em escala e isso puder induzir erro, indicar essa condição.
+
+
+62. NÃO DESENHAR PROPRIEDADES GEOMÉTRICAS NÃO DADAS
+
+A aparência de:
+
+- ângulo reto;
+- igualdade;
+- paralelismo;
+- proporção;
+- perpendicularidade;
+
+não deve sugerir uma informação inexistente.
+
+
+======================================================================
+XI — ECONOMIA VISUAL E COMPONENTES
+======================================================================
+
+63. VISUALIDADE CONCEITUAL NÃO É QUANTIDADE DE VISUAIS
+
+Uma apostila não melhora simplesmente porque possui mais:
+
+- SVG;
+- cartões;
+- caixas;
+- ícones;
+- fundos;
+- ilustrações.
+
+
+64. ORDEM PREFERENCIAL DE DECISÃO
+
+texto/semântica
+→ tipografia/hierarquia
+→ espaço/alinhamento
+→ HTML/CSS
+→ tabela/diagrama
+→ SVG
+→ imagem figurativa
+
+O recurso mais complexo só deve aparecer quando realizar melhor a função.
+
+
+65. LINHAS DIVISÓRIAS SÃO DISCRETAS E FUNCIONAIS
+
+Usar uma linha fina quando ajudar a separar:
+
+- seções;
+- exemplos;
+- questões;
+- respostas.
+
+Não usar linhas superior e inferior como tratamento automático de expressões matemáticas.
+
+Antes de inserir uma divisória, verificar se espaço, título ou mudança de hierarquia já resolvem a separação.
+
+
+66. NÃO DIVIDIR COMPONENTES INTERNOS DESNECESSARIAMENTE
+
+Não colocar divisórias entre:
+
+- alternativas;
+- itens subordinados;
+- parágrafos do mesmo exercício.
+
+
+67. EVITAR ESTÉTICA DE FORMULÁRIO
+
+Não transformar a apostila em sucessão de cartões, caixas, campos e bordas.
+
+
+68. CAIXAS DEVEM POSSUIR FUNÇÃO EXPLÍCITA
+
+Podem destacar:
+
+- definição;
+- condição;
+- objeto em análise;
+- advertência;
+- conclusão;
+- comparação.
+
+Não devem enquadrar todo conteúdo importante.
+
+
+69. DEFINIÇÕES FORMAIS POSSUEM TRATAMENTO EDITORIAL CANÔNICO
+
+Quando uma frase estabelecer formalmente o significado de um conceito, ela pode receber uma caixa de definição própria.
+
+Como padrão do Plano Matemático:
+
+- fundo Neblina — #EEF2F8;
+- barra lateral azul/cobalto discreta;
+- texto da definição em negrito;
+- largura integrada à coluna;
+- espaçamento moderado;
+- ausência de ornamentação adicional.
+
+Exemplo de função:
+
+Uma proposição é uma afirmação suficientemente determinada para ser classificada como verdadeira ou falsa.
+
+A caixa de definição deve conservar significado editorial estável: quando o estudante a encontra, deve reconhecer que está diante de uma definição formal.
+
+
+70. NÃO USAR A CAIXA DE DEFINIÇÃO COMO DESTAQUE GENÉRICO
+
+Não aplicar o mesmo tratamento a:
+
+- exemplos;
+- dicas;
+- comentários;
+- observações;
+- simples frases importantes;
+- conclusões que não sejam definições.
+
+Se toda frase relevante recebe a mesma caixa, a caixa deixa de comunicar definição.
+
+
+71. DEFINIÇÃO, PRINCÍPIO E SÍNTESE NÃO PRECISAM TER O MESMO ESTILO
+
+Uma definição formal pode usar caixa azul de definição.
+
+Um princípio, conclusão ou síntese estrutural pode receber:
+
+- negrito;
+- pequeno recuo;
+- composição própria;
+- centralização excepcional quando houver função espacial.
+
+Não confundir essas categorias apenas porque todas são importantes.
+
+
+72. BARRAS LATERAIS DEVEM SINALIZAR FUNÇÃO RECORRENTE
+
+Usar com parcimônia.
+
+
+73. COLUNAS/CARTÕES SERVEM PRINCIPALMENTE À COMPARAÇÃO
+
+Não utilizar como layout geral da prosa.
+
+
+74. TABELAS DEVEM SER UTILIZADAS QUANDO A ESTRUTURA REALMENTE FOR TABULAR
+
+Boas aplicações:
+
+- comparação sistemática;
+- dados;
+- correspondências;
+- classificações limitadas.
+
+Não converter vários parágrafos em células apenas para comprimir a página.
+
+
+75. DIAGRAMAS SERVEM A RELAÇÕES
+
+Quando houver:
+
+- sequência;
+- ramificação;
+- convergência;
+- hierarquia;
+- dependência;
+- ciclo.
+
+
+76. CONECTORES SÃO RELAÇÕES, NÃO CONCEITOS
+
+Setas e linhas devem possuir peso gráfico inferior aos elementos que conectam.
+
+
+77. RAMIFICAÇÕES DEVEM POSSUIR ORIGEM CLARA
+
+Um nó comum deve aparecer espacialmente como origem comum.
+
+
+78. HTML/CSS É PREFERÍVEL PARA COMPOSIÇÕES SIMPLES
+
+Exemplos:
+
+- comparações;
+- pequenas sequências;
+- caixas;
+- tabelas;
+- paralelismos.
+
+
+79. SVG É RESERVADO À GEOMETRIA QUE EXIGE PRECISÃO
+
+Exemplos:
+
+- gráficos;
+- figuras geométricas;
+- redes;
+- diagramas complexos;
+- ramificações sofisticadas;
+- construções matemáticas.
+
+
+80. SVG DEVE PARECER FINALIZADO
+
+Conferir:
+
+- alinhamento;
+- conexão;
+- proporção;
+- rótulo;
+- seta;
+- espessura;
+- impressão.
+
+
+81. ILUSTRAÇÃO FIGURATIVA NÃO É PADRÃO EM MATEMÁTICA
+
+Imagem gerada por IA ou ilustração deve aparecer somente quando a aparência de algo realmente participar da compreensão.
+
+Não usar para:
+
+- preencher área;
+- decorar capa interna;
+- representar genericamente “Matemática”.
+
+
+======================================================================
+XII — EXPRESSÕES MATEMÁTICAS
+======================================================================
+
+82. EXPRESSÕES NÃO PODEM ULTRAPASSAR A LARGURA ÚTIL
+
+Para uma expressão longa, tentar nesta ordem:
+
+1. reorganização matemática;
+2. quebra em etapas naturais;
+3. alinhamento em múltiplas linhas;
+4. redução discreta, somente se necessária.
+
+Não diminuir brutalmente a fonte apenas para fazer caber.
+
+
+83. A PRESENÇA DE SÍMBOLOS NÃO CONSTITUI, POR SI SÓ, MOTIVO DE DESTAQUE
+
+Uma expressão matemática não deve receber automaticamente:
+
+- centralização;
+- caixa;
+- fundo;
+- borda;
+- linhas acima e abaixo;
+- espaçamento excepcional.
+
+O destaque depende da função conceitual da expressão no argumento.
+
+Uma heurística útil é perguntar:
+
+Se os símbolos fossem escritos por extenso, a ideia continuaria merecendo o mesmo destaque?
+
+Se não, a notação provavelmente deve permanecer discreta.
+
+
+84. QUEBRA DE LINHA E CENTRALIZAÇÃO SÃO DECISÕES INDEPENDENTES
+
+Uma expressão pode merecer linha própria sem merecer posição central.
+
+Como padrão:
+
+- linha própria simples → alinhamento à esquerda, com recuo discreto quando útil;
+- fórmula estrutural ou síntese espacial → centralização apenas quando justificada.
+
+
+85. COMPARAÇÕES MATEMÁTICAS SIMPLES NÃO SÃO AUTOMATICAMENTE CENTRALIZADAS
+
+Exemplos como:
+
+7+5=12
+7+5=15
+
+ou:
+
+p: 5+4=9
+q: 5+4=10
+
+podem aparecer em linhas consecutivas, alinhadas à esquerda, ou lado a lado quando a comparação exigir simultaneidade.
+
+A centralização só deve ocorrer se contribuir para a leitura da relação.
+
+
+86. EXPRESSÕES AUTÔNOMAS SIMPLES DEVEM PERMANECER SUBORDINADAS À PROSA
+
+Quando uma expressão introduz o objeto que será analisado imediatamente, sua forma visual deve ser econômica.
+
+Usar, como regra geral:
+
+- linha própria;
+- alinhamento à esquerda;
+- pequeno recuo opcional;
+- tipografia matemática apropriada;
+- ausência de caixa, fundo ou linhas decorativas.
+
+
+87. FÓRMULAS E RELAÇÕES ESTRUTURAIS PODEM RECEBER COMPOSIÇÃO ESPECIAL
+
+A centralização ou outra composição diferenciada é adequada quando a expressão:
+
+- sintetiza uma regra;
+- mostra equivalência importante;
+- organiza transformação;
+- exige alinhamento para leitura;
+- torna perceptível alcance, precedência ou agrupamento.
+
+O recurso deve desaparecer quando não houver ganho pedagógico.
+
+
+88. MATRIZES, SISTEMAS E CADEIAS DE EQUIVALÊNCIA EXIGEM CONTROLE PRÓPRIO
+
+Devem permanecer:
+
+- legíveis;
+- alinhados;
+- próximos da explicação correspondente;
+- semanticamente íntegros.
+
+
+======================================================================
+XIII — TEXTO PRÁTICO E ELEMENTOS RECORRENTES
+======================================================================
+
+89. EXEMPLOS INDEPENDENTES PRECISAM RESPIRAR
+
+Separação clara entre exemplos, sem grandes blocos visuais desnecessários.
+
+
+90. EXERCÍCIOS INDEPENDENTES DEVEM SER SEPARADOS
+
+Mas seus componentes internos devem permanecer unidos.
+
+
+91. QUIZ SEGUE O MESMO PRINCÍPIO
+
+Questões separadas; alternativas integradas à questão.
+
+
+92. GABARITO COMENTADO PRESERVA A HIERARQUIA DO EXERCÍCIO
+
+Deve ser fácil reconhecer:
+
+- número;
+- resposta;
+- explicação.
+
+
+93. ESPAÇOS DE RESPOSTA SÓ EXISTEM QUANDO POSSUEM FUNÇÃO PEDAGÓGICA
+
+Não adicionar linhas artificiais para qualquer pergunta aberta.
+
+
+94. QUESTÕES EXTERNAS POSSUEM TRATAMENTO EDITORIAL CONSISTENTE
+
+Informar, quando aplicável:
+
+- instituição;
+- prova;
+- ano/semestre;
+- número;
+- adaptação.
+
+
+95. QUESTÃO REPRODUZIDA DEVE PRESERVAR FIDELIDADE AO ORIGINAL
+
+Adaptações devem ser indicadas.
+
+
+======================================================================
+XIV — FONTES E CRÉDITOS
+======================================================================
+
+96. BIBLIOGRAFIA DE CONSTRUÇÃO E FONTE DIRETA NÃO SÃO A MESMA COISA
+
+Uma obra consultada para verificar o conteúdo não possui necessariamente o mesmo tratamento editorial de:
+
+- uma questão reproduzida;
+- uma imagem;
+- um dado;
+- uma tabela;
+- um trecho diretamente adaptado.
+
+
+97. CRÉDITOS DEVEM CORRESPONDER AO QUE REALMENTE FOI UTILIZADO
+
+Não criar bibliografia ornamental apenas para demonstrar erudição.
+
+
+98. MATERIAIS EXTERNOS DIRETAMENTE PRESENTES NA APOSTILA DEVEM SER IDENTIFICADOS ADEQUADAMENTE
+
+Especialmente:
+
+- questões;
+- imagens;
+- dados;
+- gráficos;
+- representações adaptadas.
+
+
+======================================================================
+XV — MICROTIPOGRAFIA E PAGINAÇÃO
+======================================================================
+
+99. HIERARQUIA VISUAL DEVE SER INEQUÍVOCA
+
+O estudante deve distinguir rapidamente:
+
+- Parte;
+- Texto Teórico;
+- subseção;
+- exemplo;
+- exercício;
+- quiz;
+- gabarito.
+
+
+100. RITMO VERTICAL DEVE SER CONSISTENTE
+
+A sequência:
+
+rótulo → título → conteúdo → visual → legenda → próxima unidade
+
+deve possuir cadência previsível.
+
+
+101. EVITAR NEGRITO EXCESSIVO
+
+Usar para:
+
+- conceitos;
+- condições;
+- contrastes;
+- conclusões realmente relevantes;
+- definições formais quando estiverem em caixa de definição canônica.
+
+Não aplicar negrito a toda expressão matemática apenas por conter símbolos.
+
+
+102. CONTROLAR TÍTULOS ÓRFÃOS
+
+Título não deve aparecer no final da página sem conteúdo suficiente abaixo.
+
+
+103. CONTROLAR VIÚVAS E ÓRFÃS QUANDO POSSÍVEL
+
+Pequenos ajustes de distribuição são preferíveis a linhas isoladas.
+
+
+104. MANTER PEQUENAS UNIDADES JUNTAS QUANDO POSSÍVEL
+
+Exemplos:
+
+- título + primeiro parágrafo;
+- visual + legenda;
+- pequena tabela;
+- expressão + explicação imediata;
+- definição + comentário imediatamente dependente;
+- frase introdutória + expressão autônoma que ela apresenta;
+- conclusão curta + tabela ou resultado que ela introduz.
+
+
+105. NÃO IMPEDIR TODAS AS QUEBRAS
+
+Elementos extensos podem precisar continuar na página seguinte.
+
+
+106. PAGINAÇÃO BUSCA COERÊNCIA, NÃO PÁGINAS IGUALMENTE CHEIAS
+
+Uma página parcialmente vazia pode ser correta quando uma unidade terminou.
+
+
+======================================================================
+XVI — GERAÇÃO DO PDF
+======================================================================
+
+107. CHROME/CHROMIUM HEADLESS PERMANECE A REFERÊNCIA DE GERAÇÃO
+
+A geração deve seguir o pipeline canônico estabelecido para o Plano.
+
+
+108. O RESULTADO ESPERADO É PDF A4 ESTÁVEL
+
+Verificar:
+
+- dimensões;
+- fontes;
+- cortes;
+- margens;
+- cabeçalho;
+- rodapé;
+- outline.
+
+
+109. O HTML NÃO É CONSIDERADO CONCLUÍDO ANTES DA GERAÇÃO DO PDF
+
+A aparência no navegador não garante qualidade impressa.
+
+
+======================================================================
+XVII — PREFLIGHT VISUAL
+======================================================================
+
+110. TODA PÁGINA DEVE SER INSPECIONADA
+
+Renderizar o PDF em imagens e observar:
+
+- capa;
+- densidade;
+- vazios;
+- margens;
+- cabeçalho;
+- rodapé;
+- linhas;
+- caixas;
+- tabelas;
+- SVG;
+- fórmulas;
+- quebras;
+- cortes;
+- sobreposições.
+
+
+111. VERIFICAR O OUTLINE SEPARADAMENTE
+
+Confirmar:
+
+- entradas esperadas;
+- ausência de bookmarks acidentais;
+- hierarquia correta;
+- nomes consistentes.
+
+
+112. PREFLIGHT INCLUI FIDELIDADE AO SISTEMA CANÔNICO
+
+Perguntar:
+
+- a capa continua pertencendo à mesma identidade?
+- o texto segue uma única coluna?
+- alguma subseção recebeu abertura exagerada?
+- cabeçalhos localizam corretamente?
+- rodapés identificam a apostila?
+- algum componente novo foi inventado?
+- houve alteração estrutural não autorizada?
+- soluções anteriores aprovadas foram preservadas?
+
+
+113. PREFLIGHT DEVE AUDITAR A HIERARQUIA MATEMÁTICA
+
+Verificar especificamente:
+
+- expressões simples foram centralizadas sem necessidade?
+- alguma notação comum recebeu caixa, fundo ou linhas apenas por ser matemática?
+- expressões autônomas simples permanecem alinhadas à esquerda quando apropriado?
+- fórmulas centralizadas possuem função estrutural identificável?
+- definições formais usam o tratamento canônico de definição?
+- frases não definicionais foram indevidamente transformadas em caixas de definição?
+- há excesso de linhas ou espaço vertical provocado por notação matemática?
+
+
+114. COMPARAR COM A REFERÊNCIA QUANDO NECESSÁRIO
+
+Quando uma apostila deriva de outra versão aprovada, verificar visualmente aquilo que deveria ter permanecido.
+
+
+======================================================================
+XVIII — RETROALIMENTAÇÃO DO SISTEMA
+======================================================================
+
+115. PROBLEMA RECORRENTE VIRA REGRA
+
+Se for identificado um erro repetido de:
+
+- espaçamento;
+- conectores;
+- títulos;
+- paginação;
+- fórmulas;
+- centralização matemática;
+- tratamento de definições;
+- excesso de linhas ou caixas;
+- outline;
+
+a correção deve entrar no sistema canônico.
+
+
+116. NÃO REPETIR INDEFINIDAMENTE AUDITORIAS PROFUNDAS
+
+Lições consolidadas devem ser aplicadas automaticamente.
+
+
+117. CADA NOVA APOSTILA AINDA RECEBE AUDITORIA CURTA
+
+Verificar:
+
+- conteúdo;
+- estrutura;
+- visual;
+- prática;
+- gabarito;
+- paginação;
+- outline.
+
+Auditorias profundas devem ocorrer quando houver motivo real.
+
+
+======================================================================
+XIX — REGRA DE DECISÃO VISUAL
+======================================================================
+
+Antes de inserir um recurso, responder:
+
+1. O que ele torna perceptível?
+
+2. Isso já está suficientemente claro pelo texto, símbolos ou composição?
+
+3. A representação preserva a estrutura matemática?
+
+4. Ela ajuda a compreender sem eliminar o raciocínio necessário?
+
+5. Existe uma solução mais simples que cumpre a mesma função?
+
+Se não houver resposta clara para a primeira pergunta, o recurso provavelmente não deve existir.
+
+
+======================================================================
+XX — REGRA DE DECISÃO ESTRUTURAL
+======================================================================
+
+Antes de criar uma solução nova, perguntar:
+
+1. O conteúdo mestre exige isso?
+
+2. As Regras Gerais já estabelecem uma solução?
+
+3. Existe precedente canônico?
+
+4. A mudança é realmente necessária?
+
+5. Estou criando uma nova convenção apenas porque não sei como resolver o caso?
+
+Se a resposta à quinta pergunta for positiva:
+
+não improvisar.
+
+Preservar o padrão existente ou solicitar orientação.
+
+
+======================================================================
+XXI — PRINCÍPIOS FINAIS
+======================================================================
+
+O HTML/CSS não deve procurar parecer sofisticado.
+
+Deve procurar ser preciso.
+
+A apostila não deve ser visual por obrigação.
+
+Deve tornar visual aquilo que precisa ser percebido espacialmente.
+
+O texto não deve ser fragmentado para produzir variedade gráfica.
+
+A linguagem simbólica não deve aparecer desconectada do significado.
+
+Diagramas não devem decorar relações.
+
+Devem representá-las.
+
+Espaço não deve preencher páginas.
+
+Deve organizar leitura.
+
+Cabeçalhos orientam a posição interna.
+
+Rodapés identificam o documento.
+
+Bookmarks orientam a navegação.
+
+Não reproduzem toda a hierarquia visível.
+
+Uma nova versão deve preservar aquilo que já funciona.
+
+Flexibilidade não significa indefinição.
+
+A ausência de instrução não significa liberdade para inventar.
+
+Quando uma decisão estrutural importante não estiver suficientemente determinada, deve-se perguntar antes de criar uma nova convenção.
+
+O melhor HTML/CSS é aquele em que tipografia, espaço, simbolização, hierarquia e representação tornam o raciocínio mais fácil de acompanhar.
+
+Matemática não é automaticamente destaque.
+
+Uma expressão pode estar inline, em linha própria, centralizada ou enquadrada. A escolha depende de sua função no raciocínio, não da simples presença de símbolos.
+
+Quebra de linha não implica centralização.
+
+Centralização é recurso estrutural e deve ser excepcional.
+
+Definições formais possuem linguagem visual própria e consistente.
+
+Quando tudo é destacado, nada permanece hierarquicamente destacado.
+
+Forma e conteúdo devem cooperar.
+
+A estrutura serve ao conteúdo.
+
+
+======================================================================
+FIM DAS REGRAS GERAIS PARA CRIAÇÃO DE HTML/CSS
+PLANO DE ESTUDO MATEMÁTICO
+VERSÃO DEFINITIVA 2.2 — 2026
+======================================================================
