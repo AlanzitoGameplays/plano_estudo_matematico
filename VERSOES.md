@@ -8,4 +8,18 @@ Este arquivo registra versões congeladas, marcos editoriais e artefatos definit
 Status: Definitivo
 
 ### Bloco IV — Sentenças Abertas e Quantificadores
-Status: Em construção
+
+Status: DEFINITIVO
+Versão: 1.0
+
+HTML:
+Topico_1.1_Bloco_IV_Sentencas_Abertas_Quantificadores.html
+
+CSS:
+Plano_Matematico_3_1_Bloco_IV.css
+
+PDF:
+Topico_1.1_Bloco_IV_Sentencas_Abertas_Quantificadores_Definitivo.pdf
+
+Observação:
+PDF oficial gerado em Windows + Chrome e aprovado após preflight.
