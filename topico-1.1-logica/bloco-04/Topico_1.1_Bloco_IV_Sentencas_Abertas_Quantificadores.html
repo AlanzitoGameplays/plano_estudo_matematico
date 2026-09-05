@@ -1,0 +1,1440 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Tópico 1.1 - Lógica Matemática - Bloco IV - Sentenças Abertas e Quantificadores" name="description"/>
+<title>Tópico 1.1 · Bloco IV — Sentenças Abertas e Quantificadores</title>
+<link href="Plano_Matematico_3_1_Bloco_IV.css" rel="stylesheet"/>
+</head>
+<body class="theme--math">
+<main class="document" id="document">
+<section aria-label="Capa" class="page page--cover" id="capa">
+<div class="cover-top"><div class="cover-collection">PLANO DE ESTUDO MATEMÁTICO</div></div>
+<div class="cover-bottom">
+<div class="cover-kicker">TÓPICO 1.1 · LÓGICA MATEMÁTICA</div>
+<div class="cover-title">BLOCO IV<br/>SENTENÇAS ABERTAS<br/>E QUANTIFICADORES</div>
+<div aria-hidden="true" class="cover-rule"><span></span><span></span></div>
+<div class="cover-version">APOSTILA DE ESTUDO — 2026</div>
+</div>
+</section>
+<div class="source-content" id="source-content">
+<section class="source-section" data-context="TEXTO TEÓRICO • PARTE I">
+<header class="part-opening" data-keep-count="3"><div class="part-label"><h1 class="outline-root">Texto Teórico</h1> · Parte I</div><h2 class="part-title">Parte I — Sentenças Abertas, Variáveis e Domínio</h2></header>
+<div class="item-title keep-with-next" data-keep-count="2">1. Da proposição à sentença aberta</div>
+<p>Compare as expressões: <span class="math-inline">5+3=8</span> e <span class="math-inline">x+3=8.</span></p>
+<p>Na primeira, tudo aquilo de que precisamos para avaliar a afirmação já está determinado. A operação pode ser efetuada e encontramos <span class="math-inline">5+3=8</span>; portanto, a proposição é verdadeira.</p>
+<p>A segunda expressão possui outra estrutura. Enquanto <span class="math-inline">x</span> não representa um valor específico, ainda não existe um único caso determinado para avaliar. Se colocarmos <span class="math-inline">5</span> no lugar de <span class="math-inline">x</span>, obtemos <span class="math-inline">5+3=8</span>, que é verdadeira. Se colocarmos <span class="math-inline">2</span>, obtemos <span class="math-inline">2+3=8</span>, que é falsa.</p>
+<p>A estrutura <span class="math-inline">x+3=8</span> permanece a mesma enquanto variamos o valor atribuído a <span class="math-inline">x</span>. Essa variação é suficiente para produzir afirmações verdadeiras em alguns casos e falsas em outros.</p>
+<p>Por isso, enquanto <span class="math-inline">x</span> continua podendo assumir diferentes valores, não faz sentido atribuir à expressão <span class="math-inline">x+3=8</span> um único valor lógico. Seu comportamento depende do valor considerado.</p>
+<p>Uma expressão declarativa desse tipo recebe o nome de <strong>sentença aberta</strong>.</p>
+<p class="definition-box">Podemos dizer, neste estágio, que uma sentença aberta é uma expressão cujo valor lógico depende do valor atribuído a uma variável. Ela contém uma condição que pode ser satisfeita por determinados valores e não satisfeita por outros.</p>
+<p>Essa situação não deve ser confundida com simplesmente desconhecer o valor lógico de uma proposição.</p>
+<p>Uma proposição pode estar completamente determinada e, ainda assim, sua verificação pode ser difícil. O estudante talvez não saiba imediatamente se uma afirmação matemática complicada é verdadeira ou falsa, mas isso não faz com que a afirmação dependa de uma escolha posterior. Existe uma afirmação específica sendo feita, mesmo antes de sabermos verificá-la.</p>
+<p>Em <span class="math-inline">x+3=8</span>, ocorre algo diferente. Não falta apenas conhecimento ao leitor: falta determinar <strong>qual caso está sendo considerado</strong>. A expressão ainda admite diferentes substituições para <span class="math-inline">x</span>, e essas substituições podem modificar seu valor lógico.</p>
+<p>A abertura da sentença está, portanto, na própria estrutura da expressão.</p>
+<div class="table-wrap visual" data-visual="1"><table class="analysis-table open-sentence-table"><thead><tr><th scope="col">Expressão</th><th scope="col">Situação</th><th scope="col">Valor lógico</th></tr></thead><tbody><tr><td><span class="math-inline">5+3=8</span></td><td>proposição determinada</td><td><span class="math-inline">V</span></td></tr><tr class="focus-row"><td><span class="math-inline">x+3=8</span></td><td>sentença aberta</td><td>depende de <span class="math-inline">x</span></td></tr><tr><td><span class="math-inline">2+3=8</span></td><td>proposição obtida por atribuição</td><td><span class="math-inline">F</span></td></tr><tr><td><span class="math-inline">5+3=8</span></td><td>proposição obtida por atribuição</td><td><span class="math-inline">V</span></td></tr></tbody></table></div>
+<p data-keep-count="2">O contraste permite separar duas perguntas que, à primeira vista, poderiam parecer iguais:</p>
+<blockquote><p>Qual é o valor lógico desta proposição?</p></blockquote>
+<p data-keep-count="2">e:</p>
+<blockquote><p>Qual valor lógico obtemos quando determinada escolha é feita para a variável?</p></blockquote>
+<p>A primeira pergunta parte de uma afirmação já determinada. A segunda parte de uma condição aberta a diferentes casos.</p>
+<div class="item-title keep-with-next" data-keep-count="2">2. Variável livre, atribuição e predicado</div>
+<p>Na expressão <span class="math-inline">x+3=8</span>, a letra <span class="math-inline">x</span> ocupa uma posição que pode receber diferentes valores. Nesse papel, <span class="math-inline">x</span> funciona como uma <strong>variável</strong>.</p>
+<p>É comum encontrar letras em problemas nos quais existe um valor que queremos descobrir. Nesse caso, a letra pode funcionar como uma incógnita. Por exemplo, podemos procurar qual valor torna verdadeira a igualdade <span class="math-inline">x+3=8</span>.</p>
+<p>Mas a possibilidade de resolver essa igualdade não esgota o significado de variável.</p>
+<p>Considere outra condição: <span class="math-inline">x&gt;4.</span></p>
+<p>Não há aqui a necessidade de existir um único “valor escondido” que resolva o problema. Diversos números tornam a afirmação verdadeira, como <span class="math-inline">5</span>, <span class="math-inline">7</span> e <span class="math-inline">10</span>. Outros, como <span class="math-inline">2</span> e <span class="math-inline">4</span>, tornam-na falsa.</p>
+<p>A função de <span class="math-inline">x</span> é permitir que a mesma condição seja examinada em diferentes casos. Por isso, identificar automaticamente toda letra com uma incógnita seria estreito demais. Uma incógnita é um possível papel de uma letra; uma variável pode desempenhar um papel mais geral, representando diferentes objetos que entram numa mesma estrutura.</p>
+<p>Para trabalhar com essas condições sem precisar reescrevê-las por extenso a cada vez, podemos nomeá-las.</p>
+<p data-keep-count="2">Considere:</p>
+<div class="math-line">P(x):  x&gt;4.</div>
+<p data-keep-count="2">A escrita <span class="math-inline">P(x)</span> representa a condição:</p>
+<blockquote><p><span class="math-inline">x</span> é maior que 4.</p></blockquote>
+<p>Aqui, a letra <span class="math-inline">P</span> nomeia a condição, enquanto <span class="math-inline">x</span> indica o objeto ao qual ela está sendo aplicada.</p>
+<p>Se escolhemos <span class="math-inline">7</span>, escrevemos <span class="math-inline">P(7)</span>. Isso representa <span class="math-inline">7&gt;4</span>, uma proposição verdadeira.</p>
+<p>Se escolhemos <span class="math-inline">2</span>, temos <span class="math-inline">P(2)</span>, isto é, <span class="math-inline">2&gt;4</span>, uma proposição falsa.</p>
+<p>Esse ato de escolher um valor para a variável é uma <strong>atribuição</strong>. A atribuição determina um caso particular da condição aberta.</p>
+<p>A diferença entre <span class="math-inline">P(x)</span> e <span class="math-inline">P(7)</span> não está na propriedade considerada. Nos dois casos, a condição continua sendo “ser maior que 4”. O que muda é que, em <span class="math-inline">P(7)</span>, o objeto ao qual essa condição está sendo aplicada já foi determinado.</p>
+<p>Assim, <span class="math-inline">P(x)</span> permanece aberta a diferentes casos, enquanto <span class="math-inline">P(7)</span> já é uma afirmação específica que pode ser classificada como verdadeira ou falsa.</p>
+<p class="definition-box">Uma expressão como <span class="math-inline">P(x)</span>, que representa uma propriedade ou condição aplicada ao objeto indicado pela variável, pode ser chamada de <strong>predicado</strong>.</p>
+<p>O termo é útil porque permite separar duas estruturas que possuem papéis bastante diferentes: <span class="math-inline">p</span> e <span class="math-inline">P(x).</span></p>
+<p data-keep-count="2">Quando escrevemos <span class="math-inline">p</span>, a letra representa uma proposição inteira. Por exemplo:</p>
+<div class="math-line">p:  7&gt;4.</div>
+<p>Nesse uso, <span class="math-inline">p</span> nomeia uma afirmação já completa.</p>
+<p>Em <span class="math-inline">P(x):  x&gt;4,</span> a situação é diferente. <span class="math-inline">P(x)</span> não nomeia uma proposição determinada sobre um caso específico. Ele representa uma condição aplicada a um objeto que ainda pode variar.</p>
+<p data-keep-count="2">Podemos resumir a diferença conceitual assim:</p>
+<div class="math-line">p:  <span class="math-text">uma proposição completa;</span></div>
+<div class="math-line">P(x):  <span class="math-text">uma condição dependente de </span>x.</div>
+<p>A semelhança das letras não deve esconder a diferença de função.</p>
+<p>Enquanto <span class="math-inline">x</span> permanece disponível para receber diferentes valores em <span class="math-inline">P(x)</span>, dizemos que <span class="math-inline">x</span> é uma <strong>variável livre</strong>.</p>
+<p>A palavra “livre” indica exatamente o aspecto relevante neste momento: a condição ainda não determinou qual dos diferentes valores possíveis ocupará aquela posição.</p>
+<p>Em <span class="math-inline">P(x): x&gt;4</span>, podemos examinar <span class="math-inline">P(2)</span>, <span class="math-inline">P(5)</span>, <span class="math-inline">P(7)</span>, <span class="math-inline">P(10)</span>, entre muitos outros casos. Cada atribuição produz uma proposição particular; antes dessa atribuição, <span class="math-inline">P(x)</span> permanece uma condição aberta.</p>
+<p>Mas essa liberdade não significa que qualquer objeto imaginável possa necessariamente ocupar <span class="math-inline">x</span>. Para saber quais substituições fazem sentido, ainda precisamos especificar quais objetos estamos admitindo.</p>
+<div class="item-title keep-with-next" data-keep-count="3">3. Domínio e valores admissíveis</div>
+<p data-keep-count="2">Considere novamente:</p>
+<div class="math-line">P(x):  x&gt;4.</div>
+<p>Sabemos que diferentes valores podem ocupar <span class="math-inline">x</span>. Resta uma questão indispensável: <strong>quais valores estamos autorizados a considerar?</strong></p>
+<p>Podemos estar trabalhando apenas com números inteiros positivos menores que 10. Nesse contexto, os valores <span class="math-inline">1,2,3,4,5,6,7,8,9</span> são admissíveis. Entre eles, alguns satisfazem a condição <span class="math-inline">x&gt;4</span> e outros não.</p>
+<p>Mas poderíamos adotar outro contexto e considerar apenas números inteiros negativos. A condição <span class="math-inline">x&gt;4</span> continua exatamente a mesma, porém os casos disponíveis mudam. Nesse novo contexto, nenhum dos valores considerados satisfaz a propriedade.</p>
+<p data-keep-count="2">A condição não foi alterada:</p>
+<div class="math-line">P(x):  x&gt;4.</div>
+<p>O que mudou foi a coleção de objetos que admitimos como possíveis valores de <span class="math-inline">x</span>.</p>
+<p>Essa coleção recebe o nome de <strong>domínio</strong>.</p>
+<p class="definition-box">O domínio determina quais objetos podem ocupar a posição da variável. Ele não é apenas uma informação auxiliar acrescentada depois da sentença aberta; faz parte da maneira como a condição deve ser interpretada.</p>
+<p>Se um valor não pertence ao contexto que estamos considerando, ele não entra na investigação daquela sentença aberta.</p>
+<p>Isso também mostra por que conhecer apenas <span class="math-inline">P(x)</span> nem sempre é suficiente para saber quais casos estão em jogo. A condição informa o que deve ser testado; o domínio informa <strong>sobre quais objetos esse teste está sendo realizado</strong>.</p>
+<p>Considere novamente os dois contextos para <span class="math-inline">P(x): x&gt;4</span>.</p>
+<p>Se os valores admissíveis são números inteiros positivos menores que 10, podemos examinar casos como <span class="math-inline">P(2)</span>, <span class="math-inline">P(5)</span> e <span class="math-inline">P(8)</span>. Alguns são falsos e outros verdadeiros.</p>
+<p>Se os valores admissíveis são números inteiros negativos, os casos examinados serão diferentes, e nenhum deles satisfará <span class="math-inline">x&gt;4</span>.</p>
+<p>Portanto, mudar o domínio não modifica a propriedade expressa por <span class="math-inline">P(x)</span>, mas modifica os objetos que podem ser colocados à prova. Como consequência, também pode mudar quais valores admissíveis satisfazem aquela condição.</p>
+<p>O domínio funciona, assim, como a fronteira dentro da qual a variável pode variar.</p>
+<p data-keep-count="4">Em uma sentença aberta como <span class="math-inline">P(x)</span>, há três elementos que precisam permanecer distintos:</p>
+<ul><li>a <strong>condição</strong> expressa por <span class="math-inline">P</span>;</li><li>a <strong>variável</strong> <span class="math-inline">x</span>, que indica o lugar ocupado pelo objeto considerado;</li><li>o <strong>domínio</strong>, que determina quais objetos podem ocupar esse lugar.</li></ul>
+<p>Quando escolhemos um desses objetos e o atribuímos a <span class="math-inline">x</span>, a condição deixa de estar aberta naquele caso particular e obtemos uma proposição determinada, como <span class="math-inline">P(7)</span>.</p>
+<p>Enquanto nenhum caso específico é fixado, <span class="math-inline">P(x)</span> permanece uma condição aberta sobre os valores admissíveis do domínio.</p>
+</section>
+<section class="source-section" data-context="TEXTO TEÓRICO • PARTE II">
+<header class="part-opening" data-keep-count="4"><div class="part-label">TEXTO TEÓRICO • PARTE II</div><h2 class="part-title">Parte II — Quantificadores Universal e Existencial</h2></header>
+<div class="item-title keep-with-next" data-keep-count="3">1. Da atribuição particular à quantificação</div>
+<p data-keep-count="2">Considere novamente a condição:</p>
+<div class="math-line">P(x):  x&gt;4.</div>
+<p>Se escolhemos um valor específico para <span class="math-inline">x</span>, obtemos uma proposição determinada. Por exemplo, <span class="math-inline">P(7)</span> representa <span class="math-inline">7&gt;4</span>, que é verdadeira.</p>
+<p>Já <span class="math-inline">P(2)</span> representa <span class="math-inline">2&gt;4</span>, que é falsa.</p>
+<p>Cada uma dessas expressões responde a uma pergunta sobre <strong>um caso particular</strong>. <span class="math-inline">P(7)</span> informa o que acontece quando o valor considerado é 7; <span class="math-inline">P(2)</span>, quando o valor considerado é 2.</p>
+<p>Mas escolher valores um a um não é a única maneira de utilizar uma condição como <span class="math-inline">P(x)</span>.</p>
+<p data-keep-count="2">Podemos querer fazer uma afirmação de outro tipo:</p>
+<blockquote><p>todos os valores admissíveis satisfazem <span class="math-inline">P</span>;</p></blockquote>
+<p data-keep-count="2">ou:</p>
+<blockquote><p>pelo menos um valor admissível satisfaz <span class="math-inline">P</span>.</p></blockquote>
+<p>Nesses casos, não estamos mais fixando previamente um único valor para <span class="math-inline">x</span>. Estamos determinando <strong>como os valores do domínio devem ser considerados em relação à condição</strong>.</p>
+<p>Essa operação recebe o nome de <strong>quantificação</strong>.</p>
+<p class="definition-box">Um <strong>quantificador</strong> estabelece uma exigência sobre os valores admissíveis da variável. Em vez de escolher um caso específico, ele determina se a condição deve valer para todos os casos ou se basta a existência de ao menos um caso favorável.</p>
+<p>Essa mudança altera o papel da variável.</p>
+<p>Em <span class="math-inline">P(x)</span>, a variável <span class="math-inline">x</span> permanece livre: diferentes valores ainda podem ocupar sua posição sem que uma afirmação única tenha sido estabelecida.</p>
+<p>Quando a variável é submetida a um quantificador, dizemos que ela está <strong>quantificada</strong>. O quantificador determina de que maneira <span class="math-inline">x</span> participa da afirmação.</p>
+<p data-keep-count="2">No contexto simples de uma única variável considerado aqui, essa quantificação transforma a condição aberta em uma proposição sobre o domínio. A pergunta deixa de ser apenas:</p>
+<blockquote><p>o que acontece para este valor de <span class="math-inline">x</span>?</p></blockquote>
+<p data-keep-count="2">e passa a ser algo como:</p>
+<blockquote><p>a condição vale para todos?</p></blockquote>
+<p data-keep-count="2">ou:</p>
+<blockquote><p>existe ao menos um caso em que ela vale?</p></blockquote>
+<div class="item-title keep-with-next" data-keep-count="2">2. Quantificador universal</div>
+<p>Considere uma condição <span class="math-inline">P(x)</span> e um domínio já determinado.</p>
+<p>Uma possibilidade é exigir que <strong>todos os valores admissíveis</strong> satisfaçam a condição.</p>
+<p data-keep-count="2">Essa exigência pode ser expressa verbalmente como:</p>
+<blockquote><p>Para todo <span class="math-inline">x</span>, <span class="math-inline">P(x)</span>.</p></blockquote>
+<p data-keep-count="2">ou, de forma mais explícita:</p>
+<blockquote><p>Para todo valor admissível de <span class="math-inline">x</span>, a condição <span class="math-inline">P(x)</span> é satisfeita.</p></blockquote>
+<p data-keep-count="2">Essa estrutura é representada por:</p>
+<div class="math-line">∀x P(x).</div>
+<p>O símbolo <span class="math-inline">∀</span> representa o <strong>quantificador universal</strong>.</p>
+<p>A palavra “universal” corresponde justamente à força da afirmação: nenhum valor admissível pode ficar de fora da condição.</p>
+<p data-keep-count="2">Assim, <span class="math-inline">∀x P(x)</span> não significa que muitos valores, a maioria dos valores ou apenas todos os casos examinados até então satisfazem <span class="math-inline">P</span>. A exigência é mais forte:</p>
+<blockquote><p><strong>todo valor admissível do domínio deve satisfazer <span class="math-inline">P</span>.</strong></p></blockquote>
+<p data-keep-count="2">Considere, por exemplo, um domínio formado apenas pelos números <span class="math-inline">1,2,3,4</span> e a condição:</p>
+<div class="math-line">P(x):  x&lt;5.</div>
+<p>Temos <span class="math-inline">P(1)</span>, <span class="math-inline">P(2)</span>, <span class="math-inline">P(3)</span> e <span class="math-inline">P(4)</span>, e todos esses casos são verdadeiros.</p>
+<p>Nesse domínio, a afirmação <span class="math-inline">∀x P(x)</span> é verdadeira.</p>
+<p>O ponto central, porém, não é o fato de o domínio escolhido possuir poucos valores. O significado lógico de <span class="math-inline">∀</span> é que <strong>todos os casos admissíveis precisam respeitar a condição</strong>, seja o domínio pequeno ou muito maior.</p>
+<p>Por isso, não devemos confundir o significado de uma afirmação universal com uma técnica de verificação. Em um domínio pequeno, pode ser possível examinar cada caso diretamente. Em outros contextos, isso pode não ser prático ou sequer possível dessa maneira.</p>
+<p>O quantificador universal descreve a exigência da afirmação; ele não determina, por si só, como essa afirmação será demonstrada.</p>
+<p>O domínio continua sendo indispensável.</p>
+<p data-keep-count="2">A expressão <span class="math-inline">∀x P(x)</span> deve ser entendida relativamente aos valores que <span class="math-inline">x</span> pode assumir. “Para todo <span class="math-inline">x</span>” significa, neste contexto:</p>
+<blockquote><p>para todo <span class="math-inline">x</span> admissível no domínio considerado.</p></blockquote>
+<p>Mudar o domínio pode mudar o valor lógico da proposição, mesmo quando a condição <span class="math-inline">P(x)</span> permanece a mesma.</p>
+<div class="item-title keep-with-next" data-keep-count="2">3. Quantificador existencial</div>
+<p>Há outra maneira de transformar uma condição aberta numa afirmação sobre o domínio.</p>
+<p>Em vez de exigir que todos os valores satisfaçam <span class="math-inline">P(x)</span>, podemos afirmar apenas que existe algum caso favorável.</p>
+<p data-keep-count="2">Verbalmente:</p>
+<blockquote><p>Existe pelo menos um <span class="math-inline">x</span> tal que <span class="math-inline">P(x)</span>.</p></blockquote>
+<p data-keep-count="2">Essa estrutura é representada por:</p>
+<div class="math-line">∃x P(x).</div>
+<p>O símbolo <span class="math-inline">∃</span> representa o <strong>quantificador existencial</strong>.</p>
+<p>A exigência agora é muito diferente da universal.</p>
+<p>Em <span class="math-inline">∃x P(x)</span>, não é necessário que todos os valores admissíveis satisfaçam <span class="math-inline">P</span>. Basta que exista <strong>ao menos um</strong> valor admissível para o qual <span class="math-inline">P(x)</span> seja verdadeira.</p>
+<p data-keep-count="2">Retome:</p>
+<div class="math-line">P(x):  x&gt;4.</div>
+<p>Considere um domínio em que valores como <span class="math-inline">2</span>, <span class="math-inline">5</span> e <span class="math-inline">7</span> sejam admissíveis.</p>
+<p>Temos <span class="math-inline">P(2): 2&gt;4</span>, que é falsa, mas <span class="math-inline">P(5): 5&gt;4</span> e <span class="math-inline">P(7): 7&gt;4</span> são verdadeiras.</p>
+<p>Portanto, nesse domínio, <span class="math-inline">∃x P(x)</span> é verdadeira.</p>
+<p>A palavra “existe” precisa ser interpretada com cuidado. A afirmação existencial não diz que existe <strong>exatamente um</strong> valor favorável.</p>
+<p data-keep-count="2">Ela permanece verdadeira se houver um, dois, vários ou até mesmo todos os valores do domínio satisfazendo <span class="math-inline">P</span>. Sua exigência é apenas:</p>
+<blockquote><p>existe pelo menos um.</p></blockquote>
+<p>Quando apresentamos um valor admissível <span class="math-inline">a</span> para o qual <span class="math-inline">P(a)</span> é verdadeira, esse caso funciona como um <strong>testemunho</strong> da afirmação existencial.</p>
+<p data-keep-count="2">No exemplo, <span class="math-inline">P(7)</span> é verdadeira. Assim, o valor <span class="math-inline">7</span> serve como testemunho de:</p>
+<div class="math-line">∃x P(x).</div>
+<p>A palavra “testemunho” apenas registra o papel desempenhado por esse caso: ele mostra concretamente que a existência afirmada não está vazia de exemplos.</p>
+<p>A diferença entre os dois quantificadores pode agora ser percebida com precisão.</p>
+<p>Em <span class="math-inline">∀x P(x)</span>, todos os valores admissíveis precisam satisfazer <span class="math-inline">P</span>.</p>
+<p>Em <span class="math-inline">∃x P(x)</span>, um único caso favorável já é suficiente para satisfazer a exigência existencial.</p>
+<div class="table-wrap visual" data-visual="2"><table class="analysis-table quantifier-comparison"><thead><tr><th scope="col">Aspecto</th><th scope="col">Universal</th><th scope="col">Existencial</th></tr></thead><tbody><tr><td>Símbolo</td><td><span class="math-inline">∀</span></td><td><span class="math-inline">∃</span></td></tr><tr><td>Leitura principal</td><td>para todo</td><td>existe pelo menos um</td></tr><tr><td>Forma</td><td><span class="math-inline">∀x P(x)</span></td><td><span class="math-inline">∃x P(x)</span></td></tr><tr><td>Exigência</td><td>todos os valores admissíveis satisfazem <span class="math-inline">P</span></td><td>ao menos um valor admissível satisfaz <span class="math-inline">P</span></td></tr><tr><td>Caso concreto relevante</td><td>cada caso precisa respeitar a condição</td><td>um caso favorável já testemunha a existência</td></tr></tbody></table></div>
+<p>O contraste entre os dois quantificadores não é apenas terminológico. Ele altera profundamente aquilo que precisa ocorrer para que a proposição seja verdadeira.</p>
+<div class="item-title keep-with-next" data-keep-count="2">4. Quantificação e forma lógica</div>
+<p>Uma condição quantificada pode possuir estrutura interna mais rica do que um único predicado <span class="math-inline">P(x)</span>.</p>
+<p data-keep-count="2">Considere duas condições:</p>
+<div class="math-line">A(x):  <span class="math-text">x possui a propriedade A;</span></div>
+<div class="math-line">B(x):  <span class="math-text">x possui a propriedade B.</span></div>
+<p data-keep-count="2">Podemos querer expressar verbalmente:</p>
+<blockquote><p>Todo <span class="math-inline">A</span> é <span class="math-inline">B</span>.</p></blockquote>
+<p>Essa frase não afirma que todo objeto do domínio satisfaz simultaneamente <span class="math-inline">A</span> e <span class="math-inline">B</span>.</p>
+<p data-keep-count="2">Ela estabelece outra relação:</p>
+<blockquote><p>sempre que um objeto admissível satisfaz <span class="math-inline">A</span>, ele também satisfaz <span class="math-inline">B</span>.</p></blockquote>
+<p data-keep-count="2">Para cada valor considerado, temos uma estrutura condicional:</p>
+<div class="math-line">A(x)→ B(x).</div>
+<p data-keep-count="2">Como essa relação deve valer para todos os valores admissíveis, escrevemos:</p>
+<div class="math-line">∀x (A(x)→ B(x)).</div>
+<p>A expressão reúne duas estruturas com funções diferentes.</p>
+<p>O quantificador <span class="math-inline">∀x</span> determina que a condição deve ser considerada para todos os valores admissíveis de <span class="math-inline">x</span>.</p>
+<p>Já o condicional <span class="math-inline">A(x)→ B(x)</span> expressa a relação exigida entre as duas propriedades.</p>
+<p data-keep-count="2">Por isso, a forma lógica de:</p>
+<blockquote><p>Todo <span class="math-inline">A</span> é <span class="math-inline">B</span></p></blockquote>
+<p data-keep-count="2">não é:</p>
+<div class="math-line">∀x (A(x)∧ B(x)).</div>
+<p>Essa expressão afirmaria que todo objeto do domínio é simultaneamente <span class="math-inline">A</span> e <span class="math-inline">B</span>, o que é uma afirmação muito mais forte e diferente.</p>
+<p data-keep-count="2">O condicional permite restringir a exigência àqueles casos em que <span class="math-inline">A(x)</span> é satisfeita:</p>
+<div class="math-line">∀x (A(x)→ B(x)).</div>
+<p data-keep-count="2">Considere agora outra frase:</p>
+<blockquote><p>Existe pelo menos um <span class="math-inline">A</span> que é <span class="math-inline">B</span>.</p></blockquote>
+<p>Aqui não estamos exigindo uma relação condicional para todos os valores do domínio.</p>
+<p>Estamos afirmando a existência de um caso específico que reúna simultaneamente as duas propriedades.</p>
+<p data-keep-count="2">O objeto procurado precisa satisfazer <span class="math-inline">A(x)</span> e <span class="math-inline">B(x)</span>. Por isso, a conjunção aparece:</p>
+<div class="math-line">A(x)∧ B(x).</div>
+<p data-keep-count="2">Como basta a existência de ao menos um caso com essas duas propriedades, escrevemos:</p>
+<div class="math-line">∃x (A(x)∧ B(x)).</div>
+<p>Novamente, quantificador e conectivo realizam trabalhos diferentes.</p>
+<p>Em <span class="math-inline">∀x (A(x)→ B(x))</span>, o quantificador estabelece a extensão da afirmação sobre o domínio; o condicional organiza a relação entre <span class="math-inline">A(x)</span> e <span class="math-inline">B(x)</span>.</p>
+<p>Em <span class="math-inline">∃x (A(x)∧ B(x))</span>, o quantificador exige a existência de algum valor admissível; a conjunção estabelece que esse mesmo valor deve satisfazer as duas condições ao mesmo tempo.</p>
+<p>O conceito de alcance ajuda a tornar essa organização precisa.</p>
+<p>Em <span class="math-inline">∀x (A(x)→ B(x))</span>, a expressão <span class="math-inline">A(x)→ B(x)</span> está sob o alcance do quantificador universal.</p>
+<p>Da mesma forma, em <span class="math-inline">∃x (A(x)∧ B(x))</span>, a expressão <span class="math-inline">A(x)∧ B(x)</span> está sob o alcance do quantificador existencial.</p>
+<p>Os parênteses tornam visível qual estrutura está sendo quantificada.</p>
+<p>Essa organização também evidencia a mudança sofrida pela variável.</p>
+<p>Em <span class="math-inline">P(x)</span>, <span class="math-inline">x</span> permanece livre.</p>
+<p>Em <span class="math-inline">∀x P(x)</span> ou <span class="math-inline">∃x P(x)</span>, <span class="math-inline">x</span> está quantificada: seu papel dentro da afirmação é determinado pelo quantificador.</p>
+<p>No contexto simples de uma única variável considerado aqui, as expressões quantificadas já constituem proposições. Seu valor lógico depende de duas coisas que devem ser mantidas juntas: a condição expressa internamente e o domínio sobre o qual a variável está sendo considerada.</p>
+</section>
+<section class="source-section" data-context="TEXTO TEÓRICO • PARTE III">
+<header class="part-opening" data-keep-count="3"><div class="part-label">TEXTO TEÓRICO • PARTE III</div>
+    <h2 class="part-title part-title--long">Parte III — Negação dos Quantificadores e Estrutura
+        <span class="no-break-phrase"> do Contraexemplo</span></h2></header>
+<div class="item-title keep-with-next" data-keep-count="2">1. A negação de uma afirmação universal</div>
+<p>Considere a condição: <span class="math-inline">P(x):  x&lt;5</span> e, como valores admissíveis, os números <span class="math-inline">1,2,3,4</span>.</p>
+<p>Nesse domínio, todos os valores satisfazem <span class="math-inline">P(x)</span>. Portanto, <span class="math-inline">∀x P(x)</span> é verdadeira.</p>
+<p>Se incluirmos agora o número <span class="math-inline">5</span> entre os valores admissíveis, a situação muda. Para esse caso, <span class="math-inline">P(5)</span> representa <span class="math-inline">5&lt;5</span>, que é falsa.</p>
+<p>A afirmação universal exige que <strong>todos</strong> os valores admissíveis satisfaçam <span class="math-inline">P</span>. Por isso, não é necessário encontrar várias falhas para torná-la falsa. Um único valor que não satisfaça a condição já rompe a exigência universal.</p>
+<p>No novo domínio, basta o caso <span class="math-inline">x=5</span>.</p>
+<p data-keep-count="2">Assim, negar a afirmação:</p>
+<blockquote><p>Todos os valores admissíveis satisfazem <span class="math-inline">P</span></p></blockquote>
+<p data-keep-count="2">significa afirmar:</p>
+<blockquote><p>Existe pelo menos um valor admissível que não satisfaz <span class="math-inline">P</span>.</p></blockquote>
+<p>Essa diferença é importante. A negação de “todos” não é “nenhum”.</p>
+<p data-keep-count="2">Se alguns valores satisfazem <span class="math-inline">P</span> e um deles não satisfaz, já é verdade dizer:</p>
+<blockquote><p>Nem todos satisfazem <span class="math-inline">P</span>.</p></blockquote>
+<p data-keep-count="2">Mas seria falso dizer:</p>
+<blockquote><p>Nenhum satisfaz <span class="math-inline">P</span>.</p></blockquote>
+<p>No exemplo, <span class="math-inline">1</span>, <span class="math-inline">2</span>, <span class="math-inline">3</span> e <span class="math-inline">4</span> satisfazem <span class="math-inline">x&lt;5</span>, enquanto <span class="math-inline">5</span> não satisfaz. Portanto, a falha da universal não elimina os casos favoráveis; ela exige apenas a existência de ao menos uma exceção.</p>
+<p>Podemos traduzir essa estrutura simbolicamente.</p>
+<p data-keep-count="2">A afirmação original é:</p>
+<div class="math-line">∀x P(x).</div>
+<p>Sua negação afirma que existe pelo menos um valor admissível para o qual <span class="math-inline">P(x)</span> é falsa. Em outras palavras, existe um <span class="math-inline">x</span> que satisfaz <span class="math-inline">¬P(x)</span>.</p>
+<p data-keep-count="2">Logo,</p>
+<div class="math-structural">¬(∀x P(x)) ≡ ∃x ¬P(x).</div>
+<p>As duas mudanças na escrita correspondem exatamente à mudança de significado.</p>
+<p>O quantificador passa de <span class="math-inline">∀</span> para <span class="math-inline">∃</span>, porque deixamos de exigir algo sobre todos os casos e passamos a afirmar a existência de uma exceção.</p>
+<p>Ao mesmo tempo, <span class="math-inline">P(x)</span> passa para <span class="math-inline">¬P(x)</span>, porque o valor procurado deve justamente ser um caso em que a condição original falha.</p>
+<p>A equivalência</p>
+<div class="math-structural">¬(∀x P(x)) ≡ ∃x ¬P(x)</div>
+<p>não é, portanto, uma regra arbitrária de troca de símbolos. Ela registra aquilo que significa tornar falsa uma afirmação universal.</p>
+<p>Essa estrutura também esclarece o papel de um <strong>contraexemplo</strong>.</p>
+<p>Se <span class="math-inline">∀x P(x)</span> afirma que todos os valores admissíveis satisfazem <span class="math-inline">P</span>, então um valor específico <span class="math-inline">a</span> para o qual <span class="math-inline">P(a)</span> é falsa mostra que a afirmação universal não pode ser verdadeira.</p>
+<p>Nesse caso, <span class="math-inline">¬P(a)</span> é verdadeira.</p>
+<p data-keep-count="2">O valor <span class="math-inline">a</span> funciona, ao mesmo tempo, como uma exceção à universal e como um testemunho da afirmação:</p>
+<div class="math-line">∃x ¬P(x).</div>
+<p>É exatamente por isso que ele constitui um contraexemplo.</p>
+<p>Um contraexemplo não é apenas “um exemplo diferente” nem qualquer caso que pareça desfavorável. Ele é um caso admissível que realiza concretamente a condição necessária para que a afirmação universal falhe.</p>
+<div class="item-title keep-with-next" data-keep-count="3">2. A negação de uma afirmação existencial</div>
+<p data-keep-count="2">Considere novamente:</p>
+<div class="math-line">P(x):  x&gt;4.</div>
+<p>Suponha que, entre os valores admissíveis, estejam <span class="math-inline">2</span>, <span class="math-inline">5</span> e <span class="math-inline">7</span>.</p>
+<p>Temos <span class="math-inline">P(2)</span> falsa, mas <span class="math-inline">P(5)</span> e <span class="math-inline">P(7)</span> verdadeiras.</p>
+<p>Portanto, <span class="math-inline">∃x P(x)</span> é verdadeira.</p>
+<p>Esse exemplo mostra uma diferença profunda em relação à afirmação universal.</p>
+<p>Para tornar falsa uma universal, bastava uma exceção.</p>
+<p>Para tornar falsa uma existencial, um caso desfavorável não basta.</p>
+<p>O fato de <span class="math-inline">P(2)</span> ser falsa não elimina a possibilidade de que outro valor satisfaça <span class="math-inline">P</span>. Enquanto houver pelo menos um caso favorável, a afirmação existencial continuará verdadeira.</p>
+<p>Assim, para que <span class="math-inline">∃x P(x)</span> seja falsa, <strong>nenhum</strong> valor admissível pode satisfazer <span class="math-inline">P</span>.</p>
+<p>Isso significa que cada valor admissível deve satisfazer a negação da condição: <span class="math-inline">¬P(x).</span></p>
+<p data-keep-count="2">A negação de:</p>
+<blockquote><p>Existe pelo menos um valor admissível que satisfaz <span class="math-inline">P</span></p></blockquote>
+<p data-keep-count="2">é, portanto:</p>
+<blockquote><p>Todos os valores admissíveis deixam de satisfazer <span class="math-inline">P</span>.</p></blockquote>
+<p data-keep-count="2">Simbolicamente,</p>
+<div class="math-structural">¬(∃x P(x)) ≡ ∀x ¬P(x).</div>
+<p>Novamente, as duas mudanças na fórmula possuem uma razão precisa.</p>
+<p>O quantificador passa de <span class="math-inline">∃</span> para <span class="math-inline">∀</span>, porque negar a existência de qualquer caso favorável exige que a falha ocorra em todos os valores admissíveis.</p>
+<p>Ao mesmo tempo, <span class="math-inline">P(x)</span> passa para <span class="math-inline">¬P(x)</span>, porque cada um desses valores deve deixar de satisfazer a propriedade original.</p>
+<p>A exigência agora pode ser vista de outra maneira.</p>
+<p>Para confirmar <span class="math-inline">∃x P(x)</span>, um único testemunho favorável é suficiente.</p>
+<p>Para negar essa mesma afirmação, porém, precisamos eliminar a possibilidade de <strong>qualquer</strong> testemunho. Por isso, a negação existencial assume forma universal.</p>
+<p>Essa estrutura também permite distinguir duas afirmações que podem parecer semelhantes: <span class="math-inline">¬(∃x P(x))</span> e</p>
+<div class="math-line">∃x ¬P(x).</div>
+<p data-keep-count="2">A primeira significa:</p>
+<blockquote><p>Nenhum valor admissível satisfaz <span class="math-inline">P</span>.</p></blockquote>
+<p data-keep-count="2">A segunda significa:</p>
+<blockquote><p>Existe pelo menos um valor admissível que não satisfaz <span class="math-inline">P</span>.</p></blockquote>
+<p>Retome o domínio com <span class="math-inline">2</span>, <span class="math-inline">5</span> e <span class="math-inline">7</span>, e a condição <span class="math-inline">P(x): x&gt;4</span>.</p>
+<p>Como <span class="math-inline">2&gt;4</span> é falsa, temos <span class="math-inline">∃x ¬P(x)</span> verdadeira.</p>
+<p>Há pelo menos um valor que não satisfaz <span class="math-inline">P</span>.</p>
+<p>Mas <span class="math-inline">¬(∃x P(x))</span> é falsa, porque existem valores que satisfazem <span class="math-inline">P</span>, como <span class="math-inline">5</span> e <span class="math-inline">7</span>.</p>
+<p>Portanto, <span class="math-inline">∃x ¬P(x)</span> não significa que nenhum valor satisfaça <span class="math-inline">P</span>. Significa apenas que ao menos um valor não satisfaz.</p>
+<p>Essa diferença revela por que negar somente a propriedade interna, mantendo o mesmo quantificador, não produz a negação correta da proposição inteira.</p>
+<div class="table-wrap visual" data-visual="3"><table class="analysis-table negation-duality-table"><thead><tr><th scope="col">Afirmação negada</th><th scope="col">Forma equivalente</th><th scope="col">Leitura</th></tr></thead><tbody><tr><td><span class="math-inline">¬(<b class="quantifier-mark">∀</b>x P(x))</span></td><td><span class="math-inline"><b class="quantifier-mark">∃</b>x <b class="negated-property">¬P(x)</b></span></td><td>existe pelo menos uma exceção</td></tr><tr><td><span class="math-inline">¬(<b class="quantifier-mark">∃</b>x P(x))</span></td><td><span class="math-inline"><b class="quantifier-mark">∀</b>x <b class="negated-property">¬P(x)</b></span></td><td>todos os casos deixam de satisfazer <span class="math-inline">P</span></td></tr></tbody></table></div>
+<p>A razão das duas equivalências pode ser condensada sem recorrer à memorização.</p>
+<p data-keep-count="2">A universal é negada por uma existência contrária porque uma única exceção basta para romper uma exigência sobre todos:</p>
+<div class="math-structural">¬(∀x P(x)) ≡ ∃x ¬P(x).</div>
+<p data-keep-count="2">A existencial é negada por uma universal contrária porque, para eliminar qualquer testemunho possível, todos os casos precisam falhar:</p>
+<div class="math-structural">¬(∃x P(x)) ≡ ∀x ¬P(x).</div>
+<div class="item-title keep-with-next" data-keep-count="2">3. Domínio, alcance e negação da propriedade interna</div>
+<p>Ao negar uma afirmação quantificada, a negação não altera silenciosamente o contexto em que a proposição está sendo interpretada.</p>
+<p data-keep-count="2">Considere:</p>
+<div class="math-line">∀x P(x).</div>
+<p>Se o domínio estabelece quais valores são admissíveis para <span class="math-inline">x</span>, então sua negação continua falando <strong>desses mesmos valores</strong>.</p>
+<p data-keep-count="2">Negar:</p>
+<blockquote><p>Todos os valores admissíveis satisfazem <span class="math-inline">P</span></p></blockquote>
+<p data-keep-count="2">significa:</p>
+<blockquote><p>Entre esses mesmos valores admissíveis, existe pelo menos um que não satisfaz <span class="math-inline">P</span>.</p></blockquote>
+<p>Não seria uma negação correta mudar o domínio e depois procurar uma exceção em outro contexto. A afirmação original e sua negação precisam referir-se aos mesmos objetos admissíveis.</p>
+<p>A posição da negação também importa.</p>
+<p>Em <span class="math-inline">¬(∀x P(x)),</span> a negação atua sobre a afirmação quantificada completa.</p>
+<p>A equivalência</p>
+<div class="math-structural">¬(∀x P(x)) ≡ ∃x ¬P(x)</div>
+<p>reorganiza essa estrutura: o quantificador universal torna-se existencial, enquanto a negação passa a atuar sobre a condição <span class="math-inline">P(x)</span>.</p>
+<p>Por isso, não basta escrever <span class="math-inline">∃x P(x)</span>. Essa expressão apenas afirma que existe algum caso favorável a <span class="math-inline">P</span>; ela não procura uma exceção à universal.</p>
+<p>Da mesma forma, <span class="math-inline">∀x ¬P(x)</span> é mais forte do que a simples negação da universal. Ela afirma que nenhum valor admissível satisfaz <span class="math-inline">P</span>, quando, para negar a universal, bastaria uma única exceção.</p>
+<p>A necessidade de respeitar o alcance torna-se ainda mais visível quando a condição interna possui sua própria estrutura lógica.</p>
+<p data-keep-count="2">Considere:</p>
+<div class="math-line">∀x (A(x)→ B(x)).</div>
+<p data-keep-count="2">Essa proposição expressa:</p>
+<blockquote><p>Todo <span class="math-inline">A</span> é <span class="math-inline">B</span>.</p></blockquote>
+<p>Para cada valor admissível, a afirmação exige que, se <span class="math-inline">A(x)</span> for satisfeita, então <span class="math-inline">B(x)</span> também seja.</p>
+<p data-keep-count="2">Para negar essa proposição, começamos pela estrutura universal completa:</p>
+<div class="math-line">¬(∀x (A(x)→ B(x))).</div>
+<p data-keep-count="2">A negação da universal afirma que existe pelo menos um valor admissível para o qual a condição interna falha:</p>
+<div class="math-structural">¬(∀x (A(x)→ B(x))) ≡ ∃x ¬(A(x)→ B(x)).</div>
+<p>Agora a questão está concentrada na condição <span class="math-inline">A(x)→ B(x)</span>.</p>
+<p data-keep-count="2">Sua negação já possui uma forma conhecida:</p>
+<div class="math-structural">¬(A(x)→ B(x)) ≡ A(x)∧¬B(x).</div>
+<p data-keep-count="2">Substituindo essa equivalência na expressão quantificada, obtemos:</p>
+<div class="math-structural"><span class="math-step">¬(∀x (A(x)→ B(x))) </span><span class="math-step">≡ ∃x ¬(A(x)→ B(x)) </span><span class="math-step">≡ ∃x (A(x)∧¬B(x)).</span></div>
+<p>O resultado possui uma interpretação precisa.</p>
+<p>A expressão <span class="math-inline">∃x (A(x)∧¬B(x))</span> afirma que existe pelo menos um valor admissível que satisfaz <span class="math-inline">A</span> e, ao mesmo tempo, não satisfaz <span class="math-inline">B</span>.</p>
+<p data-keep-count="2">É exatamente esse tipo de caso que torna falsa a afirmação:</p>
+<blockquote><p>Todo <span class="math-inline">A</span> é <span class="math-inline">B</span>.</p></blockquote>
+<p>Não basta encontrar um valor para o qual <span class="math-inline">B(x)</span> seja falsa. Se esse valor também não satisfizer <span class="math-inline">A(x)</span>, ele não viola a relação condicional.</p>
+<p>Também não basta encontrar um valor que satisfaça <span class="math-inline">A(x)</span>. Se ele satisfizer <span class="math-inline">B(x)</span> igualmente, a exigência continua respeitada.</p>
+<p>O contraexemplo precisa reunir as duas condições no <strong>mesmo valor</strong>.</p>
+<p>Para um valor admissível <span class="math-inline">a</span>, <span class="math-inline">A(a)</span> deve ser verdadeira e <span class="math-inline">B(a)</span> deve ser falsa. Portanto, <span class="math-inline">A(a)∧¬B(a)</span> deve ser verdadeira.</p>
+<p>É essa combinação que realiza concretamente a falha do condicional dentro da afirmação universal.</p>
+<p>Assim, o padrão <span class="math-inline">p∧¬q,</span> que descreve a falha de um condicional, reaparece agora numa estrutura quantificada. Em vez de trabalhar apenas com proposições inteiras <span class="math-inline">p</span> e <span class="math-inline">q</span>, procuramos um valor concreto <span class="math-inline">a</span> do domínio que faça</p>
+<p><span class="math-inline">A(a)∧¬B(a)</span> ser verdadeira.</p>
+<p data-keep-count="2">Esse valor é um contraexemplo a:</p>
+<div class="math-line">∀x (A(x)→ B(x)).</div>
+<p data-keep-count="2">Ao mesmo tempo, ele é um testemunho da negação dessa afirmação:</p>
+<div class="math-line">∃x (A(x)∧¬B(x)).</div>
+<p>O contraexemplo, portanto, não constitui uma exceção informal acrescentada de fora do raciocínio. Ele é precisamente um valor do domínio que satisfaz a condição expressa pela negação da afirmação universal.</p>
+</section>
+<section class="source-section" data-context="TEXTO PRÁTICO • EXEMPLOS RESOLVIDOS">
+<header class="section-opening" data-keep-count="4"><h1 class="section-label outline-root">Texto Prático</h1><h2 class="section-title">Exemplos Resolvidos</h2></header>
+<div class="item-title keep-with-next" data-keep-count="3">Exemplo 1 — Do domínio às afirmações quantificadas</div>
+<p data-keep-count="2">Considere a condição:</p>
+<div class="math-line">P(x):  x+1&gt;0.</div>
+<p data-keep-count="2">Os valores admissíveis para <span class="math-inline">x</span> são:</p>
+<div class="math-line">-2,  -1,  0,  2,  5.</div>
+<p data-keep-count="2">Organize a investigação desses casos e, a partir dela, determine:</p>
+<ul><li>quais atribuições tornam <span class="math-inline">P(x)</span> verdadeira;</li><li>quais a tornam falsa;</li><li>o valor lógico de <span class="math-inline">∀x P(x);</span></li><li>o valor lógico de <span class="math-inline">∃x P(x);</span></li><li>quais valores podem funcionar como testemunhos da afirmação existencial;</li><li>quais valores constituem exceções à afirmação universal.</li></ul>
+<p>A ideia é construir <strong>uma única análise do domínio</strong> e utilizá-la para responder às diferentes perguntas.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">Resolução</div>
+<p>A condição <span class="math-inline">P(x):  x+1&gt;0</span> ainda depende do valor atribuído a <span class="math-inline">x</span>. Por isso, antes de decidir qualquer afirmação global, precisamos saber como <span class="math-inline">P(x)</span> se comporta nos casos que realmente pertencem ao problema.</p>
+<p data-keep-count="2">Os únicos valores admissíveis são:</p>
+<div class="math-line">-2,  -1,  0,  2,  5.</div>
+<p>Não precisamos procurar outros números. Toda a investigação será feita com esses cinco casos.</p>
+<p>Comecemos pelas atribuições.</p>
+<p>Para <span class="math-inline">x=-2</span>, <span class="math-inline">P(-2)</span> representa: <span class="math-inline">-2+1&gt;0,</span> isto é, <span class="math-inline">-1&gt;0.</span></p>
+<p>Essa proposição é falsa. Portanto,</p>
+<div class="math-line">P(-2)=F.</div>
+<p>Para <span class="math-inline">x=-1</span>, <span class="math-inline">P(-1)</span> representa: <span class="math-inline">-1+1&gt;0,</span> isto é, <span class="math-inline">0&gt;0,</span> que também é falsa. Logo,</p>
+<div class="math-line">P(-1)=F.</div>
+<p>Os demais casos podem ser avaliados da mesma maneira: <span class="math-inline">P(0):  0+1&gt;0,</span> portanto,</p>
+<div class="math-line">P(0)=V;</div>
+<p><span class="math-inline">P(2):  2+1&gt;0,</span> portanto,</p>
+<div class="math-line">P(2)=V;</div>
+<p><span class="math-inline">P(5):  5+1&gt;0,</span> portanto,</p>
+<div class="math-line">P(5)=V.</div>
+<p data-keep-count="2">Assim, o perfil completo das avaliações é:</p>
+<div class="math-line">P(-2)=F,  P(-1)=F,  P(0)=V,  P(2)=V,  P(5)=V.</div>
+<p>Agora não precisamos começar uma nova investigação para cada quantificador. Podemos simplesmente <strong>ler esse perfil de maneiras diferentes</strong>.</p>
+<p data-keep-count="2">Para a afirmação universal: <span class="math-inline">∀x P(x),</span> a pergunta relevante é:</p>
+<blockquote><p>Todos os valores admissíveis produziram uma proposição verdadeira?</p></blockquote>
+<p>Não.</p>
+<p>Os valores: <span class="math-inline">-2</span> e: <span class="math-inline">-1</span> produziram proposições falsas.</p>
+<p data-keep-count="2">Logo,</p>
+<div class="math-line answer-line"><span class="answer-box">∀x P(x)<span class="math-text"> é falsa</span>.</span></div>
+<p>Os valores <span class="math-inline">-2</span> e <span class="math-inline">-1</span> constituem exceções à exigência universal.</p>
+<p data-keep-count="2">Agora considere a afirmação existencial:</p>
+<div class="math-line">∃x P(x).</div>
+<p data-keep-count="2">A pergunta passa a ser:</p>
+<blockquote><p>Existe pelo menos um valor admissível para o qual <span class="math-inline">P(x)</span> é verdadeira?</p></blockquote>
+<p>Sim.</p>
+<p>Temos, por exemplo,</p>
+<div class="math-line">P(0)=V.</div>
+<p data-keep-count="2">Portanto,</p>
+<div class="math-line answer-line"><span class="answer-box">∃x P(x)<span class="math-text"> é verdadeira</span>.</span></div>
+<p>O valor <span class="math-inline">0</span> já seria suficiente como testemunho. Mas ele não é o único: <span class="math-inline">0, 2, 5</span> são todos testemunhos possíveis da afirmação existencial.</p>
+<div class="table-wrap visual" data-visual="4" data-keep-count="2"><table class="analysis-table domain-investigation-table"><thead><tr><th scope="col">Valor admissível <span class="math-inline">a</span></th><th scope="col"><span class="math-inline">P(a)</span></th><th scope="col">Valor lógico</th></tr></thead><tbody><tr><td><span class="math-inline">-2</span></td><td><span class="math-inline">-2+1&gt;0</span></td><td><span class="math-inline">F</span></td></tr><tr><td><span class="math-inline">-1</span></td><td><span class="math-inline">-1+1&gt;0</span></td><td><span class="math-inline">F</span></td></tr><tr><td><span class="math-inline">0</span></td><td><span class="math-inline">0+1&gt;0</span></td><td><span class="math-inline">V</span></td></tr><tr><td><span class="math-inline">2</span></td><td><span class="math-inline">2+1&gt;0</span></td><td><span class="math-inline">V</span></td></tr><tr><td><span class="math-inline">5</span></td><td><span class="math-inline">5+1&gt;0</span></td><td><span class="math-inline">V</span></td></tr></tbody></table></div>
+<div class="quantifier-reading-grid visual"><div class="reading-panel"><div class="reading-label">Universal</div><p class="math-line">∀x P(x)</p><p>Todos os casos são verdadeiros?</p><p><strong>Falsa.</strong></p><p>Exceções à universal: <span class="math-inline">−2, −1.</span></p></div><div class="reading-panel"><div class="reading-label">Existencial</div><p class="math-line">∃x P(x)</p><p>Existe pelo menos um caso verdadeiro?</p><p><strong>Verdadeira.</strong></p><p>Testemunhos possíveis: <span class="math-inline">0, 2, 5.</span></p></div></div>
+<p>O ganho do procedimento está em organizar primeiro os <strong>casos admissíveis</strong> e só depois fazer a leitura global.</p>
+<p>Com o mesmo perfil: <span class="math-inline">F,  F,  V,  V,  V,</span> podemos perceber imediatamente que a afirmação universal falha porque nem todos os casos são verdadeiros, enquanto a afirmação existencial é satisfeita porque há casos favoráveis.</p>
+<p>Assim, uma investigação bem organizada do domínio fornece, ao mesmo tempo, as atribuições verdadeiras e falsas, os possíveis testemunhos da existencial e as exceções à universal.</p>
+</section>
+<section class="source-section" data-context="TEXTO PRÁTICO • QUIZ">
+<header class="section-opening" data-keep-count="4"><div class="section-label">TEXTO PRÁTICO</div><h2 class="section-title">Quiz</h2></header>
+<div class="item-title keep-with-next" data-keep-count="3">Questão 1</div>
+<p data-keep-count="2">Considere as expressões:</p>
+<p data-keep-count="2"><strong>I.</strong></p>
+<div class="math-line">17<sup>2</sup>&lt;300.</div>
+<p><strong>II.</strong> <span class="math-inline">y-4=9.</span></p>
+<p data-keep-count="2"><strong>III.</strong></p>
+<div class="math-line">36=6·6.</div>
+<p data-keep-count="2">Um estudante afirma:</p>
+<blockquote class="student-quote"><p>“A expressão I deve ser uma sentença aberta enquanto eu ainda não souber se ela é verdadeira ou falsa.”</p></blockquote>
+<p>Qual alternativa analisa corretamente as três expressões?</p>
+<p><strong>A)</strong> I e II são sentenças abertas, porque seus valores lógicos precisam ser descobertos.</p>
+<p><strong>B)</strong> Apenas II é uma sentença aberta; I e III são proposições determinadas, independentemente de a verificação ser imediata.</p>
+<p><strong>C)</strong> Apenas III é uma proposição; I e II permanecem abertas até que seus resultados sejam calculados.</p>
+<p><strong>D)</strong> As três são proposições determinadas, pois todas utilizam linguagem matemática.</p>
+<div class="item-title keep-with-next" data-keep-count="3">Questão 2</div>
+<p data-keep-count="2">Considere: <span class="math-inline">P(x):  x<span class="math-text"> é múltiplo de </span>4</span> e:</p>
+<div class="math-line">p:  12<span class="math-text"> é múltiplo de </span>4.</div>
+<p>Suponha ainda que <span class="math-inline">8</span> seja um valor admissível para <span class="math-inline">x</span>.</p>
+<p>Qual afirmação é correta?</p>
+<p><strong>A)</strong> <span class="math-inline">P(x)</span> e <span class="math-inline">p</span> possuem a mesma função: ambos nomeiam proposições já determinadas.</p>
+<p><strong>B)</strong> <span class="math-inline">P(8)</span> continua sendo uma sentença aberta porque a letra <span class="math-inline">P</span> permanece na expressão.</p>
+<p><strong>C)</strong> <span class="math-inline">P(x)</span> representa uma condição dependente de <span class="math-inline">x</span>, <span class="math-inline">P(8)</span> representa uma proposição determinada e <span class="math-inline">p</span> nomeia uma proposição completa.</p>
+<p><strong>D)</strong> <span class="math-inline">P(x)</span> e <span class="math-inline">P(8)</span> possuem o mesmo status lógico, pois expressam a mesma propriedade.</p>
+<div class="item-title keep-with-next" data-keep-count="2">Questão 3</div>
+<p>Qual afirmação descreve corretamente o quantificador existencial?</p>
+<p><strong>A)</strong> <span class="math-inline">∃x P(x)</span> afirma que exatamente um valor admissível satisfaz <span class="math-inline">P</span>.</p>
+<p><strong>B)</strong> <span class="math-inline">∃x P(x)</span> afirma que a maioria dos valores admissíveis satisfaz <span class="math-inline">P</span>.</p>
+<p><strong>C)</strong> <span class="math-inline">∃x P(x)</span> exige que pelo menos um valor admissível satisfaça <span class="math-inline">P</span>, podendo haver vários casos favoráveis.</p>
+<p><strong>D)</strong> <span class="math-inline">∃x P(x)</span> só é verdadeira quando todos os valores admissíveis satisfazem <span class="math-inline">P</span>.</p>
+<div class="item-title keep-with-next" data-keep-count="3">Questão 4</div>
+<p data-keep-count="2">Considere:</p>
+<p><strong><span class="math-inline">A(x)</span>:</strong> <span class="math-inline">x</span> possui a propriedade <span class="math-inline">A</span>.</p>
+<p><strong><span class="math-inline">B(x)</span>:</strong> <span class="math-inline">x</span> possui a propriedade <span class="math-inline">B</span>.</p>
+<p data-keep-count="2">Qual par representa corretamente as frases:</p>
+<p><strong>I.</strong> Todo <span class="math-inline">A</span> é <span class="math-inline">B</span>.</p>
+<p><strong>II.</strong> Existe pelo menos um <span class="math-inline">A</span> que é <span class="math-inline">B</span>.</p>
+<p data-keep-count="2"><strong>A)</strong> <span class="math-inline">∀x (A(x)∧ B(x))</span> e:</p>
+<div class="math-line">∃x (A(x)→ B(x)).</div>
+<p data-keep-count="2"><strong>B)</strong> <span class="math-inline">∀x (A(x)→ B(x))</span> e:</p>
+<div class="math-line">∃x (A(x)∧ B(x)).</div>
+<p data-keep-count="2"><strong>C)</strong> <span class="math-inline">∃x (A(x)→ B(x))</span> e:</p>
+<div class="math-line">∀x (A(x)∧ B(x)).</div>
+<p data-keep-count="2"><strong>D)</strong> <span class="math-inline">∀x (A(x)→ B(x))</span> e:</p>
+<div class="math-line">∃x (A(x)→ B(x)).</div>
+<div class="item-title keep-with-next" data-keep-count="3">Questão 5</div>
+<p data-keep-count="2">Qual expressão é logicamente equivalente a:</p>
+<div class="math-line">¬(∃x P(x))?</div>
+<p data-keep-count="2"><strong>A)</strong></p>
+<div class="math-line">∃x ¬P(x)</div>
+<p data-keep-count="2"><strong>B)</strong></p>
+<div class="math-line">∀x ¬P(x)</div>
+<p data-keep-count="2"><strong>C)</strong></p>
+<div class="math-line">∀x P(x)</div>
+<p data-keep-count="2"><strong>D)</strong></p>
+<div class="math-line">¬(∀x P(x))</div>
+</section>
+<section class="source-section" data-context="TEXTO PRÁTICO • EXERCÍCIOS">
+<header class="section-opening" data-keep-count="3"><div class="section-label">TEXTO PRÁTICO</div><h2 class="section-title">Exercícios</h2></header>
+<div class="item-title keep-with-next" data-keep-count="2">Exercício 1 — Aberta, determinada ou apenas não verificada?</div>
+<p>Analise as expressões declarativas abaixo.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">I</div>
+<div class="math-line">14+9=23.</div>
+<div class="minor-title keep-with-next" data-keep-count="2">II</div>
+<div class="math-line">t<sup>2</sup>=25.</div>
+<div class="minor-title keep-with-next" data-keep-count="2">III</div>
+<div class="math-line">17<sup>2</sup>&lt;300.</div>
+<div class="minor-title keep-with-next" data-keep-count="2">IV</div>
+<div class="math-line">(-5)<sup>2</sup>=25.</div>
+<div class="minor-title keep-with-next" data-keep-count="2">V</div>
+<blockquote><p>O número inteiro <span class="math-inline">n</span> é par.</p></blockquote>
+<div class="minor-title keep-with-next" data-keep-count="3">a)</div>
+<p data-keep-count="2">Classifique cada expressão como:</p>
+<ul><li><strong>proposição determinada</strong>;</li><li><strong>sentença aberta</strong>.</li></ul>
+<div class="minor-title keep-with-next" data-keep-count="2">b)</div>
+<p>Identifique todas as expressões cujo valor lógico depende da escolha de um valor para uma variável.</p>
+<p>Explique o que permanece indeterminado em sua estrutura.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">c)</div>
+<p>Compare as expressões II e IV.</p>
+<p>Na expressão IV, um valor específico já ocupa a posição que, em II, pode variar. Explique o que essa diferença provoca no status lógico das duas expressões.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">d)</div>
+<p>Considere agora a expressão III.</p>
+<p data-keep-count="2">Um estudante ainda não efetuou o cálculo necessário para decidir se ela é verdadeira ou falsa e afirma:</p>
+<blockquote class="student-quote"><p>“Enquanto eu não fizer a conta, a sentença continua aberta.”</p></blockquote>
+<p data-keep-count="2">Analise essa afirmação. Sua resposta deve distinguir:</p>
+<ul><li>desconhecer o valor lógico de uma proposição;</li><li>depender de uma atribuição ainda não realizada.</li></ul>
+<div class="item-title keep-with-next" data-keep-count="3">Exercício 2 — Predicado, atribuição e variável livre</div>
+<p data-keep-count="2">Considere como valores admissíveis para <span class="math-inline">x</span>: <span class="math-inline">-4,  -3,  -2,  0,  1,  4</span> e o predicado:</p>
+<div class="math-line">P(x):  x<sup>2</sup>&lt;10.</div>
+<div class="minor-title keep-with-next" data-keep-count="2">a)</div>
+<p>Escreva em linguagem verbal a condição representada por <span class="math-inline">P(x)</span>.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">b)</div>
+<p>Em <span class="math-inline">P(x)</span>, qual elemento ainda pode receber diferentes valores?</p>
+<p>Explique por que, nesse estágio, a expressão continua aberta.</p>
+<div class="minor-title keep-with-next" data-keep-count="3">c)</div>
+<p data-keep-count="2">Avalie:</p>
+<div class="math-line">P(-4),  P(-2),  P(1).</div>
+<p data-keep-count="2">Em cada caso:</p>
+<ol><li>faça a atribuição;</li><li>escreva a proposição obtida;</li><li>determine seu valor lógico.</li></ol>
+<div class="minor-title keep-with-next" data-keep-count="3">d)</div>
+<p data-keep-count="2">Escolha, entre os valores admissíveis fornecidos:</p>
+<ul><li>um valor diferente dos utilizados no item <strong>c</strong> que torne <span class="math-inline">P(x)</span> verdadeira;</li><li>um valor diferente dos utilizados no item <strong>c</strong> que torne <span class="math-inline">P(x)</span> falsa.</li></ul>
+<p>Quando houver mais de uma possibilidade, basta apresentar uma escolha válida para cada caso.</p>
+<div class="minor-title keep-with-next" data-keep-count="3">e)</div>
+<p data-keep-count="2">Considere:</p>
+<div class="math-line">p:  (-2)<sup>2</sup>&lt;10.</div>
+<p>Compare as funções de: <span class="math-inline">p</span> e: <span class="math-inline">P(x).</span></p>
+<p>Explique por que a semelhança das letras utilizadas para nomeá-los não faz com que representem o mesmo tipo de estrutura lógica.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">f)</div>
+<p>Após uma atribuição admissível <span class="math-inline">a</span>, a expressão: <span class="math-inline">P(a)</span> continua aberta da mesma maneira que <span class="math-inline">P(x)</span>?</p>
+<p>Justifique.</p>
+<div class="item-title keep-with-next" data-keep-count="3">Exercício 3 — O mesmo predicado em domínios diferentes</div>
+<p data-keep-count="2">Considere o predicado:</p>
+<div class="math-line">P(x):  x&gt;1.</div>
+<p>Ele será investigado em três contextos diferentes.</p>
+<div class="domain-panel-grid visual" data-visual="5"><div class="reading-panel"><div class="reading-label">Domínio I</div><p>Os valores admissíveis são:</p><div class="math-line">-2, 0, 2, 4.</div><p>Valores que satisfazem <span class="math-inline">P</span>: <span class="blank-line" aria-label="Espaço para resposta"></span></p></div><div class="reading-panel"><div class="reading-label">Domínio II</div><p>Os valores admissíveis são:</p><div class="math-line">0, 1, 2, 3.</div><p>Valores que satisfazem <span class="math-inline">P</span>: <span class="blank-line" aria-label="Espaço para resposta"></span></p></div><div class="reading-panel"><div class="reading-label">Domínio III</div><p>Os valores admissíveis são:</p><div class="math-line">-3, -2, -1, 0.</div><p>Valores que satisfazem <span class="math-inline">P</span>: <span class="blank-line" aria-label="Espaço para resposta"></span></p></div></div>
+<div class="minor-title keep-with-next" data-keep-count="2">a)</div>
+<p>Para cada domínio, identifique quais valores admissíveis satisfazem <span class="math-inline">P(x)</span>.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">b)</div>
+<p>Considere o valor: <span class="math-inline">4.</span></p>
+<p>Ele satisfaz a condição <span class="math-inline">x&gt;1</span>.</p>
+<p>Em quais dos três domínios esse valor pode ser utilizado como uma atribuição admissível na investigação apresentada?</p>
+<p>Explique por que satisfazer o predicado, por si só, não basta para que um valor participe de determinado contexto.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">c)</div>
+<p>Faça a mesma análise para o valor: <span class="math-inline">3.</span></p>
+<div class="minor-title keep-with-next" data-keep-count="2">d)</div>
+<p>Compare os Domínios I e III.</p>
+<p>Há algum valor admissível que satisfaça <span class="math-inline">P(x)</span> em cada um deles?</p>
+<p>Registre o resultado sem alterar a condição <span class="math-inline">P(x)</span>.</p>
+<div class="minor-title keep-with-next" data-keep-count="3">e)</div>
+<p data-keep-count="2">Depois das três investigações, responda:</p>
+<ul><li>o que mudou de um domínio para outro?</li><li>o que permaneceu igual?</li></ul>
+<p>Justifique utilizando os casos analisados, e não apenas os nomes “predicado” e “domínio”.</p>
+<div class="item-title keep-with-next" data-keep-count="3">Exercício 4 — Uma investigação, duas leituras</div>
+<p data-keep-count="2">Considere: <span class="math-inline">Q(x):  x&lt;8</span> e, como valores admissíveis:</p>
+<div class="math-line">-3, 0, 2, 5, 7.</div>
+<p data-keep-count="2">Organize a investigação desses casos na tabela:</p>
+<div class="table-wrap visual"><table class="analysis-table worksheet-table"><thead><tr><th scope="col">Valor admissível <span class="math-inline">a</span></th><th scope="col"><span class="math-inline">Q(a)</span></th><th scope="col">Valor lógico</th></tr></thead><tbody><tr><td><span class="math-inline">-3</span></td><td></td><td></td></tr><tr><td><span class="math-inline">0</span></td><td></td><td></td></tr><tr><td><span class="math-inline">2</span></td><td></td><td></td></tr><tr><td><span class="math-inline">5</span></td><td></td><td></td></tr><tr><td><span class="math-inline">7</span></td><td></td><td></td></tr></tbody></table></div>
+<div class="minor-title keep-with-next" data-keep-count="2">a)</div>
+<p>Complete a tabela.</p>
+<div class="minor-title keep-with-next" data-keep-count="3">b)</div>
+<p data-keep-count="2">A partir do perfil obtido, determine o valor lógico de:</p>
+<div class="math-line">∀x Q(x).</div>
+<p>Justifique a decisão usando os casos do domínio.</p>
+<div class="minor-title keep-with-next" data-keep-count="3">c)</div>
+<p data-keep-count="2">Determine também o valor lógico de:</p>
+<div class="math-line">∃x Q(x).</div>
+<div class="minor-title keep-with-next" data-keep-count="2">d)</div>
+<p>Se a afirmação existencial for verdadeira, apresente um valor admissível que possa funcionar como testemunho.</p>
+<p>Se houver mais de uma possibilidade, basta escolher uma.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">e)</div>
+<p>Existe algum valor admissível que funcione como exceção à exigência universal?</p>
+<p>Justifique sua resposta a partir da tabela.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">f)</div>
+<p>Compare o papel desempenhado pela mesma tabela nos itens <strong>b</strong> e <strong>c</strong>.</p>
+<p>Que pergunta diferente fazemos ao perfil dos casos quando analisamos a universal e quando analisamos a existencial?</p>
+<div class="item-title keep-with-next" data-keep-count="2">Exercício 5 — Do valor global aos casos</div>
+<p>Em todos os quatro cenários abaixo, considere que o domínio possui <strong>pelo menos dois valores admissíveis</strong> e que <span class="math-inline">P(x)</span> é um predicado já determinado.</p>
+<p data-keep-count="2">Considere as seguintes afirmações sobre os casos:</p>
+<p><strong>I.</strong> Todo valor admissível satisfaz <span class="math-inline">P</span>.</p>
+<p><strong>II.</strong> Existe pelo menos um valor admissível que satisfaz <span class="math-inline">P</span>.</p>
+<p><strong>III.</strong> Existe pelo menos um valor admissível que não satisfaz <span class="math-inline">P</span>.</p>
+<p><strong>IV.</strong> Nenhum valor admissível satisfaz <span class="math-inline">P</span>.</p>
+<p data-keep-count="2">Para cada cenário, analise as afirmações I–IV e classifique cada uma como:</p>
+<ul><li><strong>obrigatoriamente verdadeira</strong>;</li><li><strong>possível, mas não obrigatória</strong>;</li><li><strong>impossível</strong>.</li></ul>
+<div class="minor-title keep-with-next" data-keep-count="3">Cenário A</div>
+<p data-keep-count="2">Sabe-se que:</p>
+<div class="math-line">∀x P(x)=V.</div>
+<div class="minor-title keep-with-next" data-keep-count="3">Cenário B</div>
+<p data-keep-count="2">Sabe-se que:</p>
+<div class="math-line">∀x P(x)=F.</div>
+<div class="minor-title keep-with-next" data-keep-count="3">Cenário C</div>
+<p data-keep-count="2">Sabe-se que:</p>
+<div class="math-line">∃x P(x)=V.</div>
+<div class="minor-title keep-with-next" data-keep-count="3">Cenário D</div>
+<p data-keep-count="2">Sabe-se que:</p>
+<div class="math-line">∃x P(x)=F.</div>
+<div class="minor-title keep-with-next" data-keep-count="2">a)</div>
+<p>Faça as classificações para os quatro cenários.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">b)</div>
+<p>No Cenário B, é possível determinar exatamente <strong>quantos</strong> valores admissíveis deixam de satisfazer <span class="math-inline">P</span>?</p>
+<p>Explique o que a informação fornecida obriga e o que ela deixa em aberto.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">c)</div>
+<p>No Cenário C, é possível concluir que todos os valores admissíveis satisfazem <span class="math-inline">P</span>?</p>
+<p>Se sua resposta for negativa, descreva dois perfis diferentes de valores <span class="math-inline">V/F</span> compatíveis com a informação dada.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">d)</div>
+<p>Compare os Cenários A e C.</p>
+<p>Explique por que a verdade de uma proposição universal fornece uma informação mais restritiva sobre os casos do que a simples verdade de uma proposição existencial.</p>
+<div class="item-title keep-with-next" data-keep-count="3">Exercício 6 — Traduzindo a quantificação</div>
+<p data-keep-count="2">Considere o predicado:</p>
+<div class="math-line">P(x):  x&gt;2.</div>
+<p>O domínio já está fixado, e <span class="math-inline">x</span> representa sempre um valor admissível desse domínio.</p>
+<div class="minor-title keep-with-next" data-keep-count="3">a)</div>
+<p data-keep-count="2">Represente simbolicamente:</p>
+<blockquote><p>Todo valor admissível é maior que 2.</p></blockquote>
+<div class="minor-title keep-with-next" data-keep-count="3">b)</div>
+<p data-keep-count="2">Represente simbolicamente:</p>
+<blockquote><p>Existe pelo menos um valor admissível maior que 2.</p></blockquote>
+<div class="minor-title keep-with-next" data-keep-count="3">c)</div>
+<p data-keep-count="2">Traduza para linguagem verbal:</p>
+<div class="math-line">∀x P(x).</div>
+<p>Escreva uma frase que preserve exatamente a força do quantificador utilizado.</p>
+<div class="minor-title keep-with-next" data-keep-count="3">d)</div>
+<p data-keep-count="2">Traduza:</p>
+<div class="math-line">∃x P(x).</div>
+<p>Sua frase não deve sugerir que existe exatamente um caso favorável.</p>
+<div class="minor-title keep-with-next" data-keep-count="3">e)</div>
+<p data-keep-count="2">Considere agora:</p>
+<div class="math-line">R(x):  x+4=10.</div>
+<p data-keep-count="2">Escreva em linguagem verbal:</p>
+<div class="math-line">∃x R(x).</div>
+<p data-keep-count="2">Depois identifique separadamente:</p>
+<ul><li>a informação fornecida pelo quantificador;</li><li>a condição interna expressa por <span class="math-inline">R(x)</span>.</li></ul>
+<div class="minor-title keep-with-next" data-keep-count="3">f)</div>
+<p data-keep-count="2">Compare: <span class="math-inline">P(5)</span> e:</p>
+<div class="math-line">∃x P(x).</div>
+<p>Ambas podem produzir proposições determinadas, mas fazem afirmações do mesmo tipo sobre o domínio?</p>
+<p>Explique a diferença entre fixar um caso particular e quantificar sobre os valores admissíveis.</p>
+<div class="item-title keep-with-next" data-keep-count="3">Exercício 7 — “Todo <span class="math-inline">A</span> é <span class="math-inline">B</span>” e “Existe um <span class="math-inline">A</span> que é <span class="math-inline">B</span>”</div>
+<p data-keep-count="2">Considere como valores admissíveis os números:</p>
+<div class="math-line">1, 2, 3, 4, 5, 6, 7.</div>
+<p data-keep-count="2">Defina: <span class="math-inline">A(x):  x<span class="math-text"> é par</span></span> e:</p>
+<div class="math-line">B(x):  x&lt;7.</div>
+<p>Queremos representar corretamente duas afirmações.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">Afirmação I</div>
+<blockquote><p>Todo número admissível que é par é menor que 7.</p></blockquote>
+<div class="minor-title keep-with-next" data-keep-count="2">Afirmação II</div>
+<blockquote><p>Existe pelo menos um número admissível que é par e menor que 7.</p></blockquote>
+<div class="minor-title keep-with-next" data-keep-count="3">a)</div>
+<p data-keep-count="2">Represente simbolicamente a Afirmação I utilizando:</p>
+<div class="math-line">A(x),  B(x), ∀, →.</div>
+<div class="minor-title keep-with-next" data-keep-count="3">b)</div>
+<p data-keep-count="2">Um estudante propõe para a Afirmação I:</p>
+<div class="math-line">∀x (A(x)∧ B(x)).</div>
+<p>Compare essa fórmula com a frase original.</p>
+<p>Examine especialmente o que ela afirma sobre os valores admissíveis que <strong>não</strong> satisfazem <span class="math-inline">A(x)</span>.</p>
+<p>Explique por que as duas estruturas não dizem a mesma coisa.</p>
+<div class="minor-title keep-with-next" data-keep-count="3">c)</div>
+<p data-keep-count="2">Represente simbolicamente a Afirmação II utilizando:</p>
+<div class="math-line">A(x),  B(x), ∃, ∧.</div>
+<div class="minor-title keep-with-next" data-keep-count="2">d)</div>
+<p>Outro estudante propõe: <span class="math-inline">∃x (A(x)→ B(x))</span> para representar a Afirmação II.</p>
+<p data-keep-count="2">Considere um valor admissível <span class="math-inline">a</span> para o qual: <span class="math-inline">A(a)=F</span> e:</p>
+<div class="math-line">B(a)=F.</div>
+<p data-keep-count="2">Avalie, nesse mesmo caso: <span class="math-inline">A(a)→ B(a)</span> e:</p>
+<div class="math-line">A(a)∧ B(a).</div>
+<p data-keep-count="2">Depois explique por que uma condicional verdadeira nesse tipo de caso não fornece necessariamente o objeto exigido pela frase:</p>
+<blockquote><p>Existe pelo menos um <span class="math-inline">A</span> que é <span class="math-inline">B</span>.</p></blockquote>
+<div class="minor-title keep-with-next" data-keep-count="3">e)</div>
+<p data-keep-count="2">Nas fórmulas corretas dos itens <strong>a</strong> e <strong>c</strong>, identifique:</p>
+<ul><li>o quantificador;</li><li>a expressão que aparece entre parênteses;</li><li>o conectivo utilizado dentro dessa expressão.</li></ul>
+<div class="minor-title keep-with-next" data-keep-count="3">f)</div>
+<p data-keep-count="2">Compare as funções de: <span class="math-inline">∀x (A(x)→ B(x))</span> e:</p>
+<div class="math-line">∃x (A(x)∧ B(x)).</div>
+<p>Explique por que a primeira organiza uma exigência sobre todos os valores admissíveis, enquanto a segunda procura um mesmo valor que reúna simultaneamente as duas propriedades.</p>
+<div class="item-title keep-with-next" data-keep-count="4">Exercício 8 — O que está sob o alcance do quantificador?</div>
+<p data-keep-count="3">Considere as três expressões:</p>
+<div class="minor-title keep-with-next" data-keep-count="2">I</div>
+<div class="math-line">∀x (P(x)→ Q(x)).</div>
+<div class="minor-title keep-with-next" data-keep-count="2">II</div>
+<div class="math-line">∃x (P(x)∧ Q(x)).</div>
+<div class="minor-title keep-with-next" data-keep-count="2">III</div>
+<div class="math-line">P(x)→ Q(x).</div>
+<div class="minor-title keep-with-next" data-keep-count="3">a)</div>
+<p data-keep-count="2">Nas expressões I e II, identifique:</p>
+<ul><li>o quantificador;</li><li>a expressão completa que aparece sob seu alcance;</li><li>o conectivo que organiza a estrutura interna.</li></ul>
+<div class="minor-title keep-with-next" data-keep-count="2">b)</div>
+<p>Compare o papel de <span class="math-inline">x</span> nas expressões I e III.</p>
+<p>Em qual delas <span class="math-inline">x</span> permanece livre para receber diferentes valores? Em qual delas seu papel já é determinado pelo quantificador?</p>
+<p>Explique a diferença sem alterar as condições <span class="math-inline">P(x)</span> e <span class="math-inline">Q(x)</span>.</p>
+<div class="minor-title keep-with-next" data-keep-count="3">c)</div>
+<p data-keep-count="2">Faça a mesma comparação entre II e:</p>
+<div class="math-line">P(x)∧ Q(x).</div>
+<p>O que muda quando acrescentamos o quantificador existencial à estrutura?</p>
+<div class="minor-title keep-with-next" data-keep-count="3">d)</div>
+<p data-keep-count="2">Observe os parênteses em: <span class="math-inline">∀x (P(x)→ Q(x))</span> e:</p>
+<div class="math-line">∃x (P(x)∧ Q(x)).</div>
+<p>Explique o que eles ajudam a tornar visível em relação ao alcance do quantificador.</p>
+<div class="minor-title keep-with-next" data-keep-count="3">e)</div>
+<p data-keep-count="2">Construa simbolicamente a afirmação:</p>
+<blockquote><p>Existe pelo menos um valor admissível para o qual <span class="math-inline">P(x)</span> e <span class="math-inline">Q(x)</span> são simultaneamente verdadeiras.</p></blockquote>
+<p data-keep-count="2">Utilize apenas:</p>
+<div class="math-line">P(x),  Q(x), ∃, ∧.</div>
+<div class="minor-title keep-with-next" data-keep-count="3">f)</div>
+<p data-keep-count="2">Agora considere as seguintes informações separadas:</p>
+<ul><li>a afirmação deve tratar <strong>todos</strong> os valores admissíveis;</li><li>para cada valor considerado, queremos exigir que, se <span class="math-inline">P(x)</span> for satisfeita, <span class="math-inline">Q(x)</span> também seja;</li><li>a relação interna deve ser condicional.</li></ul>
+<p>Construa a fórmula correspondente e indique qual parte está sob o alcance do quantificador.</p>
+<div class="item-title keep-with-next" data-keep-count="3">Exercício 9 — Quando uma exceção rompe a universal</div>
+<p data-keep-count="2">Considere como valores admissíveis para <span class="math-inline">x</span>: <span class="math-inline">0, 1, 2, 4</span> e o predicado:</p>
+<div class="math-line">P(x):  2x&lt;7.</div>
+<div class="minor-title keep-with-next" data-keep-count="3">a)</div>
+<p data-keep-count="2">Avalie:</p>
+<div class="math-line">P(0),  P(1),  P(2),  P(4).</div>
+<p>Registre o valor lógico de cada proposição obtida.</p>
+<div class="minor-title keep-with-next" data-keep-count="3">b)</div>
+<p data-keep-count="2">Com base nesses casos, determine o valor lógico de:</p>
+<div class="math-line">∀x P(x).</div>
+<p>Justifique utilizando os valores admissíveis.</p>
+<div class="minor-title keep-with-next" data-keep-count="3">c)</div>
+<p data-keep-count="2">Escreva em linguagem verbal a <strong>negação</strong> da afirmação:</p>
+<div class="math-line">∀x P(x).</div>
+<p>Sua frase deve preservar o mesmo domínio.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">d)</div>
+<p>Represente simbolicamente a negação construída no item anterior.</p>
+<p>Depois registre a equivalência entre a afirmação universal negada e a forma que você encontrou.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">e)</div>
+<p>Entre os valores admissíveis, identifique qual deles pode funcionar como testemunho da proposição existencial presente na negação.</p>
+<p>Verifique explicitamente que, para esse valor, <span class="math-inline">¬P(x)</span> é verdadeira.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">f)</div>
+<p>Explique por que um único valor com essa característica já é suficiente para que a afirmação universal do item <strong>b</strong> seja falsa, mesmo que os demais casos satisfaçam <span class="math-inline">P(x)</span>.</p>
+<div class="minor-title keep-with-next" data-keep-count="3">g)</div>
+<p data-keep-count="2">Compare as duas funções desempenhadas pelo mesmo valor encontrado:</p>
+<ul><li>como exceção à afirmação universal;</li><li>como testemunho da afirmação existencial que expressa sua negação.</li></ul>
+<p>Explique por que essas duas descrições são compatíveis.</p>
+<div class="item-title keep-with-next" data-keep-count="3">Exercício 10 — Um caso desfavorável elimina uma existência?</div>
+<p data-keep-count="2">Considere como valores admissíveis: <span class="math-inline">1, 2, 3, 4</span> e o predicado:</p>
+<div class="math-line">P(x):  x<span class="math-text"> é múltiplo de </span>3.</div>
+<p data-keep-count="2">Um estudante afirma:</p>
+<blockquote class="student-quote"><p>“Como o número <span class="math-inline">2</span> não é múltiplo de 3, encontrei um caso em que <span class="math-inline">P(x)</span> é falsa. Portanto, é falso que exista algum valor admissível que satisfaça <span class="math-inline">P</span>.”</p></blockquote>
+<div class="minor-title keep-with-next" data-keep-count="2">a)</div>
+<p>Avalie <span class="math-inline">P(x)</span> para os quatro valores admissíveis.</p>
+<div class="minor-title keep-with-next" data-keep-count="3">b)</div>
+<p data-keep-count="2">Determine o valor lógico de:</p>
+<div class="math-line">∃x P(x).</div>
+<p>Indique quais casos do domínio são suficientes para sustentar sua decisão.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">c)</div>
+<p>Analise o raciocínio do estudante.</p>
+<p>Em que ponto a existência de um caso desfavorável foi utilizada de maneira incorreta?</p>
+<div class="minor-title keep-with-next" data-keep-count="2">d)</div>
+<p>Explique verbalmente o que precisaria ocorrer com <strong>todos os valores admissíveis</strong> para que: <span class="math-inline">∃x P(x)</span> fosse falsa.</p>
+<div class="minor-title keep-with-next" data-keep-count="3">e)</div>
+<p data-keep-count="2">Escreva simbolicamente a negação de:</p>
+<div class="math-line">∃x P(x).</div>
+<p>Depois registre a equivalência correspondente.</p>
+<div class="minor-title keep-with-next" data-keep-count="3">f)</div>
+<p data-keep-count="2">Considere agora:</p>
+<div class="math-line">∃x ¬P(x).</div>
+<p>Determine seu valor lógico no domínio apresentado.</p>
+<div class="minor-title keep-with-next" data-keep-count="3">g)</div>
+<p data-keep-count="2">Compare: <span class="math-inline">∃x ¬P(x)</span> e:</p>
+<div class="math-line">¬(∃x P(x)).</div>
+<p>Explique por que a primeira expressão pode ser verdadeira ao mesmo tempo que a segunda é falsa.</p>
+<div class="item-title keep-with-next" data-keep-count="4">Exercício 11 — Trocar só uma parte não basta</div>
+<div class="minor-title keep-with-next" data-keep-count="3">Parte I</div>
+<p data-keep-count="2">Considere a afirmação:</p>
+<div class="math-line">∀x P(x).</div>
+<p>Três estudantes propuseram as seguintes fórmulas para representar sua negação.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">Proposta I</div>
+<div class="math-line">∃x P(x)</div>
+<div class="minor-title keep-with-next" data-keep-count="2">Proposta II</div>
+<div class="math-line">∀x ¬P(x)</div>
+<div class="minor-title keep-with-next" data-keep-count="2">Proposta III</div>
+<div class="math-line">∃x ¬P(x)</div>
+<div class="minor-title keep-with-next" data-keep-count="3">a)</div>
+<p data-keep-count="2">Identifique qual proposta representa corretamente a negação de:</p>
+<div class="math-line">∀x P(x).</div>
+<div class="minor-title keep-with-next" data-keep-count="2">b)</div>
+<p>Nas duas propostas incorretas, determine o que foi alterado e o que permaneceu indevidamente inalterado em relação à proposição original.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">c)</div>
+<p>Traduza cada uma das três propostas para linguagem verbal.</p>
+<p>Sua tradução deve tornar perceptível que as fórmulas incorretas ainda possuem significados matemáticos próprios, embora não sejam a negação procurada.</p>
+<div class="minor-title keep-with-next" data-keep-count="3">Parte II</div>
+<p data-keep-count="2">Considere agora:</p>
+<div class="math-line">∃x Q(x).</div>
+<p>Outras três propostas foram apresentadas.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">Proposta I</div>
+<div class="math-line">∃x ¬Q(x)</div>
+<div class="minor-title keep-with-next" data-keep-count="2">Proposta II</div>
+<div class="math-line">∀x ¬Q(x)</div>
+<div class="minor-title keep-with-next" data-keep-count="2">Proposta III</div>
+<div class="math-line">∀x Q(x)</div>
+<div class="minor-title keep-with-next" data-keep-count="2">d)</div>
+<p>Identifique qual proposta representa corretamente a negação da afirmação existencial.</p>
+<div class="minor-title keep-with-next" data-keep-count="3">e)</div>
+<p data-keep-count="2">Para cada proposta incorreta, explique se ocorreu:</p>
+<ul><li>alteração apenas do quantificador;</li><li>alteração apenas da condição interna;</li><li>ou outra transformação inadequada.</li></ul>
+<div class="minor-title keep-with-next" data-keep-count="2">f)</div>
+<p>Traduza as três fórmulas para linguagem verbal e compare aquilo que cada uma realmente afirma sobre os valores admissíveis.</p>
+<div class="minor-title keep-with-next" data-keep-count="3">g)</div>
+<p data-keep-count="2">Complete, com suas próprias palavras, a ideia abaixo:</p>
+<blockquote><p>Para negar uma afirmação quantificada deste tipo, não basta alterar apenas <span class="blank-line" aria-label="Espaço para resposta"></span>. É necessário observar conjuntamente <span class="blank-line" aria-label="Espaço para resposta"></span> e <span class="blank-line" aria-label="Espaço para resposta"></span>.</p></blockquote>
+<p>Não é necessário reproduzir uma frase específica; sua resposta deve preservar a relação lógica envolvida.</p>
+<div class="item-title keep-with-next" data-keep-count="3">Exercício 12 — A negação permanece no mesmo domínio</div>
+<p data-keep-count="2">Considere como valores admissíveis para <span class="math-inline">x</span>: <span class="math-inline">2, 4, 6, 8</span> e o predicado:</p>
+<div class="math-line">P(x):  x&lt;10.</div>
+<p data-keep-count="2">Queremos avaliar:</p>
+<div class="math-line">∀x P(x).</div>
+<p>Dois estudantes iniciaram a análise de maneiras diferentes.</p>
+<div class="student-label keep-with-next" data-keep-count="2">Ana</div>
+<blockquote class="student-quote"><p>“Vou examinar somente <span class="math-inline">2</span>, <span class="math-inline">4</span>, <span class="math-inline">6</span> e <span class="math-inline">8</span>, pois são os valores admissíveis informados pelo problema.”</p></blockquote>
+<div class="student-label keep-with-next" data-keep-count="2">Bruno</div>
+<blockquote class="student-quote"><p>“O número <span class="math-inline">12</span> não satisfaz <span class="math-inline">x&lt;10</span>. Portanto, encontrei uma exceção e a afirmação universal é falsa.”</p></blockquote>
+<div class="minor-title keep-with-next" data-keep-count="3">a)</div>
+<p data-keep-count="2">Avalie <span class="math-inline">P(x)</span> para todos os valores admissíveis e determine o valor lógico de:</p>
+<div class="math-line">∀x P(x).</div>
+<div class="minor-title keep-with-next" data-keep-count="3">b)</div>
+<p data-keep-count="2">Existe alguma exceção à exigência universal entre os valores:</p>
+<div class="math-line">2, 4, 6, 8?</div>
+<p>Justifique.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">c)</div>
+<p>Analise o procedimento de Ana.</p>
+<p>Por que a restrição aos quatro valores indicados é importante para interpretar corretamente a proposição?</p>
+<div class="minor-title keep-with-next" data-keep-count="2">d)</div>
+<p>Analise a conclusão de Bruno.</p>
+<p>O cálculo envolvendo <span class="math-inline">12</span> está matematicamente correto, mas pode ser utilizado para decidir a proposição considerada?</p>
+<p>Explique.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">e)</div>
+<p>Escreva verbalmente a negação de: <span class="math-inline">∀x P(x)</span> de modo que fique explícito que ela continua tratando dos mesmos valores admissíveis.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">f)</div>
+<p>O que precisaria existir <strong>entre <span class="math-inline">2</span>, <span class="math-inline">4</span>, <span class="math-inline">6</span> e <span class="math-inline">8</span></strong> para que essa negação fosse verdadeira?</p>
+<div class="minor-title keep-with-next" data-keep-count="2">g)</div>
+<p>Explique por que mudar o domínio durante a procura por uma exceção significa passar a investigar outra situação, e não negar corretamente a proposição original.</p>
+<div class="item-title keep-with-next" data-keep-count="3">Exercício 13 — O verdadeiro contraexemplo de “Todo <span class="math-inline">A</span> é <span class="math-inline">B</span>”</div>
+<p data-keep-count="2">Considere como valores admissíveis:</p>
+<div class="math-line">2, 3, 5, 6.</div>
+<p data-keep-count="2">Defina: <span class="math-inline">A(x):  x<span class="math-text"> é múltiplo de </span>3</span> e:</p>
+<div class="math-line">B(x):  x&gt;4.</div>
+<p data-keep-count="2">Considere a afirmação:</p>
+<blockquote><p>Todo número admissível que é múltiplo de 3 é maior que 4.</p></blockquote>
+<p data-keep-count="2">Sua forma simbólica é:</p>
+<div class="math-line">∀x (A(x)→ B(x)).</div>
+<div class="table-wrap visual" data-visual="6"><table class="analysis-table counterexample-table worksheet-table"><thead><tr><th scope="col">Valor admissível <span class="math-inline">a</span></th><th scope="col"><span class="math-inline">A(a)</span></th><th scope="col"><span class="math-inline">B(a)</span></th><th scope="col"><span class="math-inline">A(a)→ B(a)</span></th><th scope="col"><span class="math-inline">A(a)∧¬B(a)</span></th></tr></thead><tbody><tr><td><span class="math-inline">2</span></td><td></td><td></td><td></td><td></td></tr><tr><td><span class="math-inline">3</span></td><td></td><td></td><td></td><td></td></tr><tr><td><span class="math-inline">5</span></td><td></td><td></td><td></td><td></td></tr><tr><td><span class="math-inline">6</span></td><td></td><td></td><td></td><td></td></tr></tbody></table></div>
+<div class="minor-title keep-with-next" data-keep-count="2">a)</div>
+<p>Complete a tabela.</p>
+<div class="minor-title keep-with-next" data-keep-count="3">b)</div>
+<p data-keep-count="2">Determine o valor lógico de:</p>
+<div class="math-line">∀x (A(x)→ B(x)).</div>
+<p>Justifique utilizando as avaliações obtidas.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">c)</div>
+<p>Identifique o valor admissível que constitui um contraexemplo à afirmação universal.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">d)</div>
+<p>Para o valor escolhido no item <strong>c</strong>, verifique explicitamente: <span class="math-inline">A(a)</span> e: <span class="math-inline">B(a).</span></p>
+<p>Que combinação de valores lógicos aparece?</p>
+<div class="minor-title keep-with-next" data-keep-count="2">e)</div>
+<p>Há um valor admissível no qual <span class="math-inline">B(a)</span> é falsa, mas que <strong>não</strong> constitui contraexemplo.</p>
+<p>Identifique-o e explique por que a falsidade de <span class="math-inline">B(a)</span>, isoladamente, não basta.</p>
+<div class="minor-title keep-with-next" data-keep-count="3">f)</div>
+<p data-keep-count="2">Comece pela negação da proposição completa:</p>
+<div class="math-line">¬(∀x (A(x)→ B(x))).</div>
+<p>Reescreva-a em duas etapas.</p>
+<p data-keep-count="2">Na primeira, utilize a negação da afirmação universal para obter uma proposição existencial cuja condição interna ainda contenha:</p>
+<div class="math-line">¬(A(x)→ B(x)).</div>
+<p>Na segunda, utilize a forma já conhecida da negação de um condicional.</p>
+<p data-keep-count="2">Complete:</p>
+<div class="math-structural"><span class="math-step">¬(∀x (A(x)→ B(x))) </span><span class="math-step">≡ <span class="blank-line blank-line--long" aria-label="Espaço para resposta"></span> </span><span class="math-step">≡ <span class="blank-line blank-line--long" aria-label="Espaço para resposta"></span>.</span></div>
+<div class="minor-title keep-with-next" data-keep-count="2">g)</div>
+<p>Traduza verbalmente a <strong>forma final</strong> obtida no item anterior.</p>
+<p data-keep-count="2">Sua frase deve explicitar que o mesmo valor admissível precisa:</p>
+<ul><li>satisfazer <span class="math-inline">A</span>;</li><li>deixar de satisfazer <span class="math-inline">B</span>.</li></ul>
+<div class="minor-title keep-with-next" data-keep-count="2">h)</div>
+<p>Compare o valor identificado no item <strong>c</strong> com a forma existencial obtida no item <strong>f</strong>.</p>
+<p data-keep-count="2">Explique por que ele pode ser descrito simultaneamente como:</p>
+<ul><li>contraexemplo à afirmação universal;</li><li>testemunho de sua negação.</li></ul>
+<p>Considere agora outra situação.</p>
+<p data-keep-count="2">Os valores admissíveis são:</p>
+<div class="math-line">1, 2, 3, 4, 5, 6, 7, 8.</div>
+<p data-keep-count="2">Defina: <span class="math-inline">C(x):  x<span class="math-text"> é par</span></span> e:</p>
+<div class="math-line">D(x):  x<span class="math-text"> é múltiplo de </span>4.</div>
+<p data-keep-count="2">Considere:</p>
+<div class="math-line">∀x (C(x)→ D(x)).</div>
+<div class="minor-title keep-with-next" data-keep-count="2">i)</div>
+<p>Encontre <strong>um</strong> contraexemplo para essa afirmação.</p>
+<p>Não é necessário encontrar todos.</p>
+<div class="minor-title keep-with-next" data-keep-count="3">j)</div>
+<p data-keep-count="2">Para o valor escolhido, verifique explicitamente: <span class="math-inline">C(a)=V</span> e:</p>
+<div class="math-line">D(a)=F.</div>
+<p>Explique por que essas duas condições, satisfeitas pelo mesmo valor, são suficientes para que sua escolha seja válida.</p>
+<div class="item-title keep-with-next" data-keep-count="3">Exercício 14 — Diagnóstico e integração</div>
+<p data-keep-count="2">Considere como valores admissíveis:</p>
+<div class="math-line">-2, -1, 0, 1, 2.</div>
+<p data-keep-count="2">Defina: <span class="math-inline">P(x):  x<sup>2</sup>≤1</span> e:</p>
+<div class="math-line">Q(x):  x&gt;0.</div>
+<div class="minor-title keep-with-next" data-keep-count="3">a)</div>
+<p data-keep-count="2">Complete a tabela:</p>
+<div class="table-wrap visual"><table class="analysis-table worksheet-table"><thead><tr><th scope="col"><span class="math-inline">a</span></th><th scope="col"><span class="math-inline">P(a)</span></th><th scope="col"><span class="math-inline">Q(a)</span></th></tr></thead><tbody><tr><td><span class="math-inline">-2</span></td><td></td><td></td></tr><tr><td><span class="math-inline">-1</span></td><td></td><td></td></tr><tr><td><span class="math-inline">0</span></td><td></td><td></td></tr><tr><td><span class="math-inline">1</span></td><td></td><td></td></tr><tr><td><span class="math-inline">2</span></td><td></td><td></td></tr></tbody></table></div>
+<div class="minor-title keep-with-next" data-keep-count="3">b)</div>
+<p data-keep-count="2">Utilizando os mesmos dados, investigue as quatro proposições:</p>
+<p data-keep-count="2"><strong>I.</strong></p>
+<div class="math-line">∃x P(x)</div>
+<p data-keep-count="2"><strong>II.</strong></p>
+<div class="math-line">∀x P(x)</div>
+<p data-keep-count="2"><strong>III.</strong></p>
+<div class="math-line">∃x Q(x)</div>
+<p data-keep-count="2"><strong>IV.</strong></p>
+<div class="math-line">∀x (P(x)→ Q(x)).</div>
+<p data-keep-count="2">Para cada uma:</p>
+<ul><li>determine seu valor lógico;</li><li>indique quais casos do domínio sustentam sua decisão;</li><li>escolha autonomamente se é mais útil procurar casos favoráveis, exceções ou outra informação pertinente à estrutura.</li></ul>
+<div class="minor-title keep-with-next" data-keep-count="3">c)</div>
+<p data-keep-count="2">Escreva simbolicamente a negação de:</p>
+<div class="math-line">∃x Q(x).</div>
+<p>Depois traduza a negação para linguagem verbal e determine seu valor lógico no mesmo domínio.</p>
+<div class="minor-title keep-with-next" data-keep-count="3">d)</div>
+<p data-keep-count="2">Examine:</p>
+<div class="math-line">∀x (P(x)→ Q(x)).</div>
+<p>Se ela for falsa, apresente <strong>um</strong> contraexemplo.</p>
+<p data-keep-count="2">Verifique, para o mesmo valor escolhido: <span class="math-inline">P(a)=V</span> e:</p>
+<div class="math-line">Q(a)=F.</div>
+<p>Se houver mais de uma resposta válida, basta apresentar uma delas.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">e)</div>
+<p>Explique por que o valor encontrado no item anterior é suficiente para decidir a afirmação universal, mesmo sem utilizar todos os casos como contraexemplos.</p>
+<p>Quatro estudantes analisaram partes da situação.</p>
+<div class="student-label keep-with-next" data-keep-count="2">Ana</div>
+<blockquote class="student-quote"><p>“Como <span class="math-inline">P(1)</span> é verdadeira, então <span class="math-inline">∀x P(x)</span> é verdadeira.”</p></blockquote>
+<div class="student-label keep-with-next" data-keep-count="2">Bruno</div>
+<blockquote class="student-quote"><p>“Como <span class="math-inline">Q(-2)</span> é falsa, então <span class="math-inline">∃x Q(x)</span> é falsa.”</p></blockquote>
+<div class="student-label keep-with-next" data-keep-count="2">Carla</div>
+<blockquote class="student-quote"><p>“Como <span class="math-inline">Q(1)</span> é verdadeira e <span class="math-inline">1</span> é um valor admissível, esse valor pode funcionar como testemunho de <span class="math-inline">∃x Q(x)</span>.”</p></blockquote>
+<div class="student-label keep-with-next" data-keep-count="2">Diego</div>
+<blockquote class="student-quote"><p>“Para verificar se <span class="math-inline">∀x(P(x)→ Q(x))</span> falha, procurei um valor admissível para o qual <span class="math-inline">P(a)</span> fosse verdadeira e <span class="math-inline">Q(a)</span> fosse falsa. O valor <span class="math-inline">-1</span> possui essas duas características.”</p></blockquote>
+<div class="minor-title keep-with-next" data-keep-count="2">f)</div>
+<p>Analise separadamente as quatro falas.</p>
+<p data-keep-count="2">Para cada estudante:</p>
+<ol><li>determine se a conclusão é sustentada;</li><li>indique quais valores do domínio são relevantes;</li><li>quando houver erro, localize precisamente a falha do raciocínio;</li><li>reescreva a conclusão de forma correta quando necessário.</li></ol>
+<p>Não responda apenas “certo” ou “errado”.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">g)</div>
+<p>Compare os erros presentes nas falas de Ana e Bruno.</p>
+<p>Embora ambos utilizem apenas um caso, por que um único caso favorável não estabelece uma universal e um único caso desfavorável não elimina uma existencial?</p>
+<div class="minor-title keep-with-next" data-keep-count="2">h)</div>
+<p>Compare as falas de Carla e Diego.</p>
+<p>Que papel o valor concreto exerce em cada uma delas?</p>
+<p>Sua resposta deve distinguir a função de um testemunho de uma afirmação existencial da função de um contraexemplo a uma afirmação universal.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">i)</div>
+<p>Escolha uma das proposições quantificadas <strong>falsas</strong> investigadas no item <strong>b</strong>.</p>
+<p data-keep-count="2">Explique:</p>
+<ul><li>qual estrutura lógica ela possui;</li><li>qual valor admissível você utiliza para revelar sua falsidade;</li><li>que condição esse valor satisfaz ou deixa de satisfazer;</li><li>por que esse único caso é suficiente para a conclusão.</li></ul>
+</section>
+<section class="source-section" data-context="TEXTO PRÁTICO • GABARITO COMENTADO">
+<header class="section-opening" data-keep-count="4"><div class="section-label">TEXTO PRÁTICO</div><h2 class="section-title">Gabarito Comentado</h2></header>
+<div class="gabarito-subtitle keep-with-next" data-keep-count="3">Quiz</div>
+<div class="minor-title keep-with-next" data-keep-count="2">Questão 1</div>
+<p><strong>Alternativa correta: B.</strong></p>
+<p>A expressão <span class="math-inline">17<sup>2</sup>&lt;300</span> já é uma proposição determinada: não depende da escolha posterior de nenhum valor. O fato de ainda não termos efetuado o cálculo não a torna aberta.</p>
+<p>Já <span class="math-inline">y-4=9</span> depende do valor atribuído a <span class="math-inline">y</span>.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">Questão 2</div>
+<p><strong>Alternativa correta: C.</strong> <span class="math-inline">P(x)</span> representa uma condição dependente de <span class="math-inline">x</span>; <span class="math-inline">P(8)</span> representa uma proposição determinada;</p>
+<p>e <span class="math-inline">p</span> nomeia uma proposição completa.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">Questão 3</div>
+<p><strong>Alternativa correta: C.</strong></p>
+<p>O quantificador <span class="math-inline">∃</span> exige a existência de <strong>pelo menos um</strong> caso favorável. Pode haver um, vários ou mesmo todos os valores satisfazendo a condição.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">Questão 4</div>
+<p><strong>Alternativa correta: B.</strong></p>
+<p>As formas corretas são: <span class="math-inline">∀x (A(x)→ B(x))</span> para “Todo <span class="math-inline">A</span> é <span class="math-inline">B</span>” e: <span class="math-inline">∃x (A(x)∧ B(x))</span> para “Existe pelo menos um <span class="math-inline">A</span> que é <span class="math-inline">B</span>”.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">Questão 5</div>
+<p><strong>Alternativa correta: B.</strong></p>
+<div class="math-structural">¬(∃x P(x)) ≡ ∀x ¬P(x).</div>
+<div class="item-title keep-with-next" data-keep-count="3">Exercício 1</div>
+<div class="minor-title keep-with-next" data-keep-count="2">a)</div>
+<p><strong>I.</strong> <span class="math-inline">14+9=23</span> é uma <strong>proposição determinada</strong> e verdadeira.</p>
+<p><strong>II.</strong> <span class="math-inline">t<sup>2</sup>=25</span> é uma <strong>sentença aberta</strong>, pois diferentes valores atribuídos a <span class="math-inline">t</span> podem produzir proposições verdadeiras ou falsas.</p>
+<p><strong>III.</strong> <span class="math-inline">17<sup>2</sup>&lt;300</span> é uma <strong>proposição determinada</strong>. De fato, <span class="math-inline">17<sup>2</sup>=289</span> e: <span class="math-inline">289&lt;300,</span> portanto ela é verdadeira.</p>
+<p><strong>IV.</strong> <span class="math-inline">(-5)<sup>2</sup>=25</span> é uma <strong>proposição determinada</strong> e verdadeira.</p>
+<p data-keep-count="2"><strong>V.</strong></p>
+<blockquote><p>O número inteiro <span class="math-inline">n</span> é par.</p></blockquote>
+<p>é uma <strong>sentença aberta</strong>, pois seu valor lógico depende do valor atribuído a <span class="math-inline">n</span>.</p>
+<div class="minor-title keep-with-next" data-keep-count="3">b)</div>
+<p data-keep-count="2">As expressões cujo valor lógico depende de uma atribuição são:</p>
+<div class="math-line answer-line"><span class="answer-box"><span class="math-text">II e V</span></span>.</div>
+<p>Em II, ainda é necessário determinar qual valor ocupa <span class="math-inline">t</span>. Em V, é necessário determinar qual número inteiro ocupa <span class="math-inline">n</span>.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">c)</div>
+<p>Em: <span class="math-inline">t<sup>2</sup>=25,</span> <span class="math-inline">t</span> ainda pode assumir diferentes valores. Por isso, a sentença permanece aberta.</p>
+<p>Em: <span class="math-inline">(-5)<sup>2</sup>=25,</span> o valor já foi determinado. Existe uma afirmação específica a avaliar, portanto temos uma proposição.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">d)</div>
+<p>A afirmação do estudante está incorreta.</p>
+<p>Não ter calculado ainda <span class="math-inline">17<sup>2</sup></span> significa apenas que o estudante talvez ainda <strong>não saiba</strong> o valor lógico da proposição.</p>
+<p>Isso é diferente de uma sentença aberta, na qual o próprio valor lógico depende de uma atribuição ainda não fixada.</p>
+<div class="item-title keep-with-next" data-keep-count="4">Exercício 2</div>
+<div class="minor-title keep-with-next" data-keep-count="3">a)</div>
+<p data-keep-count="2"><span class="math-inline">P(x):  x<sup>2</sup>&lt;10</span> pode ser lido como:</p>
+<blockquote><p>O quadrado de <span class="math-inline">x</span> é menor que 10.</p></blockquote>
+<div class="minor-title keep-with-next" data-keep-count="2">b)</div>
+<p>A variável <span class="math-inline">x</span> ainda pode receber diferentes valores admissíveis. Por isso, <span class="math-inline">P(x)</span> permanece uma condição aberta.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">c)</div>
+<p>Para <span class="math-inline">x=-4</span>: <span class="math-inline">P(-4):  (-4)<sup>2</sup>&lt;10,</span> isto é, <span class="math-inline">16&lt;10.</span></p>
+<p data-keep-count="2">Logo,</p>
+<div class="math-line">P(-4)=F.</div>
+<p>Para <span class="math-inline">x=-2</span>: <span class="math-inline">P(-2):  (-2)<sup>2</sup>&lt;10,</span> isto é, <span class="math-inline">4&lt;10.</span></p>
+<p data-keep-count="2">Logo,</p>
+<div class="math-line">P(-2)=V.</div>
+<p>Para <span class="math-inline">x=1</span>: <span class="math-inline">P(1): 1<sup>2</sup>&lt;10,</span> isto é, <span class="math-inline">1&lt;10.</span></p>
+<p data-keep-count="2">Logo,</p>
+<div class="math-line">P(1)=V.</div>
+<div class="minor-title keep-with-next" data-keep-count="3">d)</div>
+<p data-keep-count="2">Uma resposta possível para uma atribuição verdadeira é: <span class="math-inline">x=-3,</span> pois:</p>
+<div class="math-line">(-3)<sup>2</sup>=9&lt;10.</div>
+<p>Também seria válida a escolha <span class="math-inline">x=0</span>.</p>
+<p data-keep-count="2">Para uma atribuição falsa, podemos escolher: <span class="math-inline">x=4,</span> pois:</p>
+<div class="math-line">4<sup>2</sup>=16&gt;10.</div>
+<div class="minor-title keep-with-next" data-keep-count="2">e)</div>
+<p>Em: <span class="math-inline">p: (-2)<sup>2</sup>&lt;10,</span> <span class="math-inline">p</span> nomeia uma proposição completa e determinada.</p>
+<p>Já: <span class="math-inline">P(x):  x<sup>2</sup>&lt;10</span> representa uma condição cujo resultado ainda depende do valor atribuído a <span class="math-inline">x</span>.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">f)</div>
+<p>Não. Depois que uma atribuição admissível <span class="math-inline">a</span> é fixada, <span class="math-inline">P(a)</span> representa uma proposição determinada.</p>
+<div class="item-title keep-with-next" data-keep-count="4">Exercício 3</div>
+<div class="minor-title keep-with-next" data-keep-count="3">a)</div>
+<p data-keep-count="2">Para: <span class="math-inline">P(x):  x&gt;1,</span> temos:</p>
+<p><strong>Domínio I</strong></p>
+<div class="math-line">-2, 0, 2, 4.</div>
+<p data-keep-count="2">Satisfazem <span class="math-inline">P</span>:</p>
+<div class="math-line answer-line"><span class="answer-box">2, 4</span>.</div>
+<p><strong>Domínio II</strong></p>
+<div class="math-line">0, 1, 2, 3.</div>
+<p data-keep-count="2">Satisfazem <span class="math-inline">P</span>:</p>
+<div class="math-line answer-line"><span class="answer-box">2, 3</span>.</div>
+<p><strong>Domínio III</strong></p>
+<div class="math-line">-3, -2, -1, 0.</div>
+<p>Nenhum dos valores satisfaz <span class="math-inline">P</span>.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">b)</div>
+<p>O valor <span class="math-inline">4</span> é admissível apenas no <strong>Domínio I</strong>.</p>
+<p>Embora <span class="math-inline">4&gt;1</span> seja verdadeiro, isso não permite utilizar <span class="math-inline">4</span> em qualquer investigação. Para participar de determinado contexto, o valor também precisa ser admissível naquele domínio.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">c)</div>
+<p>O valor <span class="math-inline">3</span> é admissível apenas no <strong>Domínio II</strong>.</p>
+<p>Ele satisfaz <span class="math-inline">P(x)</span>, pois: <span class="math-inline">3&gt;1,</span> mas não pertence aos casos considerados nos outros dois domínios.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">d)</div>
+<p>No Domínio I, existem casos que satisfazem <span class="math-inline">P</span>: <span class="math-inline">2, 4.</span></p>
+<p>No Domínio III, nenhum valor admissível satisfaz <span class="math-inline">P</span>.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">e)</div>
+<p>O que mudou foram os <strong>valores admissíveis</strong>.</p>
+<p data-keep-count="2">O que permaneceu igual foi a condição:</p>
+<div class="math-line">P(x):  x&gt;1.</div>
+<p>Assim, a propriedade investigada não mudou; mudaram os objetos aos quais ela pôde ser aplicada.</p>
+<div class="item-title keep-with-next" data-keep-count="3">Exercício 4</div>
+<div class="minor-title keep-with-next" data-keep-count="2">a)</div>
+<div class="table-wrap visual"><table class="analysis-table"><thead><tr><th scope="col">Valor admissível <span class="math-inline">a</span></th><th scope="col"><span class="math-inline">Q(a)</span></th><th scope="col">Valor lógico</th></tr></thead><tbody><tr><td><span class="math-inline">-3</span></td><td><span class="math-inline">-3&lt;8</span></td><td><span class="math-inline">V</span></td></tr><tr><td><span class="math-inline">0</span></td><td><span class="math-inline">0&lt;8</span></td><td><span class="math-inline">V</span></td></tr><tr><td><span class="math-inline">2</span></td><td><span class="math-inline">2&lt;8</span></td><td><span class="math-inline">V</span></td></tr><tr><td><span class="math-inline">5</span></td><td><span class="math-inline">5&lt;8</span></td><td><span class="math-inline">V</span></td></tr><tr><td><span class="math-inline">7</span></td><td><span class="math-inline">7&lt;8</span></td><td><span class="math-inline">V</span></td></tr></tbody></table></div>
+<div class="minor-title keep-with-next" data-keep-count="2">b)</div>
+<p>Todos os valores admissíveis satisfazem <span class="math-inline">Q(x)</span>. Portanto,</p>
+<div class="math-line answer-line"><span class="answer-box">∀x Q(x)=V</span>.</div>
+<div class="minor-title keep-with-next" data-keep-count="2">c)</div>
+<p>Como existem valores admissíveis que satisfazem <span class="math-inline">Q(x)</span>,</p>
+<div class="math-line answer-line"><span class="answer-box">∃x Q(x)=V</span>.</div>
+<div class="minor-title keep-with-next" data-keep-count="2">d)</div>
+<p>Qualquer valor do domínio pode funcionar como testemunho.</p>
+<p>Por exemplo: <span class="math-inline">a=2.</span></p>
+<p data-keep-count="2">Como:</p>
+<div class="math-line">Q(2)=V,</div>
+<p><span class="math-inline">2</span> testemunha a afirmação existencial.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">e)</div>
+<p>Não existe exceção à universal nesse domínio, pois todos os cinco casos produzem <span class="math-inline">V</span>.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">f)</div>
+<p>Na leitura universal, perguntamos se <strong>todos</strong> os casos do perfil são verdadeiros.</p>
+<p>Na leitura existencial, perguntamos se há <strong>pelo menos um</strong> caso verdadeiro.</p>
+<p>A mesma investigação dos casos permite responder às duas perguntas.</p>
+<div class="item-title keep-with-next" data-keep-count="4">Exercício 5</div>
+<div class="minor-title keep-with-next" data-keep-count="3">Cenário A</div>
+<p data-keep-count="2">Se: <span class="math-inline">∀x P(x)=V,</span> então:</p>
+<div class="table-wrap visual"><table class="analysis-table"><thead><tr><th scope="col">Afirmação</th><th scope="col">Classificação</th></tr></thead><tbody><tr><td>I. Todos satisfazem <span class="math-inline">P</span></td><td>obrigatoriamente verdadeira</td></tr><tr><td>II. Existe pelo menos um que satisfaz <span class="math-inline">P</span></td><td>obrigatoriamente verdadeira</td></tr><tr><td>III. Existe pelo menos um que não satisfaz <span class="math-inline">P</span></td><td>impossível</td></tr><tr><td>IV. Nenhum satisfaz <span class="math-inline">P</span></td><td>impossível</td></tr></tbody></table></div>
+<p>Todos os valores admissíveis são favoráveis.</p>
+<div class="minor-title keep-with-next" data-keep-count="3">Cenário B</div>
+<p data-keep-count="2">Se: <span class="math-inline">∀x P(x)=F,</span> temos:</p>
+<div class="table-wrap visual"><table class="analysis-table"><thead><tr><th scope="col">Afirmação</th><th scope="col">Classificação</th></tr></thead><tbody><tr><td>I. Todos satisfazem <span class="math-inline">P</span></td><td>impossível</td></tr><tr><td>II. Existe pelo menos um que satisfaz <span class="math-inline">P</span></td><td>possível, mas não obrigatória</td></tr><tr><td>III. Existe pelo menos um que não satisfaz <span class="math-inline">P</span></td><td>obrigatoriamente verdadeira</td></tr><tr><td>IV. Nenhum satisfaz <span class="math-inline">P</span></td><td>possível, mas não obrigatória</td></tr></tbody></table></div>
+<p>A falsidade da universal garante uma falha, mas não informa se existem também casos favoráveis.</p>
+<div class="minor-title keep-with-next" data-keep-count="3">Cenário C</div>
+<p data-keep-count="2">Se: <span class="math-inline">∃x P(x)=V,</span> temos:</p>
+<div class="table-wrap visual"><table class="analysis-table"><thead><tr><th scope="col">Afirmação</th><th scope="col">Classificação</th></tr></thead><tbody><tr><td>I. Todos satisfazem <span class="math-inline">P</span></td><td>possível, mas não obrigatória</td></tr><tr><td>II. Existe pelo menos um que satisfaz <span class="math-inline">P</span></td><td>obrigatoriamente verdadeira</td></tr><tr><td>III. Existe pelo menos um que não satisfaz <span class="math-inline">P</span></td><td>possível, mas não obrigatória</td></tr><tr><td>IV. Nenhum satisfaz <span class="math-inline">P</span></td><td>impossível</td></tr></tbody></table></div>
+<p>A existencial verdadeira garante ao menos um caso favorável, mas os demais podem ser favoráveis ou desfavoráveis.</p>
+<div class="minor-title keep-with-next" data-keep-count="3">Cenário D</div>
+<p data-keep-count="2">Se: <span class="math-inline">∃x P(x)=F,</span> temos:</p>
+<div class="table-wrap visual"><table class="analysis-table"><thead><tr><th scope="col">Afirmação</th><th scope="col">Classificação</th></tr></thead><tbody><tr><td>I. Todos satisfazem <span class="math-inline">P</span></td><td>impossível</td></tr><tr><td>II. Existe pelo menos um que satisfaz <span class="math-inline">P</span></td><td>impossível</td></tr><tr><td>III. Existe pelo menos um que não satisfaz <span class="math-inline">P</span></td><td>obrigatoriamente verdadeira</td></tr><tr><td>IV. Nenhum satisfaz <span class="math-inline">P</span></td><td>obrigatoriamente verdadeira</td></tr></tbody></table></div>
+<p>Nenhum valor admissível satisfaz <span class="math-inline">P</span>.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">b)</div>
+<p>No Cenário B, não é possível saber exatamente quantos valores não satisfazem <span class="math-inline">P</span>.</p>
+<p>A única exigência é que exista <strong>pelo menos um</strong> caso desfavorável.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">c)</div>
+<p>Não.</p>
+<p data-keep-count="2">Considerando, por exemplo, dois valores admissíveis, ambos os perfis abaixo seriam compatíveis com:</p>
+<div class="math-line">∃x P(x)=V:</div>
+<p><span class="math-inline">V,  V</span> e: <span class="math-inline">V,  F.</span></p>
+<p>Outros perfis também são possíveis.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">d)</div>
+<p>Em: <span class="math-inline">∀x P(x)=V,</span> todos os casos ficam determinados como favoráveis.</p>
+<p>Em: <span class="math-inline">∃x P(x)=V,</span> sabemos apenas que pelo menos um caso é favorável. Os demais permanecem indeterminados por essa informação.</p>
+<div class="item-title keep-with-next" data-keep-count="3">Exercício 6</div>
+<div class="minor-title keep-with-next" data-keep-count="2">a)</div>
+<div class="math-line answer-line"><span class="answer-box">∀x P(x)</span></div>
+<div class="minor-title keep-with-next" data-keep-count="2">b)</div>
+<div class="math-line answer-line"><span class="answer-box">∃x P(x)</span></div>
+<div class="minor-title keep-with-next" data-keep-count="3">c)</div>
+<p data-keep-count="2">Uma tradução adequada é:</p>
+<blockquote><p>Todo valor admissível é maior que 2.</p></blockquote>
+<div class="minor-title keep-with-next" data-keep-count="3">d)</div>
+<p data-keep-count="2">Uma tradução adequada é:</p>
+<blockquote><p>Existe pelo menos um valor admissível maior que 2.</p></blockquote>
+<p>Outras redações são aceitáveis desde que não transformem “pelo menos um” em “exatamente um”.</p>
+<div class="minor-title keep-with-next" data-keep-count="3">e)</div>
+<p data-keep-count="2">Para: <span class="math-inline">R(x):  x+4=10,</span> a expressão: <span class="math-inline">∃x R(x)</span> pode ser lida como:</p>
+<blockquote><p>Existe pelo menos um valor admissível <span class="math-inline">x</span> para o qual <span class="math-inline">x+4=10</span>.</p></blockquote>
+<p>O quantificador: <span class="math-inline">∃</span> estabelece a exigência de que exista ao menos um caso favorável.</p>
+<p data-keep-count="2">A condição interna é:</p>
+<div class="math-line">x+4=10.</div>
+<div class="minor-title keep-with-next" data-keep-count="2">f)</div>
+<p><span class="math-inline">P(5)</span> afirma algo sobre o caso específico <span class="math-inline">x=5</span>.</p>
+<p>Já: <span class="math-inline">∃x P(x)</span> não fixa previamente um caso: afirma que existe algum valor admissível que satisfaz <span class="math-inline">P</span>.</p>
+<p>Portanto, embora ambas sejam proposições determinadas, não fazem afirmações do mesmo tipo.</p>
+<div class="item-title keep-with-next" data-keep-count="3">Exercício 7</div>
+<p data-keep-count="2">Considere os valores admissíveis:</p>
+<div class="math-line">1, 2, 3, 4, 5, 6, 7.</div>
+<div class="minor-title keep-with-next" data-keep-count="3">a)</div>
+<p data-keep-count="2">A Afirmação I é representada por:</p>
+<div class="math-line answer-line"><span class="answer-box">∀x (A(x)→ B(x))</span>.</div>
+<div class="minor-title keep-with-next" data-keep-count="2">b)</div>
+<p>A fórmula: <span class="math-inline">∀x (A(x)∧ B(x))</span> é mais forte e representa outra afirmação.</p>
+<p>Ela exige que <strong>todo</strong> valor admissível satisfaça simultaneamente <span class="math-inline">A(x)</span> e <span class="math-inline">B(x)</span>. Isso exigiria, por exemplo, que números ímpares também fossem pares.</p>
+<p>A frase original exige <span class="math-inline">B(x)</span> apenas nos casos em que <span class="math-inline">A(x)</span> é verdadeira.</p>
+<p>No domínio considerado, os valores pares são: <span class="math-inline">2, 4, 6,</span> e todos são menores que <span class="math-inline">7</span>.</p>
+<div class="minor-title keep-with-next" data-keep-count="3">c)</div>
+<p data-keep-count="2">A Afirmação II é representada por:</p>
+<div class="math-line answer-line"><span class="answer-box">∃x (A(x)∧ B(x))</span>.</div>
+<div class="minor-title keep-with-next" data-keep-count="2">d)</div>
+<p>Podemos utilizar: <span class="math-inline">a=7.</span></p>
+<p data-keep-count="2">Temos: <span class="math-inline">A(7)=F</span> e:</p>
+<div class="math-line">B(7)=F.</div>
+<p>Assim, <span class="math-inline">A(7)→ B(7)=V,</span> pois o antecedente é falso.</p>
+<p>Por outro lado,</p>
+<div class="math-line">A(7)∧ B(7)=F.</div>
+<p data-keep-count="2">Isso mostra que um valor pode tornar o condicional verdadeiro sem ser simultaneamente <span class="math-inline">A</span> e <span class="math-inline">B</span>. Por isso, <span class="math-inline">∃x (A(x)→ B(x))</span> não representa corretamente:</p>
+<blockquote><p>Existe pelo menos um <span class="math-inline">A</span> que é <span class="math-inline">B</span>.</p></blockquote>
+<div class="minor-title keep-with-next" data-keep-count="2">e)</div>
+<p>Em: <span class="math-inline">∀x (A(x)→ B(x)),</span> o quantificador é: <span class="math-inline">∀,</span> a estrutura interna é: <span class="math-inline">A(x)→ B(x),</span> e o conectivo interno é: <span class="math-inline">→.</span></p>
+<p>Em: <span class="math-inline">∃x (A(x)∧ B(x)),</span> o quantificador é: <span class="math-inline">∃,</span> a estrutura interna é: <span class="math-inline">A(x)∧ B(x),</span> e o conectivo interno é: <span class="math-inline">∧.</span></p>
+<div class="minor-title keep-with-next" data-keep-count="2">f)</div>
+<p><span class="math-inline">∀x (A(x)→ B(x))</span> estabelece uma exigência condicional para todos os valores admissíveis: sempre que <span class="math-inline">A(x)</span> ocorrer, <span class="math-inline">B(x)</span> também deve ocorrer.</p>
+<p>Já: <span class="math-inline">∃x (A(x)∧ B(x))</span> procura pelo menos um mesmo valor que satisfaça simultaneamente as duas propriedades.</p>
+<div class="item-title keep-with-next" data-keep-count="3">Exercício 8</div>
+<div class="minor-title keep-with-next" data-keep-count="2">a)</div>
+<p>Na expressão: <span class="math-inline">∀x (P(x)→ Q(x)),</span> o quantificador é: <span class="math-inline">∀.</span></p>
+<p>A expressão sob seu alcance é: <span class="math-inline">P(x)→ Q(x),</span> organizada pelo conectivo: <span class="math-inline">→.</span></p>
+<p>Na expressão: <span class="math-inline">∃x (P(x)∧ Q(x)),</span> o quantificador é: <span class="math-inline">∃.</span></p>
+<p>A expressão sob seu alcance é: <span class="math-inline">P(x)∧ Q(x),</span> organizada pelo conectivo: <span class="math-inline">∧.</span></p>
+<div class="minor-title keep-with-next" data-keep-count="2">b)</div>
+<p>Em: <span class="math-inline">P(x)→ Q(x),</span> <span class="math-inline">x</span> permanece livre.</p>
+<p>Em: <span class="math-inline">∀x (P(x)→ Q(x)),</span> <span class="math-inline">x</span> está quantificada. A expressão passa a afirmar que a relação condicional deve valer para todos os valores admissíveis.</p>
+<div class="minor-title keep-with-next" data-keep-count="3">c)</div>
+<p data-keep-count="2">A mesma diferença ocorre entre: <span class="math-inline">P(x)∧ Q(x)</span> e:</p>
+<div class="math-line">∃x (P(x)∧ Q(x)).</div>
+<p>Na primeira estrutura, <span class="math-inline">x</span> permanece livre.</p>
+<p>Na segunda, o quantificador estabelece que existe pelo menos um valor admissível que satisfaz simultaneamente <span class="math-inline">P</span> e <span class="math-inline">Q</span>.</p>
+<div class="minor-title keep-with-next" data-keep-count="3">d)</div>
+<p data-keep-count="2">Os parênteses tornam visível que o quantificador atua sobre a estrutura interna completa: <span class="math-inline">P(x)→ Q(x)</span> ou:</p>
+<div class="math-line">P(x)∧ Q(x).</div>
+<div class="minor-title keep-with-next" data-keep-count="3">e)</div>
+<p data-keep-count="2">A fórmula procurada é:</p>
+<div class="math-line answer-line"><span class="answer-box">∃x (P(x)∧ Q(x))</span>.</div>
+<div class="minor-title keep-with-next" data-keep-count="3">f)</div>
+<p data-keep-count="2">A fórmula é:</p>
+<div class="math-line answer-line"><span class="answer-box">∀x (P(x)→ Q(x))</span>.</div>
+<p data-keep-count="2">A estrutura sob o alcance do quantificador é:</p>
+<div class="math-line">P(x)→ Q(x).</div>
+<div class="item-title keep-with-next" data-keep-count="4">Exercício 9</div>
+<div class="minor-title keep-with-next" data-keep-count="3">a)</div>
+<p data-keep-count="2">Temos: <span class="math-inline">P(0): 2·0&lt;7,</span> isto é, <span class="math-inline">0&lt;7,</span> portanto:</p>
+<div class="math-line">P(0)=V.</div>
+<p data-keep-count="2"><span class="math-inline">P(1): 2&lt;7,</span> logo:</p>
+<div class="math-line">P(1)=V.</div>
+<p data-keep-count="2"><span class="math-inline">P(2): 4&lt;7,</span> logo:</p>
+<div class="math-line">P(2)=V.</div>
+<p data-keep-count="2"><span class="math-inline">P(4): 8&lt;7,</span> portanto:</p>
+<div class="math-line">P(4)=F.</div>
+<div class="minor-title keep-with-next" data-keep-count="2">b)</div>
+<p>Como existe um valor admissível que não satisfaz <span class="math-inline">P</span>,</p>
+<div class="math-line answer-line"><span class="answer-box">∀x P(x)=F</span>.</div>
+<div class="minor-title keep-with-next" data-keep-count="3">c)</div>
+<p data-keep-count="2">Uma formulação verbal adequada é:</p>
+<blockquote><p>Existe pelo menos um valor admissível que não satisfaz <span class="math-inline">P</span>.</p></blockquote>
+<div class="minor-title keep-with-next" data-keep-count="3">d)</div>
+<p data-keep-count="2">Simbolicamente:</p>
+<div class="math-structural"><span class="answer-box"> ¬(∀x P(x)) ≡ ∃x ¬P(x) </span>.</div>
+<div class="minor-title keep-with-next" data-keep-count="3">e)</div>
+<p data-keep-count="2">O valor:</p>
+<div class="math-line answer-line"><span class="answer-box">4</span></div>
+<p>é testemunho de: <span class="math-inline">∃x ¬P(x),</span> pois: <span class="math-inline">P(4)=F</span> e, portanto,</p>
+<div class="math-line">¬P(4)=V.</div>
+<div class="minor-title keep-with-next" data-keep-count="2">f)</div>
+<p>A universal exige que <strong>todos</strong> os valores admissíveis satisfaçam <span class="math-inline">P</span>. Assim, basta um único caso em que <span class="math-inline">P</span> seja falsa para que essa exigência deixe de ser satisfeita.</p>
+<div class="minor-title keep-with-next" data-keep-count="3">g)</div>
+<p data-keep-count="2">O valor <span class="math-inline">4</span> exerce duas descrições compatíveis do mesmo papel lógico:</p>
+<ul><li>é uma <strong>exceção</strong> à afirmação universal;</li><li>é um <strong>testemunho</strong> de <span class="math-inline">∃x ¬P(x).</span></li></ul>
+<p>Ele mostra concretamente o caso cuja existência torna falsa a universal.</p>
+<div class="item-title keep-with-next" data-keep-count="3">Exercício 10</div>
+<div class="minor-title keep-with-next" data-keep-count="2">a)</div>
+<p><span class="math-inline">P(1)=F,</span> pois <span class="math-inline">1</span> não é múltiplo de <span class="math-inline">3</span>.</p>
+<div class="math-line">P(2)=F.</div>
+<div class="math-line">P(3)=V.</div>
+<div class="math-line">P(4)=F.</div>
+<div class="minor-title keep-with-next" data-keep-count="3">b)</div>
+<p data-keep-count="2">Como: <span class="math-inline">P(3)=V,</span> temos:</p>
+<div class="math-line answer-line"><span class="answer-box">∃x P(x)=V</span>.</div>
+<p>O valor <span class="math-inline">3</span> funciona como testemunho.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">c)</div>
+<p>O erro está em concluir, a partir de um único caso desfavorável, que nenhum caso favorável existe.</p>
+<p data-keep-count="2">O fato de: <span class="math-inline">P(2)=F</span> não impede que outro valor satisfaça <span class="math-inline">P</span>. De fato:</p>
+<div class="math-line">P(3)=V.</div>
+<div class="minor-title keep-with-next" data-keep-count="2">d)</div>
+<p>Para que: <span class="math-inline">∃x P(x)</span> fosse falsa, <strong>todos</strong> os valores admissíveis precisariam deixar de satisfazer <span class="math-inline">P</span>.</p>
+<div class="minor-title keep-with-next" data-keep-count="3">e)</div>
+<p data-keep-count="2">A negação correta é:</p>
+<div class="math-structural"><span class="answer-box"> ¬(∃x P(x)) ≡ ∀x ¬P(x) </span>.</div>
+<div class="minor-title keep-with-next" data-keep-count="2">f)</div>
+<p><span class="math-inline">∃x ¬P(x)</span> é verdadeira.</p>
+<p data-keep-count="2">Por exemplo, <span class="math-inline">P(1)=F,</span> portanto:</p>
+<div class="math-line">¬P(1)=V.</div>
+<p>Os valores <span class="math-inline">2</span> e <span class="math-inline">4</span> também poderiam funcionar como testemunhos.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">g)</div>
+<p><span class="math-inline">∃x ¬P(x)</span> afirma apenas que existe <strong>algum</strong> caso que não satisfaz <span class="math-inline">P</span>.</p>
+<p data-keep-count="2">Já: <span class="math-inline">¬(∃x P(x))</span> afirma que não existe qualquer caso favorável, o que equivale a:</p>
+<div class="math-line">∀x ¬P(x).</div>
+<p>Neste domínio, a primeira é verdadeira e a segunda é falsa porque <span class="math-inline">3</span> satisfaz <span class="math-inline">P</span>.</p>
+<div class="item-title keep-with-next" data-keep-count="5">Exercício 11</div>
+<div class="minor-title keep-with-next" data-keep-count="4">Parte I</div>
+<div class="minor-title keep-with-next" data-keep-count="3">a)</div>
+<p data-keep-count="2">A negação correta de: <span class="math-inline">∀x P(x)</span> é a <strong>Proposta III</strong>:</p>
+<div class="math-line answer-line"><span class="answer-box">∃x ¬P(x)</span>.</div>
+<div class="minor-title keep-with-next" data-keep-count="2">b)</div>
+<p>Na Proposta I: <span class="math-inline">∃x P(x),</span> foi alterado apenas o quantificador. A condição <span class="math-inline">P(x)</span> permaneceu sem negação.</p>
+<p>Na Proposta II: <span class="math-inline">∀x ¬P(x),</span> foi negada apenas a condição interna. O quantificador universal permaneceu.</p>
+<p>Na Proposta III: <span class="math-inline">∃x ¬P(x),</span> as duas partes relevantes foram alteradas conjuntamente.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">c)</div>
+<p><strong>Proposta I</strong></p>
+<div class="math-line">∃x P(x):</div>
+<blockquote><p>Existe pelo menos um valor admissível que satisfaz <span class="math-inline">P</span>.</p></blockquote>
+<p><strong>Proposta II</strong></p>
+<div class="math-line">∀x ¬P(x):</div>
+<blockquote><p>Todos os valores admissíveis deixam de satisfazer <span class="math-inline">P</span>.</p></blockquote>
+<p><strong>Proposta III</strong></p>
+<div class="math-line">∃x ¬P(x):</div>
+<blockquote><p>Existe pelo menos um valor admissível que não satisfaz <span class="math-inline">P</span>.</p></blockquote>
+<div class="minor-title keep-with-next" data-keep-count="4">Parte II</div>
+<div class="minor-title keep-with-next" data-keep-count="3">d)</div>
+<p data-keep-count="2">A negação correta de: <span class="math-inline">∃x Q(x)</span> é a <strong>Proposta II</strong>:</p>
+<div class="math-line answer-line"><span class="answer-box">∀x ¬Q(x)</span>.</div>
+<div class="minor-title keep-with-next" data-keep-count="2">e)</div>
+<p>Na Proposta I: <span class="math-inline">∃x ¬Q(x),</span> somente a condição interna foi negada.</p>
+<p>Na Proposta III: <span class="math-inline">∀x Q(x),</span> somente o quantificador foi alterado.</p>
+<p>Na Proposta II: <span class="math-inline">∀x ¬Q(x),</span> o quantificador e a condição interna foram alterados conjuntamente.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">f)</div>
+<p><strong>Proposta I</strong></p>
+<blockquote><p>Existe pelo menos um valor admissível que não satisfaz <span class="math-inline">Q</span>.</p></blockquote>
+<p><strong>Proposta II</strong></p>
+<blockquote><p>Todos os valores admissíveis deixam de satisfazer <span class="math-inline">Q</span>.</p></blockquote>
+<p><strong>Proposta III</strong></p>
+<blockquote><p>Todos os valores admissíveis satisfazem <span class="math-inline">Q</span>.</p></blockquote>
+<div class="minor-title keep-with-next" data-keep-count="3">g)</div>
+<p data-keep-count="2">Uma resposta possível é:</p>
+<blockquote><p>Para negar uma afirmação quantificada desse tipo, não basta alterar apenas uma parte da expressão. É necessário observar conjuntamente o <strong>quantificador</strong> e a <strong>condição interna</strong>.</p></blockquote>
+<p>Outras formulações são aceitáveis se preservarem essa relação.</p>
+<div class="item-title keep-with-next" data-keep-count="4">Exercício 12</div>
+<div class="minor-title keep-with-next" data-keep-count="3">a)</div>
+<p data-keep-count="2">Temos: <span class="math-inline">P(2): 2&lt;10,</span> portanto:</p>
+<div class="math-line">P(2)=V.</div>
+<p data-keep-count="2">Da mesma forma:</p>
+<div class="math-line">P(4)=V,   P(6)=V,   P(8)=V.</div>
+<p data-keep-count="2">Assim:</p>
+<div class="math-line answer-line"><span class="answer-box">∀x P(x)=V</span>.</div>
+<div class="minor-title keep-with-next" data-keep-count="2">b)</div>
+<p>Não.</p>
+<p>Entre: <span class="math-inline">2, 4, 6, 8,</span> todos os valores satisfazem <span class="math-inline">x&lt;10</span>.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">c)</div>
+<p>O procedimento de Ana é correto porque a proposição quantificada está sendo interpretada relativamente aos valores admissíveis informados.</p>
+<p>São esses quatro casos que precisam ser investigados.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">d)</div>
+<p>É verdade que: <span class="math-inline">12&lt;10</span> é falsa.</p>
+<p>Entretanto, <span class="math-inline">12</span> não é um valor admissível neste domínio. Portanto, ele não pode funcionar como exceção à universal considerada.</p>
+<div class="minor-title keep-with-next" data-keep-count="3">e)</div>
+<p data-keep-count="2">Uma negação verbal correta é:</p>
+<blockquote><p>Existe pelo menos um valor entre <span class="math-inline">2</span>, <span class="math-inline">4</span>, <span class="math-inline">6</span> e <span class="math-inline">8</span> que não satisfaz <span class="math-inline">x&lt;10</span>.</p></blockquote>
+<div class="minor-title keep-with-next" data-keep-count="2">f)</div>
+<p>Precisaria existir, entre os próprios valores admissíveis, pelo menos um valor para o qual: <span class="math-inline">x&lt;10</span> fosse falsa.</p>
+<p>Não existe tal valor neste domínio.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">g)</div>
+<p>Ao mudar os valores admissíveis, mudamos os casos sobre os quais a afirmação está sendo feita.</p>
+<p>Assim, utilizar <span class="math-inline">12</span> não nega a proposição original: passa a introduzir outro contexto de investigação.</p>
+<div class="item-title keep-with-next" data-keep-count="3">Exercício 13</div>
+<div class="minor-title keep-with-next" data-keep-count="2">a)</div>
+<div class="table-wrap visual" data-visual="7"><table class="analysis-table counterexample-table"><thead><tr><th scope="col">Valor admissível <span class="math-inline">a</span></th><th scope="col"><span class="math-inline">A(a)</span></th><th scope="col"><span class="math-inline">B(a)</span></th><th scope="col"><span class="math-inline">A(a)→ B(a)</span></th><th scope="col"><span class="math-inline">A(a)∧¬B(a)</span></th></tr></thead><tbody><tr><td><span class="math-inline">2</span></td><td><span class="math-inline">F</span></td><td><span class="math-inline">F</span></td><td><span class="math-inline">V</span></td><td><span class="math-inline">F</span></td></tr><tr class="focus-row"><td><span class="math-inline">3</span></td><td><span class="math-inline">V</span></td><td><span class="math-inline">F</span></td><td><span class="math-inline">F</span></td><td><span class="math-inline">V</span></td></tr><tr><td><span class="math-inline">5</span></td><td><span class="math-inline">F</span></td><td><span class="math-inline">V</span></td><td><span class="math-inline">V</span></td><td><span class="math-inline">F</span></td></tr><tr><td><span class="math-inline">6</span></td><td><span class="math-inline">V</span></td><td><span class="math-inline">V</span></td><td><span class="math-inline">V</span></td><td><span class="math-inline">F</span></td></tr></tbody></table></div>
+<div class="minor-title keep-with-next" data-keep-count="2">b)</div>
+<p>A afirmação: <span class="math-inline">∀x (A(x)→ B(x))</span> é falsa porque existe um caso em que o condicional interno é falso.</p>
+<p data-keep-count="2">Logo:</p>
+<div class="math-line answer-line"><span class="answer-box">∀x (A(x)→ B(x))=F</span>.</div>
+<div class="minor-title keep-with-next" data-keep-count="3">c)</div>
+<p data-keep-count="2">O contraexemplo é:</p>
+<div class="math-line answer-line"><span class="answer-box">3</span>.</div>
+<div class="minor-title keep-with-next" data-keep-count="2">d)</div>
+<p>Para <span class="math-inline">a=3</span>: <span class="math-inline">A(3)=V,</span> pois <span class="math-inline">3</span> é múltiplo de <span class="math-inline">3</span>.</p>
+<p>Já: <span class="math-inline">B(3)=F,</span> pois <span class="math-inline">3</span> não é maior que <span class="math-inline">4</span>.</p>
+<p>Temos, portanto, a combinação: <span class="math-inline">V,  F.</span></p>
+<div class="minor-title keep-with-next" data-keep-count="3">e)</div>
+<p data-keep-count="2">O valor: <span class="math-inline">2</span> possui: <span class="math-inline">B(2)=F,</span> mas também:</p>
+<div class="math-line">A(2)=F.</div>
+<p data-keep-count="2">Logo:</p>
+<div class="math-line">A(2)→ B(2)=V.</div>
+<p>Por isso, a simples falsidade de <span class="math-inline">B(a)</span> não basta. O mesmo valor precisa satisfazer <span class="math-inline">A(a)</span>.</p>
+<div class="minor-title keep-with-next" data-keep-count="3">f)</div>
+<p data-keep-count="2">Temos:</p>
+<div class="math-structural"><span class="answer-box"><span class="math-step">¬(∀x (A(x)→ B(x)))</span><span class="math-step">≡ ∃x ¬(A(x)→ B(x))</span><span class="math-step">≡ ∃x (A(x)∧¬B(x))</span></span>.</div>
+<p>Na primeira equivalência, a negação da universal afirma a existência de um caso em que a condição interna falha.</p>
+<p data-keep-count="2">Na segunda, utilizamos:</p>
+<div class="math-structural">¬(A(x)→ B(x)) ≡ A(x)∧¬B(x).</div>
+<div class="minor-title keep-with-next" data-keep-count="3">g)</div>
+<p data-keep-count="2">A forma final significa:</p>
+<blockquote><p>Existe pelo menos um valor admissível que satisfaz <span class="math-inline">A</span> e não satisfaz <span class="math-inline">B</span>.</p></blockquote>
+<p>As duas condições devem ocorrer no mesmo valor.</p>
+<div class="minor-title keep-with-next" data-keep-count="3">h)</div>
+<p data-keep-count="2">O valor <span class="math-inline">3</span> satisfaz:</p>
+<div class="math-line">A(3)∧¬B(3).</div>
+<p data-keep-count="2">Por isso, ele é simultaneamente:</p>
+<ul><li>contraexemplo de <span class="math-inline">∀x (A(x)→ B(x));</span></li><li>testemunho de <span class="math-inline">∃x (A(x)∧¬B(x)).</span></li></ul>
+<p>São duas maneiras de descrever o mesmo caso a partir da proposição original e de sua negação.</p>
+<div class="minor-title keep-with-next" data-keep-count="3">i)</div>
+<p data-keep-count="2">Uma resposta possível é:</p>
+<div class="math-line answer-line"><span class="answer-box">a=2</span>.</div>
+<p>Outra resposta válida seria <span class="math-inline">a=6</span>.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">j)</div>
+<p>Para <span class="math-inline">a=2</span>: <span class="math-inline">C(2)=V,</span> pois <span class="math-inline">2</span> é par.</p>
+<p>Mas: <span class="math-inline">D(2)=F,</span> pois <span class="math-inline">2</span> não é múltiplo de <span class="math-inline">4</span>.</p>
+<p>Assim, <span class="math-inline">C(2)∧¬D(2)</span> é verdadeira, e <span class="math-inline">2</span> constitui um contraexemplo.</p>
+<p>Da mesma forma, <span class="math-inline">6</span> também é válido, pois é par e não é múltiplo de <span class="math-inline">4</span>.</p>
+<div class="item-title keep-with-next" data-keep-count="3">Exercício 14</div>
+<div class="minor-title keep-with-next" data-keep-count="2">a)</div>
+<div class="table-wrap visual"><table class="analysis-table"><thead><tr><th scope="col"><span class="math-inline">a</span></th><th scope="col"><span class="math-inline">P(a)</span></th><th scope="col"><span class="math-inline">Q(a)</span></th></tr></thead><tbody><tr><td><span class="math-inline">-2</span></td><td><span class="math-inline">F</span></td><td><span class="math-inline">F</span></td></tr><tr><td><span class="math-inline">-1</span></td><td><span class="math-inline">V</span></td><td><span class="math-inline">F</span></td></tr><tr><td><span class="math-inline">0</span></td><td><span class="math-inline">V</span></td><td><span class="math-inline">F</span></td></tr><tr><td><span class="math-inline">1</span></td><td><span class="math-inline">V</span></td><td><span class="math-inline">V</span></td></tr><tr><td><span class="math-inline">2</span></td><td><span class="math-inline">F</span></td><td><span class="math-inline">V</span></td></tr></tbody></table></div>
+<div class="minor-title keep-with-next" data-keep-count="2">b)</div>
+<p><strong>I.</strong> <span class="math-inline">∃x P(x)</span> é verdadeira.</p>
+<p data-keep-count="2">Por exemplo:</p>
+<div class="math-line">P(-1)=V.</div>
+<p>Assim, <span class="math-inline">-1</span> é um testemunho. Os valores <span class="math-inline">0</span> e <span class="math-inline">1</span> também seriam válidos.</p>
+<p><strong>II.</strong> <span class="math-inline">∀x P(x)</span> é falsa.</p>
+<p data-keep-count="2">Por exemplo:</p>
+<div class="math-line">P(-2)=F.</div>
+<p>Logo, <span class="math-inline">-2</span> é uma exceção à universal. O valor <span class="math-inline">2</span> também poderia ser utilizado.</p>
+<p><strong>III.</strong> <span class="math-inline">∃x Q(x)</span> é verdadeira.</p>
+<p data-keep-count="2">Por exemplo:</p>
+<div class="math-line">Q(1)=V.</div>
+<p>O valor <span class="math-inline">2</span> também é um testemunho possível.</p>
+<p><strong>IV.</strong> <span class="math-inline">∀x (P(x)→ Q(x))</span> é falsa.</p>
+<p data-keep-count="2">Para <span class="math-inline">a=-1</span>: <span class="math-inline">P(-1)=V</span> e:</p>
+<div class="math-line">Q(-1)=F.</div>
+<p data-keep-count="2">Portanto,</p>
+<div class="math-line">P(-1)→ Q(-1)=F.</div>
+<p>O valor <span class="math-inline">0</span> também apresenta o mesmo padrão e constitui outro contraexemplo válido.</p>
+<p>A informação relevante depende da estrutura examinada: nas existenciais procuramos um testemunho; numa universal simples, uma exceção pode revelar a falha; na universal com condicional, é necessário encontrar um caso com antecedente verdadeiro e consequente falso.</p>
+<div class="minor-title keep-with-next" data-keep-count="3">c)</div>
+<p data-keep-count="2">A negação é:</p>
+<div class="math-structural"><span class="answer-box"> ¬(∃x Q(x)) ≡ ∀x ¬Q(x) </span>.</div>
+<p data-keep-count="2">Verbalmente:</p>
+<blockquote><p>Todos os valores admissíveis deixam de satisfazer <span class="math-inline">Q</span>.</p></blockquote>
+<p>Essa proposição é falsa, pois existem valores que satisfazem <span class="math-inline">Q</span>, como: <span class="math-inline">1</span> e: <span class="math-inline">2.</span></p>
+<div class="minor-title keep-with-next" data-keep-count="2">d)</div>
+<p>Uma resposta possível é: <span class="math-inline">a=-1.</span></p>
+<p data-keep-count="2">Nesse caso: <span class="math-inline">P(-1)=V</span> e:</p>
+<div class="math-line">Q(-1)=F.</div>
+<p>Logo, o condicional: <span class="math-inline">P(-1)→ Q(-1)</span> é falso e <span class="math-inline">-1</span> funciona como contraexemplo da universal.</p>
+<p>Também seria válida a escolha: <span class="math-inline">a=0.</span></p>
+<div class="minor-title keep-with-next" data-keep-count="2">e)</div>
+<p>Uma universal exige que a condição interna seja respeitada em <strong>todos</strong> os valores admissíveis.</p>
+<p>Quando encontramos um caso em que: <span class="math-inline">P(a)=V</span> e: <span class="math-inline">Q(a)=F,</span> o condicional interno falha. Um único caso desse tipo já rompe a exigência universal.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">f)</div>
+<p><strong>Ana</strong></p>
+<p>A conclusão não é sustentada.</p>
+<p data-keep-count="2">É verdade que: <span class="math-inline">P(1)=V,</span> mas um único caso favorável não permite concluir:</p>
+<div class="math-line">∀x P(x)=V.</div>
+<p data-keep-count="2">Os valores: <span class="math-inline">-2</span> e: <span class="math-inline">2</span> produzem: <span class="math-inline">P(-2)=F</span> e:</p>
+<div class="math-line">P(2)=F.</div>
+<p data-keep-count="2">Uma correção adequada seria:</p>
+<blockquote><p><span class="math-inline">P(1)</span> mostra que existe um caso favorável, mas a afirmação universal é falsa porque nem todos os valores admissíveis satisfazem <span class="math-inline">P</span>.</p></blockquote>
+<p><strong>Bruno</strong></p>
+<p>A conclusão também não é sustentada.</p>
+<p>De fato: <span class="math-inline">Q(-2)=F,</span> mas isso não elimina a possibilidade de outro valor satisfazer <span class="math-inline">Q</span>.</p>
+<p data-keep-count="2">Temos: <span class="math-inline">Q(1)=V</span> e:</p>
+<div class="math-line">Q(2)=V.</div>
+<p data-keep-count="2">Logo:</p>
+<div class="math-line">∃x Q(x)=V.</div>
+<p><strong>Carla</strong></p>
+<p>A conclusão é correta.</p>
+<p data-keep-count="2">Como: <span class="math-inline">Q(1)=V</span> e <span class="math-inline">1</span> é admissível, temos um testemunho concreto de:</p>
+<div class="math-line">∃x Q(x).</div>
+<p><strong>Diego</strong></p>
+<p>A conclusão é correta.</p>
+<p data-keep-count="2">Para: <span class="math-inline">a=-1,</span> temos: <span class="math-inline">P(-1)=V</span> e:</p>
+<div class="math-line">Q(-1)=F.</div>
+<p data-keep-count="2">Essa é exatamente a combinação que torna falso:</p>
+<div class="math-line">P(-1)→ Q(-1).</div>
+<p data-keep-count="2">Assim, <span class="math-inline">-1</span> é um contraexemplo de:</p>
+<div class="math-line">∀x (P(x)→ Q(x)).</div>
+<div class="minor-title keep-with-next" data-keep-count="2">g)</div>
+<p>Ana utiliza um único caso <strong>favorável</strong> para tentar estabelecer uma universal.</p>
+<p>Isso não basta, pois a universal exige que todos os casos sejam favoráveis.</p>
+<p>Bruno utiliza um único caso <strong>desfavorável</strong> para tentar eliminar uma existencial.</p>
+<p>Isso também não basta, pois a existencial continua verdadeira enquanto houver ao menos um caso favorável.</p>
+<p data-keep-count="2">Portanto, o problema é diferente nos dois raciocínios:</p>
+<ul><li>um caso verdadeiro não estabelece uma exigência sobre todos;</li><li>um caso falso não elimina a possibilidade de existir outro caso verdadeiro.</li></ul>
+<div class="minor-title keep-with-next" data-keep-count="3">h)</div>
+<p data-keep-count="2">Carla utiliza <span class="math-inline">1</span> como <strong>testemunho</strong> de uma afirmação existencial:</p>
+<div class="math-line">∃x Q(x).</div>
+<p>Ela precisa apenas apresentar um valor admissível para o qual <span class="math-inline">Q</span> seja verdadeira.</p>
+<p data-keep-count="2">Diego utiliza <span class="math-inline">-1</span> como <strong>contraexemplo</strong> de uma afirmação universal:</p>
+<div class="math-line">∀x (P(x)→ Q(x)).</div>
+<p data-keep-count="2">Nesse caso, o valor precisa realizar precisamente a falha do condicional: <span class="math-inline">P(-1)=V</span> e:</p>
+<div class="math-line">Q(-1)=F.</div>
+<div class="minor-title keep-with-next" data-keep-count="10">i)</div>
+<p data-keep-count="2">Uma resposta possível é escolher:</p>
+<div class="math-line">∀x (P(x)→ Q(x)).</div>
+<p>Essa proposição é universal e exige que, para cada valor admissível, sempre que <span class="math-inline">P(a)</span> for verdadeira, <span class="math-inline">Q(a)</span> também seja verdadeira.</p>
+<p data-keep-count="2">Escolhendo: <span class="math-inline">a=0,</span> temos: <span class="math-inline">P(0)=V</span> e:</p>
+<div class="math-line">Q(0)=F.</div>
+<p data-keep-count="2">Assim:</p>
+<div class="math-line">P(0)→ Q(0)=F.</div>
+<p>Esse único valor é suficiente para revelar a falsidade da universal, pois realiza exatamente o caso que viola sua condição interna.</p>
+<p>Também seria possível responder utilizando <span class="math-inline">-1</span> como contraexemplo, ou escolher a proposição: <span class="math-inline">∀x P(x)</span> e utilizar <span class="math-inline">-2</span> ou <span class="math-inline">2</span> como exceção.</p>
+</section>
+</div>
+</main>
+<script>(function () {
+    'use strict';
+    const documentRoot = document.getElementById('document');
+    const source = document.getElementById('source-content');
+    if (!source) return;
+    let pageNumber = 2;
+    function makePage(context) {
+        const page = document.createElement('section');
+        page.className = 'page page--generated';
+        page.innerHTML = `<header class="page-header"><span>PLANO DE ESTUDO — MATEMÁTICA</span><span class="header-context">${context}</span></header><div class="page-content"></div><footer class="page-footer"><span>TÓPICO 1.1 · BLOCO IV — SENTENÇAS ABERTAS E QUANTIFICADORES</span><span class="page-number">${pageNumber++}</span></footer>`;
+        documentRoot.insertBefore(page, source); return page;
+    }
+    function overflows(content) { return content.scrollHeight > content.clientHeight + 1; }
+    function appendAtomic(content,nodes) { nodes.forEach(n=>content.appendChild(n)); }
+    function removeAtomic(content,nodes) { for(let i=nodes.length-1;i>=0;i--) if(nodes[i].parentNode===content) content.removeChild(nodes[i]); }
+    const sections=Array.from(source.querySelectorAll(':scope > .source-section'));
+    for(const section of sections) {
+        const context=section.dataset.context||''; let page=makePage(context); let content=page.querySelector('.page-content'); const nodes=Array.from(section.children);
+        for(let i=0;i<nodes.length;i++) {
+            const node=nodes[i]; let count=1;
+            if(node.dataset && node.dataset.keepCount) count=Math.max(1,parseInt(node.dataset.keepCount,10)||1);
+            else if(node.classList && node.classList.contains('keep-with-next') && i+1<nodes.length) count=2;
+            count=Math.min(count,nodes.length-i); const atomic=nodes.slice(i,i+count);
+            appendAtomic(content,atomic);
+            if(overflows(content)) { removeAtomic(content,atomic); page=makePage(context); content=page.querySelector('.page-content'); appendAtomic(content,atomic); if(overflows(content)) page.classList.add('page--overflow-warning'); }
+            i+=count-1;
+        }
+    }
+    source.remove();
+})();</script>
+</body></html>
