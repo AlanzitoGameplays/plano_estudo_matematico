@@ -1,0 +1,666 @@
+/* ==========================================================================
+   PLANO DE ESTUDO MATEMÁTICO — VERSÃO 3.1
+   TÓPICO 1.1 · BLOCO III — CONDICIONAL, BICONDICIONAL E CONDIÇÕES MATEMÁTICAS
+   Base canônica: Plano Matemático 3.1 + Regras Gerais HTML/CSS 2.2 + Bloco I definitivo
+   ========================================================================== */
+
+.theme--math{
+    --primary: #252B5E;
+    --secondary: #3657A7;
+    --accent: #6558A6;
+    --support: #7396C8;
+    --soft: #EEF2F8;
+    --border: #C5CEDD;
+    --text: #252A33;
+    --muted: #6F7583;
+    --paper: #FBFCFE;
+    --white: #FBFCFE;
+    --screen: #EEF2F8;
+
+    --page-width: 210mm;
+    --page-height: 297mm;
+    --page-top: 12mm;
+    --page-right: 17mm;
+    --page-bottom: 7mm;
+    --page-left: 20mm;
+
+    --font-heading: Arial, "Liberation Sans", "DejaVu Sans", sans-serif;
+    --font-body: Georgia, "Times New Roman", "Liberation Serif", serif;
+    --font-math: "Cambria Math", "STIX Two Math", "DejaVu Math TeX Gyre", serif;
+
+    --text-size: 9.55pt;
+    --text-line: 1.39;
+    --text-small: 8.2pt;
+    --text-micro: 7.25pt;
+
+    --title-cover: 27.5pt;
+    --title-part: 19.5pt;
+    --title-section: 13.2pt;
+    --title-subsection: 10.2pt;
+    --title-minor: 8.5pt;
+
+    --line-thin: 0.24mm;
+    --line-regular: 0.34mm;
+    --line-medium: 0.78mm;
+    --line-strong: 1.3mm;
+    --radius-small: 1.2mm;
+}
+
+*, *::before, *::after{ box-sizing: border-box; }
+html{ -webkit-print-color-adjust: exact; print-color-adjust: exact; background: var(--screen); }
+body{
+    margin: 0;
+    background: var(--screen);
+    color: var(--text);
+    font-family: var(--font-body);
+    font-size: var(--text-size);
+    line-height: var(--text-line);
+    overflow-x: auto;
+}
+main, section, article, header, footer, div{ min-width: 0; }
+p, ul, ol, figure, table, blockquote{ margin-top: 0; }
+p{ margin-bottom: .60em; orphans: 3; widows: 3; }
+ul, ol{ margin-top: .45em; margin-bottom: .72em; padding-left: 1.35em; }
+li{ margin-bottom: .22em; orphans: 2; widows: 2; }
+b, strong{ color: var(--primary); }
+img, svg{ display: block; max-width: 100%; }
+
+@page { size: A4; margin: 0; }
+
+/* --- tela e páginas: mesmas proporções do Plano 3.1 --- */
+.document{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    width: 100%;
+    padding: 24px 0;
+}
+.page{
+    position: relative;
+    display: grid;
+    grid-template-rows: auto minmax(0, 1fr) auto;
+    width: var(--page-width);
+    height: var(--page-height);
+    padding: var(--page-top) var(--page-right) var(--page-bottom) var(--page-left);
+    overflow: visible;
+    background: var(--paper);
+    box-shadow: 0 5px 18px rgb(37 42 51 / 12%);
+    break-after: page;
+    page-break-after: always;
+}
+.page-content{
+    min-width: 0;
+    min-height: 0;
+    padding-top: 4mm;
+    padding-bottom: 3.6mm;
+    overflow: visible;
+}
+
+/* --- cabeçalho e rodapé --- */
+.page-header, .page-footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8mm;
+    color: var(--muted);
+    font-family: var(--font-heading);
+    font-size: 7.35pt;
+    line-height: 1.15;
+    letter-spacing: .035em;
+    text-transform: uppercase;
+}
+.page-header{ padding-bottom: 2.2mm; border-bottom: var(--line-thin) solid var(--border); }
+.page-footer{ padding-top: 1.8mm; border-top: var(--line-thin) solid var(--border); }
+.page-header > span:last-child, .page-footer > span:last-child{ text-align: right; }
+.page-header .header-context{ max-width: 92mm; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.page-number{ min-width: 8mm; font-variant-numeric: tabular-nums; }
+
+/* --- capa: mesma gramática do Plano 3.1 --- */
+.page--cover{ display: grid; grid-template-rows: 101mm minmax(0,1fr); padding: 0; }
+.cover-top{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 18mm 24mm 15mm;
+    background: var(--primary);
+}
+.cover-top::after{
+    content: "";
+    position: absolute;
+    right: 0; bottom: 0; left: 0;
+    height: 4mm;
+    border-top: 1.6mm solid var(--secondary);
+    border-bottom: 1.6mm solid var(--accent);
+    background: var(--support);
+}
+.cover-collection{
+    color: var(--white);
+    font-family: var(--font-heading);
+    font-size: 9pt;
+    font-weight: 700;
+    letter-spacing: .095em;
+    text-transform: uppercase;
+}
+.cover-bottom{ display: flex; flex-direction: column; justify-content: center; padding: 20mm 24mm 19mm; }
+.cover-kicker{
+    margin-bottom: 3mm;
+    color: var(--muted);
+    font-family: var(--font-heading);
+    font-size: 8.2pt;
+    font-weight: 700;
+    letter-spacing: .09em;
+    text-transform: uppercase;
+}
+.cover-title{
+    max-width: 155mm;
+    color: var(--primary);
+    font-family: var(--font-heading);
+    font-size: var(--title-cover);
+    font-weight: 700;
+    line-height: 1.01;
+    letter-spacing: -.026em;
+    text-transform: uppercase;
+}
+.cover-rule{ display: grid; grid-template-columns: 64mm 28mm; width: 92mm; height: 1.4mm; margin-top: 7mm; }
+.cover-rule span:first-child{ background: var(--secondary); }
+.cover-rule span:last-child{ background: var(--accent); }
+
+
+.cover-version{ margin-top: 2.3mm; color: var(--muted); font-family: var(--font-heading); font-size: 8.2pt; font-weight: 700; letter-spacing: .08em; }
+
+/* --- grandes aberturas --- */
+.section-opening{ margin-bottom: 4.2mm; padding-left: 4mm; border-left: var(--line-strong) solid var(--secondary); }
+.section-label, .part-label{
+    margin-top: 0;
+    margin-bottom: .8mm;
+    color: var(--muted);
+    font-family: var(--font-heading);
+    font-size: var(--text-micro);
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+}
+.section-title, .part-title{
+    margin: 0;
+    color: var(--primary);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -.018em;
+}
+.section-title{ font-size: 19pt; }
+.part-title{ font-size: var(--title-part); }
+.part-opening{
+    margin-bottom: 4.3mm;
+    padding: 4.6mm 5.5mm 4.3mm;
+    border-top: 1.4mm solid var(--primary);
+    border-bottom: var(--line-regular) solid var(--border);
+    background: var(--white);
+}
+.part-opening::after{ content:""; display:block; width:44mm; height:var(--line-medium); margin-top:2.8mm; background:var(--support); }
+.part-opening .part-label{ color: var(--accent); }
+
+/* --- títulos fora do outline --- */
+.item-title, .gabarito-subtitle{
+    margin-top: 4.8mm;
+    color: var(--secondary);
+    font-family: var(--font-heading);
+    font-size: var(--title-subsection);
+    font-weight: 700;
+    line-height: 1.16;
+}
+.item-title{ margin-top: 4.8mm; font-size: 10.5pt; }
+.part-opening + .item-title, .section-opening + .item-title{ margin-top: 2.1mm; }
+.gabarito-subtitle{
+    margin-top: 1.2mm;
+    color: var(--accent);
+    font-size: 11pt;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+}
+.minor-title{
+    margin: 2.3mm 0 1mm;
+    color: var(--accent);
+    font-family: var(--font-heading);
+    font-size: var(--title-minor);
+    font-weight: 700;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+}
+
+/* --- prosa, citações e matemática --- */
+blockquote{
+    margin: 1.15mm 0 1.65mm 4mm;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: var(--text);
+}
+blockquote p:last-child{ margin-bottom: 0; }
+blockquote.student-quote{
+    margin: 1.8mm 0 2.2mm;
+    padding: 1.6mm 2.8mm;
+    border-left: var(--line-medium) solid var(--support);
+    background: var(--white);
+}
+.math-inline{
+    color: var(--primary);
+    font-family: var(--font-math);
+    white-space: nowrap;
+}
+/* Expressões simples não recebem moldura, fundo ou centralização automática. */
+.math-line{
+    margin: .65mm 0 1.05mm 5mm;
+    color: var(--primary);
+    font-family: var(--font-math);
+    font-size: 9.9pt;
+    line-height: 1.34;
+}
+/* Comparações ou notações que são, de fato, o objeto imediato da explicação. */
+
+
+
+
+
+
+
+
+.key-statement{
+    max-width: 146mm;
+    margin: 2.1mm auto 2.7mm;
+    color: var(--text);
+    font-size: 9.75pt;
+    line-height: 1.42;
+    text-align: center;
+}
+
+/* --- tabelas: linguagem canônica, não cartões --- */
+.table-wrap{ max-width: 100%; margin: 2.2mm 0 3mm; overflow-x: auto; }
+table{ width: 100%; table-layout: fixed; border-collapse: collapse; background: var(--white); font-size: 8.65pt; line-height: 1.32; }
+thead{ display: table-header-group; }
+th, td{ padding: 2mm 2.5mm; border: var(--line-thin) solid var(--border); vertical-align: top; text-align: left; overflow-wrap: anywhere; }
+th{
+    background: var(--secondary);
+    color: var(--white);
+    font-family: var(--font-heading);
+    font-size: 7.9pt;
+    font-weight: 700;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+}
+tbody tr:nth-child(even){ background: var(--soft); }
+tbody tr:nth-child(odd){ background: var(--white); }
+td:first-child{ color: var(--primary); }
+
+
+
+
+
+/* --- visuais --- */
+.visual{ break-inside: avoid; page-break-inside: avoid; }
+.visual--geometry{ margin: 2.4mm auto 3.3mm; color: var(--primary); }
+
+
+
+
+.shape-label{ fill: #3657A7; font-family: Arial, sans-serif; font-size: 22px; font-weight: 700; }
+
+
+/* --- paginação e unidades --- */
+.source-content{ display: none; }
+.source-section{ display: block; }
+
+.keep-with-next{ break-after: avoid; page-break-after: avoid; }
+.table-wrap, table, tr, figure, blockquote, .key-statement{ break-inside: avoid; page-break-inside: avoid; }
+
+@media screen and (max-width: 900px) {
+    .document{ align-items:flex-start; padding:12px; }
+    .page{ transform-origin: top left; }
+}
+
+@media print {
+    html, body{ width:var(--page-width); margin:0; padding:0; background:var(--paper); }
+    .document{ display:block; gap:0; padding:0; }
+    .page{ margin:0; box-shadow:none; break-after:page; page-break-after:always; }
+    .page:last-of-type{ break-after:auto; page-break-after:auto; }
+}
+
+/* Headings-raiz do outline permanecem visíveis na própria linguagem editorial. */
+.outline-root{
+    display: inline;
+    margin: 0;
+    padding: 0;
+    color: inherit;
+    font: inherit;
+    font-weight: inherit;
+    letter-spacing: inherit;
+    line-height: inherit;
+    text-transform: inherit;
+}
+
+@media screen {
+    .page--overflow-warning{ outline: 2px solid var(--accent); }
+}
+.section-opening > .section-label.outline-root{ display: block; margin: 0 0 .8mm; }
+.part-label .outline-root{ display: inline; }
+
+
+/* ==========================================================================
+   BLOCO III — BASE FUNCIONAL HERDADA
+   ========================================================================== */
+
+/* Regras 2.2: matemática simples não é automaticamente centralizada. */
+
+
+.math-structural{
+    width: fit-content;
+    max-width: 154mm;
+    margin: 2.2mm auto 2.6mm;
+    color: var(--primary);
+    font-family: var(--font-math);
+    font-size: 11.2pt;
+    font-weight: 700;
+    line-height: 1.35;
+    text-align: center;
+}
+.math-inline sup{ font-size: .72em; line-height: 0; }
+.answer-box{
+    display: inline-block;
+    padding: .35mm 1.2mm;
+    border: var(--line-thin) solid var(--support);
+    border-radius: .7mm;
+    background: var(--soft);
+    font-family: var(--font-math);
+    font-weight: 700;
+}
+
+/* Definição formal: fundo Neblina + barra cobalto + negrito. */
+.definition-box{
+    margin: 2.2mm 0 2.8mm;
+    padding: 2.3mm 3.2mm 2.35mm 4mm;
+    border-left: 1.15mm solid var(--secondary);
+    background: var(--soft);
+    color: var(--primary);
+    font-weight: 700;
+    line-height: 1.42;
+    break-inside: avoid;
+    page-break-inside: avoid;
+}
+.definition-box--group p{ margin-bottom: .5em; }
+.definition-box--group p:last-child{ margin-bottom: 0; }
+.key-statement{
+    max-width: none;
+    margin: 1.7mm 0 2.1mm 4mm;
+    text-align: left;
+}
+
+/* Tabelas lógicas: a própria tabulação realiza a comparação. */
+.truth-table{ font-family: var(--font-math); }
+.truth-table th{ text-transform: none; text-align: center; }
+.truth-table td{ text-align: center; vertical-align: middle; }
+.truth-table th .math-inline{ color: var(--white); }
+.truth-table td .math-inline{ color: var(--primary); }
+.truth-table--compact{ font-size: 8.1pt; }
+.truth-table--single{ width: 94mm; margin-left: auto; margin-right: auto; }
+
+
+.truth-table--wide{ font-size: 7.75pt; line-height: 1.22; }
+.truth-table--wide th, .truth-table--wide td{ padding: 1.45mm 1.3mm; overflow-wrap: normal; }
+
+
+.worksheet-table td:empty{ height: 8.3mm; }
+.worksheet-table th:empty{ min-width: 15mm; background: var(--soft); }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Agrupamento e alcance: geometria tipográfica, não setas. */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Painéis de avaliações possíveis. */
+
+
+
+
+
+
+
+
+
+/* Figuras do "ou" inclusivo. */
+
+
+
+/* Quadros de preenchimento e diagnóstico. */
+
+
+
+
+
+
+
+
+
+
+/* Tabelas muito largas preservam legibilidade; fórmulas curtas não quebram. */
+th .math-inline, td .math-inline{ white-space:nowrap; }
+.table-wrap{ overflow:visible; }
+table{ overflow-wrap:normal; word-break:normal; }
+th, td{ overflow-wrap:break-word; }
+
+/* Componentes que não devem ser quebrados internamente. */
+.definition-box, .truth-table--single{
+    break-inside: avoid;
+    page-break-inside: avoid;
+}
+
+@media print {
+    .truth-table--wide{ font-size:7.6pt; }
+}
+
+
+/* ==========================================================================\n   BLOCO III — NORMALIZAÇÃO CANÔNICA (Regras Gerais 2.2)\n   ========================================================================== */
+
+/* A matemática curta acompanha a prosa; uma linha própria não implica centralização. */
+.math-line{
+    margin: .45mm 0 .9mm 4mm;
+    text-align: left;
+}
+
+.answer-line{ margin-left: 0; }
+.answer-line .answer-box{ vertical-align: baseline; }
+
+/* Em cabeçalhos largos, a quebra é deliberada e ocorre somente onde o HTML a marcou. */
+.truth-table--wide th .math-inline{ white-space: normal; }
+.truth-table--wide td .math-inline{ white-space: nowrap; }
+.math-header-wrap{
+    display: inline-block;
+    white-space: normal !important;
+    line-height: 1.15;
+    text-align: center;
+}
+.truth-table--six th, .truth-table--six td, .truth-table--seven th, .truth-table--seven td{
+    padding-left: .75mm;
+    padding-right: .75mm;
+}
+.truth-table--seven{ font-size: 7.05pt; }
+.truth-table--seven th{ font-size: 6.9pt; }
+
+/* Alcance: o agrupamento relevante é percebido pela geometria tipográfica, sem setas. */
+
+
+
+/* A grade diagnóstica é o próprio enunciado visual do Exercício 15. */
+
+
+
+
+/* Tabelas de tradução: rótulo do item faz parte da própria ficha de trabalho. */
+
+
+@media print {
+    .truth-table--seven{ font-size: 7pt; }
+    .truth-table--seven th{ font-size: 6.8pt; }
+}
+
+/* Ajustes finais de navegação e alternativas do Quiz. */
+.outline-root{ text-transform: none !important; }
+
+
+
+
+.part-title--long{ font-size: 17.8pt; letter-spacing: -.022em; }
+
+
+/* ==========================================================================\n   BLOCO III — EXTENSÕES CONCEITUAIS ESPECÍFICAS\n   ========================================================================== */
+
+/* O conectivo → permanece símbolo lógico; não há setas decorativas externas. */
+
+
+.comparison-label{
+    margin-bottom:1.2mm;
+    color:var(--accent);
+    font-family:var(--font-heading);
+    font-size:7.2pt;
+    font-weight:700;
+    letter-spacing:.07em;
+    text-transform:uppercase;
+}
+.comparison-symbol{
+    margin:1mm 0 1.5mm;
+    color:var(--primary);
+    font-family:var(--font-math);
+    font-size:11pt;
+    font-weight:700;
+    text-align:center;
+}
+
+/* Linha VF: único modo de falha do condicional, sem código vermelho/verde. */
+.truth-table .focus-row td, .truth-table .coincide-row td{
+    background:var(--soft);
+    font-weight:700;
+}
+.conditional-table{ width:94mm; margin-left:auto; margin-right:auto; }
+.contraposition-table{ width:126mm; margin-left:auto; margin-right:auto; }
+.biconditional-table{ width:142mm; margin-left:auto; margin-right:auto; }
+
+/* Correspondência verbal-simbólica: verbal mais larga, fórmula compacta. */
+.verbal-direction-table th:first-child, .verbal-direction-table td:first-child{ text-align:left; }
+.verbal-direction-table th:last-child, .verbal-direction-table td:last-child{ text-align:center; }
+.verbal-direction-table .compare-row td:first-child{ font-weight:700; }
+.verbal-direction-table .compare-row td{ background:var(--soft); }
+
+/* Bicondicional × equivalência; diferença textual, não cromática. */
+.concept-comparison{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:4mm;
+    margin:3mm 0 3.7mm;
+    break-inside:avoid;
+}
+.concept-comparison > article{
+    padding:2.7mm 3.1mm;
+    border-top:var(--line-medium) solid var(--support);
+    border-bottom:var(--line-thin) solid var(--border);
+    background:var(--white);
+}
+.concept-comparison p{ margin-bottom:.65em; }
+.concept-comparison p:last-child{ margin-bottom:0; }
+
+/* Exemplo de filtragem: tabela, não fluxograma. */
+.filter-table th:first-child, .filter-table td:first-child{ text-align:center; }
+.filter-table td:last-child{ text-align:center; }
+.result-note{
+    margin:1.2mm 0 2.8mm 4mm;
+    padding-left:2.5mm;
+    border-left:var(--line-medium) solid var(--support);
+}
+.comparison-fields{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:4mm;
+    margin:1.5mm 0 3mm;
+}
+.comparison-fields p{
+    margin:0;
+    padding:1.7mm 2.2mm;
+    border-bottom:var(--line-thin) solid var(--border);
+}
+.case-comparison-table{ font-size:8.15pt; }
+
+/* Painel geométrico do Exercício 2: preenchimento/contorno, sem dependência de cor. */
+.conditional-shape-panel{ width:142mm; height:auto; margin:0 auto; }
+.conditional-shape-panel--mini{ width:92mm; }
+
+/* Tabelas de investigação com texto longo. */
+.analysis-table--counterpositive{
+    font-size:7.45pt;
+    line-height:1.22;
+}
+.analysis-table--counterpositive th, .analysis-table--counterpositive td{
+    padding:1.6mm 1.4mm;
+}
+.analysis-table--counterpositive th{ font-size:7.05pt; }
+.classification-table th:first-child, .classification-table td:first-child{ width:34%; }
+
+/* Tabela ampla final: quebra apenas onde o HTML permite. */
+.truth-table--seven th .math-inline, .truth-table--six th .math-inline{ white-space:normal; }
+.truth-table--seven .math-header-wrap{ max-width:100%; }
+
+/* Blocos de fala permanecem textuais e neutros. */
+.student-quote{
+    break-inside:avoid;
+    page-break-inside:avoid;
+}
+.student-quote + .student-quote{ margin-top:1.5mm; }
+
+/* Reduz a estética de formulário em tabelas incompletas. */
+.worksheet-table td:empty{
+    height:7.5mm;
+    background:var(--paper);
+}
+
+/* Estruturas longas da Parte IV permanecem em prosa; comparação é exceção. */
+.part-title--long{ font-size:15.6pt; line-height:1.06; letter-spacing:-.018em; white-space:nowrap; }
+
+/* Semântico: pequenos blocos de definição dentro de exercício são legíveis sem antecipar respostas. */
+blockquote.definition-box{ margin-left:0; }
+
+@media print {
+    .conditional-table{ width:94mm; }
+    .analysis-table--counterpositive{ font-size:7.35pt; }
+    .concept-comparison, .comparison-fields{ break-inside:avoid; page-break-inside:avoid; }
+}
+
+.answer-box--text{ font-family:var(--font-heading); font-size:8.4pt; line-height:1.25; white-space:normal; }
