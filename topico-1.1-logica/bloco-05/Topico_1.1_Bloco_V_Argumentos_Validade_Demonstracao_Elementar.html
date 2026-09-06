@@ -1,0 +1,1793 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Tópico 1.1 - Lógica Matemática - Bloco V - Argumentos, Validade e Demonstração Elementar" name="description"/>
+<title>Tópico 1.1 · Bloco V — Argumentos, Validade e Demonstração Elementar</title>
+<link href="Plano_Matematico_3_1_Bloco_V.css" rel="stylesheet"/>
+</head>
+<body class="theme--math">
+<main class="document" id="document">
+<section aria-label="Capa" class="page page--cover" id="capa">
+<div class="cover-top"><div class="cover-collection">PLANO DE ESTUDO MATEMÁTICO</div></div>
+<div class="cover-bottom">
+<div class="cover-kicker">TÓPICO 1.1 · LÓGICA MATEMÁTICA</div>
+<div class="cover-title">BLOCO V<br/>ARGUMENTOS, VALIDADE<br/>E DEMONSTRAÇÃO<br/>ELEMENTAR</div>
+<div aria-hidden="true" class="cover-rule"><span></span><span></span></div>
+<div class="cover-version">APOSTILA DE ESTUDO — 2026</div>
+</div>
+</section>
+<div class="source-content" id="source-content">
+<section class="source-section" data-context="TEXTO TEÓRICO • PARTE I">
+<header class="part-opening" data-keep-count="4"><div class="part-label"><h1 class="outline-root">Texto Teórico</h1> · Parte I</div><h2 class="part-title">Parte I — Argumentos, Inferência e Validade</h2></header>
+<div class="item-title keep-with-next" data-keep-count="3">1. Da proposição ao argumento</div>
+<p data-keep-count="2">Considere a seguinte organização:</p>
+<div class="argument-stack"><div class="argument-premises"><div class="argument-premise">p→ q</div><div class="argument-premise">p</div></div><div class="argument-conclusion"><span class="therefore-marker">∴</span><span>q</span></div></div>
+<p>As três linhas representam proposições, mas elas não desempenham o mesmo papel. As duas primeiras são tomadas como pontos de partida; a terceira é apresentada como aquilo que deve decorrer delas.</p>
+<p data-keep-count="2">Isso é diferente de simplesmente escrever:</p>
+<div class="math-line">p,   q,   r.</div>
+<p>Nessa segunda situação, temos apenas três proposições colocadas lado a lado. Nada foi dito sobre a relação que pretendemos estabelecer entre elas. Na primeira estrutura, ao contrário, existe uma direção no raciocínio: algumas afirmações fornecem a base a partir da qual outra é apresentada como consequência.</p>
+<p>As proposições utilizadas como ponto de partida recebem o nome de <strong>premissas</strong>. A proposição que se pretende obter a partir delas é a <strong>conclusão</strong>.</p>
+<p class="definition-box">Um <strong>argumento</strong> é, portanto, uma estrutura em que uma ou mais proposições são apresentadas como premissas para sustentar uma conclusão.</p>
+<p>Isso não significa que as premissas sejam necessariamente verdadeiras. “Premissa” designa o papel que uma proposição ocupa no argumento, e não seu valor lógico. Uma afirmação falsa também pode ser tomada como premissa; a questão de sua verdade deve ser analisada separadamente.</p>
+<p class="definition-box">A passagem das premissas para a conclusão recebe o nome de <strong>inferência</strong>. Inferir significa apresentar uma conclusão como decorrência de certas proposições assumidas como ponto de partida.</p>
+<p>Na escrita simbólica, o sinal <span class="math-inline">∴</span> é utilizado para marcar a conclusão. Pode ser lido como “portanto” ou “logo”.</p>
+<p data-keep-count="2">Assim, uma forma geral de argumento pode ser apresentada como:</p>
+<div class="argument-stack"><div class="argument-premises"><div class="argument-premise">P<sub>1</sub></div><div class="argument-premise">P<sub>2</sub></div><div class="argument-premise">⋮</div><div class="argument-premise">P<sub>n</sub></div></div><div class="argument-conclusion"><span class="therefore-marker">∴</span><span>C.</span></div></div>
+<p>As expressões <span class="math-inline">P<sub>1</sub>,P<sub>2</sub>,…,P<sub>n</sub></span> representam as premissas, enquanto <span class="math-inline">C</span> representa a conclusão.</p>
+<p>O símbolo <span class="math-inline">∴</span> não funciona como <span class="math-inline">∧</span>, <span class="math-inline">∨</span> ou <span class="math-inline">→</span>. Ele não conecta proposições para formar uma nova proposição. Sua função é apenas indicar, na apresentação do argumento, onde termina o conjunto de premissas e qual afirmação está sendo apresentada como conclusão.</p>
+<p>Na linguagem verbal, essa organização pode aparecer sem qualquer notação especial. Palavras como “portanto”, “logo” e “assim” frequentemente introduzem conclusões; expressões como “pois”, “porque” e “dado que” podem introduzir razões ou premissas. O essencial, porém, não está nessas palavras, mas na relação que elas sinalizam.</p>
+<p>Também é possível separar o <strong>conteúdo particular</strong> de um argumento de sua <strong>forma</strong>.</p>
+<p data-keep-count="2">Por exemplo, diferentes argumentos concretos podem possuir a mesma organização:</p>
+<div class="argument-stack"><div class="argument-premises"><div class="argument-premise">p→ q</div><div class="argument-premise">p</div></div><div class="argument-conclusion"><span class="therefore-marker">∴</span><span>q.</span></div></div>
+<p>Nesse caso, <span class="math-inline">p</span> e <span class="math-inline">q</span> podem representar proposições muito diferentes em cada aplicação. O que permanece é a maneira como elas estão relacionadas.</p>
+<p>Essa estrutura abstrata é uma <strong>forma de argumento</strong>. Ao estudar sua forma, deixamos em segundo plano o conteúdo particular das proposições e passamos a investigar se a organização inferencial realmente garante a conclusão.</p>
+<div class="item-title keep-with-next" data-keep-count="2">2. Verdade, validade e solidez</div>
+<p>Uma proposição pode ser verdadeira ou falsa. Mas essa classificação não resolve, por si só, a questão central de um argumento.</p>
+<p data-keep-count="2">Considere a forma:</p>
+<div class="argument-stack"><div class="argument-premises"><div class="argument-premise">p∨ q</div></div><div class="argument-conclusion"><span class="therefore-marker">∴</span><span>p.</span></div></div>
+<p data-keep-count="2">Suponha, em determinada avaliação, que:</p>
+<div class="math-line">p=V   <span class="math-text">e</span>   q=V.</div>
+<p>Nesse caso, a premissa <span class="math-inline">p∨ q</span> é verdadeira e a conclusão <span class="math-inline">p</span> também é verdadeira.</p>
+<p>Ainda assim, isso não mostra que a conclusão seja garantida pela premissa.</p>
+<p data-keep-count="2">Basta considerar outra avaliação:</p>
+<div class="math-line">p=F   <span class="math-text">e</span>   q=V.</div>
+<p>Agora, <span class="math-inline">p∨ q=V,</span> mas: <span class="math-inline">p=F.</span></p>
+<p>A premissa continua verdadeira enquanto a conclusão se torna falsa.</p>
+<p>Portanto, o fato de uma conclusão ser verdadeira em determinado caso não basta para estabelecer a qualidade da inferência que levou até ela.</p>
+<p>É possível chegar a uma conclusão verdadeira por uma estrutura que não a garante.</p>
+<p data-keep-count="2">Essa diferença separa dois níveis:</p>
+<ul><li><p><strong>verdade e falsidade</strong> são atribuídas às proposições;</p></li><li><p><strong>validade e invalidade</strong> são atribuídas aos argumentos.</p></li></ul>
+<p class="definition-box">Um argumento é <strong>válido</strong> quando não existe uma situação em que todas as suas premissas sejam verdadeiras e sua conclusão seja falsa.</p>
+<p>Equivalentemente, podemos dizer que, num argumento válido, a verdade simultânea das premissas garante a verdade da conclusão.</p>
+<p>A palavra “garante” é decisiva.</p>
+<p>Validade não significa apenas que premissas e conclusão podem ser verdadeiras ao mesmo tempo. Significa que, sempre que todas as premissas forem verdadeiras, a conclusão não poderá ser falsa.</p>
+<p>Por isso, uma conclusão verdadeira não implica, por si só, que o argumento seja válido.</p>
+<p>Uma conclusão pode ser verdadeira independentemente da qualidade do raciocínio usado para alcançá-la.</p>
+<p>Também ocorre a situação inversa: uma premissa falsa não torna automaticamente um argumento inválido.</p>
+<p data-keep-count="2">Considere novamente:</p>
+<div class="argument-stack"><div class="argument-premises"><div class="argument-premise">p→ q</div><div class="argument-premise">p</div></div><div class="argument-conclusion"><span class="therefore-marker">∴</span><span>q.</span></div></div>
+<p data-keep-count="2">Suponha uma avaliação em que:</p>
+<div class="math-line">p=F   <span class="math-text">e</span>   q=F.</div>
+<p>Nesse caso, a segunda premissa <span class="math-inline">p</span> é falsa, e a conclusão <span class="math-inline">q</span> também é falsa. Isso, por si só, não constitui uma falha da forma argumentativa.</p>
+<p data-keep-count="2">A pergunta relevante não é:</p>
+<blockquote><p>Existe alguma situação em que uma premissa é falsa?</p></blockquote>
+<p data-keep-count="2">Nem:</p>
+<blockquote><p>Existe alguma situação em que a conclusão é falsa?</p></blockquote>
+<p data-keep-count="2">A pergunta é:</p>
+<blockquote><p>Existe alguma situação em que <strong>todas as premissas são verdadeiras e a conclusão é falsa</strong>?</p></blockquote>
+<p>Para a forma acima, não.</p>
+<p>Se <span class="math-inline">p</span> for verdadeira e <span class="math-inline">p→ q</span> também for verdadeira, então <span class="math-inline">q</span> não poderá ser falsa. A própria condição de verdade do condicional impede essa combinação.</p>
+<p>Assim, a validade não afirma que as premissas são verdadeiras. Ela estabelece o que necessariamente ocorreria com a conclusão <strong>caso todas as premissas fossem verdadeiras</strong>.</p>
+<p>Essa distinção permite introduzir uma exigência adicional.</p>
+<div class="definition-box"><p>Um argumento é chamado de <strong>sólido</strong> quando:</p>
+<ul><li><p>é válido;</p></li><li><p>e suas premissas são verdadeiras.</p></li></ul>
+</div>
+<p data-keep-count="2">Assim,</p>
+<div class="math-line"><span class="math-text">solidez</span> = <span class="math-text">validade</span> + <span class="math-text">premissas verdadeiras</span>.</div>
+<p>A validade fornece a garantia inferencial. A verdade das premissas garante que estamos efetivamente na situação em que essa garantia pode ser aplicada.</p>
+<p>Se todas as premissas de um argumento sólido são verdadeiras e sua estrutura não permite premissas verdadeiras com conclusão falsa, então sua conclusão também deve ser verdadeira.</p>
+<p>Portanto, verdade, validade e solidez não são três palavras para a mesma coisa.</p>
+<p>A verdade diz respeito ao que uma proposição afirma. A validade diz respeito à relação entre premissas e conclusão. A solidez reúne uma relação inferencial válida com pontos de partida verdadeiros.</p>
+<div class="item-title keep-with-next" data-keep-count="3">3. Contra-avaliação e critério de validade</div>
+<p data-keep-count="2">A definição de validade identifica uma configuração especialmente importante: <span class="math-inline"><span class="math-text">todas as premissas verdadeiras</span></span> e:</p>
+<div class="math-line"><span class="math-text">conclusão falsa</span>.</div>
+<p>Se conseguirmos produzir uma situação desse tipo, teremos mostrado que as premissas não garantem a conclusão.</p>
+<p class="definition-box">Uma atribuição de valores lógicos que torna todas as premissas verdadeiras e a conclusão falsa recebe o nome de <strong>contra-avaliação</strong>.</p>
+<p data-keep-count="2">Retome:</p>
+<div class="argument-stack"><div class="argument-premises"><div class="argument-premise">p∨ q</div></div><div class="argument-conclusion"><span class="therefore-marker">∴</span><span>p.</span></div></div>
+<p data-keep-count="2">Escolha:</p>
+<div class="math-line">p=F   <span class="math-text">e</span>   q=V.</div>
+<p>Temos: <span class="math-inline">p∨ q=V,</span> enquanto: <span class="math-inline">p=F.</span></p>
+<p data-keep-count="2">Logo, essa avaliação produz exatamente a configuração:</p>
+<div class="math-line"><span class="math-text">premissa verdadeira</span> + <span class="math-text">conclusão falsa</span>.</div>
+<p>Ela é uma contra-avaliação.</p>
+<p>Portanto, o argumento é inválido.</p>
+<p>Uma única contra-avaliação é suficiente.</p>
+<p>Isso ocorre porque a validade expressa uma garantia geral: <strong>não deve existir</strong> uma situação em que todas as premissas sejam verdadeiras e a conclusão falsa. Encontrar uma única situação desse tipo basta para quebrar essa garantia.</p>
+<p>O raciocínio é semelhante ao papel desempenhado por um contraexemplo diante de uma afirmação universal: quando se alega que determinado caso proibido nunca ocorre, uma ocorrência concreta é suficiente para refutar a alegação.</p>
+<p>O contrário, porém, não funciona da mesma forma.</p>
+<p data-keep-count="2">Considere novamente o mesmo argumento, mas escolha:</p>
+<div class="math-line">p=V   <span class="math-text">e</span>   q=F.</div>
+<p>Temos: <span class="math-inline">p∨ q=V</span> e: <span class="math-inline">p=V.</span></p>
+<p>Nessa avaliação, a premissa é verdadeira e a conclusão também.</p>
+<p>Isso é perfeitamente compatível com a possibilidade de o argumento ser válido, mas essa única avaliação não estabelece sua validade. Já encontramos outra avaliação em que a premissa é verdadeira e a conclusão falsa.</p>
+<p>Casos favoráveis isolados não demonstram uma garantia geral.</p>
+<p>Também não devemos usar avaliações com premissas falsas para refutar validade.</p>
+<p>Se alguma premissa é falsa, então a condição específica investigada pela definição de validade — <strong>todas as premissas verdadeiras</strong> — nem sequer foi satisfeita.</p>
+<div class="table-wrap visual" data-visual="1"><table class="analysis-table validity-analysis-table"><thead><tr><th scope="col">Situação das premissas</th><th scope="col">Conclusão</th><th scope="col">O que isso informa?</th></tr></thead><tbody><tr><td>todas verdadeiras</td><td>verdadeira</td><td>compatível com validade, mas não a estabelece isoladamente</td></tr><tr><td>alguma premissa falsa</td><td>verdadeira ou falsa</td><td>não decide a validade</td></tr><tr class="focus-row"><td>todas verdadeiras</td><td>falsa</td><td>contra-avaliação: o argumento é inválido</td></tr></tbody></table></div>
+<p data-keep-count="2">Uma forma válida pode ser contrastada com o exemplo anterior por meio de uma estrutura simples:</p>
+<div class="argument-stack"><div class="argument-premises"><div class="argument-premise">p∧ q</div></div><div class="argument-conclusion"><span class="therefore-marker">∴</span><span>p.</span></div></div>
+<p>Para que a premissa <span class="math-inline">p∧ q</span> seja verdadeira, tanto <span class="math-inline">p</span> quanto <span class="math-inline">q</span> precisam ser verdadeiras.</p>
+<p>Assim, sempre que a premissa for verdadeira, <span class="math-inline">p=V.</span></p>
+<p>Não existe avaliação em que: <span class="math-inline">p∧ q=V</span> e, ao mesmo tempo, <span class="math-inline">p=F.</span></p>
+<p>A contra-avaliação necessária para mostrar invalidade é impossível. Portanto, o argumento é válido.</p>
+<p>Uma tabela-verdade pode ser utilizada para realizar esse tipo de análise de maneira sistemática. Nesse caso, não precisamos tratar todas as linhas como igualmente importantes. Para investigar validade, dirigimos a atenção especialmente às linhas em que <strong>todas as premissas são verdadeiras</strong>.</p>
+<p>Se alguma dessas linhas apresentar conclusão falsa, encontramos uma contra-avaliação e o argumento é inválido.</p>
+<p>Se nenhuma linha com todas as premissas verdadeiras apresentar conclusão falsa, a forma é válida.</p>
+<p>Há ainda uma maneira de relacionar esse critério à estrutura do condicional.</p>
+<p data-keep-count="2">Considere um argumento geral:</p>
+<div class="argument-stack"><div class="argument-premises"><div class="argument-premise">P<sub>1</sub></div><div class="argument-premise">P<sub>2</sub></div><div class="argument-premise">⋮</div><div class="argument-premise">P<sub>n</sub></div></div><div class="argument-conclusion"><span class="therefore-marker">∴</span><span>C.</span></div></div>
+<p data-keep-count="2">As premissas podem ser reunidas por conjunção:</p>
+<div class="math-line">P<sub>1</sub>∧ P<sub>2</sub>∧⋯∧ P<sub>n</sub>.</div>
+<p data-keep-count="2">Podemos então formar:</p>
+<div class="math-line">(P<sub>1</sub>∧ P<sub>2</sub>∧⋯∧ P<sub>n</sub>)→ C.</div>
+<p>O antecedente desse condicional é verdadeiro exatamente quando <strong>todas as premissas são verdadeiras ao mesmo tempo</strong>.</p>
+<p>O consequente é a conclusão <span class="math-inline">C</span>.</p>
+<p>Para que esse condicional seja falso, precisamos precisamente da situação: <span class="math-inline">P<sub>1</sub>∧ P<sub>2</sub>∧⋯∧ P<sub>n</sub>=V</span> e: <span class="math-inline">C=F.</span></p>
+<p data-keep-count="2">Mas isso significa:</p>
+<div class="math-line"><span class="math-text">todas as premissas verdadeiras</span> + <span class="math-text">conclusão falsa</span>.</div>
+<p>É exatamente a configuração que torna um argumento inválido.</p>
+<p>Assim, dizer que</p>
+<div class="argument-stack"><div class="argument-premises"><div class="argument-premise">P<sub>1</sub>,P<sub>2</sub>,…,P<sub>n</sub></div></div><div class="argument-conclusion"><span class="therefore-marker">∴</span><span>C</span></div></div>
+<p data-keep-count="2">é válido equivale, neste nível de análise, a dizer que não existe avaliação capaz de falsificar:</p>
+<div class="math-line">(P<sub>1</sub>∧ P<sub>2</sub>∧⋯∧ P<sub>n</sub>)→ C.</div>
+<p>A validade não acrescenta uma nova espécie de verdade às proposições. Ela expressa uma garantia sobre a passagem das premissas para a conclusão: sempre que os pontos de partida forem simultaneamente verdadeiros, a conclusão não poderá falhar.</p>
+</section>
+<section class="source-section" data-context="TEXTO TEÓRICO • PARTE II">
+<header class="part-opening" data-keep-count="3"><div class="part-label">TEXTO TEÓRICO · Parte II</div><h2 class="part-title">Parte II — Formas Fundamentais de Inferência</h2></header>
+<div class="item-title keep-with-next" data-keep-count="2">1. Da validade à forma inferencial</div>
+<p>Uma forma de argumento não depende do assunto particular das proposições que a preenchem. Quando escrevemos, por exemplo, <span class="math-inline">A→ B,</span> as letras <span class="math-inline">A</span> e <span class="math-inline">B</span> podem representar proposições simples ou fórmulas inteiras. O que permanece constante é a maneira como essas expressões estão organizadas.</p>
+<p>Isso permite aproveitar uma consequência importante da validade. Se determinada forma não admite nenhuma contra-avaliação — isto é, se sua própria estrutura impede que todas as premissas sejam verdadeiras e a conclusão falsa —, essa garantia não precisa ser reconstruída desde o início toda vez que a mesma organização reaparece com outro conteúdo.</p>
+<p>Uma forma válida utilizada dessa maneira recebe o nome de <strong>regra de inferência</strong>.</p>
+<p class="definition-box">Uma regra de inferência é, portanto, uma forma válida de argumento que pode servir como padrão para obter uma conclusão a partir de determinadas premissas.</p>
+<p>A palavra “regra” não indica uma convenção arbitrária. Não estamos simplesmente autorizando, por escolha, determinada passagem simbólica. A conclusão pode ser inferida porque a forma já possui a garantia exigida pela validade.</p>
+<p data-keep-count="2">Se uma regra possui a estrutura:</p>
+<div class="argument-stack"><div class="argument-premises"><div class="argument-premise">A,   B</div></div><div class="argument-conclusion"><span class="therefore-marker">∴</span><span>C,</span></div></div>
+<p>a possibilidade de substituir <span class="math-inline">A</span>, <span class="math-inline">B</span> e <span class="math-inline">C</span> por proposições concretas não altera essa relação, desde que a estrutura seja preservada. É por isso que uma mesma forma pode participar de raciocínios sobre objetos matemáticos muito diferentes.</p>
+<p>Essa função também distingue uma regra de inferência de uma equivalência lógica.</p>
+<p data-keep-count="2">Quando escrevemos:</p>
+<div class="math-structural">A≡ B,</div>
+<p>afirmamos que <span class="math-inline">A</span> e <span class="math-inline">B</span> possuem os mesmos valores lógicos em todas as avaliações.</p>
+<p>Uma inferência realiza outro trabalho. Se determinadas premissas estão disponíveis, uma conclusão fica autorizada por sua relação com elas.</p>
+<p>Assim, de: <span class="math-inline">A→ B</span> e: <span class="math-inline">A,</span> podemos obter <span class="math-inline">B</span>. Isso não significa, porém, que <span class="math-inline">(A→ B)∧ A</span> seja logicamente equivalente a <span class="math-inline">B</span>. Equivalência compara fórmulas; inferência estabelece uma passagem legítima das premissas para a conclusão.</p>
+<p data-keep-count="2">Para compreender por que uma regra é válida, continua valendo a mesma pergunta:</p>
+<blockquote><p>Se todas as premissas forem verdadeiras, a conclusão poderia ser falsa?</p></blockquote>
+<p>Nas formas fundamentais a seguir, a própria estrutura dos conectivos torna a resposta perceptível sem que seja necessário reconstruir uma tabela-verdade completa para cada caso.</p>
+<div class="item-title keep-with-next" data-keep-count="3">2. Modus ponens e modus tollens</div>
+<p data-keep-count="2">Considere:</p>
+<div class="argument-stack"><div class="argument-premises"><div class="argument-premise">A→ B</div><div class="argument-premise">A</div></div><div class="argument-conclusion"><span class="therefore-marker">∴</span><span>B.</span></div></div>
+<p>A primeira premissa estabelece uma direção: quando <span class="math-inline">A</span> ocorre, <span class="math-inline">B</span> deve ocorrer. A segunda informa que justamente <span class="math-inline">A</span> ocorre. A condição suficiente estabelecida pelo condicional foi satisfeita; portanto, <span class="math-inline">B</span> é garantida.</p>
+<p data-keep-count="2">Essa forma recebe tradicionalmente o nome de <strong>modus ponens</strong>:</p>
+<div class="argument-stack"><div class="argument-premises"><div class="argument-premise">A→ B</div><div class="argument-premise">A</div></div><div class="argument-conclusion"><span class="therefore-marker">∴</span><span>B.</span></div></div>
+<p>Sua validade pode ser percebida diretamente pela tentativa de construir uma contra-avaliação.</p>
+<p>Suponha que as duas premissas sejam verdadeiras. Teríamos: <span class="math-inline">A→ B=V</span> e: <span class="math-inline">A=V.</span></p>
+<p>Para que a conclusão fosse falsa, precisaríamos ainda de: <span class="math-inline">B=F.</span></p>
+<p>Mas isso produziria: <span class="math-inline">A=V   <span class="math-text">e</span>   B=F,</span> exatamente a combinação que torna <span class="math-inline">A→ B</span> falso. A primeira premissa deixaria de ser verdadeira.</p>
+<p>Portanto, não existe avaliação em que as duas premissas do modus ponens sejam verdadeiras e sua conclusão falsa.</p>
+<p>O modus ponens não cria uma nova direção para o condicional. Ele apenas utiliza a direção que já foi estabelecida: <span class="math-inline">A→ B.</span></p>
+<p>Se <span class="math-inline">A</span> é suficiente para <span class="math-inline">B</span> e <span class="math-inline">A</span> efetivamente ocorre, então <span class="math-inline">B</span> deve ocorrer.</p>
+<p>Há, porém, outra maneira legítima de utilizar a mesma relação condicional.</p>
+<p data-keep-count="2">Considere:</p>
+<div class="argument-stack"><div class="argument-premises"><div class="argument-premise">A→ B</div><div class="argument-premise">¬B</div></div><div class="argument-conclusion"><span class="therefore-marker">∴</span><span>¬A.</span></div></div>
+<p>Se <span class="math-inline">A</span> fosse verdadeira, a primeira premissa exigiria <span class="math-inline">B</span>. Mas a segunda premissa afirma que <span class="math-inline">B</span> é falsa. Logo, <span class="math-inline">A</span> não pode ser verdadeira.</p>
+<p data-keep-count="2">Essa forma recebe o nome de <strong>modus tollens</strong>:</p>
+<div class="argument-stack"><div class="argument-premises"><div class="argument-premise">A→ B</div><div class="argument-premise">¬B</div></div><div class="argument-conclusion"><span class="therefore-marker">∴</span><span>¬A.</span></div></div>
+<p data-keep-count="2">Sua estrutura coincide com a direção já expressa pela contrapositiva:</p>
+<div class="math-structural">A→ B ≡ ¬B→¬A.</div>
+<p>A segunda premissa fornece precisamente: <span class="math-inline">¬B,</span> e a contrapositiva permite concluir: <span class="math-inline">¬A.</span></p>
+<p>A mesma relação pode ser compreendida em termos de necessidade. Se: <span class="math-inline">A→ B,</span> então <span class="math-inline">B</span> é condição necessária para <span class="math-inline">A</span>. Se <span class="math-inline">B</span> não ocorre, também não pode ocorrer aquilo que dependia necessariamente dela.</p>
+<p data-keep-count="2">Podemos ainda testar semanticamente a forma. Se <span class="math-inline">A→ B</span> fosse verdadeira e <span class="math-inline">¬B</span> também fosse verdadeira, então <span class="math-inline">B=F</span>. Caso <span class="math-inline">A</span> fosse verdadeira, teríamos novamente:</p>
+<div class="math-line">A=V,   B=F,</div>
+<p>o que falsificaria o condicional.</p>
+<p>Por isso, com as duas premissas verdadeiras, <span class="math-inline">¬A</span> não pode ser falsa.</p>
+<p>Modus ponens e modus tollens exploram, assim, duas direções legitimamente disponíveis a partir de um condicional. A primeira utiliza a presença do antecedente para obter o consequente; a segunda utiliza a negação do consequente para obter a negação do antecedente, de acordo com a contrapositiva.</p>
+<div class="item-title keep-with-next" data-keep-count="2">3. Silogismo hipotético e silogismo disjuntivo</div>
+<p>Uma relação condicional também pode participar de um encadeamento.</p>
+<p>Considere: <span class="math-inline">A→ B</span> e: <span class="math-inline">B→ C.</span></p>
+<p>A primeira premissa estabelece que <span class="math-inline">A</span> conduz a <span class="math-inline">B</span>. A segunda estabelece que <span class="math-inline">B</span> conduz a <span class="math-inline">C</span>.</p>
+<p>Se <span class="math-inline">A</span> ocorrer, então <span class="math-inline">B</span> deverá ocorrer; e, ocorrendo <span class="math-inline">B</span>, <span class="math-inline">C</span> também deverá ocorrer. Portanto, a direção inicial pode ser prolongada: <span class="math-inline">A→ C.</span></p>
+<p data-keep-count="2">Temos então:</p>
+<div class="argument-stack"><div class="argument-premises"><div class="argument-premise">A→ B</div><div class="argument-premise">B→ C</div></div><div class="argument-conclusion"><span class="therefore-marker">∴</span><span>A→ C.</span></div></div>
+<p>Essa forma recebe o nome de <strong>silogismo hipotético</strong>.</p>
+<p data-keep-count="2">Sua validade pode ser compreendida procurando a situação que tornaria sua conclusão falsa. Para que: <span class="math-inline">A→ C</span> fosse falsa, precisaríamos de: <span class="math-inline">A=V</span> e:</p>
+<div class="math-line">C=F.</div>
+<p>Mas, com <span class="math-inline">A=V</span> e <span class="math-inline">A→ B=V</span>, somos obrigados a ter: <span class="math-inline">B=V.</span></p>
+<p>Com <span class="math-inline">B=V</span> e <span class="math-inline">B→ C=V</span>, somos então obrigados a ter: <span class="math-inline">C=V.</span></p>
+<p>Isso contradiz a tentativa de manter <span class="math-inline">C=F</span>. Logo, não é possível tornar simultaneamente verdadeiras as duas premissas e falsa a conclusão.</p>
+<p>A importância da forma está na passagem intermediária. A proposição <span class="math-inline">B</span> ocupa o ponto em que uma consequência de <span class="math-inline">A</span> se torna, por sua vez, condição suficiente para <span class="math-inline">C</span>. Assim, duas direções compatíveis podem formar uma direção mais longa.</p>
+<p>Uma estrutura diferente aparece quando a premissa principal é uma disjunção: <span class="math-inline">A∨ B.</span></p>
+<p>Essa proposição exige que pelo menos uma das alternativas seja verdadeira.</p>
+<p>Suponha agora que também saibamos: <span class="math-inline">¬A.</span></p>
+<p>A possibilidade representada por <span class="math-inline">A</span> foi eliminada. Como <span class="math-inline">A∨ B</span> continua verdadeira, <span class="math-inline">B</span> não pode ser falsa também. Portanto: <span class="math-inline">B.</span></p>
+<p data-keep-count="2">A forma completa é:</p>
+<div class="argument-stack"><div class="argument-premises"><div class="argument-premise">A∨ B</div><div class="argument-premise">¬A</div></div><div class="argument-conclusion"><span class="therefore-marker">∴</span><span>B.</span></div></div>
+<p>Ela recebe o nome de <strong>silogismo disjuntivo</strong>.</p>
+<p>Sua validade decorre diretamente da exigência imposta pela disjunção. Se <span class="math-inline">A∨ B</span> é verdadeira e <span class="math-inline">A</span> é falsa, então admitir também <span class="math-inline">B=F</span> tornaria ambas as alternativas falsas e, consequentemente, falsificaria a primeira premissa.</p>
+<p>Logo, <span class="math-inline">B</span> precisa ser verdadeira.</p>
+<p data-keep-count="2">A mesma estrutura pode atuar sobre a outra alternativa:</p>
+<div class="argument-stack"><div class="argument-premises"><div class="argument-premise">A∨ B</div><div class="argument-premise">¬B</div></div><div class="argument-conclusion"><span class="therefore-marker">∴</span><span>A.</span></div></div>
+<p>Não se trata de outra regra. O princípio é o mesmo: uma disjunção verdadeira permanece com apenas uma alternativa disponível depois que a outra é excluída.</p>
+<div class="item-title keep-with-next" data-keep-count="2">4. Formas inválidas próximas</div>
+<p>A semelhança entre formas simbólicas não garante que elas possuam a mesma validade.</p>
+<p>Considere novamente o condicional: <span class="math-inline">A→ B.</span></p>
+<p>Sabemos que <span class="math-inline">A</span> é suficiente para <span class="math-inline">B</span>. Isso autoriza concluir <span class="math-inline">B</span> quando <span class="math-inline">A</span> é dada como premissa. Mas não autoriza percorrer essa relação no sentido contrário apenas porque <span class="math-inline">B</span> ocorreu.</p>
+<p data-keep-count="2">Considere:</p>
+<div class="argument-stack"><div class="argument-premises"><div class="argument-premise">A→ B</div><div class="argument-premise">B</div></div><div class="argument-conclusion"><span class="therefore-marker">∴</span><span>A.</span></div></div>
+<p>Essa forma recebe o nome de <strong>afirmação do consequente</strong>.</p>
+<p>O problema está na direção da inferência. De <span class="math-inline">A→ B</span>, não sabemos que <span class="math-inline">B</span> só pode ocorrer quando <span class="math-inline">A</span> ocorre. O condicional estabelece <span class="math-inline">A</span> como condição suficiente para <span class="math-inline">B</span>, mas não estabelece <span class="math-inline">A</span> como condição necessária.</p>
+<p>Concluir <span class="math-inline">A</span> a partir de <span class="math-inline">B</span> exigiria, em geral, uma direção como: <span class="math-inline">B→ A,</span> isto é, a recíproca do condicional original.</p>
+<p>A invalidade pode ser confirmada por uma contra-avaliação simples.</p>
+<p>Tome: <span class="math-inline">A=F</span> e: <span class="math-inline">B=V.</span></p>
+<p>Nesse caso: <span class="math-inline">A→ B=V,</span> pois um antecedente falso e um consequente verdadeiro não falsificam o condicional.</p>
+<p>A segunda premissa também é verdadeira: <span class="math-inline">B=V.</span></p>
+<p>Mas a conclusão é falsa: <span class="math-inline">A=F.</span></p>
+<p data-keep-count="2">Portanto:</p>
+<div class="math-line">A→ B=V,    B=V,    A=F.</div>
+<p>Todas as premissas são verdadeiras e a conclusão é falsa. A forma é inválida.</p>
+<p data-keep-count="2">Uma distorção semelhante ocorre quando partimos da falsidade do antecedente:</p>
+<div class="argument-stack"><div class="argument-premises"><div class="argument-premise">A→ B</div><div class="argument-premise">¬A</div></div><div class="argument-conclusion"><span class="therefore-marker">∴</span><span>¬B.</span></div></div>
+<p>Essa forma recebe o nome de <strong>negação do antecedente</strong>.</p>
+<p>Se <span class="math-inline">A</span> é suficiente para <span class="math-inline">B</span>, a ausência de <span class="math-inline">A</span> não estabelece que <span class="math-inline">B</span> seja impossível. <span class="math-inline">B</span> pode ocorrer sem que <span class="math-inline">A</span> tenha ocorrido.</p>
+<p>O condicional original não fornece a direção: <span class="math-inline">¬A→¬B.</span></p>
+<p data-keep-count="2">A mesma avaliação anterior revela a falha:</p>
+<div class="math-line">A=F,    B=V.</div>
+<p>Temos: <span class="math-inline">A→ B=V,</span> e, como <span class="math-inline">A=F</span>, <span class="math-inline">¬A=V.</span></p>
+<p>Mas, como <span class="math-inline">B=V</span>, <span class="math-inline">¬B=F.</span></p>
+<p data-keep-count="2">Portanto:</p>
+<div class="math-line">A→ B=V,    ¬A=V,    ¬B=F.</div>
+<p>Novamente, as premissas são verdadeiras e a conclusão falsa.</p>
+<p data-keep-count="2">A mesma contra-avaliação expõe, portanto, o defeito das duas formas:</p>
+<div class="math-line">A=F,   B=V.</div>
+<p>Ela mostra simultaneamente que <span class="math-inline">B</span> pode ser verdadeira sem <span class="math-inline">A</span> ser verdadeira e que <span class="math-inline">B</span> pode permanecer verdadeira mesmo quando <span class="math-inline">A</span> é falsa.</p>
+<div class="visual" data-visual="2"><div class="inference-pair"><div class="inference-pair-grid"><div class="inference-form"><div class="minor-title">Forma válida</div><p><strong>Modus ponens</strong></p><div class="argument-stack"><div class="argument-premises"><div class="argument-premise">A→ B</div><div class="argument-premise">A</div></div><div class="argument-conclusion"><span class="therefore-marker">∴</span><span>B</span></div></div></div><div class="inference-form"><div class="minor-title">Forma inválida</div><p><strong>Afirmação do consequente</strong></p><div class="argument-stack"><div class="argument-premises"><div class="argument-premise">A→ B</div><div class="argument-premise">B</div></div><div class="argument-conclusion"><span class="therefore-marker">∴</span><span>A</span></div></div></div></div></div><div class="inference-pair"><div class="inference-pair-grid"><div class="inference-form"><div class="minor-title">Forma válida</div><p><strong>Modus tollens</strong></p><div class="argument-stack"><div class="argument-premises"><div class="argument-premise">A→ B</div><div class="argument-premise">¬B</div></div><div class="argument-conclusion"><span class="therefore-marker">∴</span><span>¬A</span></div></div></div><div class="inference-form"><div class="minor-title">Forma inválida</div><p><strong>Negação do antecedente</strong></p><div class="argument-stack"><div class="argument-premises"><div class="argument-premise">A→ B</div><div class="argument-premise">¬A</div></div><div class="argument-conclusion"><span class="therefore-marker">∴</span><span>¬B</span></div></div></div></div></div></div>
+<p>A diferença entre as quatro formas pode ser condensada pela direção já estabelecida em: <span class="math-inline">A→ B.</span></p>
+<p>A partir dela, quando <span class="math-inline">A</span> é verdadeira, podemos concluir <span class="math-inline">B</span>; e, pela contrapositiva, quando <span class="math-inline">B</span> é falsa, podemos concluir <span class="math-inline">¬A</span>. Em geral, porém, a verdade de <span class="math-inline">B</span> não autoriza concluir <span class="math-inline">A</span>, assim como a falsidade de <span class="math-inline">A</span> não autoriza concluir <span class="math-inline">¬B</span>.</p>
+<p>A validade depende da direção efetivamente estabelecida, não da simples presença dos mesmos símbolos em posições semelhantes.</p>
+<div class="item-title keep-with-next" data-keep-count="2">5. Encadeamento de inferências</div>
+<p>Uma inferência válida não precisa encerrar um raciocínio. Sua conclusão pode fornecer informação para uma nova etapa.</p>
+<p data-keep-count="2">Considere:</p>
+<div class="math-sequence"><div class="math-line">p→ q</div>
+<div class="math-line">q→ r</div>
+<div class="math-line">p.</div>
+</div>
+<p>Das premissas: <span class="math-inline">p→ q</span> e: <span class="math-inline">p,</span> obtemos: <span class="math-inline">q.</span></p>
+<p>Esse <span class="math-inline">q</span> não foi acrescentado ao raciocínio por suposição. Ele foi legitimamente obtido das informações já disponíveis.</p>
+<p>Agora podemos utilizá-lo juntamente com: <span class="math-inline">q→ r.</span></p>
+<p data-keep-count="2">Temos então:</p>
+<div class="argument-stack"><div class="argument-premises"><div class="argument-premise">q→ r</div><div class="argument-premise">q</div></div><div class="argument-conclusion"><span class="therefore-marker">∴</span><span>r.</span></div></div>
+<p data-keep-count="2">Assim, a cadeia pode ser organizada como:</p>
+<div class="argument-stack"><div class="argument-premises"><div class="argument-premise">p→ q,    q→ r,    p</div></div><div class="argument-conclusion"><span class="therefore-marker">∴</span><span>q</span></div><div class="argument-conclusion"><span class="therefore-marker">∴</span><span>r.</span></div></div>
+<p>A conclusão intermediária <span class="math-inline">q</span> ocupa dois papéis em momentos diferentes. Primeiro, é aquilo que obtemos a partir de <span class="math-inline">p→ q</span> e <span class="math-inline">p</span>. Depois de legitimamente estabelecida, passa a funcionar como premissa para a inferência seguinte.</p>
+<p>O mesmo raciocínio pode ser organizado por outra sequência de passos. Das duas primeiras condicionais, <span class="math-inline">p→ q</span> e: <span class="math-inline">q→ r,</span> podemos obter: <span class="math-inline">p→ r.</span></p>
+<p>Combinando esse resultado com: <span class="math-inline">p,</span> chegamos novamente a: <span class="math-inline">r.</span></p>
+<p>As duas organizações utilizam formas válidas e chegam à mesma conclusão, embora distribuam os passos de maneira diferente.</p>
+<div class="atomic-group"><p>O ponto decisivo de um encadeamento não está em fazer a conclusão final parecer plausível. Cada passagem precisa conservar a garantia inferencial.</p>
+<p>Se uma expressão intermediária é usada como premissa de uma etapa posterior, deve haver uma razão legítima para que ela esteja disponível. Caso um passo seja inserido sem decorrer das informações anteriores, o restante da cadeia pode até terminar numa proposição verdadeira, mas isso não corrige a falha ocorrida no caminho.</p>
+<p>Uma inferência válida preserva a verdade neste sentido: quando suas premissas são todas verdadeiras, sua conclusão também precisa ser verdadeira. Ao encadear inferências válidas, essa garantia pode passar de uma etapa à seguinte, desde que cada nova conclusão seja realmente obtida antes de ser utilizada como ponto de partida para o próximo passo.</p>
+</div>
+</section>
+<section class="source-section" data-context="TEXTO TEÓRICO • PARTE III">
+<header class="part-opening" data-keep-count="3"><div class="part-label">TEXTO TEÓRICO · Parte III</div><h2 class="part-title">Parte III — Demonstração Matemática Elementar</h2></header>
+<div class="item-title keep-with-next" data-keep-count="2">1. Da inferência à demonstração</div>
+<p>Uma conclusão obtida legitimamente pode tornar-se ponto de partida para uma nova inferência. Quando esse processo se prolonga, já não temos apenas uma passagem isolada entre premissas e conclusão, mas uma cadeia na qual cada afirmação obtida depende das anteriores.</p>
+<p>Essa cadeia, porém, pode ser organizada em torno de uma finalidade mais precisa. Em Matemática, muitas vezes existe uma afirmação determinada que queremos estabelecer. Essa afirmação desempenha o papel de <strong>tese</strong>.</p>
+<p>As informações das quais partimos podem ter origens diferentes. Algumas são assumidas especificamente no problema; outras decorrem de definições, propriedades já estabelecidas ou resultados anteriormente demonstrados. O que importa é que estejam legitimamente disponíveis antes de serem utilizadas.</p>
+<p>Considere uma afirmação com estrutura condicional: <span class="math-inline">A→ B.</span></p>
+<p>Quando queremos estabelecê-la, <span class="math-inline">A</span> pode desempenhar o papel de <strong>hipótese</strong> e <span class="math-inline">B</span>, o de <strong>tese</strong>. A hipótese fornece a condição sob a qual precisamos justificar a conclusão expressa pela tese.</p>
+<p>Essa linguagem é especialmente transparente em afirmações condicionais, mas a ideia de tese é mais ampla: é aquilo que o raciocínio pretende estabelecer.</p>
+<p class="definition-box">Uma <strong>demonstração matemática</strong> é um argumento que estabelece uma tese por meio de uma sequência de passos logicamente justificados a partir de informações legitimamente admitidas.</p>
+<p>A demonstração não se reduz, portanto, a chegar a uma afirmação verdadeira. O caminho que liga os pontos de partida à tese faz parte do que precisa ser estabelecido.</p>
+<p data-keep-count="2">Por essa razão, uma sucessão de fórmulas não constitui automaticamente uma demonstração. Considere, de maneira esquemática:</p>
+<div class="math-sequence"><div class="math-line">A</div>
+<div class="math-line">D</div>
+<div class="math-line">E</div>
+<div class="math-line">B.</div>
+</div>
+<p>Mesmo que <span class="math-inline">A</span> seja uma hipótese legítima e <span class="math-inline">B</span> seja exatamente a tese desejada, ainda falta saber por que <span class="math-inline">D</span> decorre de <span class="math-inline">A</span>, por que <span class="math-inline">E</span> decorre do que já foi obtido e por que <span class="math-inline">B</span> pode finalmente ser concluída.</p>
+<p>Uma passagem pode ser sustentada por uma definição, por uma propriedade conhecida, por uma equivalência, por uma inferência válida ou por outro resultado já estabelecido. Não é necessário reconstruir toda a Matemática utilizada a cada demonstração, mas deve ser possível recuperar a razão dos passos relevantes.</p>
+<p>Esse aspecto também separa <strong>testar uma afirmação</strong> de <strong>demonstrá-la</strong>.</p>
+<p>Suponha que determinada proposição afirme que uma propriedade vale para todos os valores admissíveis. Podemos experimentar um primeiro caso e obter sucesso. Depois um segundo, um terceiro, um centésimo. Esses resultados podem aumentar nossa confiança, revelar um padrão ou ajudar a descobrir uma demonstração, mas continuam sendo casos particulares.</p>
+<p data-keep-count="2">A exigência universal não é:</p>
+<blockquote><p>a propriedade funcionou muitas vezes.</p></blockquote>
+<p data-keep-count="2">Ela é:</p>
+<blockquote><p>a propriedade vale para todos os casos abrangidos pela afirmação.</p></blockquote>
+<p>Por isso, exemplos favoráveis podem orientar uma investigação sem substituir a razão geral necessária para estabelecer a tese.</p>
+<p>Há uma assimetria importante. Para refutar uma afirmação universal, um único contraexemplo pode ser suficiente. Para demonstrá-la, porém, acumular exemplos favoráveis não produz o mesmo efeito. Demonstrar e refutar são tarefas logicamente diferentes.</p>
+<p>Essa distinção revela por que toda demonstração possui uma estrutura argumentativa, mas nem todo argumento apresentado constitui uma demonstração matemática. Uma demonstração precisa efetivamente estabelecer sua tese a partir de fundamentos legítimos, preservando a justificação ao longo do raciocínio.</p>
+<div class="item-title keep-with-next" data-keep-count="2">2. Demonstração direta</div>
+<p>Considere que a tese a estabelecer seja: <span class="math-inline">A→ B.</span></p>
+<p>O condicional não exige que <span class="math-inline">A</span> seja verdadeira em todas as situações. Ele estabelece uma relação: nos casos em que <span class="math-inline">A</span> for verdadeira, <span class="math-inline">B</span> também deverá ser.</p>
+<p>Isso indica uma maneira natural de organizar a demonstração.</p>
+<p>Podemos começar supondo: <span class="math-inline">A.</span></p>
+<p>A partir dessa hipótese, procuramos obter: <span class="math-inline">B.</span></p>
+<p data-keep-count="2">A estrutura conceitual é:</p>
+<div class="proof-schema"><div class="proof-step"><div class="proof-step__role">HIPÓTESE</div><div class="math-line">A</div></div><div class="proof-step"><div class="proof-step__role">DESENVOLVIMENTO</div><div class="math-line"><span class="math-text">passos justificados</span></div></div><div class="proof-step"><div class="proof-step__role">TESE</div><div class="math-line">B.</div></div></div>
+<p>Quando conseguimos construir essa passagem para um caso arbitrário que satisfaz a hipótese, estabelecemos que a presença de <span class="math-inline">A</span> obriga a presença de <span class="math-inline">B</span>. É isso que a proposição <span class="math-inline">A→ B</span> afirma.</p>
+<p>A expressão “suponha <span class="math-inline">A</span>” merece atenção. Ela não significa que estamos declarando <span class="math-inline">A</span> verdadeira universalmente, nem que estamos concedendo gratuitamente aquilo que deveríamos demonstrar.</p>
+<p>Estamos examinando justamente a situação relevante para o condicional: <strong>um caso no qual o antecedente é verdadeiro</strong>.</p>
+<p>Se conseguimos mostrar que, sob essa condição, <span class="math-inline">B</span> necessariamente segue, então estabelecemos a direção pretendida.</p>
+<p>Essa maneira de proceder recebe o nome de <strong>demonstração direta</strong>. Ela começa da hipótese na forma em que foi apresentada e procura alcançar a tese por uma sequência justificável.</p>
+<p>Um exemplo elementar permite observar essa estrutura sem acrescentar muita teoria externa.</p>
+<p class="definition-box">Dizemos que um número inteiro <span class="math-inline">n</span> é <strong>par</strong> quando existe um número inteiro <span class="math-inline">k</span> tal que: <span class="math-inline">n=2k.</span></p>
+<p data-keep-count="2">Considere a afirmação:</p>
+<blockquote><p>Se <span class="math-inline">n</span> é par, então <span class="math-inline">n+2</span> é par.</p></blockquote>
+<div class="proof-schema"><div class="proof-step"><p>A hipótese é:</p>
+<div class="math-line">n<span class="math-text"> é par</span>.</div>
+</div><div class="proof-step"><p class="proof-justification">Pela própria definição, isso significa que existe um inteiro <span class="math-inline">k</span> para o qual: <span class="math-inline">n=2k.</span></p>
+</div><div class="proof-step"><p class="proof-justification">Somando <span class="math-inline">2</span> aos dois lados, obtemos:</p>
+<div class="math-line">n+2=2k+2.</div>
+</div><div class="proof-step"><p class="proof-justification">Colocando <span class="math-inline">2</span> em evidência:</p>
+<div class="math-line">n+2=2(k+1).</div>
+</div><div class="proof-step"><p class="proof-justification">Como <span class="math-inline">k</span> é inteiro, <span class="math-inline">k+1</span> também é inteiro. Portanto, <span class="math-inline">n+2</span> possui a forma <span class="math-inline">2</span> vezes um inteiro.</p>
+</div><div class="proof-step"><p>Logo, <span class="math-inline">n+2</span> é par.</p>
+</div></div>
+<p>A demonstração não depende de testar <span class="math-inline">n=2</span>, depois <span class="math-inline">n=4</span>, depois <span class="math-inline">n=6</span>. Ela parte daquilo que caracteriza <strong>qualquer</strong> inteiro par: <span class="math-inline">n=2k,</span> e preserva essa estrutura até obter a forma necessária para a tese.</p>
+<p>É isso que produz generalidade.</p>
+<p>A demonstração é chamada de direta não porque seja necessariamente curta nem porque seu caminho seja sempre óbvio. O nome descreve principalmente sua orientação: começamos da hipótese e avançamos até aquilo que desejamos estabelecer.</p>
+<div class="item-title keep-with-next" data-keep-count="2">3. Demonstração por contraposição</div>
+<p>Nem sempre a informação fornecida pela hipótese é a forma mais conveniente de iniciar o raciocínio.</p>
+<p>Considere novamente uma tese condicional: <span class="math-inline">A→ B.</span></p>
+<p data-keep-count="2">Temos a equivalência:</p>
+<div class="math-structural">A→ B ≡ ¬B→¬A.</div>
+<p>Isso significa que estabelecer a contrapositiva também estabelece o condicional original.</p>
+<p>Em vez de começar supondo <span class="math-inline">A</span>, podemos então trabalhar com: <span class="math-inline">¬B</span> e procurar obter: <span class="math-inline">¬A.</span></p>
+<p data-keep-count="2">A estrutura torna-se:</p>
+<div class="proof-schema"><div class="proof-step"><div class="proof-step__role">PONTO DE PARTIDA</div><div class="math-line">¬B</div></div><div class="proof-step"><div class="proof-step__role">DESENVOLVIMENTO</div><div class="math-line"><span class="math-text">passos justificados</span></div></div><div class="proof-step"><div class="proof-step__role">RESULTADO</div><div class="math-line">¬A.</div></div></div>
+<p>Essa organização recebe o nome de <strong>demonstração por contraposição</strong>.</p>
+<p data-keep-count="2">Não estamos substituindo a tese por outra afirmação apenas por conveniência. A legitimidade do método vem precisamente da equivalência lógica:</p>
+<div class="math-structural">A→ B ≡ ¬B→¬A.</div>
+<p>Portanto, demonstrar a segunda proposição é suficiente para estabelecer a primeira.</p>
+<p>Essa mudança de direção pode ser útil quando negar a tese produz uma informação matematicamente mais manejável que a hipótese original. Não existe superioridade geral da contraposição sobre a demonstração direta; trata-se de escolher uma forma equivalente na qual a estrutura do problema se deixe trabalhar com maior clareza.</p>
+<p>A diferença entre esse método e o modus tollens é importante.</p>
+<p>No modus tollens, já possuímos: <span class="math-inline">A→ B</span> como premissa. Também possuímos: <span class="math-inline">¬B.</span></p>
+<p>Então inferimos: <span class="math-inline">¬A.</span></p>
+<p data-keep-count="2">Na demonstração por contraposição, <span class="math-inline">A→ B</span> ainda é justamente aquilo que pretendemos estabelecer. Em vez de utilizá-lo como premissa, demonstramos a proposição equivalente:</p>
+<div class="math-line">¬B→¬A.</div>
+<p>O modus tollens <strong>usa</strong> um condicional já disponível; a contraposição <strong>estabelece</strong> um condicional demonstrando sua forma equivalente.</p>
+<p>Podemos visualizar essa diferença por meio de uma situação matemática simples.</p>
+<p data-keep-count="2">Considere números reais <span class="math-inline">x</span> e a afirmação:</p>
+<blockquote><p>Se <span class="math-inline">x&gt;3</span>, então <span class="math-inline">2x+1&gt;7</span>.</p></blockquote>
+<p data-keep-count="2">É possível demonstrá-la diretamente. Mas podemos também demonstrar sua contrapositiva:</p>
+<blockquote><p>Se <span class="math-inline">2x+1≤ 7</span>, então <span class="math-inline">x≤3</span>.</p></blockquote>
+<div class="proof-schema"><div class="proof-step"><p>Suponha:</p>
+<div class="math-line">2x+1≤7.</div>
+</div><div class="proof-step"><p class="proof-justification">Subtraindo <span class="math-inline">1</span>: <span class="math-inline">2x≤6.</span></p>
+</div><div class="proof-step"><p class="proof-justification">Dividindo por <span class="math-inline">2</span>: <span class="math-inline">x≤3.</span></p>
+</div></div>
+<p>Obtivemos exatamente a negação da hipótese original.</p>
+<p data-keep-count="2">Assim, foi estabelecido: <span class="math-inline">2x+1≤7→ x≤3,</span> e, pela equivalência com a contrapositiva, fica estabelecido:</p>
+<div class="math-line">x&gt;3→2x+1&gt;7.</div>
+<p>Nesse exemplo, a direção direta também seria simples. O interesse está em tornar visível o mecanismo: uma equivalência lógica permite reorganizar a tarefa sem modificar aquilo que, ao final, foi demonstrado.</p>
+<div class="item-title keep-with-next" data-keep-count="2">4. Demonstração por contradição</div>
+<p>Há situações em que a tese não se oferece naturalmente como uma direção a ser percorrida. Outra possibilidade é investigar o que aconteceria se aquilo que queremos estabelecer fosse falso.</p>
+<p>Considere uma tese: <span class="math-inline">T.</span></p>
+<div class="proof-schema"><div class="proof-step"><p>Na <strong>demonstração por contradição</strong>, assumimos temporariamente: <span class="math-inline">¬T.</span></p>
+</div><div class="proof-step"><p class="proof-justification">A partir dessa suposição, juntamente com as demais informações legitimamente disponíveis, desenvolvemos o raciocínio.</p>
+</div><div class="proof-step"><p>Se a suposição força uma incompatibilidade, ela não pode ser mantida.</p>
+</div><div class="proof-step"><p>Por exemplo, podemos chegar simultaneamente a: <span class="math-inline">R</span> e: <span class="math-inline">¬R.</span></p>
+</div><div class="proof-step"><p class="proof-justification">As duas proposições não podem ser verdadeiras na mesma situação. Se essa incompatibilidade foi consequência inevitável da suposição <span class="math-inline">¬T</span> combinada com informações legítimas, então a suposição deve ser rejeitada.</p>
+</div><div class="proof-step"><p>Consequentemente, estabelecemos: <span class="math-inline">T.</span></p>
+</div></div>
+<p>O ponto decisivo não é simplesmente “supor o contrário e dar errado”. Uma tentativa que se torna difícil, um cálculo pouco elegante ou um resultado inesperado não constitui contradição.</p>
+<p>A incompatibilidade precisa ser real.</p>
+<p data-keep-count="2">Considere a afirmação:</p>
+<blockquote><p>Não existe um maior número natural.</p></blockquote>
+<p>Suponha, para obter uma contradição, que essa afirmação seja falsa. Então existiria um maior número natural. Chame-o de <span class="math-inline">m</span>.</p>
+<p>Pela suposição, nenhum número natural poderia ser maior que <span class="math-inline">m</span>.</p>
+<p>Mas: <span class="math-inline">m+1</span> também é um número natural, e: <span class="math-inline">m+1&gt;m.</span></p>
+<p data-keep-count="2">Obtivemos simultaneamente duas exigências incompatíveis:</p>
+<p><span class="math-inline">m</span> seria o maior número natural;</p>
+<p>e existiria um número natural <span class="math-inline">m+1</span> maior que <span class="math-inline">m</span>.</p>
+<p>A contradição não surgiu porque o cálculo se tornou inconveniente. Ela surgiu porque a suposição de existência de um maior natural obriga uma situação que viola a própria condição atribuída a esse número.</p>
+<p>Portanto, a suposição precisa ser rejeitada.</p>
+<p>Não existe um maior número natural.</p>
+<p>A demonstração por contradição e a demonstração por contraposição podem, em algumas situações, parecer próximas, mas suas estruturas não são idênticas.</p>
+<p>Na contraposição de: <span class="math-inline">A→ B,</span> a tarefa é reorganizada de forma precisa como: <span class="math-inline">¬B→¬A.</span></p>
+<p>Há uma nova direção condicional claramente determinada.</p>
+<p>Na contradição, partimos da negação da tese e procuramos mostrar que ela não pode coexistir com as demais condições legítimas. Não precisamos necessariamente terminar em <span class="math-inline">¬A</span>; podemos chegar a qualquer incompatibilidade logicamente decisiva.</p>
+<p>Por isso, a contradição não deve ser tratada como um procedimento automático a ser escolhido sempre que o caminho direto não aparece imediatamente. Se uma demonstração direta ou uma contraposição deixa a estrutura mais transparente, não há ganho em esconder o raciocínio dentro de uma contradição.</p>
+<p>O método serve à organização da justificativa, e não o contrário.</p>
+<div class="item-title keep-with-next" data-keep-count="2">5. Demonstração por casos</div>
+<p>Algumas afirmações precisam abranger situações que se apresentam de maneiras diferentes.</p>
+<p>Suponha que sabemos: <span class="math-inline">A∨ B.</span></p>
+<p>Isso significa que toda situação relevante considerada satisfaz pelo menos uma dessas alternativas.</p>
+<p>Queremos estabelecer uma tese <span class="math-inline">C</span>.</p>
+<p>Uma possibilidade é mostrar primeiro que, sob <span class="math-inline">A</span>, <span class="math-inline">C</span> é verdadeira.</p>
+<p>Depois, mostrar que, sob <span class="math-inline">B</span>, <span class="math-inline">C</span> também é verdadeira.</p>
+<p data-keep-count="2">Em termos lógicos, temos:</p>
+<div class="math-sequence"><div class="math-line">A∨ B,</div>
+<div class="math-line">A→ C,</div>
+<div class="math-line">B→ C.</div>
+</div>
+<p>Como todas as possibilidades abrangidas por <span class="math-inline">A∨ B</span> conduzem à mesma tese, podemos concluir: <span class="math-inline">C.</span></p>
+<p>Essa organização recebe o nome de <strong>demonstração por casos</strong>.</p>
+<p>Seu ponto mais importante não é a simples divisão do raciocínio. É a <strong>cobertura das possibilidades</strong>.</p>
+<p data-keep-count="2">Imagine que uma afirmação possa ocorrer em três situações legítimas:</p>
+<div class="math-line">A,   B,   D.</div>
+<p>Se demonstrarmos a tese apenas sob <span class="math-inline">A</span> e sob <span class="math-inline">B</span>, nada foi estabelecido sobre <span class="math-inline">D</span>. Mesmo que os dois primeiros casos estejam perfeitamente demonstrados, a prova geral permanece incompleta.</p>
+<p>Por isso, os casos precisam cobrir todas as possibilidades relevantes.</p>
+<p>Eles não precisam necessariamente ser mutuamente exclusivos. Pode existir uma situação que pertença a mais de um caso sem que isso prejudique a demonstração. O essencial é que não exista uma possibilidade admissível deixada de fora.</p>
+<p>Em muitos exemplos elementares, casos separados sem sobreposição tornam a exposição mais simples, mas a validade do método depende da cobertura, não da exclusividade.</p>
+<p>Também é necessário que os diferentes ramos conduzam à mesma tese.</p>
+<p>Se queremos estabelecer <span class="math-inline">C</span>, não basta obter <span class="math-inline">C</span> em um caso e uma afirmação sem relação suficiente com <span class="math-inline">C</span> em outro. Cada possibilidade precisa levar à conclusão pretendida, direta ou legitimamente.</p>
+<p>Uma ilustração simples pode ser dada sem introduzir uma nova teoria matemática.</p>
+<p>Suponha que, para determinado objeto, saibamos que ocorre <span class="math-inline">A</span> ou <span class="math-inline">B</span>, e que queremos estabelecer <span class="math-inline">C</span>.</p>
+<div class="proof-schema"><div class="proof-step"><p>No primeiro caso, suponha <span class="math-inline">A</span>. A partir das informações disponíveis, obtemos: <span class="math-inline">D</span> e de <span class="math-inline">D</span>: <span class="math-inline">C.</span></p>
+</div><div class="proof-step"><p>No segundo caso, suponha <span class="math-inline">B</span>. Por outro caminho, obtemos: <span class="math-inline">E</span> e de <span class="math-inline">E</span>: <span class="math-inline">C.</span></p>
+</div></div>
+<p>Os ramos podem utilizar informações intermediárias diferentes. O que os reúne é o fato de que a divisão <span class="math-inline">A∨ B</span> cobre as possibilidades consideradas e ambos terminam estabelecendo a mesma tese <span class="math-inline">C</span>.</p>
+<p>A demonstração por casos não consiste, portanto, em testar alguns exemplos. Cada “caso” representa uma classe inteira de situações abrangidas por determinada condição, e todas as possibilidades relevantes precisam ser contempladas.</p>
+<div class="item-title keep-with-next" data-keep-count="2">6. Demonstração de equivalência e escrita justificada</div>
+<p>Considere agora uma tese com a forma: <span class="math-inline">A↔ B.</span></p>
+<p>Uma bicondicional reúne duas direções: <span class="math-inline">A→ B</span> e: <span class="math-inline">B→ A.</span></p>
+<p>Por isso, demonstrar apenas: <span class="math-inline">A→ B</span> não estabelece toda a bicondicional.</p>
+<p>É necessário demonstrar também: <span class="math-inline">B→ A.</span></p>
+<p>Uma demonstração de equivalência pode, portanto, ser organizada em duas partes conceituais.</p>
+<div class="proof-schema"><div class="proof-step"><p>Primeiro, estabelecemos: <span class="math-inline">A→ B.</span></p>
+</div><div class="proof-step"><p>Depois: <span class="math-inline">B→ A.</span></p>
+</div><div class="proof-step"><p>Quando ambas as direções foram justificadas, temos: <span class="math-inline">A↔ B.</span></p>
+</div></div>
+<p>As duas partes não precisam utilizar a mesma estratégia.</p>
+<p>Pode acontecer de: <span class="math-inline">A→ B</span> admitir um caminho direto natural, enquanto: <span class="math-inline">B→ A</span> seja mais transparente por contraposição. A bicondicional exige simetria quanto ao que deve ser estabelecido — as duas direções —, mas não exige simetria na maneira de demonstrá-las.</p>
+<p>Essa observação aponta para uma característica mais geral do trabalho com demonstrações: <strong>encontrar uma prova e apresentá-la não são exatamente a mesma atividade</strong>.</p>
+<p>Durante a investigação, podemos testar exemplos, manipular expressões, tentar uma demonstração direta, abandonar esse caminho, examinar a contrapositiva ou começar pela própria tese perguntando o que seria suficiente para alcançá-la.</p>
+<p>Podemos, por exemplo, olhar para a tese <span class="math-inline">B</span> e perceber que seria suficiente estabelecer <span class="math-inline">D</span>. Em seguida, perguntar o que permitiria obter <span class="math-inline">D</span>, chegando a uma condição <span class="math-inline">E</span>. Talvez então descubramos que <span class="math-inline">E</span> decorre facilmente da hipótese <span class="math-inline">A</span>.</p>
+<p data-keep-count="2">A descoberta pode ter ocorrido mentalmente na ordem:</p>
+<div class="math-line">B ← D ← E ← A.</div>
+<p data-keep-count="2">Mas, uma vez encontrado o caminho, a demonstração pode ser apresentada na ordem justificativa:</p>
+<div class="math-sequence"><div class="math-line">A</div>
+<div class="math-line">E</div>
+<div class="math-line">D</div>
+<div class="math-line">B.</div>
+</div>
+<p>Trabalhar retrospectivamente durante a descoberta não significa inverter arbitrariamente inferências na versão final. Significa utilizar a tese como orientação para descobrir quais passos intermediários poderiam ser suficientes para alcançá-la.</p>
+<p>A demonstração redigida deve permitir ao leitor reconstruir por que cada passagem relevante é legítima.</p>
+<p>Isso não exige registrar toda tentativa abandonada. Se cinco caminhos foram explorados antes de encontrar um sexto que funciona, a demonstração final não precisa narrar esse processo. Ela precisa apresentar o argumento que efetivamente estabelece a tese.</p>
+<p>Também não é necessário explicitar cada microetapa concebível.</p>
+<p>Uma demonstração pode ser concisa quando seus passos intermediários são recuperáveis pelo leitor no nível adequado. Mas a concisão deixa de ser qualidade quando elimina justamente a razão que sustenta a passagem principal.</p>
+<p>Há uma diferença entre omitir uma operação elementar e omitir o argumento central.</p>
+<p data-keep-count="2">Palavras como “logo”, “portanto” e “assim” não resolvem essa diferença. Elas indicam que uma conclusão está sendo apresentada, mas não criam a relação lógica que a justifica. Escrever:</p>
+<blockquote><p>Portanto, <span class="math-inline">B</span>.</p></blockquote>
+<p>não torna <span class="math-inline">B</span> consequência de <span class="math-inline">A</span> se nenhuma passagem legítima foi estabelecida entre as duas afirmações.</p>
+<p>Uma demonstração pode apoiar-se em definições, hipóteses, equivalências, propriedades e resultados já legitimamente estabelecidos. Isso permite que a Matemática avance sem reconstruir cada fundamento a cada novo argumento. O que não pode ocorrer é utilizar como fundamento algo cuja legitimidade depende justamente da tese que ainda está sendo demonstrada.</p>
+<p>Suponha que queremos estabelecer <span class="math-inline">T</span>.</p>
+<p>Se, em algum ponto essencial do raciocínio, assumimos <span class="math-inline">T</span> como informação disponível e depois utilizamos essa própria informação para concluir <span class="math-inline">T</span>, a argumentação é <strong>circular</strong>.</p>
+<p data-keep-count="2">A circularidade pode ser evidente:</p>
+<div class="argument-stack"><div class="argument-premises"><div class="argument-premise">T</div></div><div class="argument-conclusion"><span class="therefore-marker">∴</span><span>T,</span></div></div>
+<p>mas também pode estar escondida em várias etapas. O problema permanece o mesmo: a tese foi utilizada como fundamento antes de ter sido legitimamente estabelecida.</p>
+<p>Por outro lado, descobrir uma falha numa tentativa de demonstração não produz automaticamente a negação da tese.</p>
+<p>Se encontramos uma inferência inválida, uma lacuna ou uma etapa que não conseguimos justificar, estabelecemos apenas que <strong>aquele argumento não demonstra a afirmação</strong>.</p>
+<div class="atomic-group"><p>A tese pode continuar verdadeira e exigir outro caminho.</p>
+<p>Para mostrar que ela é falsa, é necessário apresentar uma refutação legítima — por exemplo, um contraexemplo quando sua estrutura permitir —, e não apenas constatar que uma tentativa de prova fracassou.</p>
+<p>A força de uma demonstração não vem da quantidade de símbolos utilizados, do número de casos testados ou da autoridade de quem a apresenta. Ela está na possibilidade de reconstruir uma cadeia de razões pelas quais, a partir do que foi legitimamente admitido, a tese não é apenas anunciada, mas efetivamente estabelecida.</p>
+</div>
+</section>
+<section class="source-section" data-context="TEXTO PRÁTICO • EXEMPLOS RESOLVIDOS">
+<header class="section-opening" data-keep-count="4"><h1 class="section-label outline-root">Texto Prático</h1><h2 class="section-title">Exemplos Resolvidos</h2></header>
+<div class="item-title keep-with-next" data-keep-count="3">Exemplo 1 — A conclusão parece aceitável, mas ela é garantida?</div>
+<p data-keep-count="2">Considere o seguinte argumento:</p>
+<blockquote class="student-quote"><p>Se um relatório passou pela revisão de Ana, então foi liberado. Se um relatório passou pela revisão de Bruno, então foi liberado. O relatório foi liberado. Portanto, o relatório passou pela revisão de Ana ou pela revisão de Bruno.</p></blockquote>
+<p>O argumento pode parecer razoável: as duas primeiras premissas apresentam maneiras pelas quais o relatório poderia ter sido liberado, e a terceira informa que a liberação ocorreu.</p>
+<p data-keep-count="2">A questão, porém, é outra:</p>
+<blockquote class="student-quote"><p>As premissas realmente <strong>garantem</strong> que o relatório passou pela revisão de Ana ou pela revisão de Bruno?</p></blockquote>
+<div class="minor-title keep-with-next" data-keep-count="4">Resolução</div>
+<div class="minor-title keep-with-next" data-keep-count="3">1. Identificando os papéis</div>
+<p data-keep-count="2">As premissas são:</p>
+<ol><li><p>Se o relatório passou pela revisão de Ana, então foi liberado.</p></li><li><p>Se o relatório passou pela revisão de Bruno, então foi liberado.</p></li><li><p>O relatório foi liberado.</p></li></ol>
+<p data-keep-count="2">A conclusão é:</p>
+<blockquote class="student-quote"><p>O relatório passou pela revisão de Ana ou pela revisão de Bruno.</p></blockquote>
+<p>Para analisar a validade, precisamos investigar a relação entre essas premissas e a conclusão.</p>
+<div class="minor-title keep-with-next" data-keep-count="3">2. Abstraindo o conteúdo</div>
+<p data-keep-count="2">Defina:</p>
+<div class="math-sequence"><div class="math-line">A:  <span class="math-text">o relatório passou pela revisão de Ana;</span></div>
+<div class="math-line">B:  <span class="math-text">o relatório foi liberado;</span></div>
+<div class="math-line">C:  <span class="math-text">o relatório passou pela revisão de Bruno.</span></div>
+</div>
+<p data-keep-count="2">A forma do argumento é:</p>
+<div class="argument-stack"><div class="argument-premises"><div class="argument-premise">A→ B</div><div class="argument-premise">C→ B</div><div class="argument-premise">B</div></div><div class="argument-conclusion"><span class="therefore-marker">∴</span><span>A∨ C.</span></div></div>
+<p>Agora podemos deixar o conteúdo particular em segundo plano e perguntar se essa forma garante a conclusão.</p>
+<div class="minor-title keep-with-next" data-keep-count="3">3. Procurando a situação decisiva</div>
+<p data-keep-count="2">Para mostrar que o argumento é inválido, precisamos encontrar uma <strong>contra-avaliação</strong>:</p>
+<ul><li><p>todas as premissas devem ser verdadeiras;</p></li><li><p>a conclusão deve ser falsa.</p></li></ul>
+<p>A conclusão é: <span class="math-inline">A∨ C.</span></p>
+<p data-keep-count="2">Para que ela seja falsa, precisamos de:</p>
+<div class="math-line">A=F   <span class="math-text">e</span>   C=F.</div>
+<p>Resta verificar se ainda é possível manter as três premissas verdadeiras.</p>
+<p>Escolha: <span class="math-inline">B=V.</span></p>
+<p data-keep-count="2">Temos então:</p>
+<div class="math-line">A=F,   B=V,   C=F.</div>
+<div class="minor-title keep-with-next" data-keep-count="2">4. Verificando a avaliação</div>
+<div class="table-wrap"><table class="analysis-table"><thead><tr><th scope="col">Expressão</th><th scope="col">Valor lógico</th></tr></thead><tbody><tr><td><span class="math-inline">A→ B</span></td><td><span class="math-inline">V</span></td></tr><tr><td><span class="math-inline">C→ B</span></td><td><span class="math-inline">V</span></td></tr><tr><td><span class="math-inline">B</span></td><td><span class="math-inline">V</span></td></tr><tr><td><span class="math-inline">A∨ C</span></td><td><span class="math-inline">F</span></td></tr></tbody></table></div>
+<p>As duas condicionais são verdadeiras porque seus antecedentes são falsos: <span class="math-inline">A=F</span> e: <span class="math-inline">C=F.</span></p>
+<p>A terceira premissa também é verdadeira: <span class="math-inline">B=V.</span></p>
+<p>Entretanto: <span class="math-inline">A∨ C=F,</span> pois tanto <span class="math-inline">A</span> quanto <span class="math-inline">C</span> são falsas.</p>
+<p data-keep-count="2">Portanto, conseguimos exatamente a configuração procurada: <span class="math-inline"><span class="math-text">todas as premissas verdadeiras</span></span> e:</p>
+<div class="math-line"><span class="math-text">conclusão falsa</span>.</div>
+<div class="minor-title keep-with-next" data-keep-count="3">5. Conclusão</div>
+<p data-keep-count="2">O argumento é:</p>
+<div class="math-line answer-line"><span class="answer-box"><span class="math-text">inválido</span></span>.</div>
+<p>A liberação do relatório pode ter ocorrido por alguma possibilidade não representada por <span class="math-inline">A</span> nem por <span class="math-inline">C</span>. As premissas dizem que essas duas situações são suficientes para produzir <span class="math-inline">B</span>, mas não dizem que são as únicas maneiras pelas quais <span class="math-inline">B</span> pode ocorrer.</p>
+<p>Por isso, mesmo que a conclusão fosse verdadeira em algum caso concreto, sua verdade não seria suficiente para tornar o argumento válido.</p>
+<p>A contra-avaliação: <span class="math-inline">A=F,   B=V,   C=F</span> mostra que as premissas não garantem a conclusão.</p>
+<div class="item-title keep-with-next" data-keep-count="3">Exemplo 2 — Uma tese verdadeira não salva uma demonstração defeituosa</div>
+<p data-keep-count="2">Considere a afirmação:</p>
+<blockquote class="student-quote"><p>Se <span class="math-inline">n</span> é um número inteiro par, então <span class="math-inline">5n</span> é par.</p></blockquote>
+<p data-keep-count="2">Um estudante apresenta a seguinte tentativa de demonstração:</p>
+<blockquote class="student-quote"><p>Para <span class="math-inline">n=2</span>, <span class="math-inline">5n=10,</span> que é par.</p><p>Para <span class="math-inline">n=4</span>, <span class="math-inline">5n=20,</span> que também é par.</p><p>Para <span class="math-inline">n=6</span>, <span class="math-inline">5n=30,</span> novamente par.</p><p>Portanto, se <span class="math-inline">n</span> é par, <span class="math-inline">5n</span> é par.</p></blockquote>
+<p>A conclusão está correta. Mas a argumentação apresentada realmente demonstra a afirmação?</p>
+<div class="minor-title keep-with-next" data-keep-count="3">Resolução</div>
+<div class="minor-title keep-with-next" data-keep-count="2">1. O que precisa ser demonstrado?</div>
+<p>A afirmação possui a forma condicional.</p>
+<p data-keep-count="2">A hipótese é:</p>
+<blockquote class="student-quote"><p><span class="math-inline">n</span> é um número inteiro par.</p></blockquote>
+<p data-keep-count="2">A tese é:</p>
+<blockquote class="student-quote"><p><span class="math-inline">5n</span> é par.</p></blockquote>
+<p>Não precisamos mostrar apenas que a propriedade funciona para alguns números pares. Precisamos estabelecer que ela funciona para <strong>qualquer inteiro que satisfaça a hipótese</strong>.</p>
+<div class="minor-title keep-with-next" data-keep-count="3">2. O que a tentativa realmente mostrou?</div>
+<p data-keep-count="2">O estudante verificou corretamente três casos:</p>
+<div class="math-line">n=2,   n=4,   n=6.</div>
+<p data-keep-count="2">Neles:</p>
+<div class="math-sequence"><div class="math-line">5·2=10,</div>
+<div class="math-line">5·4=20,</div>
+<div class="math-line">5·6=30,</div>
+</div>
+<p>e os três resultados são pares.</p>
+<p>Essas verificações não são inúteis. Elas mostram que a afirmação funciona nesses casos e podem ajudar a perceber um padrão.</p>
+<p data-keep-count="2">Mas elas estabelecem apenas:</p>
+<blockquote class="student-quote"><p>a propriedade vale para <span class="math-inline">2</span>, <span class="math-inline">4</span> e <span class="math-inline">6</span>.</p></blockquote>
+<p data-keep-count="2">A tese exige muito mais:</p>
+<blockquote class="student-quote"><p>a propriedade vale para qualquer número inteiro par.</p></blockquote>
+<div class="minor-title keep-with-next" data-keep-count="3">3. Onde está a lacuna?</div>
+<p data-keep-count="2">A passagem problemática está entre:</p>
+<blockquote class="student-quote"><p>“A propriedade funcionou para alguns números pares.”</p></blockquote>
+<p data-keep-count="2">e:</p>
+<blockquote class="student-quote"><p>“Portanto, ela funciona para todo número inteiro par.”</p></blockquote>
+<p>Os três exemplos favoráveis não justificam essa generalização.</p>
+<p>Mesmo uma quantidade muito maior de casos testados continuaria sendo uma coleção de casos particulares. Ainda faltaria explicar por que <strong>qualquer</strong> inteiro par deve produzir o mesmo comportamento.</p>
+<p>A tese pode ser verdadeira e, ainda assim, a tentativa apresentada não constituir sua demonstração.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">4. Que informação geral a hipótese fornece?</div>
+<p>Se <span class="math-inline">n</span> é par, então, pela definição de número par, existe um número inteiro <span class="math-inline">k</span> tal que: <span class="math-inline">n=2k.</span></p>
+<p>Essa expressão não representa um par específico. Ela descreve a forma de qualquer inteiro par.</p>
+<p>É essa informação geral que podemos utilizar para estabelecer a tese.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">5. Reconstruindo a demonstração</div>
+<p>Suponha que <span class="math-inline">n</span> seja um número inteiro par.</p>
+<p>Então existe um inteiro <span class="math-inline">k</span> tal que: <span class="math-inline">n=2k.</span></p>
+<p data-keep-count="2">Multiplicando <span class="math-inline">n</span> por <span class="math-inline">5</span>, temos:</p>
+<div class="math-line">5n=5(2k)=10k=2(5k).</div>
+<p>Como <span class="math-inline">k</span> é inteiro, <span class="math-inline">5k</span> também é inteiro.</p>
+<p data-keep-count="2">Portanto, <span class="math-inline">5n</span> possui a forma:</p>
+<div class="math-line">2·<span class="math-text">(um número inteiro)</span>.</div>
+<p>Pela definição de número par,</p>
+<div class="math-line answer-line"><span class="answer-box">5n<span class="math-text"> é par</span>.</span></div>
+<p data-keep-count="2">Assim, foi estabelecido que:</p>
+<blockquote class="student-quote"><p>Se <span class="math-inline">n</span> é um número inteiro par, então <span class="math-inline">5n</span> é par.</p></blockquote>
+<div class="minor-title keep-with-next" data-keep-count="2">6. Por que essa demonstração é geral?</div>
+<p>Na demonstração reconstruída, não escolhemos: <span class="math-inline">n=2,  n=4,  n=6</span> nem qualquer outro valor particular.</p>
+<p>Partimos apenas daquilo que caracteriza um inteiro par: <span class="math-inline">n=2k,</span> com <span class="math-inline">k</span> inteiro.</p>
+<p>A partir dessa forma geral, obtivemos: <span class="math-inline">5n=2(5k),</span> que novamente possui a forma de um número par.</p>
+<p>Os exemplos particulares mostravam que a afirmação funcionava em alguns casos. A demonstração reconstruída explica <strong>por que ela precisa funcionar em todos os casos abrangidos pela hipótese</strong>.</p>
+</section>
+<section class="source-section" data-context="TEXTO PRÁTICO • QUIZ">
+<header class="section-opening" data-keep-count="2"><div class="section-label">TEXTO PRÁTICO</div><h2 class="section-title">Quiz</h2></header>
+<div class="atomic-group"><div class="item-title keep-with-next">Questão 1</div>
+<p>Considere o argumento:</p>
+<div class="argument-stack"><div class="argument-premises"><div class="argument-premise">p∨ q</div><div class="argument-premise">¬p</div></div><div class="argument-conclusion"><span class="therefore-marker">∴</span><span>q.</span></div></div>
+<p>Qual alternativa descreve corretamente sua organização?</p>
+<p><strong>A)</strong> <span class="math-inline">p∨ q</span> e <span class="math-inline">¬p</span> são premissas, <span class="math-inline">q</span> é a conclusão e <span class="math-inline">∴</span> apenas marca a afirmação apresentada como conclusão.</p>
+<p><strong>B)</strong> <span class="math-inline">∴</span> conecta <span class="math-inline">¬p</span> e <span class="math-inline">q</span>, formando uma nova proposição composta.</p>
+<p><strong>C)</strong> Apenas <span class="math-inline">p∨ q</span> é premissa; <span class="math-inline">¬p</span> e <span class="math-inline">q</span> são duas conclusões sucessivas.</p>
+<p><strong>D)</strong> As três expressões são premissas, pois todas participam da mesma estrutura argumentativa.</p>
+</div>
+<div class="atomic-group"><div class="item-title keep-with-next">Questão 2</div>
+<p>Qual afirmação distingue corretamente verdade, validade e solidez?</p>
+<p><strong>A)</strong> Um argumento é válido sempre que sua conclusão é verdadeira.</p>
+<p><strong>B)</strong> Se uma das premissas é falsa, o argumento é necessariamente inválido.</p>
+<p><strong>C)</strong> Proposições podem ser verdadeiras ou falsas; argumentos podem ser válidos ou inválidos; um argumento sólido é válido e possui premissas verdadeiras.</p>
+<p><strong>D)</strong> Todo argumento válido é automaticamente sólido, independentemente do valor lógico de suas premissas.</p>
+</div>
+<div class="atomic-group"><div class="item-title keep-with-next">Questão 3</div>
+<p>Qual situação constitui uma contra-avaliação para um argumento?</p>
+<p><strong>A)</strong> Todas as premissas são verdadeiras e a conclusão também é verdadeira.</p>
+<p><strong>B)</strong> Alguma premissa é falsa e a conclusão é falsa.</p>
+<p><strong>C)</strong> Todas as premissas são falsas e a conclusão é verdadeira.</p>
+<p><strong>D)</strong> Todas as premissas são verdadeiras e a conclusão é falsa.</p>
+</div>
+<div class="atomic-group"><div class="item-title keep-with-next">Questão 4</div>
+<p>Compare:</p>
+<div class="minor-title keep-with-next">I</div>
+<div class="argument-stack"><div class="argument-premises"><div class="argument-premise">A→ B</div><div class="argument-premise">¬B</div></div><div class="argument-conclusion"><span class="therefore-marker">∴</span><span>¬A</span></div></div>
+<div class="minor-title keep-with-next">II</div>
+<div class="argument-stack"><div class="argument-premises"><div class="argument-premise">A→ B</div><div class="argument-premise">¬A</div></div><div class="argument-conclusion"><span class="therefore-marker">∴</span><span>¬B.</span></div></div>
+<p>Qual alternativa é correta?</p>
+<p><strong>A)</strong> As duas formas são válidas porque ambas utilizam o mesmo condicional.</p>
+<p><strong>B)</strong> I é válida por modus tollens; II é inválida por negação do antecedente.</p>
+<p><strong>C)</strong> I é inválida por afirmar o consequente; II é válida por modus ponens.</p>
+<p><strong>D)</strong> As duas formas são inválidas porque nenhuma utiliza diretamente <span class="math-inline">A</span> como segunda premissa.</p>
+</div>
+<div class="atomic-group"><div class="item-title keep-with-next">Questão 5</div>
+<p>Considere:</p>
+<div class="math-line">A∨ B</div>
+<div class="math-line">¬A.</div>
+<p>Qual conclusão pode ser obtida legitimamente em um único passo?</p>
+<p><strong>A)</strong> <span class="math-inline">¬B</span></p>
+<p><strong>B)</strong> <span class="math-inline">A</span></p>
+<p><strong>C)</strong> <span class="math-inline">B</span></p>
+<p><strong>D)</strong> <span class="math-inline">A∧ B</span></p>
+</div>
+</section>
+<section class="source-section" data-context="TEXTO PRÁTICO • EXERCÍCIOS">
+<header class="section-opening" data-keep-count="3"><div class="section-label">TEXTO PRÁTICO</div><h2 class="section-title">Exercícios</h2></header>
+<div class="item-title keep-with-next" data-keep-count="2">Exercício 1 — Onde está o argumento?</div>
+<p>Analise as quatro estruturas.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">I</div>
+<blockquote class="student-quote"><p>Se um número é múltiplo de <span class="math-inline">4</span>, então ele é par. <span class="math-inline">20</span> é múltiplo de <span class="math-inline">4</span>. Logo, <span class="math-inline">20</span> é par.</p></blockquote>
+<div class="minor-title keep-with-next" data-keep-count="2">II</div>
+<blockquote class="student-quote"><p><span class="math-inline">7-3</span> é positivo, pois <span class="math-inline">7-3=4</span> e <span class="math-inline">4&gt;0</span>.</p></blockquote>
+<div class="minor-title keep-with-next" data-keep-count="2">III</div>
+<blockquote class="student-quote"><p><span class="math-inline">12</span> é par. <span class="math-inline">15</span> é ímpar. <span class="math-inline">20&gt;7</span>.</p></blockquote>
+<div class="minor-title keep-with-next" data-keep-count="2">IV</div>
+<div class="argument-stack"><div class="argument-premises"><div class="argument-premise">p∨ q</div><div class="argument-premise">¬q</div></div><div class="argument-conclusion"><span class="therefore-marker">∴</span><span>p.</span></div></div>
+<div class="minor-title keep-with-next" data-keep-count="2">a)</div>
+<p>Identifique quais das quatro estruturas apresentam um argumento.</p>
+<div class="minor-title keep-with-next" data-keep-count="3">b)</div>
+<p data-keep-count="2">Nas estruturas que constituem argumentos, identifique:</p>
+<ul><li><p>a premissa ou as premissas;</p></li><li><p>a conclusão.</p></li></ul>
+<div class="minor-title keep-with-next" data-keep-count="2">c)</div>
+<p>Explique por que a estrutura III, embora contenha várias proposições, não apresenta por si só uma inferência.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">d)</div>
+<p>Na estrutura II, a conclusão aparece antes das razões apresentadas para sustentá-la.</p>
+<p data-keep-count="2">Reorganize-a na forma:</p>
+<div class="argument-stack"><div class="argument-premises"><div class="argument-premise"><span class="math-text">premissas</span></div></div><div class="argument-conclusion"><span class="therefore-marker">∴</span><span><span class="math-text"> conclusão</span>.</span></div></div>
+<div class="minor-title keep-with-next" data-keep-count="2">e)</div>
+<p>Compare as estruturas I e IV.</p>
+<p>Uma utiliza linguagem verbal e a outra linguagem simbólica. Explique o que precisa existir em ambas para que sejam reconhecidas como argumentos, independentemente da forma de escrita.</p>
+<div class="item-title keep-with-next" data-keep-count="2">Exercício 2 — Verdade não é validade; validade não é solidez</div>
+<p>Em cada cenário, considere que os valores lógicos indicados são os valores assumidos pelas proposições naquela situação.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">Cenário I</div>
+<div class="argument-stack"><div class="argument-premises"><div class="argument-premise">A→ B</div><div class="argument-premise">A</div></div><div class="argument-conclusion"><span class="therefore-marker">∴</span><span>B</span></div></div>
+<p data-keep-count="2">com:</p>
+<div class="math-line">A=F,    B=V.</div>
+<div class="minor-title keep-with-next" data-keep-count="2">Cenário II</div>
+<div class="argument-stack"><div class="argument-premises"><div class="argument-premise">A∨ B</div></div><div class="argument-conclusion"><span class="therefore-marker">∴</span><span>A</span></div></div>
+<p data-keep-count="2">com:</p>
+<div class="math-line">A=V,    B=V.</div>
+<div class="minor-title keep-with-next" data-keep-count="2">Cenário III</div>
+<div class="argument-stack"><div class="argument-premises"><div class="argument-premise">A∧ B</div></div><div class="argument-conclusion"><span class="therefore-marker">∴</span><span>A</span></div></div>
+<p data-keep-count="2">com:</p>
+<div class="math-line">A=V,    B=V.</div>
+<div class="minor-title keep-with-next" data-keep-count="2">a)</div>
+<p>Em cada cenário, determine o valor lógico de todas as premissas e da conclusão.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">b)</div>
+<p>Classifique cada <strong>forma de argumento</strong> como válida ou inválida.</p>
+<p>Não decida a validade apenas pela avaliação particular fornecida.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">c)</div>
+<p>Em quais cenários estão satisfeitas simultaneamente as duas condições necessárias para a solidez?</p>
+<p data-keep-count="2">Justifique levando em conta:</p>
+<ul><li><p>a validade da forma;</p></li><li><p>a verdade das premissas na situação apresentada.</p></li></ul>
+<div class="minor-title keep-with-next" data-keep-count="3">d)</div>
+<p data-keep-count="2">Um estudante observa o Cenário II e afirma:</p>
+<blockquote class="student-quote"><p>“A premissa é verdadeira e a conclusão também é verdadeira. Portanto, o argumento é válido.”</p></blockquote>
+<p>Analise a justificativa.</p>
+<p>Que informação ainda precisa ser considerada para decidir validade?</p>
+<div class="minor-title keep-with-next" data-keep-count="3">e)</div>
+<p data-keep-count="2">Outro estudante observa o Cenário I e afirma:</p>
+<blockquote class="student-quote"><p>“Como <span class="math-inline">A</span> é falsa, o argumento é inválido.”</p></blockquote>
+<p>Corrija esse raciocínio distinguindo o valor lógico de uma premissa da validade da forma argumentativa.</p>
+<div class="item-title keep-with-next" data-keep-count="3">Exercício 3 — Construindo uma contra-avaliação</div>
+<p data-keep-count="2">Considere o argumento:</p>
+<div class="argument-stack"><div class="argument-premises"><div class="argument-premise">A∨ B</div><div class="argument-premise">A→ C</div></div><div class="argument-conclusion"><span class="therefore-marker">∴</span><span>C.</span></div></div>
+<div class="minor-title keep-with-next" data-keep-count="2">a)</div>
+<p>Antes de escolher qualquer valor lógico, descreva qual configuração uma avaliação precisa produzir para funcionar como contra-avaliação desse argumento.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">b)</div>
+<p>Construa uma atribuição de valores para: <span class="math-inline">A,   B,   C</span> que torne simultaneamente verdadeiras as duas premissas e falsa a conclusão.</p>
+<div class="minor-title keep-with-next" data-keep-count="3">c)</div>
+<p data-keep-count="2">Verifique separadamente, usando a atribuição escolhida:</p>
+<div class="math-sequence"><div class="math-line">A∨ B,</div>
+<div class="math-line">A→ C,</div>
+</div>
+<p>e: <span class="math-inline">C.</span></p>
+<p>Organize a conferência em uma pequena tabela ou em linhas separadas.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">d)</div>
+<p>Explique por que a avaliação construída é suficiente para decidir a validade do argumento.</p>
+<div class="minor-title keep-with-next" data-keep-count="3">e)</div>
+<p data-keep-count="2">Considere agora a avaliação:</p>
+<div class="math-line">A=V,    B=F,    C=V.</div>
+<p>Verifique as premissas e a conclusão.</p>
+<p>Essa avaliação também é uma contra-avaliação?</p>
+<p>Explique o que ela informa — e o que não informa — sobre a validade.</p>
+<div class="item-title keep-with-next" data-keep-count="3">Exercício 4 — Onde devemos procurar a falha?</div>
+<p data-keep-count="2">Considere:</p>
+<div class="argument-stack"><div class="argument-premises"><div class="argument-premise">A∨ B</div><div class="argument-premise">A→ C</div><div class="argument-premise">B→ C</div></div><div class="argument-conclusion"><span class="therefore-marker">∴</span><span>C.</span></div></div>
+<p>Em vez de testar atribuições aleatoriamente, investigue diretamente a possibilidade de construir uma contra-avaliação.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">a)</div>
+<p>Para que uma contra-avaliação exista, qual deve ser o valor lógico da conclusão <span class="math-inline">C</span>?</p>
+<div class="minor-title keep-with-next" data-keep-count="2">b)</div>
+<p>Suponha esse valor para <span class="math-inline">C</span>.</p>
+<p>Que valor <span class="math-inline">A</span> precisaria possuir para que: <span class="math-inline">A→ C</span> continuasse verdadeira?</p>
+<div class="minor-title keep-with-next" data-keep-count="2">c)</div>
+<p>Na mesma situação, que valor <span class="math-inline">B</span> precisaria possuir para que: <span class="math-inline">B→ C</span> continuasse verdadeira?</p>
+<div class="minor-title keep-with-next" data-keep-count="2">d)</div>
+<p>Os valores encontrados para <span class="math-inline">A</span> e <span class="math-inline">B</span> são compatíveis com a exigência de que: <span class="math-inline">A∨ B</span> seja verdadeira?</p>
+<p>A partir dessa análise, determine se é possível construir uma contra-avaliação.</p>
+<div class="minor-title keep-with-next" data-keep-count="3">e)</div>
+<p data-keep-count="2">Conclua se o argumento é válido ou inválido e justifique pela existência ou inexistência da configuração:</p>
+<blockquote class="student-quote"><p>todas as premissas verdadeiras e conclusão falsa.</p></blockquote>
+<div class="minor-title keep-with-next" data-keep-count="2">f)</div>
+<p>Reúna as três premissas numa única conjunção e escreva o condicional que possui essa conjunção como antecedente e <span class="math-inline">C</span> como consequente.</p>
+<p data-keep-count="2">Utilize a forma:</p>
+<div class="math-line">[(<span class="math-text">premissas</span>)]→ C.</div>
+<div class="minor-title keep-with-next" data-keep-count="2">g)</div>
+<p>Explique como a tentativa de falsificar esse condicional está relacionada à procura por uma contra-avaliação do argumento original.</p>
+<div class="item-title keep-with-next" data-keep-count="3">Exercício 5 — Reconhecendo formas fundamentais</div>
+<p data-keep-count="2">Em cada argumento, identifique a regra de inferência utilizada:</p>
+<ul><li><p>modus ponens;</p></li><li><p>modus tollens;</p></li><li><p>silogismo hipotético;</p></li><li><p>silogismo disjuntivo.</p></li></ul>
+<p>Além do nome, indique quais expressões ocupam os papéis estruturais relevantes.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">I</div>
+<div class="argument-stack"><div class="argument-premises"><div class="argument-premise">(p∧ q)→ r</div><div class="argument-premise">p∧ q</div></div><div class="argument-conclusion"><span class="therefore-marker">∴</span><span>r.</span></div></div>
+<div class="minor-title keep-with-next" data-keep-count="2">II</div>
+<div class="argument-stack"><div class="argument-premises"><div class="argument-premise">p→(q∨ r)</div><div class="argument-premise">¬(q∨ r)</div></div><div class="argument-conclusion"><span class="therefore-marker">∴</span><span>¬p.</span></div></div>
+<div class="minor-title keep-with-next" data-keep-count="2">III</div>
+<div class="argument-stack"><div class="argument-premises"><div class="argument-premise">(p∨ q)→ r</div><div class="argument-premise">r→ s</div></div><div class="argument-conclusion"><span class="therefore-marker">∴</span><span>(p∨ q)→ s.</span></div></div>
+<div class="minor-title keep-with-next" data-keep-count="2">IV</div>
+<div class="argument-stack"><div class="argument-premises"><div class="argument-premise">(p∧ q)∨ r</div><div class="argument-premise">¬r</div></div><div class="argument-conclusion"><span class="therefore-marker">∴</span><span>p∧ q.</span></div></div>
+<div class="minor-title keep-with-next" data-keep-count="2">V</div>
+<div class="argument-stack"><div class="argument-premises"><div class="argument-premise">p∨(q∧ r)</div><div class="argument-premise">¬p</div></div><div class="argument-conclusion"><span class="therefore-marker">∴</span><span>q∧ r.</span></div></div>
+<div class="minor-title keep-with-next" data-keep-count="2">a)</div>
+<p>Nomeie a regra correspondente em cada caso.</p>
+<div class="minor-title keep-with-next" data-keep-count="3">b)</div>
+<p data-keep-count="2">Nos argumentos I e II, identifique o que desempenha o papel de <span class="math-inline">A</span> e de <span class="math-inline">B</span> nas formas abstratas:</p>
+<div class="argument-stack"><div class="argument-premises"><div class="argument-premise">A→ B,</div><div class="argument-premise">A</div></div><div class="argument-conclusion"><span class="therefore-marker">∴</span><span>B</span></div></div>
+<p data-keep-count="2">e:</p>
+<div class="argument-stack"><div class="argument-premises"><div class="argument-premise">A→ B,</div><div class="argument-premise">¬B</div></div><div class="argument-conclusion"><span class="therefore-marker">∴</span><span>¬A.</span></div></div>
+<div class="minor-title keep-with-next" data-keep-count="3">c)</div>
+<p data-keep-count="2">No argumento III, identifique as três expressões que desempenham os papéis de <span class="math-inline">A</span>, <span class="math-inline">B</span> e <span class="math-inline">C</span> em:</p>
+<div class="argument-stack"><div class="argument-premises"><div class="argument-premise">A→ B,</div><div class="argument-premise">B→ C,</div></div><div class="argument-conclusion"><span class="therefore-marker">∴</span><span>A→ C.</span></div></div>
+<div class="minor-title keep-with-next" data-keep-count="2">d)</div>
+<p>Nos argumentos IV e V, explique por que uma fórmula composta inteira pode ocupar o lugar de uma das alternativas de uma disjunção.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">e)</div>
+<p>Uma regra de inferência utilizada acima afirma que duas fórmulas são logicamente equivalentes?</p>
+<p data-keep-count="2">Explique brevemente a diferença entre usar uma forma para <strong>obter uma conclusão</strong> e escrever uma equivalência como:</p>
+<div class="math-structural">A≡ B.</div>
+<div class="item-title keep-with-next" data-keep-count="2">Exercício 6 — Aplicando a regra à estrutura inteira</div>
+<p>Em cada item, analise as premissas e determine o que pode ser obtido legitimamente em <strong>um único passo</strong> com as regras de inferência disponíveis.</p>
+<p data-keep-count="2">Quando uma conclusão puder ser obtida:</p>
+<ul><li><p>escreva-a;</p></li><li><p>identifique a regra utilizada;</p></li><li><p>indique a correspondência entre as fórmulas concretas e sua forma abstrata.</p></li></ul>
+<div class="minor-title keep-with-next" data-keep-count="2">a)</div>
+<div class="math-sequence"><div class="math-line">¬p→(q∨ r)</div>
+<div class="math-line">¬p.</div>
+</div>
+<div class="minor-title keep-with-next" data-keep-count="2">b)</div>
+<div class="math-sequence"><div class="math-line">(p∧ q)∨ r</div>
+<div class="math-line">¬r.</div>
+</div>
+<div class="minor-title keep-with-next" data-keep-count="2">c)</div>
+<div class="math-sequence"><div class="math-line">(p∨ q)→ r</div>
+<div class="math-line">r→¬s.</div>
+</div>
+<div class="minor-title keep-with-next" data-keep-count="2">d)</div>
+<div class="math-sequence"><div class="math-line">(p∧ q)→ r</div>
+<div class="math-line">¬r.</div>
+</div>
+<div class="minor-title keep-with-next" data-keep-count="3">e)</div>
+<p data-keep-count="2">Considere:</p>
+<div class="math-sequence"><div class="math-line">(p∧ q)→ r</div>
+<div class="math-line">p.</div>
+</div>
+<p>Um estudante propõe concluir: <span class="math-inline">r.</span></p>
+<p>É possível obter <span class="math-inline">r</span> legitimamente em um único passo com as regras disponíveis?</p>
+<p>Sua justificativa deve observar a estrutura <strong>inteira</strong> da primeira premissa, e não apenas parte dela.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">f)</div>
+<p>Escolha um dos itens em que uma conclusão pode ser legitimamente obtida e explique por que a passagem realizada é uma <strong>inferência</strong>, e não uma afirmação de que alguma premissa seja logicamente equivalente à conclusão.</p>
+<div class="item-title keep-with-next" data-keep-count="5">Exercício 7 — Formas válidas e imitações próximas</div>
+<div class="minor-title keep-with-next" data-keep-count="4">Parte I — Antecedente e consequente</div>
+<p data-keep-count="3">Compare:</p>
+<div class="minor-title keep-with-next" data-keep-count="2">Forma I</div>
+<div class="argument-stack"><div class="argument-premises"><div class="argument-premise">A→ B</div><div class="argument-premise">A</div></div><div class="argument-conclusion"><span class="therefore-marker">∴</span><span>B</span></div></div>
+<div class="minor-title keep-with-next" data-keep-count="2">Forma II</div>
+<div class="argument-stack"><div class="argument-premises"><div class="argument-premise">A→ B</div><div class="argument-premise">B</div></div><div class="argument-conclusion"><span class="therefore-marker">∴</span><span>A.</span></div></div>
+<div class="minor-title keep-with-next" data-keep-count="2">a)</div>
+<p>Identifique qual forma é válida e nomeie a regra correspondente.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">b)</div>
+<p>Identifique a forma inválida pelo nome construído no Texto Teórico.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">c)</div>
+<p>Construa uma atribuição de valores para <span class="math-inline">A</span> e <span class="math-inline">B</span> que torne verdadeiras as premissas da forma inválida e falsa sua conclusão.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">d)</div>
+<p>Explique, em linguagem verbal, por que a direção estabelecida por: <span class="math-inline">A→ B</span> não autoriza a passagem realizada pela forma inválida.</p>
+<div class="minor-title keep-with-next" data-keep-count="4">Parte II — Negando uma das posições</div>
+<p data-keep-count="3">Compare:</p>
+<div class="minor-title keep-with-next" data-keep-count="2">Forma III</div>
+<div class="argument-stack"><div class="argument-premises"><div class="argument-premise">A→ B</div><div class="argument-premise">¬B</div></div><div class="argument-conclusion"><span class="therefore-marker">∴</span><span>¬A</span></div></div>
+<div class="minor-title keep-with-next" data-keep-count="2">Forma IV</div>
+<div class="argument-stack"><div class="argument-premises"><div class="argument-premise">A→ B</div><div class="argument-premise">¬A</div></div><div class="argument-conclusion"><span class="therefore-marker">∴</span><span>¬B.</span></div></div>
+<div class="minor-title keep-with-next" data-keep-count="2">e)</div>
+<p>Identifique qual forma é válida e nomeie-a.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">f)</div>
+<p>Identifique a forma inválida.</p>
+<div class="minor-title keep-with-next" data-keep-count="3">g)</div>
+<p data-keep-count="2">Construa uma contra-avaliação para a forma inválida e verifique:</p>
+<ul><li><p>a primeira premissa;</p></li><li><p>a segunda premissa;</p></li><li><p>a conclusão.</p></li></ul>
+<div class="minor-title keep-with-next" data-keep-count="2">h)</div>
+<p>Explique por que negar o antecedente não autoriza, em geral, negar o consequente.</p>
+<div class="minor-title keep-with-next" data-keep-count="3">Parte III — Transferência para um argumento verbal</div>
+<p data-keep-count="2">Considere:</p>
+<blockquote class="student-quote"><p>Se a senha foi digitada corretamente, então o sistema libera o acesso. O sistema liberou o acesso. Portanto, a senha foi digitada corretamente.</p></blockquote>
+<div class="minor-title keep-with-next" data-keep-count="2">i)</div>
+<p>Defina proposições adequadas para formalizar o argumento.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">j)</div>
+<p>Escreva sua forma simbólica.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">k)</div>
+<p>Classifique-a como válida ou inválida e identifique sua estrutura.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">l)</div>
+<p>Explique por que a liberação do acesso, por si só, não garante a conclusão apresentada.</p>
+<p>Sua análise deve tratar da direção lógica do condicional, não de possíveis detalhes técnicos do sistema.</p>
+<div class="item-title keep-with-next" data-keep-count="2">Exercício 8 — Qual regra realmente serve?</div>
+<p>Em cada item, determine se as premissas permitem obter alguma conclusão indicada pela estrutura em <strong>um único passo</strong>.</p>
+<p data-keep-count="2">Quando permitirem:</p>
+<ul><li><p>escreva a conclusão;</p></li><li><p>identifique a regra;</p></li><li><p>justifique brevemente por que ela se aplica.</p></li></ul>
+<div class="minor-title keep-with-next" data-keep-count="2">I</div>
+<div class="math-sequence"><div class="math-line">A→ B</div>
+<div class="math-line">B→ C.</div>
+</div>
+<p>Que relação condicional entre <span class="math-inline">A</span> e <span class="math-inline">C</span> pode ser obtida?</p>
+<div class="minor-title keep-with-next" data-keep-count="2">II</div>
+<div class="math-sequence"><div class="math-line">A∨ B</div>
+<div class="math-line">¬B.</div>
+</div>
+<p>Qual das alternativas da primeira premissa pode ser concluída?</p>
+<div class="minor-title keep-with-next" data-keep-count="2">III</div>
+<div class="math-sequence"><div class="math-line">(p∧ q)→ r</div>
+<div class="math-line">p∧ q.</div>
+</div>
+<p>Qual conclusão pode ser obtida?</p>
+<div class="minor-title keep-with-next" data-keep-count="2">IV</div>
+<div class="math-sequence"><div class="math-line">p→(q∨ r)</div>
+<div class="math-line">¬(q∨ r).</div>
+</div>
+<p>Que conclusão sobre <span class="math-inline">p</span> pode ser obtida?</p>
+<div class="minor-title keep-with-next" data-keep-count="3">V</div>
+<p data-keep-count="2">Considere:</p>
+<div class="math-sequence"><div class="math-line">A→ B</div>
+<div class="math-line">¬A</div>
+</div>
+<p>e a conclusão proposta: <span class="math-inline">¬B.</span></p>
+<p>Alguma das quatro regras válidas disponíveis autoriza essa conclusão em um único passo?</p>
+<p>Se não, identifique o problema estrutural da tentativa.</p>
+<div class="item-title keep-with-next" data-keep-count="3">Exercício 9 — Encadeamento de inferências</div>
+<p data-keep-count="2">Considere como premissas iniciais:</p>
+<div class="math-sequence"><div class="math-line">p∨ q</div>
+<div class="math-line">¬p</div>
+<div class="math-line">q→ r</div>
+<div class="math-line">r→ s.</div>
+</div>
+<p>Pretende-se estabelecer: <span class="math-inline">s.</span></p>
+<div class="minor-title keep-with-next" data-keep-count="2">a)</div>
+<p>Identifique uma afirmação que possa ser legitimamente obtida a partir das premissas já disponíveis.</p>
+<p>Indique exatamente quais informações utiliza e qual regra justifica a passagem.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">b)</div>
+<p>Utilize a nova informação obtida, quando ela estiver legitimamente disponível, para continuar o raciocínio.</p>
+<p>Prossiga até alcançar: <span class="math-inline">s.</span></p>
+<div class="minor-title keep-with-next" data-keep-count="3">c)</div>
+<p data-keep-count="2">Registre cada passo indicando:</p>
+<ul><li><p>a afirmação obtida;</p></li><li><p>as informações utilizadas;</p></li><li><p>a justificativa da inferência.</p></li></ul>
+<div class="table-wrap visual" data-visual="3"><table class="analysis-table  chain-table worksheet-table"><thead><tr><th scope="col">Passo</th><th scope="col">Afirmação disponível ou obtida</th><th scope="col">Informações utilizadas</th><th scope="col">Justificativa</th></tr></thead><tbody><tr><td>Premissas</td><td><span class="math-inline">p∨ q</span>; <span class="math-inline">¬p</span>; <span class="math-inline">q→ r</span>; <span class="math-inline">r→ s</span></td><td>—</td><td>dadas</td></tr><tr><td>1</td><td></td><td></td><td></td></tr><tr><td>2</td><td></td><td></td><td></td></tr><tr><td>3</td><td></td><td></td><td></td></tr></tbody></table></div>
+<div class="minor-title keep-with-next" data-keep-count="2">d)</div>
+<p>Explique em que momento cada conclusão intermediária passa a estar legitimamente disponível para ser utilizada como premissa de um passo posterior.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">e)</div>
+<p>Examine a dependência entre os passos que você construiu.</p>
+<p>É possível obter a conclusão final sem antes estabelecer determinadas conclusões intermediárias?</p>
+<p>Justifique com base nas premissas disponíveis, sem apenas reorganizar visualmente as linhas.</p>
+<p data-keep-count="2">Considere agora a seguinte tentativa de resolução construída com as mesmas premissas:</p>
+<div class="attempt-block"><div class="minor-title keep-with-next">Passo 1</div>
+<div class="math-line">r</div>
+<p>Justificativa apresentada:</p>
+<blockquote class="student-quote"><p>De <span class="math-inline">q→ r</span> e <span class="math-inline">q</span>, por modus ponens.</p></blockquote>
+</div>
+<div class="attempt-block"><div class="minor-title keep-with-next">Passo 2</div>
+<div class="math-line">q</div>
+<p>Justificativa apresentada:</p>
+<blockquote class="student-quote"><p>De <span class="math-inline">p∨ q</span> e <span class="math-inline">¬p</span>, por silogismo disjuntivo.</p></blockquote>
+</div>
+<div class="attempt-block"><div class="minor-title keep-with-next">Passo 3</div>
+<div class="math-line">s</div>
+<p>Justificativa apresentada:</p>
+<blockquote class="student-quote"><p>De <span class="math-inline">r→ s</span> e <span class="math-inline">r</span>, por modus ponens.</p></blockquote>
+</div>
+<div class="minor-title keep-with-next" data-keep-count="2">f)</div>
+<p>Localize a primeira linha que não está legitimamente justificada <strong>no momento em que aparece</strong>.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">g)</div>
+<p>A justificativa escrita nessa linha corresponde a uma forma de inferência válida em si mesma?</p>
+<p>Explique por que isso ainda não basta para tornar o passo legítimo naquela posição da cadeia.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">h)</div>
+<p>Reorganize a resolução de modo que cada afirmação utilizada como premissa já tenha sido previamente fornecida ou legitimamente obtida.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">i)</div>
+<p>Explique por que uma conclusão intermediária não pode ser utilizada apenas porque sabemos que ela aparecerá mais adiante no raciocínio.</p>
+<div class="item-title keep-with-next" data-keep-count="4">Exercício 10 — Testar, demonstrar ou refutar?</div>
+<div class="minor-title keep-with-next" data-keep-count="3">Parte I — Duas abordagens para uma afirmação geral</div>
+<p data-keep-count="2">Considere a afirmação:</p>
+<blockquote class="student-quote"><p>Se <span class="math-inline">n</span> é um número inteiro par, então <span class="math-inline">n+6</span> é par.</p></blockquote>
+<p>Dois estudantes investigam essa afirmação de maneiras diferentes.</p>
+<div class="attempt-block"><div class="minor-title keep-with-next">Abordagem A</div>
+<p>O primeiro estudante escolhe alguns números pares:</p>
+<p>Para: <span class="math-inline">n=2,</span> temos: <span class="math-inline">n+6=8.</span></p>
+<p>Para: <span class="math-inline">n=8,</span> temos:</p>
+<div class="math-line">n+6=14.</div>
+<p>Para: <span class="math-inline">n=20,</span> temos:</p>
+<div class="math-line">n+6=26.</div>
+<p>Nos três casos, <span class="math-inline">n+6</span> é par.</p>
+</div>
+<div class="attempt-block"><div class="minor-title keep-with-next">Abordagem B</div>
+<p>O segundo estudante começa escrevendo: <span class="math-inline">n=2k,</span> com <span class="math-inline">k</span> inteiro, e procura utilizar essa informação para analisar <span class="math-inline">n+6</span> sem escolher um valor particular para <span class="math-inline">n</span>.</p>
+</div>
+<div class="minor-title keep-with-next" data-keep-count="3">a)</div>
+<p data-keep-count="2">O que a Abordagem A realmente estabelece sobre os valores:</p>
+<div class="math-line">2,  8,  20?</div>
+<div class="minor-title keep-with-next" data-keep-count="2">b)</div>
+<p>Explique por que os três casos favoráveis, mesmo estando corretos, não são suficientes para demonstrar a afirmação geral.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">c)</div>
+<p>Complete a Abordagem B.</p>
+<p data-keep-count="2">Parta de: <span class="math-inline">n=2k</span> e transforme <span class="math-inline">n+6</span> até obter uma expressão da forma:</p>
+<div class="math-line">2·<span class="math-text">(um número inteiro)</span>.</div>
+<div class="minor-title keep-with-next" data-keep-count="2">d)</div>
+<p>Justifique por que a expressão obtida permite concluir que <span class="math-inline">n+6</span> é par.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">e)</div>
+<p>Compare as duas abordagens. Por que a Abordagem B consegue tratar qualquer inteiro par abrangido pela hipótese, enquanto a Abordagem A examina apenas casos particulares?</p>
+<div class="minor-title keep-with-next" data-keep-count="3">Parte II — Quando um único caso é suficiente</div>
+<p data-keep-count="2">Considere agora a afirmação:</p>
+<blockquote class="student-quote"><p>Para todo número real <span class="math-inline">x</span>, <span class="math-inline">x<sup>2</sup>≥ x.</span></p></blockquote>
+<div class="minor-title keep-with-next" data-keep-count="2">f)</div>
+<p>Procure um número real para o qual: <span class="math-inline">x<sup>2</sup>&lt;x.</span></p>
+<div class="minor-title keep-with-next" data-keep-count="2">g)</div>
+<p>Substitua o valor escolhido e verifique numericamente a desigualdade.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">h)</div>
+<p>Explique por que um único valor desse tipo é suficiente para refutar a afirmação universal.</p>
+<div class="minor-title keep-with-next" data-keep-count="3">i)</div>
+<p data-keep-count="2">Compare as duas situações deste exercício:</p>
+<ul><li><p>vários casos favoráveis na Parte I;</p></li><li><p>um único caso desfavorável na Parte II.</p></li></ul>
+<p>Por que essas evidências não possuem a mesma força lógica?</p>
+<div class="item-title keep-with-next" data-keep-count="3">Exercício 11 — Construindo uma demonstração direta</div>
+<p data-keep-count="2">Considere a afirmação:</p>
+<blockquote class="student-quote"><p>Se <span class="math-inline">n</span> é um número inteiro par, então <span class="math-inline">3n+4</span> é par.</p></blockquote>
+<p>Construa uma demonstração direta.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">a)</div>
+<p>Identifique a <strong>hipótese</strong>.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">b)</div>
+<p>Identifique a <strong>tese</strong>.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">c)</div>
+<p>Utilize a definição de número par para escrever <span class="math-inline">n</span> na forma: <span class="math-inline">n=2k,</span> indicando que tipo de número <span class="math-inline">k</span> deve ser.</p>
+<div class="minor-title keep-with-next" data-keep-count="3">d)</div>
+<p data-keep-count="2">Substitua essa expressão em: <span class="math-inline">3n+4</span> e desenvolva as igualdades necessárias até obter uma expressão da forma:</p>
+<div class="math-line">2·<span class="math-text">(uma expressão)</span>.</div>
+<div class="minor-title keep-with-next" data-keep-count="2">e)</div>
+<p>Explique por que a expressão que aparece multiplicando <span class="math-inline">2</span> representa um número inteiro.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">f)</div>
+<p>Conclua explicitamente por que: <span class="math-inline">3n+4</span> é par.</p>
+<div class="minor-title keep-with-next" data-keep-count="3">g)</div>
+<p data-keep-count="2">Na demonstração construída, foi necessário escolher algum valor particular como:</p>
+<div class="math-line">n=2,   n=4,   n=10?</div>
+<p>Explique por que a ausência dessa escolha é importante para a generalidade da demonstração.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">h)</div>
+<p>Reescreva sua demonstração de forma contínua e concisa, mantendo visíveis a hipótese, os passos centrais e a conclusão.</p>
+<div class="item-title keep-with-next" data-keep-count="3">Exercício 12 — Demonstrando pela contrapositiva</div>
+<p data-keep-count="2">Considere <span class="math-inline">x</span> um número real e a afirmação:</p>
+<blockquote class="student-quote"><p>Se <span class="math-inline">5x+2&gt;17,</span> então <span class="math-inline">x&gt;3.</span></p></blockquote>
+<p>Pretende-se demonstrar essa afirmação por <strong>contraposição</strong>.</p>
+<div class="minor-title keep-with-next" data-keep-count="3">a)</div>
+<p data-keep-count="2">Considere: <span class="math-inline">A:  5x+2&gt;17</span> e:</p>
+<div class="math-line">B:  x&gt;3.</div>
+<p>Escreva simbolicamente a forma da afirmação original.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">b)</div>
+<p>Escreva a forma simbólica de sua contrapositiva utilizando: <span class="math-inline">¬B→¬A.</span></p>
+<div class="minor-title keep-with-next" data-keep-count="2">c)</div>
+<p>Traduza: <span class="math-inline">¬B</span> para uma desigualdade envolvendo <span class="math-inline">x</span>.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">d)</div>
+<p>Traduza: <span class="math-inline">¬A</span> para uma desigualdade envolvendo <span class="math-inline">5x+2</span>.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">e)</div>
+<p>Parta da desigualdade correspondente a <span class="math-inline">¬B</span> e desenvolva uma demonstração que chegue à desigualdade correspondente a <span class="math-inline">¬A</span>.</p>
+<p>Justifique as operações relevantes realizadas com a desigualdade.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">f)</div>
+<p>Depois de estabelecer a contrapositiva, explique por que a afirmação original também fica demonstrada.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">g)</div>
+<p>Compare agora esta demonstração com o <strong>modus tollens</strong>.</p>
+<p>No modus tollens, qual proposição já está disponível como premissa?</p>
+<p>Na demonstração por contraposição, qual proposição é justamente aquilo que ainda precisa ser estabelecido?</p>
+<div class="minor-title keep-with-next" data-keep-count="2">h)</div>
+<p>Explique por que demonstrar: <span class="math-inline">¬B→¬A</span> não significa utilizar: <span class="math-inline">A→ B</span> como premissa durante a própria demonstração.</p>
+<div class="item-title keep-with-next" data-keep-count="3">Exercício 13 — Onde está a contradição?</div>
+<p data-keep-count="2">Considere a afirmação:</p>
+<blockquote class="student-quote"><p>Não existem dois números inteiros consecutivos que sejam ambos pares.</p></blockquote>
+<p>Pretende-se demonstrá-la por contradição.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">a)</div>
+<p>Identifique a tese que precisa ser estabelecida.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">b)</div>
+<p>Escreva, em linguagem verbal, a <strong>negação</strong> dessa tese.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">c)</div>
+<p>Assuma temporariamente a negação.</p>
+<p>Considere, portanto, dois inteiros consecutivos: <span class="math-inline">n</span> e: <span class="math-inline">n+1,</span> e suponha que ambos sejam pares.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">d)</div>
+<p>Como <span class="math-inline">n</span> foi assumido par, represente-o utilizando a definição de número par e um inteiro adequado.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">e)</div>
+<p>Faça o mesmo para: <span class="math-inline">n+1.</span></p>
+<p>Utilize uma letra diferente para o inteiro que aparece nessa segunda representação.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">f)</div>
+<p>Compare as duas igualdades obtidas e desenvolva-as até chegar a uma relação que envolva: <span class="math-inline">1</span> e o dobro de um número inteiro.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">g)</div>
+<p>Identifique precisamente a incompatibilidade matemática produzida.</p>
+<p>Não responda apenas que “a conta deu errado”. Explique quais duas condições não podem ser satisfeitas simultaneamente.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">h)</div>
+<p>Por que essa incompatibilidade obriga a rejeitar a suposição temporária feita no item c?</p>
+<div class="minor-title keep-with-next" data-keep-count="2">i)</div>
+<p>Conclua a tese original.</p>
+<div class="minor-title keep-with-next" data-keep-count="3">j)</div>
+<p data-keep-count="2">Considere agora a seguinte descrição de uma tentativa de prova:</p>
+<blockquote class="student-quote"><p>“Assumi a negação da tese, fiz algumas contas e não consegui continuar. Portanto, encontrei uma contradição.”</p></blockquote>
+<p>Essa justificativa é suficiente?</p>
+<p data-keep-count="2">Explique a diferença entre:</p>
+<ul><li><p>encontrar uma dificuldade no raciocínio;</p></li><li><p>obter uma incompatibilidade lógica ou matemática real.</p></li></ul>
+<div class="item-title keep-with-next" data-keep-count="3">Exercício 14 — Demonstrando por casos</div>
+<p data-keep-count="2">Sabe-se que um número real <span class="math-inline">x</span> é necessariamente um dos três valores:</p>
+<div class="math-line">-2,   0,   2.</div>
+<p>Demonstre que: <span class="math-inline">x<sup>2</sup>≤4.</span></p>
+<div class="minor-title keep-with-next" data-keep-count="2">a)</div>
+<p>Liste todas as possibilidades fornecidas pela hipótese.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">b)</div>
+<p>Organize a demonstração em três casos.</p>
+<p data-keep-count="2">Em cada caso:</p>
+<ol><li><p>fixe uma das possibilidades para <span class="math-inline">x</span>;</p></li><li><p>calcule <span class="math-inline">x<sup>2</sup></span>;</p></li><li><p>verifique a tese <span class="math-inline">x<sup>2</sup>≤4.</span></p></li></ol>
+<div class="minor-title keep-with-next" data-keep-count="2">c)</div>
+<p>Depois de analisar os três casos, explique por que a tese fica estabelecida para qualquer <span class="math-inline">x</span> abrangido pela hipótese.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">d)</div>
+<p>Por que essa demonstração por casos não é equivalente a escolher arbitrariamente três exemplos favoráveis de um conjunto maior de possibilidades?</p>
+<p>Sua resposta deve considerar a <strong>cobertura</strong> fornecida pelos casos.</p>
+<p data-keep-count="2">Considere agora a seguinte tentativa:</p>
+<blockquote class="student-quote"><p><strong>Caso 1:</strong> <span class="math-inline">x=-2</span>. Verifica-se que <span class="math-inline">x<sup>2</sup>≤4</span>.</p><p><strong>Caso 2:</strong> <span class="math-inline">x=0</span>. Verifica-se que <span class="math-inline">x<sup>2</sup>≤4</span>.</p><p>Portanto, <span class="math-inline">x<sup>2</sup>≤4.</span></p></blockquote>
+<div class="minor-title keep-with-next" data-keep-count="2">e)</div>
+<p>Os dois casos efetivamente analisados estão corretos?</p>
+<div class="minor-title keep-with-next" data-keep-count="2">f)</div>
+<p>Mesmo que estejam corretos, a demonstração completa está terminada?</p>
+<div class="minor-title keep-with-next" data-keep-count="2">g)</div>
+<p>Identifique exatamente qual possibilidade fornecida pela hipótese não foi analisada.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">h)</div>
+<p>Explique por que duas ramificações corretas não compensam a ausência de uma possibilidade admissível.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">i)</div>
+<p>Complete a tentativa de modo que os casos cubram integralmente a hipótese e conduzam à mesma tese.</p>
+<div class="item-title keep-with-next" data-keep-count="3">Exercício 15 — Duas direções para uma equivalência</div>
+<p data-keep-count="2">Considere <span class="math-inline">x</span> um número real e a afirmação:</p>
+<div class="math-line">x&gt;4 ↔ 3x-2&gt;10.</div>
+<div class="minor-title keep-with-next" data-keep-count="2">a)</div>
+<p>Separe a bicondicional nas duas afirmações condicionais que precisam ser estabelecidas.</p>
+<p>Escreva-as simbolicamente.</p>
+<div class="minor-title keep-with-next" data-keep-count="3">b)</div>
+<p data-keep-count="2">Demonstre a primeira direção:</p>
+<div class="math-line">x&gt;4→3x-2&gt;10.</div>
+<p>Parta da hipótese dessa direção e desenvolva as desigualdades até alcançar sua tese.</p>
+<div class="minor-title keep-with-next" data-keep-count="3">c)</div>
+<p data-keep-count="2">Demonstre agora a direção recíproca:</p>
+<div class="math-line">3x-2&gt;10→ x&gt;4.</div>
+<div class="minor-title keep-with-next" data-keep-count="2">d)</div>
+<p>Ao manipular as desigualdades, justifique por que as multiplicações ou divisões efetuadas não invertem o sentido da desigualdade.</p>
+<div class="minor-title keep-with-next" data-keep-count="3">e)</div>
+<p data-keep-count="2">Depois de estabelecer as duas direções, conclua a bicondicional:</p>
+<div class="math-line">x&gt;4 ↔ 3x-2&gt;10.</div>
+<div class="minor-title keep-with-next" data-keep-count="2">f)</div>
+<p>Explique por que demonstrar apenas: <span class="math-inline">x&gt;4→3x-2&gt;10</span> não seria suficiente para estabelecer toda a bicondicional.</p>
+<p data-keep-count="2">Um estudante apresenta a seguinte tentativa:</p>
+<blockquote class="student-quote"><p>Suponha: <span class="math-inline">x&gt;4.</span></p><p>Multiplicando por <span class="math-inline">3</span>, <span class="math-inline">3x&gt;12.</span></p><p>Subtraindo <span class="math-inline">2</span>,</p><div class="math-line">3x-2&gt;10.</div><p>Portanto,</p><div class="math-line">x&gt;4 ↔ 3x-2&gt;10.</div></blockquote>
+<div class="minor-title keep-with-next" data-keep-count="2">g)</div>
+<p>Qual direção o estudante efetivamente demonstrou?</p>
+<div class="minor-title keep-with-next" data-keep-count="2">h)</div>
+<p>Qual direção ainda não foi estabelecida?</p>
+<div class="minor-title keep-with-next" data-keep-count="2">i)</div>
+<p>Complete a tentativa acrescentando a parte necessária para justificar legitimamente a bicondicional.</p>
+<div class="item-title keep-with-next" data-keep-count="3">Exercício 16 — Auditoria e integração</div>
+<p data-keep-count="2">Considere <span class="math-inline">n</span> um número inteiro e a tese:</p>
+<blockquote class="student-quote"><p>Se <span class="math-inline">n+4</span> é par, então <span class="math-inline">n</span> é par.</p></blockquote>
+<p>Quatro estudantes apresentam tentativas diferentes de demonstração.</p>
+<div class="attempt-block"><div class="minor-title keep-with-next">Tentativa I</div>
+<blockquote><p>Suponha que <span class="math-inline">n+4</span> seja par.</p><p>Então existe um inteiro <span class="math-inline">k</span> tal que:</p><div class="math-line">n+4=2k.</div><p>Logo:</p><div class="math-line">n=2k-4=2(k-2).</div><p>Como <span class="math-inline">k-2</span> é inteiro, <span class="math-inline">n</span> é par.</p></blockquote>
+</div>
+<div class="attempt-block"><div class="minor-title keep-with-next">Tentativa II</div>
+<blockquote><p>Suponha que <span class="math-inline">n</span> seja par.</p><p>Então existe um inteiro <span class="math-inline">k</span> tal que: <span class="math-inline">n=2k.</span></p><p>Assim:</p><div class="math-line">n+4=2k+4=2(k+2).</div><p>Como <span class="math-inline">k+2</span> é inteiro, <span class="math-inline">n+4</span> é par.</p><p>Portanto, se <span class="math-inline">n+4</span> é par, então <span class="math-inline">n</span> é par.</p></blockquote>
+</div>
+<div class="attempt-block"><div class="minor-title keep-with-next">Tentativa III</div>
+<blockquote><p>Suponha que <span class="math-inline">n+4</span> seja par.</p><p>Então: <span class="math-inline">n+4=2k</span> para algum inteiro <span class="math-inline">k</span>.</p><p>Como <span class="math-inline">n</span> é par, podemos escrever: <span class="math-inline">n=2m</span> para algum inteiro <span class="math-inline">m</span>.</p><p>Desse modo: <span class="math-inline">n+4=2m+4=2(m+2),</span> o que é compatível com a hipótese.</p><p>Logo, <span class="math-inline">n</span> é par.</p></blockquote>
+</div>
+<div class="attempt-block"><div class="minor-title keep-with-next">Tentativa IV</div>
+<blockquote><p>Para <span class="math-inline">n=0</span>, <span class="math-inline">n+4=4</span> é par, e <span class="math-inline">n</span> também é par.</p><p>Para <span class="math-inline">n=4</span>, <span class="math-inline">n+4=8</span> é par, e <span class="math-inline">n</span> também é par.</p><p>Para <span class="math-inline">n=10</span>, <span class="math-inline">n+4=14</span> é par, e <span class="math-inline">n</span> também é par.</p><p>Portanto, sempre que <span class="math-inline">n+4</span> é par, <span class="math-inline">n</span> é par.</p></blockquote>
+</div>
+<div class="minor-title keep-with-next" data-keep-count="2">a)</div>
+<p>Identifique qual das quatro tentativas estabelece legitimamente a tese.</p>
+<div class="minor-title keep-with-next" data-keep-count="3">b)</div>
+<p data-keep-count="2">Para cada tentativa, registre:</p>
+<ul><li><p>qual condição foi efetivamente tomada como ponto de partida;</p></li><li><p>qual conclusão foi efetivamente obtida;</p></li><li><p>qual foi o passo ou estratégia central utilizado.</p></li></ul>
+<div class="minor-title keep-with-next" data-keep-count="2">c)</div>
+<p>Nas Tentativas II, III e IV, localize o <strong>primeiro defeito lógico relevante</strong>.</p>
+<p>Não se limite a dizer que a tentativa está incorreta; identifique onde a legitimidade do raciocínio é perdida.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">d)</div>
+<p>Na Tentativa II, todas as manipulações algébricas podem estar corretas e, ainda assim, a tese original não ter sido demonstrada.</p>
+<p>Explique por quê, comparando a direção demonstrada com a direção exigida pela tese.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">e)</div>
+<p>Na Tentativa III, identifique a afirmação que foi utilizada antes de ser legitimamente estabelecida.</p>
+<p>Explique por que esse uso torna o raciocínio circular.</p>
+<div class="minor-title keep-with-next" data-keep-count="3">f)</div>
+<p data-keep-count="2">Na Tentativa IV, explique separadamente:</p>
+<ol><li><p>o que os três casos testados realmente mostram;</p></li><li><p>o que eles não são suficientes para mostrar.</p></li></ol>
+<div class="minor-title keep-with-next" data-keep-count="2">g)</div>
+<p>Escolha <strong>uma</strong> das Tentativas II, III ou IV e reconstrua-a de modo que passe a constituir uma demonstração legítima da tese original.</p>
+<p>Sua reconstrução não precisa conservar os mesmos passos da tentativa defeituosa.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">h)</div>
+<p>Depois de reconstruir o raciocínio, redija uma versão final concisa da demonstração.</p>
+<p data-keep-count="2">A apresentação deve permitir ao leitor recuperar:</p>
+<ul><li><p>a hipótese;</p></li><li><p>a informação obtida da hipótese;</p></li><li><p>os passos centrais;</p></li><li><p>a razão da conclusão.</p></li></ul>
+<p>Não é necessário narrar tentativas abandonadas durante a descoberta da solução.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">i)</div>
+<p>Compare a versão final redigida no item h com o processo utilizado para encontrá-la.</p>
+<p>Por que uma demonstração pode ser apresentada numa ordem mais limpa do que a sequência de tentativas que levou à sua descoberta?</p>
+<div class="minor-title keep-with-next" data-keep-count="3">j)</div>
+<p data-keep-count="2">Um estudante analisa a Tentativa II e afirma:</p>
+<blockquote class="student-quote"><p>“Como essa tentativa não demonstra a tese, então a tese é falsa.”</p></blockquote>
+<p>Analise essa conclusão.</p>
+<p data-keep-count="2">Sua resposta deve distinguir cuidadosamente as afirmações:</p>
+<blockquote class="student-quote"><p>“Este argumento não demonstra a tese.”</p></blockquote>
+<p data-keep-count="2">e:</p>
+<blockquote class="student-quote"><p>“A tese é falsa.”</p></blockquote>
+</section>
+<section class="source-section" data-context="TEXTO PRÁTICO • GABARITO COMENTADO">
+<header class="section-opening" data-keep-count="4"><div class="section-label">TEXTO PRÁTICO</div><h2 class="section-title">Gabarito Comentado</h2></header>
+<div class="gabarito-subtitle keep-with-next" data-keep-count="3">Quiz</div>
+<div class="minor-title keep-with-next" data-keep-count="2">Questão 1</div>
+<p><strong>Alternativa A.</strong> <span class="math-inline">p∨ q</span> e <span class="math-inline">¬p</span> são as premissas, enquanto <span class="math-inline">q</span> é a conclusão. O símbolo <span class="math-inline">∴</span> apenas marca a afirmação apresentada como conclusão; ele não funciona como conectivo proposicional.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">Questão 2</div>
+<p><strong>Alternativa C.</strong></p>
+<p>Verdade e falsidade são propriedades de proposições; validade e invalidade dizem respeito aos argumentos. Um argumento é sólido quando é válido e, além disso, possui premissas verdadeiras.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">Questão 3</div>
+<p><strong>Alternativa D.</strong></p>
+<p>Uma contra-avaliação precisa produzir exatamente: <span class="math-inline"><span class="math-text">todas as premissas verdadeiras</span></span> e</p>
+<div class="math-line"><span class="math-text">conclusão falsa</span>.</div>
+<p>Uma única avaliação desse tipo é suficiente para mostrar que o argumento é inválido.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">Questão 4</div>
+<p><strong>Alternativa B.</strong></p>
+<p data-keep-count="2">A forma I é um <strong>modus tollens</strong>, portanto válida:</p>
+<div class="argument-stack"><div class="argument-premises"><div class="argument-premise">A→ B,</div><div class="argument-premise">¬B</div></div><div class="argument-conclusion"><span class="therefore-marker">∴</span><span>¬A.</span></div></div>
+<p data-keep-count="2">A forma II é uma <strong>negação do antecedente</strong>, portanto inválida:</p>
+<div class="argument-stack"><div class="argument-premises"><div class="argument-premise">A→ B,</div><div class="argument-premise">¬A</div></div><div class="argument-conclusion"><span class="therefore-marker">∴</span><span>¬B.</span></div></div>
+<div class="minor-title keep-with-next" data-keep-count="2">Questão 5</div>
+<p><strong>Alternativa C.</strong></p>
+<p>De: <span class="math-inline">A∨ B</span> e <span class="math-inline">¬A,</span> obtemos: <span class="math-inline">B</span> por <strong>silogismo disjuntivo</strong>.</p>
+<div class="item-title keep-with-next" data-keep-count="2">Exercício 1</div>
+<div class="atomic-group"><div class="minor-title keep-with-next">a)</div>
+<p>As estruturas que apresentam argumentos são:</p>
+<div class="math-line answer-line"><span class="answer-box">I, II <span class="math-text">e</span> IV.</span></div>
+<p>A estrutura III contém apenas proposições colocadas lado a lado, sem que alguma delas seja apresentada como conclusão sustentada pelas demais.</p>
+</div>
+<div class="atomic-group"><div class="minor-title keep-with-next">b)</div>
+<p>Na estrutura I, as premissas são:</p>
+<blockquote class="student-quote"><p>Se um número é múltiplo de <span class="math-inline">4</span>, então ele é par.</p></blockquote>
+<p>e:</p>
+<blockquote class="student-quote"><p><span class="math-inline">20</span> é múltiplo de <span class="math-inline">4</span>.</p></blockquote>
+<p>A conclusão é:</p>
+<blockquote class="student-quote"><p><span class="math-inline">20</span> é par.</p></blockquote>
+<p>Na estrutura II, a conclusão é:</p>
+<blockquote class="student-quote"><p><span class="math-inline">7-3</span> é positivo.</p></blockquote>
+<p>As razões apresentadas para sustentá-la são: <span class="math-inline">7-3=4</span> e: <span class="math-inline">4&gt;0.</span></p>
+<p>Na estrutura IV, as premissas são: <span class="math-inline">p∨ q</span> e: <span class="math-inline">¬q.</span></p>
+<p>A conclusão é: <span class="math-inline">p.</span></p>
+</div>
+<div class="minor-title keep-with-next" data-keep-count="2">c)</div>
+<p>Na estrutura III, temos três proposições, mas nenhuma é apresentada como decorrência das outras. Uma coleção de proposições não se torna um argumento apenas por conter várias afirmações.</p>
+<div class="atomic-group"><div class="minor-title keep-with-next">d)</div>
+<p>Uma reorganização possível é:</p>
+<div class="argument-stack"><div class="argument-premises"><div class="argument-premise">7-3=4</div><div class="argument-premise">4&gt;0</div></div><div class="argument-conclusion"><span class="therefore-marker">∴</span><span>7-3<span class="math-text"> é positivo</span>.</span></div></div>
+<p>A ordem verbal original não altera os papéis lógicos: a conclusão pode aparecer antes das razões que a sustentam.</p>
+</div>
+<div class="atomic-group"><div class="minor-title keep-with-next">e)</div>
+<p>Tanto em linguagem verbal quanto simbólica, deve existir uma organização inferencial: algumas proposições funcionam como <strong>premissas</strong>, e outra é apresentada como <strong>conclusão</strong> sustentada por elas.</p>
+<p>A presença de palavras como “logo” ou do símbolo <span class="math-inline">∴</span> pode sinalizar essa organização, mas não é, sozinha, aquilo que constitui o argumento.</p>
+</div>
+<div class="item-title keep-with-next" data-keep-count="5">Exercício 2</div>
+<div class="minor-title keep-with-next" data-keep-count="4">a)–c)</div>
+<div class="minor-title keep-with-next" data-keep-count="3">Cenário I</div>
+<p data-keep-count="2">Temos:</p>
+<div class="math-line">A=F,   B=V.</div>
+<p data-keep-count="2">Logo:</p>
+<div class="math-line">A→ B=V.</div>
+<p data-keep-count="2">Assim:</p>
+<ul><li><p>primeira premissa: <span class="math-inline">V</span>;</p></li><li><p>segunda premissa <span class="math-inline">A</span>: <span class="math-inline">F</span>;</p></li><li><p>conclusão <span class="math-inline">B</span>: <span class="math-inline">V</span>.</p></li></ul>
+<p data-keep-count="2">A forma:</p>
+<div class="argument-stack"><div class="argument-premises"><div class="argument-premise">A→ B</div><div class="argument-premise">A</div></div><div class="argument-conclusion"><span class="therefore-marker">∴</span><span>B</span></div></div>
+<p>é válida: trata-se de <strong>modus ponens</strong>.</p>
+<p>Entretanto, na avaliação apresentada, o argumento não é sólido, pois uma de suas premissas é falsa.</p>
+<p data-keep-count="2">Isso mostra que:</p>
+<div class="math-line answer-line"><span class="answer-box"><span class="math-text">premissa falsa não implica argumento inválido</span>.</span></div>
+<div class="minor-title keep-with-next" data-keep-count="2">Cenário II</div>
+<p>Com: <span class="math-inline">A=V,   B=V,</span> temos: <span class="math-inline">A∨ B=V</span> e a conclusão: <span class="math-inline">A=V.</span></p>
+<p data-keep-count="2">Apesar de premissa e conclusão serem verdadeiras nessa avaliação, a forma:</p>
+<div class="argument-stack"><div class="argument-premises"><div class="argument-premise">A∨ B</div></div><div class="argument-conclusion"><span class="therefore-marker">∴</span><span>A</span></div></div>
+<p>é inválida.</p>
+<p data-keep-count="2">Por exemplo, tome:</p>
+<div class="math-line">A=F,   B=V.</div>
+<p>Então: <span class="math-inline">A∨ B=V</span> e: <span class="math-inline">A=F.</span></p>
+<p>Temos uma contra-avaliação. Portanto, a forma é inválida e não pode ser sólida.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">Cenário III</div>
+<p>Com: <span class="math-inline">A=V,   B=V,</span> temos: <span class="math-inline">A∧ B=V</span> e: <span class="math-inline">A=V.</span></p>
+<p data-keep-count="2">A forma:</p>
+<div class="argument-stack"><div class="argument-premises"><div class="argument-premise">A∧ B</div></div><div class="argument-conclusion"><span class="therefore-marker">∴</span><span>A</span></div></div>
+<p>é válida. Como a premissa também é verdadeira na situação apresentada, o argumento é sólido.</p>
+<div class="atomic-group"><div class="minor-title keep-with-next">d)</div>
+<p>A justificativa do estudante é incorreta.</p>
+<p>Encontrar uma avaliação em que premissa e conclusão são verdadeiras mostra apenas que essa avaliação é <strong>compatível</strong> com validade. Para decidir validade, precisamos saber se existe alguma situação em que todas as premissas sejam verdadeiras e a conclusão falsa.</p>
+<p>No Cenário II, tal situação existe.</p>
+</div>
+<div class="atomic-group"><div class="minor-title keep-with-next">e)</div>
+<p>A falsidade de <span class="math-inline">A</span> na avaliação apresentada não torna a forma inválida.</p>
+<p>Validade diz respeito à relação geral entre premissas e conclusão. A forma continua sendo modus ponens e, portanto, válida.</p>
+<p>O que a falsidade de <span class="math-inline">A</span> impede, nessa situação particular, é que o argumento seja sólido.</p>
+</div>
+<div class="item-title keep-with-next" data-keep-count="2">Exercício 3</div>
+<div class="atomic-group"><div class="minor-title keep-with-next">a)</div>
+<p>Uma contra-avaliação precisa satisfazer simultaneamente:</p>
+<div class="math-sequence"><div class="math-line">A∨ B=V,</div>
+<div class="math-line">A→ C=V,</div>
+</div>
+<p>e: <span class="math-inline">C=F.</span></p>
+</div>
+<div class="atomic-group"><div class="minor-title keep-with-next">b)–c)</div>
+<p>Uma resposta possível é:</p>
+<div class="math-line">A=F,   B=V,   C=F.</div>
+<p>Verificando:</p>
+<div class="table-wrap"><table class="analysis-table"><thead><tr><th scope="col">Expressão</th><th scope="col">Valor</th></tr></thead><tbody><tr><td><span class="math-inline">A∨ B</span></td><td><span class="math-inline">V</span></td></tr><tr><td><span class="math-inline">A→ C</span></td><td><span class="math-inline">V</span></td></tr><tr><td><span class="math-inline">C</span></td><td><span class="math-inline">F</span></td></tr></tbody></table></div>
+<p>Logo, todas as premissas são verdadeiras e a conclusão é falsa.</p>
+</div>
+<div class="atomic-group"><div class="minor-title keep-with-next">d)</div>
+<p>Essa única avaliação já é suficiente para mostrar que o argumento é:</p>
+<div class="math-line answer-line"><span class="answer-box"><span class="math-text">inválido</span></span>.</div>
+<p>A validade exige que nenhuma contra-avaliação exista.</p>
+</div>
+<div class="atomic-group"><div class="minor-title keep-with-next">e)</div>
+<p>Para: <span class="math-inline">A=V,   B=F,   C=V,</span> temos:</p>
+<div class="math-sequence"><div class="math-line">A∨ B=V,</div>
+<div class="math-line">A→ C=V,</div>
+</div>
+<p>e: <span class="math-inline">C=V.</span></p>
+<p>Portanto, essa avaliação <strong>não</strong> é uma contra-avaliação.</p>
+<p>Ela mostra apenas uma situação em que premissas verdadeiras convivem com conclusão verdadeira. Isso não basta para estabelecer validade.</p>
+</div>
+<div class="item-title keep-with-next" data-keep-count="3">Exercício 4</div>
+<div class="minor-title keep-with-next" data-keep-count="2">a)</div>
+<p>Para procurar uma contra-avaliação, começamos impondo: <span class="math-inline">C=F.</span></p>
+<div class="minor-title keep-with-next" data-keep-count="2">b)</div>
+<p>Para que: <span class="math-inline">A→ C</span> permaneça verdadeira com <span class="math-inline">C=F</span>, é necessário: <span class="math-inline">A=F.</span></p>
+<div class="minor-title keep-with-next" data-keep-count="2">c)</div>
+<p>Pelo mesmo motivo, para: <span class="math-inline">B→ C</span> permaneça verdadeira com <span class="math-inline">C=F</span>, precisamos de: <span class="math-inline">B=F.</span></p>
+<div class="atomic-group"><div class="minor-title keep-with-next">d)</div>
+<p>Mas, se: <span class="math-inline">A=F   <span class="math-text">e</span>   B=F,</span> então:</p>
+<div class="math-line">A∨ B=F.</div>
+<p>A primeira premissa deixaria de ser verdadeira.</p>
+<p>Logo, é impossível manter simultaneamente todas as premissas verdadeiras e <span class="math-inline">C</span> falsa.</p>
+</div>
+<div class="atomic-group"><div class="minor-title keep-with-next">e)</div>
+<p>Não existe contra-avaliação. Portanto:</p>
+<div class="math-line answer-line"><span class="answer-box"><span class="math-text">o argumento é válido</span>.</span></div>
+</div>
+<div class="atomic-group"><div class="minor-title keep-with-next">f)</div>
+<p>O condicional associado é:</p>
+<div class="math-line">[(A∨ B)∧(A→ C)∧(B→ C)]→ C.</div>
+</div>
+<div class="atomic-group"><div class="minor-title keep-with-next">g)</div>
+<p>O antecedente desse condicional é verdadeiro exatamente quando as três premissas do argumento são verdadeiras ao mesmo tempo.</p>
+<p>Para falsificá-lo, seria necessário: <span class="math-inline">(A∨ B)∧(A→ C)∧(B→ C)=V</span> e: <span class="math-inline">C=F.</span></p>
+<p>Essa é precisamente a configuração de uma contra-avaliação do argumento original.</p>
+</div>
+<div class="item-title keep-with-next" data-keep-count="4">Exercício 5</div>
+<div class="minor-title keep-with-next" data-keep-count="3">a)</div>
+<div class="minor-title keep-with-next" data-keep-count="2"><strong>I — Modus ponens</strong></div>
+<div class="argument-stack"><div class="argument-premises"><div class="argument-premise">(p∧ q)→ r</div><div class="argument-premise">p∧ q</div></div><div class="argument-conclusion"><span class="therefore-marker">∴</span><span>r.</span></div></div>
+<div class="minor-title keep-with-next" data-keep-count="2"><strong>II — Modus tollens</strong></div>
+<div class="argument-stack"><div class="argument-premises"><div class="argument-premise">p→(q∨ r)</div><div class="argument-premise">¬(q∨ r)</div></div><div class="argument-conclusion"><span class="therefore-marker">∴</span><span>¬p.</span></div></div>
+<div class="minor-title keep-with-next" data-keep-count="2"><strong>III — Silogismo hipotético</strong></div>
+<div class="argument-stack"><div class="argument-premises"><div class="argument-premise">(p∨ q)→ r</div><div class="argument-premise">r→ s</div></div><div class="argument-conclusion"><span class="therefore-marker">∴</span><span>(p∨ q)→ s.</span></div></div>
+<div class="minor-title keep-with-next" data-keep-count="2"><strong>IV — Silogismo disjuntivo</strong></div>
+<div class="argument-stack"><div class="argument-premises"><div class="argument-premise">(p∧ q)∨ r</div><div class="argument-premise">¬r</div></div><div class="argument-conclusion"><span class="therefore-marker">∴</span><span>p∧ q.</span></div></div>
+<div class="minor-title keep-with-next" data-keep-count="2"><strong>V — Silogismo disjuntivo</strong></div>
+<div class="argument-stack"><div class="argument-premises"><div class="argument-premise">p∨(q∧ r)</div><div class="argument-premise">¬p</div></div><div class="argument-conclusion"><span class="therefore-marker">∴</span><span>q∧ r.</span></div></div>
+<div class="atomic-group"><div class="minor-title keep-with-next">b)</div>
+<p>No argumento I:</p>
+<div class="math-line">A=p∧ q,    B=r.</div>
+<p>No argumento II:</p>
+<div class="math-line">A=p,    B=q∨ r.</div>
+</div>
+<div class="atomic-group"><div class="minor-title keep-with-next">c)</div>
+<p>No argumento III:</p>
+<div class="math-sequence"><div class="math-line">A=p∨ q,</div>
+<div class="math-line">B=r,</div>
+<div class="math-line">C=s.</div>
+</div>
+<p>Isso produz exatamente:</p>
+<div class="argument-stack"><div class="argument-premises"><div class="argument-premise">A→ B,</div><div class="argument-premise">B→ C,</div></div><div class="argument-conclusion"><span class="therefore-marker">∴</span><span>A→ C.</span></div></div>
+</div>
+<div class="atomic-group"><div class="minor-title keep-with-next">d)</div>
+<p>As letras <span class="math-inline">A</span>, <span class="math-inline">B</span> e <span class="math-inline">C</span> das formas abstratas não precisam representar proposições simples. Elas podem representar fórmulas inteiras.</p>
+<p>Por isso, em IV, a alternativa da disjunção pode ser: <span class="math-inline">p∧ q,</span> e, em V: <span class="math-inline">q∧ r.</span></p>
+</div>
+<div class="atomic-group"><div class="minor-title keep-with-next">e)</div>
+<p>Não.</p>
+<p>Uma regra de inferência autoriza obter uma conclusão a partir de premissas.</p>
+<p>Já:</p>
+<div class="math-structural">A≡ B</div>
+<p>afirma que <span class="math-inline">A</span> e <span class="math-inline">B</span> possuem os mesmos valores lógicos em todas as avaliações.</p>
+<p>Inferência e equivalência realizam funções diferentes.</p>
+</div>
+<div class="item-title keep-with-next" data-keep-count="2">Exercício 6</div>
+<div class="atomic-group"><div class="minor-title keep-with-next">a)</div>
+<p>De: <span class="math-inline">¬p→(q∨ r)</span> e: <span class="math-inline">¬p,</span> obtemos:</p>
+<div class="atomic-group"><div class="math-line answer-line"><span class="answer-box">q∨ r</span></div>
+<p>por <strong>modus ponens</strong>.</p>
+</div><p>A correspondência é:</p>
+<div class="math-line">A=¬p,    B=q∨ r.</div>
+</div>
+<div class="atomic-group"><div class="minor-title keep-with-next">b)</div>
+<p>De: <span class="math-inline">(p∧ q)∨ r</span> e: <span class="math-inline">¬r,</span> obtemos:</p>
+<div class="atomic-group"><div class="math-line answer-line"><span class="answer-box">p∧ q</span></div>
+<p>por <strong>silogismo disjuntivo</strong>.</p>
+</div></div>
+<div class="atomic-group"><div class="minor-title keep-with-next">c)</div>
+<p>De: <span class="math-inline">(p∨ q)→ r</span> e: <span class="math-inline">r→¬s,</span> obtemos:</p>
+<div class="atomic-group"><div class="math-line answer-line"><span class="answer-box">(p∨ q)→¬s</span></div>
+<p>por <strong>silogismo hipotético</strong>.</p>
+</div><p>Correspondência:</p>
+<div class="math-line">A=p∨ q,   B=r,   C=¬s.</div>
+</div>
+<div class="atomic-group"><div class="minor-title keep-with-next">d)</div>
+<p>De: <span class="math-inline">(p∧ q)→ r</span> e: <span class="math-inline">¬r,</span> obtemos:</p>
+<div class="atomic-group"><div class="math-line answer-line"><span class="answer-box">¬(p∧ q)</span></div>
+<p>por <strong>modus tollens</strong>.</p>
+</div><p>Aqui:</p>
+<div class="math-line">A=p∧ q,    B=r.</div>
+</div>
+<div class="atomic-group"><div class="minor-title keep-with-next">e)</div>
+<p>Não é possível concluir <span class="math-inline">r</span> legitimamente em um único passo.</p>
+<p>A primeira premissa possui antecedente: <span class="math-inline">p∧ q.</span></p>
+<p>Entretanto, temos apenas: <span class="math-inline">p.</span></p>
+<p>A disponibilidade de uma parte da conjunção não equivale à disponibilidade da conjunção inteira. Portanto, não podemos aplicar modus ponens.</p>
+</div>
+<div class="atomic-group"><div class="minor-title keep-with-next">f)</div>
+<p>Uma resposta possível, utilizando o item a:</p>
+<p>De: <span class="math-inline">¬p→(q∨ r)</span> e: <span class="math-inline">¬p,</span> inferimos: <span class="math-inline">q∨ r.</span></p>
+<p>Isso significa que a conclusão é legitimamente obtida das premissas por uma regra válida. Não significa que: <span class="math-inline">¬p</span> ou: <span class="math-inline">¬p→(q∨ r)</span> sejam logicamente equivalentes a:</p>
+<div class="math-line">q∨ r.</div>
+<p>Outras explicações corretas utilizando os itens b, c ou d também são aceitáveis.</p>
+</div>
+<div class="item-title keep-with-next" data-keep-count="3">Exercício 7</div>
+<div class="minor-title keep-with-next" data-keep-count="2">Parte I</div>
+<div class="atomic-group"><div class="minor-title keep-with-next">a)</div>
+<p>A Forma I é válida:</p>
+<div class="argument-stack"><div class="argument-premises"><div class="argument-premise">A→ B</div><div class="argument-premise">A</div></div><div class="argument-conclusion"><span class="therefore-marker">∴</span><span>B.</span></div></div>
+<p>Trata-se de <strong>modus ponens</strong>.</p>
+</div>
+<div class="atomic-group"><div class="minor-title keep-with-next">b)</div>
+<p>A Forma II:</p>
+<div class="argument-stack"><div class="argument-premises"><div class="argument-premise">A→ B</div><div class="argument-premise">B</div></div><div class="argument-conclusion"><span class="therefore-marker">∴</span><span>A</span></div></div>
+<p>é a <strong>afirmação do consequente</strong> e é inválida.</p>
+</div>
+<div class="atomic-group"><div class="minor-title keep-with-next">c)</div>
+<p>Uma contra-avaliação possível é:</p>
+<div class="math-line">A=F,   B=V.</div>
+<p>Então:</p>
+<div class="math-sequence"><div class="math-line">A→ B=V,</div>
+<div class="math-line">B=V,</div>
+</div>
+<p>mas: <span class="math-inline">A=F.</span></p>
+</div>
+<div class="atomic-group"><div class="minor-title keep-with-next">d)</div>
+<p>O condicional: <span class="math-inline">A→ B</span> estabelece que <span class="math-inline">A</span> é suficiente para <span class="math-inline">B</span>. Ele não afirma que <span class="math-inline">B</span> só pode ocorrer quando <span class="math-inline">A</span> ocorre.</p>
+<p>Por isso, partir da verdade de <span class="math-inline">B</span> e retornar a <span class="math-inline">A</span> não é autorizado.</p>
+</div>
+<div class="minor-title keep-with-next" data-keep-count="2">Parte II</div>
+<div class="atomic-group"><div class="minor-title keep-with-next">e)</div>
+<p>A Forma III é válida:</p>
+<div class="argument-stack"><div class="argument-premises"><div class="argument-premise">A→ B</div><div class="argument-premise">¬B</div></div><div class="argument-conclusion"><span class="therefore-marker">∴</span><span>¬A.</span></div></div>
+<p>É um <strong>modus tollens</strong>.</p>
+</div>
+<div class="atomic-group"><div class="minor-title keep-with-next">f)</div>
+<p>A Forma IV:</p>
+<div class="argument-stack"><div class="argument-premises"><div class="argument-premise">A→ B</div><div class="argument-premise">¬A</div></div><div class="argument-conclusion"><span class="therefore-marker">∴</span><span>¬B</span></div></div>
+<p>é uma <strong>negação do antecedente</strong> e é inválida.</p>
+</div>
+<div class="atomic-group"><div class="minor-title keep-with-next">g)</div>
+<p>Uma contra-avaliação possível é:</p>
+<div class="math-line">A=F,   B=V.</div>
+<p>Logo:</p>
+<div class="math-sequence"><div class="math-line">A→ B=V,</div>
+<div class="math-line">¬A=V,</div>
+</div>
+<p>e: <span class="math-inline">¬B=F.</span></p>
+<p>Todas as premissas são verdadeiras, mas a conclusão é falsa.</p>
+</div>
+<div class="minor-title keep-with-next" data-keep-count="2">h)</div>
+<p>A falsidade de <span class="math-inline">A</span> não impede, em geral, que <span class="math-inline">B</span> seja verdadeira. O condicional original apenas declara que, quando <span class="math-inline">A</span> ocorre, <span class="math-inline">B</span> deve ocorrer.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">Parte III</div>
+<div class="atomic-group"><div class="minor-title keep-with-next">i)</div>
+<p>Uma formalização adequada é:</p>
+<div class="math-sequence"><div class="math-line">A:  <span class="math-text">a senha foi digitada corretamente;</span></div>
+<div class="math-line">B:  <span class="math-text">o sistema libera o acesso.</span></div>
+</div>
+</div>
+<div class="atomic-group"><div class="minor-title keep-with-next">j)</div>
+<p>A forma é:</p>
+<div class="argument-stack"><div class="argument-premises"><div class="argument-premise">A→ B</div><div class="argument-premise">B</div></div><div class="argument-conclusion"><span class="therefore-marker">∴</span><span>A.</span></div></div>
+</div>
+<div class="minor-title keep-with-next" data-keep-count="2">k)</div>
+<p>É uma <strong>afirmação do consequente</strong>, portanto inválida.</p>
+<div class="atomic-group"><div class="minor-title keep-with-next">l)</div>
+<p>A premissa: <span class="math-inline">A→ B</span> não estabelece que <span class="math-inline">A</span> seja a única condição capaz de produzir <span class="math-inline">B</span>. Assim, a ocorrência de <span class="math-inline">B</span> não garante <span class="math-inline">A</span>.</p>
+<p>Não é necessário supor concretamente outras formas de acesso; basta reconhecer que o condicional fornecido não exclui outras possibilidades.</p>
+</div>
+<div class="item-title keep-with-next" data-keep-count="4">Exercício 8</div>
+<div class="minor-title keep-with-next" data-keep-count="3">I</div>
+<p data-keep-count="2">De: <span class="math-inline">A→ B</span> e: <span class="math-inline">B→ C,</span> obtemos:</p>
+<div class="atomic-group"><div class="math-line answer-line"><span class="answer-box">A→ C</span></div>
+<p>por <strong>silogismo hipotético</strong>.</p>
+</div>
+<div class="minor-title keep-with-next" data-keep-count="3">II</div>
+<p data-keep-count="2">De: <span class="math-inline">A∨ B</span> e: <span class="math-inline">¬B,</span> obtemos:</p>
+<div class="atomic-group"><div class="math-line answer-line"><span class="answer-box">A</span></div>
+<p>por <strong>silogismo disjuntivo</strong>.</p>
+</div>
+<div class="minor-title keep-with-next" data-keep-count="3">III</div>
+<p data-keep-count="2">De: <span class="math-inline">(p∧ q)→ r</span> e: <span class="math-inline">p∧ q,</span> obtemos:</p>
+<div class="atomic-group"><div class="math-line answer-line"><span class="answer-box">r</span></div>
+<p>por <strong>modus ponens</strong>.</p>
+</div>
+<div class="minor-title keep-with-next" data-keep-count="3">IV</div>
+<p data-keep-count="2">De: <span class="math-inline">p→(q∨ r)</span> e: <span class="math-inline">¬(q∨ r),</span> obtemos:</p>
+<div class="atomic-group"><div class="math-line answer-line"><span class="answer-box">¬p</span></div>
+<p>por <strong>modus tollens</strong>.</p>
+</div>
+<div class="minor-title keep-with-next" data-keep-count="2">V</div>
+<p>Não é possível obter: <span class="math-inline">¬B</span> a partir de: <span class="math-inline">A→ B</span> e: <span class="math-inline">¬A.</span></p>
+<p>A tentativa realiza uma <strong>negação do antecedente</strong>, forma inválida.</p>
+<p>Nenhuma das quatro regras válidas disponíveis autoriza essa conclusão em um único passo.</p>
+<div class="item-title keep-with-next" data-keep-count="5">Exercício 9</div>
+<div class="minor-title keep-with-next" data-keep-count="4">a)–c)</div>
+<p data-keep-count="3">A cadeia correta é:</p>
+<div class="minor-title keep-with-next" data-keep-count="2"><strong>Passo 1</strong></div>
+<p>De: <span class="math-inline">p∨ q</span> e: <span class="math-inline">¬p,</span> obtemos: <span class="math-inline">q</span> por silogismo disjuntivo.</p>
+<div class="minor-title keep-with-next" data-keep-count="2"><strong>Passo 2</strong></div>
+<p>De: <span class="math-inline">q</span> e: <span class="math-inline">q→ r,</span> obtemos: <span class="math-inline">r</span> por modus ponens.</p>
+<div class="minor-title keep-with-next" data-keep-count="2"><strong>Passo 3</strong></div>
+<p>De: <span class="math-inline">r</span> e: <span class="math-inline">r→ s,</span> obtemos: <span class="math-inline">s</span> por modus ponens.</p>
+<div class="table-wrap"><table class="analysis-table chain-table"><thead><tr><th scope="col">Passo</th><th scope="col">Afirmação disponível ou obtida</th><th scope="col">Informações utilizadas</th><th scope="col">Justificativa</th></tr></thead><tbody><tr><td>Premissas</td><td><span class="math-inline">p∨ q</span>; <span class="math-inline">¬p</span>; <span class="math-inline">q→ r</span>; <span class="math-inline">r→ s</span></td><td>—</td><td>dadas</td></tr><tr><td>1</td><td><span class="math-inline">q</span></td><td><span class="math-inline">p∨ q</span>, <span class="math-inline">¬p</span></td><td>silogismo disjuntivo</td></tr><tr><td>2</td><td><span class="math-inline">r</span></td><td><span class="math-inline">q</span>, <span class="math-inline">q→ r</span></td><td>modus ponens</td></tr><tr><td>3</td><td><span class="math-inline">s</span></td><td><span class="math-inline">r</span>, <span class="math-inline">r→ s</span></td><td>modus ponens</td></tr></tbody></table></div>
+<div class="atomic-group"><div class="minor-title keep-with-next">d)</div>
+<p>A proposição <span class="math-inline">q</span> só passa a estar disponível depois de ser obtida no Passo 1.</p>
+<p>Depois disso, pode ser utilizada juntamente com: <span class="math-inline">q→ r</span> para produzir <span class="math-inline">r</span>.</p>
+<p>Da mesma forma, <span class="math-inline">r</span> só passa a estar disponível depois do Passo 2 e, então, pode ser utilizada com: <span class="math-inline">r→ s.</span></p>
+</div>
+<div class="atomic-group"><div class="minor-title keep-with-next">e)</div>
+<p>Há uma dependência necessária entre as conclusões intermediárias.</p>
+<p>Com as premissas fornecidas, não podemos aplicar modus ponens a: <span class="math-inline">q→ r</span> sem antes dispor de <span class="math-inline">q</span>. E não podemos utilizar: <span class="math-inline">r→ s</span> para obter <span class="math-inline">s</span> sem antes dispor de <span class="math-inline">r</span>.</p>
+</div>
+<div class="minor-title keep-with-next" data-keep-count="2">f)</div>
+<p>A primeira linha ilegítima da tentativa é: <span class="math-inline">r.</span></p>
+<div class="atomic-group"><div class="minor-title keep-with-next">g)</div>
+<p>A justificativa indicada corresponde, em abstrato, a um modus ponens válido:</p>
+<div class="argument-stack"><div class="argument-premises"><div class="argument-premise">q→ r,</div><div class="argument-premise">q</div></div><div class="argument-conclusion"><span class="therefore-marker">∴</span><span>r.</span></div></div>
+<p>O problema é que, naquele momento da cadeia, <span class="math-inline">q</span> ainda não havia sido fornecida nem obtida.</p>
+<p>Uma regra válida só pode ser aplicada quando suas premissas estão efetivamente disponíveis.</p>
+</div>
+<div class="atomic-group"><div class="minor-title keep-with-next">h)</div>
+<p>A ordem correta é:</p>
+<ol><li><p>obter <span class="math-inline">q</span> de <span class="math-inline">p∨ q</span> e <span class="math-inline">¬p</span>;</p></li><li><p>obter <span class="math-inline">r</span> de <span class="math-inline">q</span> e <span class="math-inline">q→ r</span>;</p></li><li><p>obter <span class="math-inline">s</span> de <span class="math-inline">r</span> e <span class="math-inline">r→ s</span>.</p></li></ol>
+</div>
+<div class="minor-title keep-with-next" data-keep-count="2">i)</div>
+<p>Saber que uma proposição será obtida posteriormente não a torna disponível antecipadamente. Cada etapa precisa utilizar apenas premissas iniciais ou resultados que já tenham sido legitimamente estabelecidos.</p>
+<div class="item-title keep-with-next" data-keep-count="3">Exercício 10</div>
+<div class="minor-title keep-with-next" data-keep-count="2">Parte I</div>
+<div class="atomic-group"><div class="minor-title keep-with-next">a)</div>
+<p>A Abordagem A estabelece que a propriedade funciona nos três valores testados:</p>
+<div class="math-line">n=2,   n=8,   n=20.</div>
+</div>
+<div class="minor-title keep-with-next" data-keep-count="2">b)</div>
+<p>Esses três casos são particulares. Mesmo estando corretos, não mostram por que a propriedade deve valer para <strong>qualquer</strong> inteiro par.</p>
+<div class="atomic-group"><div class="minor-title keep-with-next">c)–d)</div>
+<p>Uma demonstração possível para a Abordagem B é:</p>
+<p>Suponha que <span class="math-inline">n</span> seja par. Então existe um inteiro <span class="math-inline">k</span> tal que: <span class="math-inline">n=2k.</span></p>
+<p>Assim:</p>
+<div class="math-line">n+6 = 2k+6 = 2(k+3).</div>
+<p>Como <span class="math-inline">k</span> é inteiro, <span class="math-inline">k+3</span> também é inteiro. Logo: <span class="math-inline">n+6</span> é par.</p>
+</div>
+<div class="atomic-group"><div class="minor-title keep-with-next">e)</div>
+<p>A Abordagem A trabalha com valores escolhidos individualmente.</p>
+<p>A Abordagem B utiliza: <span class="math-inline">n=2k,</span> que descreve um inteiro par arbitrário. Por isso, o raciocínio não depende de um caso particular.</p>
+</div>
+<div class="minor-title keep-with-next" data-keep-count="2">Parte II</div>
+<div class="atomic-group"><div class="minor-title keep-with-next">f)–g)</div>
+<p>Uma resposta possível é: <span class="math-inline">x=<span class="fraction"><span class="fraction-numerator">1</span><span class="fraction-denominator">2</span></span>.</span></p>
+<p>Temos:</p>
+<div class="math-line">x<sup>2</sup> = (<span class="fraction"><span class="fraction-numerator">1</span><span class="fraction-denominator">2</span></span>)<sup>2</sup> = <span class="fraction"><span class="fraction-numerator">1</span><span class="fraction-denominator">4</span></span>.</div>
+<p>Como: <span class="math-inline"><span class="fraction"><span class="fraction-numerator">1</span><span class="fraction-denominator">4</span></span>&lt;<span class="fraction"><span class="fraction-numerator">1</span><span class="fraction-denominator">2</span></span>,</span> a desigualdade: <span class="math-inline">x<sup>2</sup>≥ x</span> falha nesse caso.</p>
+<p>Outros valores corretos são aceitáveis. O critério é escolher um real que satisfaça: <span class="math-inline">x<sup>2</sup>&lt;x.</span></p>
+</div>
+<div class="minor-title keep-with-next" data-keep-count="2">h)</div>
+<p>A afirmação diz que a propriedade vale para <strong>todo</strong> real. Um único real admissível no qual ela falhe basta para refutá-la.</p>
+<div class="atomic-group"><div class="minor-title keep-with-next">i)</div>
+<p>Casos favoráveis isolados não garantem uma afirmação universal, porque ainda podem existir casos não testados em que ela falha.</p>
+<p>Já um único contraexemplo é suficiente para mostrar que a universal não vale para todos os casos.</p>
+</div>
+<div class="item-title keep-with-next" data-keep-count="2">Exercício 11</div>
+<div class="atomic-group"><div class="minor-title keep-with-next">a)</div>
+<p>Hipótese:</p>
+<div class="math-line">n<span class="math-text"> é par</span>.</div>
+</div>
+<div class="atomic-group"><div class="minor-title keep-with-next">b)</div>
+<p>Tese:</p>
+<div class="math-line">3n+4<span class="math-text"> é par</span>.</div>
+</div>
+<div class="atomic-group"><div class="minor-title keep-with-next">c)–f)</div>
+<p>Uma demonstração possível é:</p>
+<p>Como <span class="math-inline">n</span> é par, existe um inteiro <span class="math-inline">k</span> tal que: <span class="math-inline">n=2k.</span></p>
+<p>Então:</p>
+<div class="math-line">3n+4 = 3(2k)+4 = 6k+4 = 2(3k+2).</div>
+<p>Como <span class="math-inline">k</span> é inteiro: <span class="math-inline">3k+2</span> também é inteiro.</p>
+<p>Portanto: <span class="math-inline">3n+4</span> é par.</p>
+</div>
+<div class="minor-title keep-with-next" data-keep-count="2">g)</div>
+<p>Nenhum valor particular de <span class="math-inline">n</span> foi escolhido. O argumento utilizou apenas a forma geral: <span class="math-inline">n=2k,</span> válida para qualquer inteiro par.</p>
+<div class="atomic-group"><div class="minor-title keep-with-next">h)</div>
+<p>Uma redação possível é:</p>
+<blockquote class="student-quote proof-schema"><div class="proof-step"><p>Suponha que <span class="math-inline">n</span> seja par. Então existe um inteiro <span class="math-inline">k</span> tal que <span class="math-inline">n=2k</span>. Assim,</p><div class="math-line">3n+4=3(2k)+4=6k+4=2(3k+2).</div></div><div class="proof-step"><p>Como <span class="math-inline">3k+2</span> é inteiro, <span class="math-inline">3n+4</span> é par.</p></div></blockquote>
+<p>Outras redações são aceitáveis desde que partam da hipótese correta, obtenham uma expressão igual a <span class="math-inline">2</span> vezes um inteiro e concluam explicitamente a tese.</p>
+</div>
+<div class="item-title keep-with-next" data-keep-count="2">Exercício 12</div>
+<div class="atomic-group"><div class="minor-title keep-with-next">a)</div>
+<p>Temos: <span class="math-inline">A:  5x+2&gt;17</span> e:</p>
+<div class="math-line">B:  x&gt;3.</div>
+<p>A afirmação original é: <span class="math-inline">A→ B.</span></p>
+</div>
+<div class="minor-title keep-with-next" data-keep-count="2">b)</div>
+<p>A contrapositiva é: <span class="math-inline">¬B→¬A.</span></p>
+<div class="minor-title keep-with-next" data-keep-count="2">c)</div>
+<p>A negação de: <span class="math-inline">x&gt;3</span> é: <span class="math-inline">x≤3.</span></p>
+<div class="atomic-group"><div class="minor-title keep-with-next">d)</div>
+<p>A negação de: <span class="math-inline">5x+2&gt;17</span> é:</p>
+<div class="math-line">5x+2≤17.</div>
+<p>Logo, a contrapositiva é:</p>
+<div class="math-line">x≤3 → 5x+2≤17.</div>
+</div>
+<div class="atomic-group"><div class="minor-title keep-with-next">e)</div>
+<p>Uma demonstração possível:</p>
+<p>Suponha: <span class="math-inline">x≤3.</span></p>
+<p>Multiplicando por <span class="math-inline">5</span>, que é positivo: <span class="math-inline">5x≤15.</span></p>
+<p>Somando <span class="math-inline">2</span> aos dois lados:</p>
+<div class="math-line">5x+2≤17.</div>
+<p>Portanto, a contrapositiva foi demonstrada.</p>
+</div>
+<div class="atomic-group"><div class="minor-title keep-with-next">f)</div>
+<p>Como:</p>
+<div class="math-structural">A→ B ≡ ¬B→¬A,</div>
+<p>demonstrar a contrapositiva estabelece também o condicional original.</p>
+</div>
+<div class="atomic-group"><div class="minor-title keep-with-next">g)</div>
+<p>No <strong>modus tollens</strong>, o condicional: <span class="math-inline">A→ B</span> já está disponível como premissa. Com: <span class="math-inline">¬B,</span> inferimos: <span class="math-inline">¬A.</span></p>
+<p>Na demonstração por contraposição, ao contrário: <span class="math-inline">A→ B</span> é justamente aquilo que ainda queremos estabelecer. Demonstramos então a proposição equivalente:</p>
+<div class="math-line">¬B→¬A.</div>
+</div>
+<div class="minor-title keep-with-next" data-keep-count="2">h)</div>
+<p>Não estamos usando <span class="math-inline">A→ B</span> para demonstrar a si próprio. A legitimidade do procedimento vem da equivalência lógica entre o condicional e sua contrapositiva.</p>
+<div class="item-title keep-with-next" data-keep-count="2">Exercício 13</div>
+<div class="atomic-group"><div class="minor-title keep-with-next">a)</div>
+<p>A tese é:</p>
+<blockquote class="student-quote"><p>Não existem dois números inteiros consecutivos que sejam ambos pares.</p></blockquote>
+</div>
+<div class="atomic-group"><div class="minor-title keep-with-next">b)</div>
+<p>Sua negação é:</p>
+<blockquote class="student-quote"><p>Existem dois números inteiros consecutivos que são ambos pares.</p></blockquote>
+</div>
+<div class="atomic-group"><div class="minor-title keep-with-next">c)–f)</div>
+<p>Assuma, para obter uma contradição, que <span class="math-inline">n</span> e <span class="math-inline">n+1</span> sejam ambos pares.</p>
+<p>Então existem inteiros <span class="math-inline">a</span> e <span class="math-inline">b</span> tais que: <span class="math-inline">n=2a</span> e:</p>
+<div class="math-line">n+1=2b.</div>
+<p>Substituindo a primeira igualdade na segunda:</p>
+<div class="math-line">2a+1=2b.</div>
+<p>Assim: <span class="math-inline">1=2b-2a</span> e:</p>
+<div class="math-line">1=2(b-a).</div>
+</div>
+<div class="atomic-group"><div class="minor-title keep-with-next">g)</div>
+<p>Como <span class="math-inline">a</span> e <span class="math-inline">b</span> são inteiros: <span class="math-inline">b-a</span> é inteiro.</p>
+<p>A igualdade: <span class="math-inline">1=2(b-a)</span> afirmaria que <span class="math-inline">1</span> é duas vezes um número inteiro. Isso é impossível: não existe inteiro <span class="math-inline">c</span> tal que: <span class="math-inline">2c=1.</span></p>
+<p>Essa é a contradição efetiva.</p>
+</div>
+<div class="minor-title keep-with-next" data-keep-count="2">h)</div>
+<p>A incompatibilidade foi consequência da suposição de que os dois inteiros consecutivos eram pares. Como essa suposição conduz a uma impossibilidade, ela deve ser rejeitada.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">i)</div>
+<p>Portanto, não existem dois números inteiros consecutivos que sejam ambos pares.</p>
+<div class="atomic-group"><div class="minor-title keep-with-next">j)</div>
+<p>Não.</p>
+<p>“Não consegui continuar” indica apenas que uma tentativa de raciocínio encontrou uma dificuldade. Uma demonstração por contradição exige que a suposição conduza efetivamente a uma incompatibilidade lógica ou matemática.</p>
+<p>Outras demonstrações equivalentes são aceitáveis desde que a contradição seja real e decorra da suposição feita.</p>
+</div>
+<div class="item-title keep-with-next" data-keep-count="2">Exercício 14</div>
+<div class="atomic-group"><div class="minor-title keep-with-next">a)</div>
+<p>As possibilidades são exatamente:</p>
+<div class="math-line">x=-2,   x=0,   x=2.</div>
+</div>
+<div class="minor-title keep-with-next" data-keep-count="4">b)</div>
+<div class="minor-title keep-with-next" data-keep-count="3"><strong>Caso 1</strong></div>
+<p data-keep-count="2">Se: <span class="math-inline">x=-2,</span> então:</p>
+<div class="math-line">x<sup>2</sup>=4≤4.</div>
+<div class="minor-title keep-with-next" data-keep-count="3"><strong>Caso 2</strong></div>
+<p data-keep-count="2">Se: <span class="math-inline">x=0,</span> então:</p>
+<div class="math-line">x<sup>2</sup>=0≤4.</div>
+<div class="minor-title keep-with-next" data-keep-count="3"><strong>Caso 3</strong></div>
+<p data-keep-count="2">Se: <span class="math-inline">x=2,</span> então:</p>
+<div class="math-line">x<sup>2</sup>=4≤4.</div>
+<div class="minor-title keep-with-next" data-keep-count="2">c)</div>
+<p>Esses três valores constituem todas as possibilidades admitidas pela hipótese. Como a tese foi estabelecida em cada uma delas, vale para qualquer <span class="math-inline">x</span> abrangido pela situação.</p>
+<div class="atomic-group"><div class="minor-title keep-with-next">d)</div>
+<p>Não estamos escolhendo três exemplos dentre muitas possibilidades possíveis. Estamos verificando <strong>todos</strong> os casos permitidos pela hipótese.</p>
+<p>É essa cobertura completa que torna o argumento uma demonstração por casos.</p>
+</div>
+<div class="minor-title keep-with-next" data-keep-count="2">e)</div>
+<p>Sim. Os dois casos analisados na tentativa estão corretos.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">f)</div>
+<p>Não. A demonstração está incompleta.</p>
+<div class="minor-title keep-with-next" data-keep-count="2">g)</div>
+<p>Falta analisar: <span class="math-inline">x=2.</span></p>
+<div class="minor-title keep-with-next" data-keep-count="2">h)</div>
+<p>Mesmo que cada ramo apresentado esteja correto, uma demonstração por casos precisa cobrir todas as possibilidades admissíveis. Um caso omitido deixa aberta a possibilidade de a tese falhar justamente ali.</p>
+<div class="atomic-group"><div class="minor-title keep-with-next">i)</div>
+<p>Basta acrescentar:</p>
+<blockquote class="student-quote proof-schema"><div class="proof-step"><p><strong>Caso 3:</strong> se <span class="math-inline">x=2</span>, então</p><div class="math-line">x<sup>2</sup>=4≤4.</div></div></blockquote>
+<p>Agora todas as possibilidades foram verificadas e a demonstração fica completa.</p>
+</div>
+<div class="item-title keep-with-next" data-keep-count="2">Exercício 15</div>
+<div class="atomic-group"><div class="minor-title keep-with-next">a)</div>
+<p>As duas direções são: <span class="math-inline">x&gt;4→3x-2&gt;10</span> e:</p>
+<div class="math-line">3x-2&gt;10→ x&gt;4.</div>
+</div>
+<div class="atomic-group"><div class="minor-title keep-with-next">b)</div>
+<p>Uma demonstração possível da primeira direção:</p>
+<p>Suponha: <span class="math-inline">x&gt;4.</span></p>
+<p>Multiplicando por <span class="math-inline">3</span>, número positivo: <span class="math-inline">3x&gt;12.</span></p>
+<p>Subtraindo <span class="math-inline">2</span>:</p>
+<div class="math-line">3x-2&gt;10.</div>
+<p>Logo:</p>
+<div class="math-line">x&gt;4→3x-2&gt;10.</div>
+</div>
+<div class="atomic-group"><div class="minor-title keep-with-next">c)</div>
+<p>Para a segunda direção, suponha:</p>
+<div class="math-line">3x-2&gt;10.</div>
+<p>Somando <span class="math-inline">2</span>: <span class="math-inline">3x&gt;12.</span></p>
+<p>Dividindo por <span class="math-inline">3</span>: <span class="math-inline">x&gt;4.</span></p>
+<p>Portanto:</p>
+<div class="math-line">3x-2&gt;10→ x&gt;4.</div>
+</div>
+<div class="minor-title keep-with-next" data-keep-count="2">d)</div>
+<p>Multiplicamos e dividimos apenas pelo número positivo <span class="math-inline">3</span>. Por isso, o sentido das desigualdades é preservado.</p>
+<div class="atomic-group"><div class="minor-title keep-with-next">e)</div>
+<p>Como as duas direções foram demonstradas:</p>
+<div class="math-line answer-line"><span class="answer-box">x&gt;4↔3x-2&gt;10</span>.</div>
+</div>
+<div class="minor-title keep-with-next" data-keep-count="2">f)</div>
+<p>Uma bicondicional exige ambas as direções. Demonstrar somente: <span class="math-inline">x&gt;4→3x-2&gt;10</span> não estabelece que: <span class="math-inline">3x-2&gt;10</span> também seja suficiente para: <span class="math-inline">x&gt;4.</span></p>
+<div class="atomic-group"><div class="minor-title keep-with-next">g)</div>
+<p>A tentativa apresentada demonstra apenas:</p>
+<div class="math-line">x&gt;4→3x-2&gt;10.</div>
+</div>
+<div class="atomic-group"><div class="minor-title keep-with-next">h)</div>
+<p>Falta demonstrar:</p>
+<div class="math-line">3x-2&gt;10→ x&gt;4.</div>
+</div>
+<div class="atomic-group"><div class="minor-title keep-with-next">i)</div>
+<p>Podemos completar:</p>
+<blockquote class="student-quote proof-schema"><div class="proof-step"><p>Suponha:</p><div class="math-line">3x-2&gt;10.</div></div><div class="proof-step"><p>Somando <span class="math-inline">2</span>: <span class="math-inline">3x&gt;12.</span></p></div><div class="proof-step"><p>Dividindo por <span class="math-inline">3</span>: <span class="math-inline">x&gt;4.</span></p></div><div class="proof-step"><p>Como as duas direções foram estabelecidas,</p><div class="math-line">x&gt;4↔3x-2&gt;10.</div></div></blockquote>
+<p>Outras redações equivalentes são aceitáveis desde que ambas as direções sejam efetivamente demonstradas.</p>
+</div>
+<div class="item-title keep-with-next" data-keep-count="2">Exercício 16</div>
+<div class="atomic-group"><div class="minor-title keep-with-next">a)</div>
+<p>A tentativa que estabelece legitimamente a tese é:</p>
+<div class="math-line answer-line"><span class="answer-box"><span class="math-text">Tentativa I</span>.</span></div>
+<p>Ela começa exatamente da hipótese: <span class="math-inline">n+4<span class="math-text"> é par</span></span> e conclui:</p>
+<div class="math-line">n<span class="math-text"> é par</span>.</div>
+</div>
+<div class="minor-title keep-with-next" data-keep-count="2">b)</div>
+<div class="table-wrap"><table class="analysis-table"><thead><tr><th scope="col">Tentativa</th><th scope="col">Ponto de partida</th><th scope="col">O que efetivamente obtém</th><th scope="col">Estratégia ou diagnóstico</th></tr></thead><tbody><tr><td>I</td><td><span class="math-inline">n+4</span> é par</td><td><span class="math-inline">n</span> é par</td><td>demonstração legítima</td></tr><tr><td>II</td><td><span class="math-inline">n</span> é par</td><td><span class="math-inline">n+4</span> é par</td><td>demonstra a direção recíproca</td></tr><tr><td>III</td><td><span class="math-inline">n+4</span> é par</td><td>utiliza <span class="math-inline">n</span> par antes de estabelecê-lo</td><td>raciocínio circular</td></tr><tr><td>IV</td><td>casos particulares</td><td>validade da afirmação nesses casos</td><td>não estabelece a generalidade</td></tr></tbody></table></div>
+<div class="atomic-group"><div class="minor-title keep-with-next">c)</div>
+<p>Na Tentativa II, o primeiro problema está já na escolha do ponto de partida: ela assume <span class="math-inline">n</span> par, quando a hipótese da tese é <span class="math-inline">n+4</span> par.</p>
+<p>Na Tentativa III, o primeiro defeito ocorre em:</p>
+<blockquote class="student-quote"><p>“Como <span class="math-inline">n</span> é par...”</p></blockquote>
+<p>Nesse momento, <span class="math-inline">n</span> ser par ainda é precisamente aquilo que deveria ser demonstrado.</p>
+<p>Na Tentativa IV, o problema aparece quando os casos particulares corretos são usados para anunciar uma conclusão universal.</p>
+</div>
+<div class="atomic-group"><div class="minor-title keep-with-next">d)</div>
+<p>A Tentativa II demonstra corretamente:</p>
+<div class="math-line">n<span class="math-text"> é par</span> → n+4<span class="math-text"> é par</span>.</div>
+<p>Mas a tese solicitada é:</p>
+<div class="math-line">n+4<span class="math-text"> é par</span> → n<span class="math-text"> é par</span>.</div>
+<p>As duas afirmações possuem direções diferentes. Provar a recíproca não substitui a demonstração da direção original.</p>
+</div>
+<div class="atomic-group"><div class="minor-title keep-with-next">e)</div>
+<p>Na Tentativa III, a afirmação: <span class="math-inline">n<span class="math-text"> é par</span></span> é utilizada antes de ser estabelecida.</p>
+<p>A partir dela, escreve-se: <span class="math-inline">n=2m.</span></p>
+<p>Mas esse passo depende justamente da tese que ainda está em demonstração. Assim, a conclusão é usada como fundamento para si mesma: o raciocínio é circular.</p>
+</div>
+<div class="atomic-group"><div class="minor-title keep-with-next">f)</div>
+<p>A Tentativa IV mostra corretamente que a tese funciona nos casos:</p>
+<div class="math-line">n=0,   n=4,   n=10.</div>
+<p>Ela não mostra que a tese vale para qualquer inteiro <span class="math-inline">n</span> cuja soma <span class="math-inline">n+4</span> seja par.</p>
+<p>Casos particulares favoráveis não fornecem, sozinhos, uma justificativa geral.</p>
+</div>
+<div class="atomic-group"><div class="minor-title keep-with-next">g)</div>
+<p>Uma reconstrução possível, tomando a Tentativa II como ponto de partida, é abandonar a direção recíproca e começar pela hipótese correta:</p>
+<p>Suponha que: <span class="math-inline">n+4</span> seja par.</p>
+<p>Então existe um inteiro <span class="math-inline">k</span> tal que:</p>
+<div class="math-line">n+4=2k.</div>
+<p>Logo: <span class="math-inline">n=2k-4</span> e:</p>
+<div class="math-line">n=2(k-2).</div>
+<p>Como <span class="math-inline">k-2</span> é inteiro, <span class="math-inline">n</span> é par.</p>
+<p>Também seriam aceitáveis reconstruções corretas das Tentativas III ou IV, desde que a tese seja efetivamente estabelecida sem circularidade e sem depender apenas de exemplos particulares.</p>
+</div>
+<div class="atomic-group"><div class="minor-title keep-with-next">h)</div>
+<p>Uma versão final concisa possível é:</p>
+<blockquote class="student-quote proof-schema"><div class="proof-step"><p>Suponha que <span class="math-inline">n+4</span> seja par. Então existe um inteiro <span class="math-inline">k</span> tal que:</p><div class="math-line">n+4=2k.</div></div><div class="proof-step"><p>Assim:</p><div class="math-line">n=2k-4=2(k-2).</div></div><div class="proof-step"><p>Como <span class="math-inline">k-2</span> é inteiro, <span class="math-inline">n</span> é par.</p></div></blockquote>
+<p>Não é necessário reproduzir literalmente essa redação. Uma demonstração correta deve:</p>
+<ul><li><p>partir da hipótese adequada;</p></li><li><p>utilizar uma informação legitimamente obtida dela;</p></li><li><p>chegar à forma de <span class="math-inline">2</span> vezes um inteiro;</p></li><li><p>justificar que esse fator é inteiro;</p></li><li><p>concluir que <span class="math-inline">n</span> é par.</p></li></ul>
+</div>
+<div class="atomic-group"><div class="minor-title keep-with-next">i)</div>
+<p>Durante a descoberta de uma demonstração, é possível testar caminhos, começar pela tese, abandonar tentativas ou perceber posteriormente uma forma mais simples de organizar o raciocínio.</p>
+<p>A redação final não precisa narrar essa história. Ela deve reorganizar o argumento numa ordem em que o leitor consiga reconstruir claramente por que cada passagem é legítima.</p>
+</div>
+<div class="atomic-group"><div class="minor-title keep-with-next">j)</div>
+<p>A afirmação do estudante é incorreta.</p>
+<p>Mostrar que a Tentativa II falha estabelece apenas:</p>
+<blockquote class="student-quote"><p>A Tentativa II não demonstra a tese.</p></blockquote>
+<p>Isso é diferente de estabelecer:</p>
+<blockquote class="student-quote"><p>A tese é falsa.</p></blockquote>
+<p>Uma demonstração defeituosa pode falhar mesmo quando a tese é verdadeira. Para mostrar que uma tese é falsa, seria necessária uma refutação legítima.</p>
+<p>Neste caso, a própria Tentativa I demonstra corretamente a tese.</p>
+</div>
+</section>
+</div>
+</main>
+<script>(function () {
+    'use strict';
+    const documentRoot = document.getElementById('document');
+    const source = document.getElementById('source-content');
+    if (!source) return;
+    let pageNumber = 2;
+    function makePage(context) {
+        const page = document.createElement('section');
+        page.className = 'page page--generated';
+        page.innerHTML = `<header class="page-header"><span>PLANO DE ESTUDO — MATEMÁTICA</span><span class="header-context">${context}</span></header><div class="page-content"></div><footer class="page-footer"><span>TÓPICO 1.1 · BLOCO V — ARGUMENTOS, VALIDADE E DEMONSTRAÇÃO ELEMENTAR</span><span class="page-number">${pageNumber++}</span></footer>`;
+        documentRoot.insertBefore(page, source); return page;
+    }
+    function overflows(content) { return content.scrollHeight > content.clientHeight + 1; }
+    function appendAtomic(content,nodes) { nodes.forEach(n=>content.appendChild(n)); }
+    function removeAtomic(content,nodes) { for(let i=nodes.length-1;i>=0;i--) if(nodes[i].parentNode===content) content.removeChild(nodes[i]); }
+    const sections=Array.from(source.querySelectorAll(':scope > .source-section'));
+    for(const section of sections) {
+        const context=section.dataset.context||''; let page=makePage(context); let content=page.querySelector('.page-content'); const nodes=Array.from(section.children);
+        for(let i=0;i<nodes.length;i++) {
+            const node=nodes[i]; let count=1;
+            if(node.dataset && node.dataset.keepCount) count=Math.max(1,parseInt(node.dataset.keepCount,10)||1);
+            else if(node.classList && node.classList.contains('keep-with-next') && i+1<nodes.length) count=2;
+            count=Math.min(count,nodes.length-i); const atomic=nodes.slice(i,i+count);
+            appendAtomic(content,atomic);
+            if(overflows(content)) { removeAtomic(content,atomic); page=makePage(context); content=page.querySelector('.page-content'); appendAtomic(content,atomic); if(overflows(content)) page.classList.add('page--overflow-warning'); }
+            i+=count-1;
+        }
+    }
+    source.remove();
+})();</script>
+</body></html>

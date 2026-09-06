@@ -1,0 +1,626 @@
+/* ==========================================================================
+   PLANO DE ESTUDO MATEMÁTICO — VERSÃO 3.1
+   TÓPICO 1.1 · BLOCO II — PROPOSIÇÕES COMPOSTAS, CONECTIVOS E TABELAS-VERDADE
+   Base canônica: Plano Matemático 3.1 + Regras Gerais HTML/CSS 2.2 + Bloco I definitivo
+   ========================================================================== */
+
+.theme--math {
+    --primary: #252B5E;
+    --secondary: #3657A7;
+    --accent: #6558A6;
+    --support: #7396C8;
+    --soft: #EEF2F8;
+    --border: #C5CEDD;
+    --text: #252A33;
+    --muted: #6F7583;
+    --paper: #FBFCFE;
+    --white: #FBFCFE;
+    --screen: #EEF2F8;
+
+    --page-width: 210mm;
+    --page-height: 297mm;
+    --page-top: 12mm;
+    --page-right: 17mm;
+    --page-bottom: 7mm;
+    --page-left: 20mm;
+
+    --font-heading: Arial, "Liberation Sans", "DejaVu Sans", sans-serif;
+    --font-body: Georgia, "Times New Roman", "Liberation Serif", serif;
+    --font-math: "Cambria Math", "STIX Two Math", "DejaVu Math TeX Gyre", serif;
+
+    --text-size: 9.55pt;
+    --text-line: 1.39;
+    --text-small: 8.2pt;
+    --text-micro: 7.25pt;
+
+    --title-cover: 27.5pt;
+    --title-part: 19.5pt;
+    --title-section: 13.2pt;
+    --title-subsection: 10.2pt;
+    --title-minor: 8.5pt;
+
+    --line-thin: 0.24mm;
+    --line-regular: 0.34mm;
+    --line-medium: 0.78mm;
+    --line-strong: 1.3mm;
+    --radius-small: 1.2mm;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-print-color-adjust: exact; print-color-adjust: exact; background: var(--screen); }
+body {
+    margin: 0;
+    background: var(--screen);
+    color: var(--text);
+    font-family: var(--font-body);
+    font-size: var(--text-size);
+    line-height: var(--text-line);
+    overflow-x: auto;
+}
+main, section, article, header, footer, div { min-width: 0; }
+p, ul, ol, figure, table, blockquote { margin-top: 0; }
+p { margin-bottom: .60em; orphans: 3; widows: 3; }
+ul, ol { margin-top: .45em; margin-bottom: .72em; padding-left: 1.35em; }
+li { margin-bottom: .22em; orphans: 2; widows: 2; }
+b, strong { color: var(--primary); }
+img, svg { display: block; max-width: 100%; }
+
+@page { size: A4; margin: 0; }
+
+/* --- tela e páginas: mesmas proporções do Plano 3.1 --- */
+.document {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    width: 100%;
+    padding: 24px 0;
+}
+.page {
+    position: relative;
+    display: grid;
+    grid-template-rows: auto minmax(0, 1fr) auto;
+    width: var(--page-width);
+    height: var(--page-height);
+    padding: var(--page-top) var(--page-right) var(--page-bottom) var(--page-left);
+    overflow: visible;
+    background: var(--paper);
+    box-shadow: 0 5px 18px rgb(37 42 51 / 12%);
+    break-after: page;
+    page-break-after: always;
+}
+.page-content {
+    min-width: 0;
+    min-height: 0;
+    padding-top: 4mm;
+    padding-bottom: 3.6mm;
+    overflow: visible;
+}
+
+/* --- cabeçalho e rodapé --- */
+.page-header, .page-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8mm;
+    color: var(--muted);
+    font-family: var(--font-heading);
+    font-size: 7.35pt;
+    line-height: 1.15;
+    letter-spacing: .035em;
+    text-transform: uppercase;
+}
+.page-header { padding-bottom: 2.2mm; border-bottom: var(--line-thin) solid var(--border); }
+.page-footer { padding-top: 1.8mm; border-top: var(--line-thin) solid var(--border); }
+.page-header > span:last-child, .page-footer > span:last-child { text-align: right; }
+.page-header .header-context { max-width: 92mm; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.page-number { min-width: 8mm; font-variant-numeric: tabular-nums; }
+
+/* --- capa: mesma gramática do Plano 3.1 --- */
+.page--cover { display: grid; grid-template-rows: 101mm minmax(0,1fr); padding: 0; }
+.cover-top {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 18mm 24mm 15mm;
+    background: var(--primary);
+}
+.cover-top::after {
+    content: "";
+    position: absolute;
+    right: 0; bottom: 0; left: 0;
+    height: 4mm;
+    border-top: 1.6mm solid var(--secondary);
+    border-bottom: 1.6mm solid var(--accent);
+    background: var(--support);
+}
+.cover-collection {
+    color: var(--white);
+    font-family: var(--font-heading);
+    font-size: 9pt;
+    font-weight: 700;
+    letter-spacing: .095em;
+    text-transform: uppercase;
+}
+.cover-bottom { display: flex; flex-direction: column; justify-content: center; padding: 20mm 24mm 19mm; }
+.cover-kicker {
+    margin-bottom: 3mm;
+    color: var(--muted);
+    font-family: var(--font-heading);
+    font-size: 8.2pt;
+    font-weight: 700;
+    letter-spacing: .09em;
+    text-transform: uppercase;
+}
+.cover-title {
+    max-width: 155mm;
+    color: var(--primary);
+    font-family: var(--font-heading);
+    font-size: var(--title-cover);
+    font-weight: 700;
+    line-height: 1.01;
+    letter-spacing: -.026em;
+    text-transform: uppercase;
+}
+.cover-rule { display: grid; grid-template-columns: 64mm 28mm; width: 92mm; height: 1.4mm; margin-top: 7mm; }
+.cover-rule span:first-child { background: var(--secondary); }
+.cover-rule span:last-child { background: var(--accent); }
+.cover-subtitle { margin-top: 5mm; color: var(--secondary); font-family: var(--font-heading); font-size: 13pt; font-weight: 700; line-height: 1.22; }
+.cover-description { margin-top: 3mm; font-size: 11pt; font-style: italic; }
+.cover-version { margin-top: 2.3mm; color: var(--muted); font-family: var(--font-heading); font-size: 8.2pt; font-weight: 700; letter-spacing: .08em; }
+
+/* --- grandes aberturas --- */
+.section-opening { margin-bottom: 4.2mm; padding-left: 4mm; border-left: var(--line-strong) solid var(--secondary); }
+.section-label, .part-label {
+    margin-top: 0;
+    margin-bottom: .8mm;
+    color: var(--muted);
+    font-family: var(--font-heading);
+    font-size: var(--text-micro);
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+}
+.section-title, .part-title {
+    margin: 0;
+    color: var(--primary);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -.018em;
+}
+.section-title { font-size: 19pt; }
+.part-title { font-size: var(--title-part); }
+.part-opening {
+    margin-bottom: 4.3mm;
+    padding: 4.6mm 5.5mm 4.3mm;
+    border-top: 1.4mm solid var(--primary);
+    border-bottom: var(--line-regular) solid var(--border);
+    background: var(--white);
+}
+.part-opening::after { content:""; display:block; width:44mm; height:var(--line-medium); margin-top:2.8mm; background:var(--support); }
+.part-opening .part-label { color: var(--accent); }
+
+/* --- títulos fora do outline --- */
+.subsection-title, .item-title, .gabarito-subtitle {
+    margin-top: 4.8mm;
+    color: var(--secondary);
+    font-family: var(--font-heading);
+    font-size: var(--title-subsection);
+    font-weight: 700;
+    line-height: 1.16;
+}
+.item-title { margin-top: 4.8mm; font-size: 10.5pt; }
+.part-opening + .item-title,
+.section-opening + .item-title { margin-top: 2.1mm; }
+.gabarito-subtitle {
+    margin-top: 1.2mm;
+    color: var(--accent);
+    font-size: 11pt;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+}
+.minor-title {
+    margin: 2.3mm 0 1mm;
+    color: var(--accent);
+    font-family: var(--font-heading);
+    font-size: var(--title-minor);
+    font-weight: 700;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+}
+
+/* --- prosa, citações e matemática --- */
+blockquote {
+    margin: 1.15mm 0 1.65mm 4mm;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: var(--text);
+}
+blockquote p:last-child { margin-bottom: 0; }
+blockquote.student-quote {
+    margin: 1.8mm 0 2.2mm;
+    padding: 1.6mm 2.8mm;
+    border-left: var(--line-medium) solid var(--support);
+    background: var(--white);
+}
+.math-inline {
+    color: var(--primary);
+    font-family: var(--font-math);
+    white-space: nowrap;
+}
+/* Expressões simples não recebem moldura, fundo ou centralização automática. */
+.math-line {
+    margin: .65mm 0 1.05mm 5mm;
+    color: var(--primary);
+    font-family: var(--font-math);
+    font-size: 9.9pt;
+    line-height: 1.34;
+}
+/* Comparações ou notações que são, de fato, o objeto imediato da explicação. */
+.math-comparison,
+.value-legend {
+    max-width: 138mm;
+    margin: 1.25mm auto 1.9mm;
+    text-align: center;
+}
+.math-comparison {
+    color: var(--primary);
+    font-family: var(--font-math);
+    font-size: 10.15pt;
+}
+.value-legend { font-size: 9.7pt; }
+.proposition-pair {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 4mm;
+    width: 118mm;
+    margin: 1.35mm auto 2mm;
+}
+.proposition-pair p {
+    margin: 0;
+    text-align: center;
+}
+.proposition-pair--without-connector p:first-child { grid-column: 1 / 2; }
+.proposition-pair--without-connector p:last-child { grid-column: 3 / 4; }
+.pair-connector { color: var(--muted); font-style: italic; }
+.key-statement {
+    max-width: 146mm;
+    margin: 2.1mm auto 2.7mm;
+    color: var(--text);
+    font-size: 9.75pt;
+    line-height: 1.42;
+    text-align: center;
+}
+.guide-question {
+    margin: .8mm 0 .8mm 4mm;
+    font-family: var(--font-heading);
+    font-size: 9.1pt;
+}
+/* --- tabelas: linguagem canônica, não cartões --- */
+.table-wrap { max-width: 100%; margin: 2.2mm 0 3mm; overflow-x: auto; }
+table { width: 100%; table-layout: fixed; border-collapse: collapse; background: var(--white); font-size: 8.65pt; line-height: 1.32; }
+thead { display: table-header-group; }
+th, td { padding: 2mm 2.5mm; border: var(--line-thin) solid var(--border); vertical-align: top; text-align: left; overflow-wrap: anywhere; }
+th {
+    background: var(--secondary);
+    color: var(--white);
+    font-family: var(--font-heading);
+    font-size: 7.9pt;
+    font-weight: 700;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+}
+tbody tr:nth-child(even) { background: var(--soft); }
+tbody tr:nth-child(odd) { background: var(--white); }
+td:first-child { color: var(--primary); }
+.correspondence-table .col-name { width: 14%; }
+.correspondence-table .col-prop { width: 64%; }
+.correspondence-table .col-value { width: 22%; }
+.correspondence-table th:first-child, .correspondence-table td:first-child,
+.correspondence-table th:last-child, .correspondence-table td:last-child { text-align: center; }
+
+/* --- visuais --- */
+.visual { break-inside: avoid; page-break-inside: avoid; }
+.visual--geometry { margin: 2.4mm auto 3.3mm; color: var(--primary); }
+.shape-panel { width: 126mm; height: auto; margin: 0 auto; }
+.shape-panel--mini { width: 78mm; }
+.shape-panel--single { width: 38mm; }
+.shape-panel--single-mini { width: 27mm; }
+.shape-label { fill: #3657A7; font-family: Arial, sans-serif; font-size: 22px; font-weight: 700; }
+
+
+/* --- paginação e unidades --- */
+.source-content { display: none; }
+.source-section { display: block; }
+.generated-unit { width: 100%; }
+.keep-with-next { break-after: avoid; page-break-after: avoid; }
+.table-wrap, table, tr, figure, blockquote, .proposition-pair, .key-statement { break-inside: avoid; page-break-inside: avoid; }
+
+@media screen and (max-width: 900px) {
+    .document { align-items:flex-start; padding:12px; }
+    .page { transform-origin: top left; }
+}
+
+@media print {
+    html, body { width:var(--page-width); margin:0; padding:0; background:var(--paper); }
+    .document { display:block; gap:0; padding:0; }
+    .page { margin:0; box-shadow:none; break-after:page; page-break-after:always; }
+    .page:last-of-type { break-after:auto; page-break-after:auto; }
+}
+
+/* Headings-raiz do outline permanecem visíveis na própria linguagem editorial. */
+.outline-root {
+    display: inline;
+    margin: 0;
+    padding: 0;
+    color: inherit;
+    font: inherit;
+    font-weight: inherit;
+    letter-spacing: inherit;
+    line-height: inherit;
+    text-transform: inherit;
+}
+
+@media screen {
+    .page--overflow-warning { outline: 2px solid var(--accent); }
+}
+.section-opening > .section-label.outline-root { display: block; margin: 0 0 .8mm; }
+.part-label .outline-root { display: inline; }
+
+
+/* ==========================================================================
+   BLOCO II — EXTENSÕES FUNCIONAIS
+   ========================================================================== */
+
+/* Regras 2.2: matemática simples não é automaticamente centralizada. */
+.math-comparison,
+.value-legend {
+    max-width: none;
+    margin: .7mm 0 1.15mm 5mm;
+    text-align: left;
+}
+.math-comparison { font-size: 9.9pt; }
+.math-structural {
+    width: fit-content;
+    max-width: 154mm;
+    margin: 2.2mm auto 2.6mm;
+    color: var(--primary);
+    font-family: var(--font-math);
+    font-size: 11.2pt;
+    font-weight: 700;
+    line-height: 1.35;
+    text-align: center;
+}
+.math-inline sup { font-size: .72em; line-height: 0; }
+.answer-box {
+    display: inline-block;
+    padding: .35mm 1.2mm;
+    border: var(--line-thin) solid var(--support);
+    border-radius: .7mm;
+    background: var(--soft);
+    font-family: var(--font-math);
+    font-weight: 700;
+}
+
+/* Definição formal: fundo Neblina + barra cobalto + negrito. */
+.definition-box {
+    margin: 2.2mm 0 2.8mm;
+    padding: 2.3mm 3.2mm 2.35mm 4mm;
+    border-left: 1.15mm solid var(--secondary);
+    background: var(--soft);
+    color: var(--primary);
+    font-weight: 700;
+    line-height: 1.42;
+    break-inside: avoid;
+    page-break-inside: avoid;
+}
+.definition-box--group p { margin-bottom: .5em; }
+.definition-box--group p:last-child { margin-bottom: 0; }
+.key-statement {
+    max-width: none;
+    margin: 1.7mm 0 2.1mm 4mm;
+    text-align: left;
+}
+
+/* Tabelas lógicas: a própria tabulação realiza a comparação. */
+.truth-table { font-family: var(--font-math); }
+.truth-table th { text-transform: none; text-align: center; }
+.truth-table td { text-align: center; vertical-align: middle; }
+.truth-table th .math-inline { color: var(--white); }
+.truth-table td .math-inline { color: var(--primary); }
+.truth-table--compact { font-size: 8.1pt; }
+.truth-table--single { width: 94mm; margin-left: auto; margin-right: auto; }
+.truth-table--evaluations { width: 84mm; margin-left: auto; margin-right: auto; }
+.truth-table--equivalence { width: 92mm; margin-left: auto; margin-right: auto; }
+.truth-table--wide { font-size: 7.75pt; line-height: 1.22; }
+.truth-table--wide th, .truth-table--wide td { padding: 1.45mm 1.3mm; overflow-wrap: normal; }
+.truth-table--dense { font-size: 7.35pt; }
+.truth-table--dense th, .truth-table--dense td { padding-left: .9mm; padding-right: .9mm; }
+.worksheet-table td:empty { height: 8.3mm; }
+.worksheet-table th:empty { min-width: 15mm; background: var(--soft); }
+
+.translation-table th:first-child, .translation-table td:first-child { width: 70%; }
+.translation-table th:last-child, .translation-table td:last-child { width: 30%; text-align: center; }
+.correspondence-logic th:nth-child(1), .correspondence-logic td:nth-child(1) { width: 22%; text-align:center; }
+.correspondence-logic th:nth-child(2), .correspondence-logic td:nth-child(2) { width: 58%; }
+.correspondence-logic th:nth-child(3), .correspondence-logic td:nth-child(3) { width: 20%; text-align:center; }
+.correspondence-logic--neg th:nth-child(1), .correspondence-logic--neg td:nth-child(1) { width: 22%; }
+.correspondence-logic--neg th:nth-child(2), .correspondence-logic--neg td:nth-child(2) { width: 58%; }
+.variable-count-table th:nth-child(1) { width: 11%; }
+.variable-count-table th:nth-child(2) { width: 51%; }
+.variable-count-table th:nth-child(3), .variable-count-table th:nth-child(4) { width: 19%; }
+.structure-analysis-table th:nth-child(1) { width: 12%; }
+.structure-analysis-table th:nth-child(2) { width: 28%; }
+.structure-analysis-table th:nth-child(3) { width: 60%; }
+.expandable-table th:nth-child(1), .expandable-table th:nth-child(2) { width: 9%; }
+.demorgan-summary th:first-child, .demorgan-summary td:first-child { width: 46%; }
+.demorgan-summary th:last-child, .demorgan-summary td:last-child { width: 54%; }
+
+/* Agrupamento e alcance: geometria tipográfica, não setas. */
+.structure-grid {
+    display: grid;
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    gap: 4mm;
+    margin: 3mm 0 3.7mm;
+    break-inside: avoid;
+}
+.structure-grid--four { grid-template-columns: repeat(2,minmax(0,1fr)); }
+.structure-panel {
+    padding: 2.7mm 3mm 2.5mm;
+    border-top: var(--line-medium) solid var(--support);
+    border-bottom: var(--line-thin) solid var(--border);
+    background: var(--white);
+}
+.structure-label {
+    margin-bottom: 1.3mm;
+    color: var(--accent);
+    font-family: var(--font-heading);
+    font-size: 7.1pt;
+    font-weight: 700;
+    letter-spacing: .07em;
+}
+.structure-formula {
+    margin: 1.2mm 0 2.2mm;
+    padding: 1.6mm 2mm;
+    background: var(--soft);
+    color: var(--primary);
+    font-family: var(--font-math);
+    font-size: 11pt;
+    text-align: center;
+}
+.structure-meta { margin: .9mm 0; font-size: 8.2pt; }
+.structure-meta > span, .fill-meta > span { color: var(--secondary); font-family: var(--font-heading); font-size: 7.2pt; font-weight: 700; }
+.structure-panel--fill .structure-formula { font-size: 9.7pt; }
+.fill-meta { display:grid; grid-template-columns:auto 1fr; align-items:end; gap:2mm; margin-top:2mm; }
+.blank-line { display:inline-block; min-height:4mm; border-bottom:var(--line-thin) solid var(--border); }
+
+.formula-count-grid, .comparison-frames {
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:4mm;
+    margin:3mm 0 3.8mm;
+    break-inside:avoid;
+}
+.formula-count-grid > article, .comparison-frames > article {
+    padding:2.7mm 3mm;
+    border-top:var(--line-medium) solid var(--support);
+    border-bottom:var(--line-thin) solid var(--border);
+    background:var(--white);
+}
+.panel-result {
+    margin:2mm 0 0;
+    padding:1.4mm 2mm;
+    background:var(--soft);
+    color:var(--primary);
+    font-family:var(--font-heading);
+    font-weight:700;
+    text-align:center;
+}
+.label-muted { color:var(--muted); font-family:var(--font-heading); font-size:7.3pt; font-weight:700; }
+.visual-note { margin:1.1mm 0 2.3mm; color:var(--muted); font-size:8.25pt; font-style:italic; }
+
+/* Painéis de avaliações possíveis. */
+.evaluation-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:3.5mm; margin:3mm 0 4mm; }
+.evaluation-panel { padding:2.3mm 2.6mm; border-top:var(--line-medium) solid var(--support); border-bottom:var(--line-thin) solid var(--border); background:var(--white); }
+.evaluation-title { margin-bottom:1.6mm; color:var(--primary); font-family:var(--font-math); font-size:9.6pt; font-weight:700; text-align:center; }
+.eval-option { display:grid; grid-template-columns:1fr 7mm; gap:2mm; align-items:center; margin:.9mm 0; }
+.eval-mini { display:grid; grid-template-columns:repeat(2,1fr); border:var(--line-thin) solid var(--border); background:var(--soft); }
+.eval-mini span { padding:.7mm 1mm; text-align:center; }
+.eval-mini span:nth-child(-n+2) { border-bottom:var(--line-thin) solid var(--border); font-size:7.1pt; }
+.mark-box { width:5mm; height:5mm; border:var(--line-thin) solid var(--support); background:var(--paper); }
+
+/* Figuras do "ou" inclusivo. */
+.shape-logic-panel { width:126mm; height:auto; margin:0 auto; }
+.shape-logic-panel--mini { width:76mm; }
+
+/* Quadros de preenchimento e diagnóstico. */
+.translation-work > div + div { margin-top:3mm; }
+.concept-fill-grid, .synthesis-conclusion { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:4mm; margin:3mm 0 4mm; }
+.concept-fill { min-height:26mm; padding:2.5mm 2.8mm; border-top:var(--line-medium) solid var(--support); border-bottom:var(--line-thin) solid var(--border); background:var(--white); }
+.concept-fill .blank-line { display:block; margin-top:2.8mm; }
+.diagnostic-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:3.2mm; margin:3mm 0 4mm; }
+.diagnostic-card { padding:2.4mm 2.7mm; border-top:var(--line-medium) solid var(--support); border-bottom:var(--line-thin) solid var(--border); background:var(--white); }
+.diagnostic-card blockquote { margin:0 0 2mm; font-size:8pt; line-height:1.34; }
+.response-field { display:grid; grid-template-columns:auto 1fr; gap:2mm; align-items:end; margin-top:1.6mm; font-size:7.8pt; }
+.synthesis-structure-zone { margin:2.2mm 0 3.8mm; }
+
+/* Tabelas muito largas preservam legibilidade; fórmulas curtas não quebram. */
+th .math-inline, td .math-inline { white-space:nowrap; }
+.table-wrap { overflow:visible; }
+table { overflow-wrap:normal; word-break:normal; }
+th, td { overflow-wrap:break-word; }
+
+/* Componentes que não devem ser quebrados internamente. */
+.definition-box, .structure-grid, .formula-count-grid, .comparison-frames, .evaluation-grid,
+.concept-fill-grid, .diagnostic-grid, .synthesis-conclusion, .demorgan-tables,
+.truth-table--single, .truth-table--evaluations, .truth-table--equivalence {
+    break-inside: avoid;
+    page-break-inside: avoid;
+}
+
+@media print {
+    .truth-table--wide { font-size:7.6pt; }
+}
+
+
+/* ==========================================================================\n   BLOCO II — CAMADA DEFINITIVA DE NORMALIZAÇÃO (Regras Gerais 2.2)\n   ========================================================================== */
+
+/* A matemática curta acompanha a prosa; uma linha própria não implica centralização. */
+.math-line {
+    margin: .45mm 0 .9mm 4mm;
+    text-align: left;
+}
+.math-list-line { margin-top: .4mm; }
+.answer-line { margin-left: 0; }
+.answer-line .answer-box { vertical-align: baseline; }
+
+/* Em cabeçalhos largos, a quebra é deliberada e ocorre somente onde o HTML a marcou. */
+.truth-table--wide th .math-inline { white-space: normal; }
+.truth-table--wide td .math-inline { white-space: nowrap; }
+.math-header-wrap {
+    display: inline-block;
+    white-space: normal !important;
+    line-height: 1.15;
+    text-align: center;
+}
+.truth-table--six th, .truth-table--six td,
+.truth-table--seven th, .truth-table--seven td {
+    padding-left: .75mm;
+    padding-right: .75mm;
+}
+.truth-table--seven { font-size: 7.05pt; }
+.truth-table--seven th { font-size: 6.9pt; }
+
+/* Alcance: o agrupamento relevante é percebido pela geometria tipográfica, sem setas. */
+.scope-mark {
+    display: inline-block;
+    padding: 0 .45mm .25mm;
+    border-bottom: .42mm solid var(--support);
+    border-radius: .5mm;
+}
+.structure-formula .scope-mark .math-inline { white-space: nowrap; }
+
+/* A grade diagnóstica é o próprio enunciado visual do Exercício 15. */
+.diagnostic-grid { margin-top: 2.5mm; }
+.diagnostic-card { break-inside: avoid; page-break-inside: avoid; }
+.diagnostic-card blockquote { color: var(--text); }
+
+/* Tabelas de tradução: rótulo do item faz parte da própria ficha de trabalho. */
+.translation-work td strong { color: var(--secondary); font-family: var(--font-heading); }
+
+@media print {
+    .truth-table--seven { font-size: 7pt; }
+    .truth-table--seven th { font-size: 6.8pt; }
+}
+
+/* Ajustes finais de navegação e alternativas do Quiz. */
+.outline-root { text-transform: none !important; }
+.quiz-math-option { margin-left: 4mm; font-weight: 600; }
+
+.part-title-break { display:block; }
+
+.part-title--long { font-size: 17.8pt; letter-spacing: -.022em; }
