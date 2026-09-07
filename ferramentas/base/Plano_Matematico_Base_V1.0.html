@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Base HTML/CSS do Plano de Estudo Matemático para instanciação de apostilas.">
+    <title>Plano de Estudo Matemático — Base HTML/CSS V1.0</title>
+    <link rel="stylesheet" href="Plano_Matematico_Base_V1.0.css">
+</head>
+<body class="theme--math">
+    <main
+        class="document"
+        id="document"
+        data-header-identity="PLANO DE ESTUDO — MATEMÁTICA"
+        data-footer-identity="[IDENTIDADE DA APOSTILA]"
+    >
+        <section class="page page--cover" id="capa" aria-label="Capa">
+            <div class="cover-top">
+                <div class="cover-collection">PLANO DE ESTUDO MATEMÁTICO</div>
+            </div>
+
+            <div class="cover-bottom">
+                <div class="cover-kicker">[TÓPICO / BLOCO / UNIDADE]</div>
+                <div class="cover-title">[TÍTULO DA APOSTILA]</div>
+
+                <div class="cover-rule" aria-hidden="true">
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div class="cover-version">APOSTILA DE ESTUDO — [ANO]</div>
+            </div>
+        </section>
+
+        <div class="source-content" id="source-content">
+            <section class="source-section" data-context="TEXTO TEÓRICO • PARTE I">
+                <header class="part-opening" data-keep-count="3">
+                    <div class="part-label">
+                        <h1 class="outline-root">Texto Teórico</h1>
+                        · Parte I
+                    </div>
+                    <h2 class="part-title">[Título da Parte]</h2>
+                </header>
+
+                <div class="item-title keep-with-next">[Título de unidade interna]</div>
+                <p>
+                    [Insira aqui a prosa do conteúdo mestre. A Base fornece estrutura e identidade;
+                    a forma concreta permanece determinada pelo conteúdo.]
+                </p>
+
+                <p>
+                    Matemática incorporada à frase pode usar
+                    <span class="math-inline">x + y = z</span>.
+                </p>
+
+                <div class="math-line">x + y = z</div>
+
+                <div class="math-structural">A ⇔ B</div>
+
+                <p>
+                    Em uma estrutura matemática, um trecho verbal pode usar
+                    <span class="math-inline">A <span class="math-text">é equivalente a</span> B</span>.
+                </p>
+
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th scope="col">[Cabeçalho A]</th>
+                                <th scope="col">[Cabeçalho B]</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>[Dado]</td>
+                                <td>[Dado]</td>
+                            </tr>
+                            <tr>
+                                <td>[Dado]</td>
+                                <td>[Dado]</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="atomic-group">
+                    <div class="minor-title keep-with-next">[Pequena unidade composta]</div>
+                    <p>[Use agrupamento atômico somente quando a dependência interna justificar.]</p>
+                    <div class="math-line">a + b = c</div>
+                </div>
+
+                <figure class="visual">
+                    <figcaption>[Visual funcional, quando realmente exigido pelo conteúdo.]</figcaption>
+                </figure>
+            </section>
+
+            <section class="source-section" data-context="TEXTO PRÁTICO • GABARITO COMENTADO">
+                <header class="section-opening" data-keep-count="3">
+                    <div class="section-label">
+                        <h1 class="outline-root">Texto Prático</h1>
+                    </div>
+                    <h2 class="section-title">[Grande unidade do Texto Prático]</h2>
+                </header>
+
+                <div class="gabarito-subtitle keep-with-next">[Subunidade do gabarito]</div>
+                <div class="item-title keep-with-next" data-keep-count="2">[Item]</div>
+                <p>[Insira aqui somente a resposta e a justificação exigidas pelo conteúdo mestre.]</p>
+            </section>
+        </div>
+    </main>
+
+    <script>
+        (function () {
+            'use strict';
+
+            const documentRoot = document.getElementById('document');
+            const source = document.getElementById('source-content');
+
+            if (!documentRoot || !source) return;
+
+            const headerIdentity =
+                documentRoot.dataset.headerIdentity || 'PLANO DE ESTUDO — MATEMÁTICA';
+            const footerIdentity =
+                documentRoot.dataset.footerIdentity || 'APOSTILA DE ESTUDO';
+
+            let pageNumber = 2;
+
+            function makePage(context) {
+                const page = document.createElement('section');
+                page.className = 'page page--generated';
+
+                const header = document.createElement('header');
+                header.className = 'page-header';
+
+                const headerBrand = document.createElement('span');
+                headerBrand.textContent = headerIdentity;
+
+                const headerContext = document.createElement('span');
+                headerContext.className = 'header-context';
+                headerContext.textContent = context;
+
+                header.append(headerBrand, headerContext);
+
+                const content = document.createElement('div');
+                content.className = 'page-content';
+
+                const footer = document.createElement('footer');
+                footer.className = 'page-footer';
+
+                const footerBrand = document.createElement('span');
+                footerBrand.textContent = footerIdentity;
+
+                const number = document.createElement('span');
+                number.className = 'page-number';
+                number.textContent = String(pageNumber++);
+
+                footer.append(footerBrand, number);
+                page.append(header, content, footer);
+
+                documentRoot.insertBefore(page, source);
+                return page;
+            }
+
+            function overflows(content) {
+                return content.scrollHeight > content.clientHeight + 1;
+            }
+
+            function appendAtomic(content, nodes) {
+                nodes.forEach((node) => content.appendChild(node));
+            }
+
+            function removeAtomic(content, nodes) {
+                for (let i = nodes.length - 1; i >= 0; i -= 1) {
+                    const node = nodes[i];
+                    if (node.parentNode === content) {
+                        content.removeChild(node);
+                    }
+                }
+            }
+
+            function stripIdsDeep(root) {
+                if (root.nodeType !== Node.ELEMENT_NODE) return;
+                root.removeAttribute('id');
+                root.querySelectorAll('[id]').forEach((element) => {
+                    element.removeAttribute('id');
+                });
+            }
+
+            function tableBlueprint(node) {
+                let wrap = null;
+                let table = null;
+
+                if (node.matches && node.matches('.table-wrap')) {
+                    wrap = node;
+                    const elementChildren = Array.from(wrap.children);
+                    const tables = elementChildren.filter(
+                        (child) => child.tagName === 'TABLE'
+                    );
+
+                    if (tables.length !== 1 || elementChildren.length !== 1) {
+                        return null;
+                    }
+
+                    table = tables[0];
+                } else if (node.tagName === 'TABLE') {
+                    table = node;
+                } else {
+                    return null;
+                }
+
+                if (table.querySelector('table')) return null;
+
+                const rows = Array.from(table.rows);
+                const hasUnsafeRowspan = rows.some((row) =>
+                    Array.from(row.cells).some((cell) => cell.rowSpan > 1)
+                );
+
+                if (hasUnsafeRowspan) {
+                    return {
+                        safe: false,
+                        wrap,
+                        table
+                    };
+                }
+
+                const bodies = Array.from(table.tBodies);
+                if (bodies.length === 0) return null;
+
+                const rowRecords = [];
+                bodies.forEach((body, bodyIndex) => {
+                    Array.from(body.rows).forEach((row) => {
+                        rowRecords.push({ row, body, bodyIndex });
+                    });
+                });
+
+                if (rowRecords.length === 0) return null;
+
+                return {
+                    safe: true,
+                    wrap,
+                    table,
+                    caption: table.caption,
+                    colgroups: Array.from(table.children).filter(
+                        (child) => child.tagName === 'COLGROUP'
+                    ),
+                    thead: table.tHead,
+                    tfoot: table.tFoot,
+                    bodies,
+                    rowRecords
+                };
+            }
+
+            function createTableFragment(blueprint, isFirstFragment) {
+                const root = blueprint.wrap
+                    ? blueprint.wrap.cloneNode(false)
+                    : blueprint.table.cloneNode(false);
+
+                const table = blueprint.wrap
+                    ? blueprint.table.cloneNode(false)
+                    : root;
+
+                if (blueprint.wrap) {
+                    root.appendChild(table);
+                }
+
+                if (!isFirstFragment) {
+                    stripIdsDeep(root);
+                }
+
+                if (blueprint.caption && isFirstFragment) {
+                    table.appendChild(blueprint.caption.cloneNode(true));
+                }
+
+                blueprint.colgroups.forEach((colgroup) => {
+                    const clone = colgroup.cloneNode(true);
+                    if (!isFirstFragment) stripIdsDeep(clone);
+                    table.appendChild(clone);
+                });
+
+                if (blueprint.thead) {
+                    const clone = blueprint.thead.cloneNode(true);
+                    if (!isFirstFragment) stripIdsDeep(clone);
+                    table.appendChild(clone);
+                }
+
+                return {
+                    root,
+                    table,
+                    bodyMap: new Map(),
+                    isFirstFragment
+                };
+            }
+
+            function ensureFragmentBody(fragment, record) {
+                if (fragment.bodyMap.has(record.bodyIndex)) {
+                    return fragment.bodyMap.get(record.bodyIndex);
+                }
+
+                const body = record.body.cloneNode(false);
+                if (!fragment.isFirstFragment) stripIdsDeep(body);
+
+                fragment.table.appendChild(body);
+                fragment.bodyMap.set(record.bodyIndex, body);
+                return body;
+            }
+
+            function appendRow(fragment, record) {
+                const body = ensureFragmentBody(fragment, record);
+                body.appendChild(record.row);
+                return body;
+            }
+
+            function removeRow(fragment, record) {
+                const body = fragment.bodyMap.get(record.bodyIndex);
+                if (!body || record.row.parentNode !== body) return;
+
+                body.removeChild(record.row);
+
+                if (body.rows.length === 0) {
+                    body.remove();
+                    fragment.bodyMap.delete(record.bodyIndex);
+                }
+            }
+
+            function appendFinalFoot(fragment, blueprint) {
+                if (!blueprint.tfoot) return null;
+
+                const foot = blueprint.tfoot.cloneNode(true);
+                fragment.table.appendChild(foot);
+                return foot;
+            }
+
+            function splitTableAcrossPages(
+                blueprint,
+                context,
+                initialPage,
+                initialContent
+            ) {
+                let page = initialPage;
+                let content = initialContent;
+                let rowIndex = 0;
+                let fragmentIndex = 0;
+
+                while (rowIndex < blueprint.rowRecords.length) {
+                    const hadPriorContent = content.children.length > 0;
+                    const fragment = createTableFragment(
+                        blueprint,
+                        fragmentIndex === 0
+                    );
+
+                    content.appendChild(fragment.root);
+
+                    let acceptedRows = 0;
+                    let fragmentClosed = false;
+
+                    while (rowIndex < blueprint.rowRecords.length) {
+                        const record = blueprint.rowRecords[rowIndex];
+                        appendRow(fragment, record);
+
+                        let foot = null;
+                        const isLastRow =
+                            rowIndex === blueprint.rowRecords.length - 1;
+
+                        if (isLastRow) {
+                            foot = appendFinalFoot(fragment, blueprint);
+                        }
+
+                        if (!overflows(content)) {
+                            acceptedRows += 1;
+                            rowIndex += 1;
+                            continue;
+                        }
+
+                        if (foot) foot.remove();
+                        removeRow(fragment, record);
+
+                        if (acceptedRows > 0) {
+                            fragmentClosed = true;
+                            break;
+                        }
+
+                        if (hadPriorContent) {
+                            fragment.root.remove();
+                            page = makePage(context);
+                            content = page.querySelector('.page-content');
+                            fragmentClosed = true;
+                            break;
+                        }
+
+                        appendRow(fragment, record);
+                        if (isLastRow) appendFinalFoot(fragment, blueprint);
+                        page.classList.add('page--overflow-warning');
+                        acceptedRows = 1;
+                        rowIndex += 1;
+                        fragmentClosed = true;
+                        break;
+                    }
+
+                    if (fragment.root.isConnected && acceptedRows > 0) {
+                        fragmentIndex += 1;
+                    }
+
+                    if (rowIndex < blueprint.rowRecords.length) {
+                        if (
+                            fragment.root.isConnected &&
+                            acceptedRows > 0 &&
+                            fragmentClosed
+                        ) {
+                            page = makePage(context);
+                            content = page.querySelector('.page-content');
+                        }
+                    }
+                }
+
+                return { page, content };
+            }
+
+            function placeSingleNode(node, context, page, content) {
+                content.appendChild(node);
+
+                if (!overflows(content)) {
+                    return { page, content };
+                }
+
+                content.removeChild(node);
+
+                const blueprint = tableBlueprint(node);
+                if (blueprint && blueprint.safe) {
+                    return splitTableAcrossPages(
+                        blueprint,
+                        context,
+                        page,
+                        content
+                    );
+                }
+
+                page = makePage(context);
+                content = page.querySelector('.page-content');
+                content.appendChild(node);
+
+                if (overflows(content)) {
+                    page.classList.add('page--overflow-warning');
+                }
+
+                return { page, content };
+            }
+
+            const sections = Array.from(
+                source.querySelectorAll(':scope > .source-section')
+            );
+
+            for (const section of sections) {
+                const nodes = Array.from(section.children);
+                if (nodes.length === 0) continue;
+
+                const context = section.dataset.context || '';
+                let page = makePage(context);
+                let content = page.querySelector('.page-content');
+
+                for (let i = 0; i < nodes.length; i += 1) {
+                    const node = nodes[i];
+                    let count = 1;
+
+                    if (node.dataset && node.dataset.keepCount) {
+                        count = Math.max(
+                            1,
+                            parseInt(node.dataset.keepCount, 10) || 1
+                        );
+                    } else if (
+                        node.classList &&
+                        node.classList.contains('keep-with-next') &&
+                        i + 1 < nodes.length
+                    ) {
+                        count = 2;
+                    }
+
+                    count = Math.min(count, nodes.length - i);
+
+                    if (count === 1) {
+                        const result = placeSingleNode(
+                            node,
+                            context,
+                            page,
+                            content
+                        );
+                        page = result.page;
+                        content = result.content;
+                        continue;
+                    }
+
+                    const atomic = nodes.slice(i, i + count);
+                    appendAtomic(content, atomic);
+
+                    if (overflows(content)) {
+                        removeAtomic(content, atomic);
+
+                        page = makePage(context);
+                        content = page.querySelector('.page-content');
+
+                        appendAtomic(content, atomic);
+
+                        if (overflows(content)) {
+                            page.classList.add('page--overflow-warning');
+                        }
+                    }
+
+                    i += count - 1;
+                }
+            }
+
+            source.remove();
+        })();
+    </script>
+</body>
+</html>
