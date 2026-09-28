@@ -1,0 +1,1441 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tópico 1.2 — Teoria dos Conjuntos. Bloco II — Subconjuntos, Inclusão e Igualdade: Texto Teórico, 20 exercícios e Gabarito Comentado.">
+    <title>Plano de Estudo Matemático — Tópico 1.2 · Bloco II</title>
+    <link rel="stylesheet" href="Plano_Matematico_3_1_Topico_1.2_Bloco_II.css">
+</head>
+<body class="theme--math">
+    <main
+        class="document"
+        id="document"
+        data-header-identity="PLANO DE ESTUDO — MATEMÁTICA"
+        data-footer-identity="TÓPICO 1.2 · BLOCO II"
+    >
+        <section class="page page--cover" id="capa" aria-label="Capa">
+            <div class="cover-top">
+                <div class="cover-collection">PLANO DE ESTUDO MATEMÁTICO</div>
+            </div>
+
+            <div class="cover-bottom">
+                <div class="cover-kicker">TÓPICO 1.2 · TEORIA DOS CONJUNTOS</div>
+                <div class="cover-title">BLOCO II<br>SUBCONJUNTOS, INCLUSÃO<br>E IGUALDADE</div>
+
+                <div class="cover-rule" aria-hidden="true">
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div class="cover-version">APOSTILA DE ESTUDO — 2026</div>
+            </div>
+        </section>
+
+        <!-- Candidata a PDF. Instância da Base V1.0; visuais restritos a este Bloco. -->
+        <div class="source-content" id="source-content">
+            <section class="source-section" data-context="TEXTO TEÓRICO • PARTE I">
+                <header class="part-opening keep-with-next"><div class="part-label"><h1 class="outline-root">Texto Teórico</h1> · Parte I</div><h2 class="part-title">Parte I — Subconjuntos e Inclusão</h2></header>
+                <p>Saber se um objeto pertence a um conjunto permite examinar seus elementos individualmente. Para comparar dois conjuntos, porém, precisamos responder a uma pergunta mais abrangente: <strong>todos os elementos de um deles também pertencem ao outro?</strong></p>
+                <p>A pertinência continua sendo a base do raciocínio. O que muda é o alcance da afirmação: deixamos de verificar apenas um objeto e passamos a estabelecer uma condição sobre todos os elementos de uma coleção. Essa passagem permite reconhecer quando um conjunto está incluído em outro e quando ambos possuem exatamente os mesmos elementos.</p>
+                <div class="item-title keep-with-next" data-keep-count="3">De elementos individuais à comparação entre conjuntos</div>
+                <p class="keep-with-next">Considere os conjuntos</p>
+                <div class="math-line">A={2,4}   <span class="math-text">e</span>   B={1,2,3,4,5}.</div>
+                <p class="keep-with-next">O número <span class="math-inline">2</span> pertence a <span class="math-inline">B</span>, assim como o número <span class="math-inline">4</span>. Como esses são todos os elementos de <span class="math-inline">A</span>, podemos reunir as duas verificações em uma única afirmação:</p>
+                <blockquote>
+                <p>Todo elemento de <span class="math-inline">A</span> também pertence a <span class="math-inline">B</span>.</p>
+                </blockquote>
+                <p>O ponto decisivo é a palavra <strong>todo</strong>. A afirmação não trata apenas de alguns elementos escolhidos de <span class="math-inline">A</span>: ela exige que nenhum elemento de <span class="math-inline">A</span> deixe de pertencer a <span class="math-inline">B</span>.</p>
+                <p class="keep-with-next">Em linguagem lógica, essa condição é expressa por</p>
+                <div class="math-line">∀ x (x ∈ A → x ∈ B).</div>
+                <p class="keep-with-next">Quando ela é satisfeita, dizemos que <strong><span class="math-inline">A</span> é subconjunto de <span class="math-inline">B</span></strong>, ou que <strong><span class="math-inline">A</span> está incluído em <span class="math-inline">B</span></strong>, e escrevemos <span class="math-inline">A ⊆ B</span>. Assim, a definição de inclusão é:</p>
+                <div class="definition-box"><div class="math-line">A ⊆ B ⇔ ∀ x (x ∈ A → x ∈ B).</div></div>
+                <p>A direção da implicação importa. Partimos da hipótese de que um objeto pertence a <span class="math-inline">A</span> e exigimos que ele também pertença a <span class="math-inline">B</span>. Não exigimos que todo elemento de <span class="math-inline">B</span> pertença a <span class="math-inline">A</span>: no exemplo, <span class="math-inline">1</span>, <span class="math-inline">3</span> e <span class="math-inline">5</span> pertencem a <span class="math-inline">B</span>, mas não a <span class="math-inline">A</span>, sem impedir a inclusão.</p>
+                <p>Objetos que não pertencem a <span class="math-inline">A</span> não podem contrariar essa condição. Uma falha só ocorreria se algum objeto pertencesse a <span class="math-inline">A</span> e não pertencesse a <span class="math-inline">B</span>.</p>
+                <p>Por isso, inclusão não deve ser entendida apenas como uma imagem de algo “dentro” de outra coisa. Seu significado matemático é uma condição de pertencimento: <strong>cada elemento do primeiro conjunto deve ser também elemento do segundo</strong>.</p>
+                <div class="item-title keep-with-next" data-keep-count="3">Pertinência e inclusão: duas perguntas diferentes</div>
+                <p class="keep-with-next">Para <span class="math-inline">A={2,4}</span>, compare:</p>
+                <div class="math-line">2 ∈ A,    {2} ⊆ A,    {2} ∉ A.</div>
+                <p>A primeira afirmação pergunta se o objeto <span class="math-inline">2</span> é um dos elementos de <span class="math-inline">A</span>. A resposta é afirmativa.</p>
+                <p>A segunda pergunta se <strong>todos os elementos de <span class="math-inline">{2}</span></strong> pertencem a <span class="math-inline">A</span>. O único elemento desse conjunto é <span class="math-inline">2</span>, que pertence a <span class="math-inline">A</span>; portanto, a inclusão também é verdadeira.</p>
+                <p>A terceira pergunta se <strong>o próprio conjunto <span class="math-inline">{2}</span></strong> é um dos elementos de <span class="math-inline">A</span>. Não é: os elementos de <span class="math-inline">A</span> são os números <span class="math-inline">2</span> e <span class="math-inline">4</span>, e nenhum deles é o conjunto <span class="math-inline">{2}</span>.</p>
+                <p>As relações não são intercambiáveis. Em <span class="math-inline">a ∈ A</span>, examinamos o objeto <span class="math-inline">a</span> como possível elemento de <span class="math-inline">A</span>. Em <span class="math-inline">C ⊆ A</span>, examinamos os elementos de <span class="math-inline">C</span> e verificamos se todos pertencem a <span class="math-inline">A</span>.</p>
+                <p class="keep-with-next">Essa distinção não significa que um conjunto nunca possa aparecer à esquerda de <span class="math-inline"> ∈ </span>. Considere</p>
+                <div class="math-line">C={{2},4}.</div>
+                <p>Agora, <span class="math-inline">{2} ∈ C</span>, pois o conjunto <span class="math-inline">{2}</span> é um dos elementos diretamente indicados entre as chaves externas. Entretanto, <span class="math-inline">{2} ⊈ C</span>: seu elemento <span class="math-inline">2</span> não pertence a <span class="math-inline">C</span>.</p>
+                <p>Portanto, mesmo quando os dois objetos comparados são conjuntos, é preciso distinguir as perguntas: <strong>um deles é elemento do outro, ou todos os seus elementos pertencem ao outro?</strong> A escolha do símbolo depende da relação afirmada, não apenas da presença de chaves.</p>
+                <div class="item-title keep-with-next">Não inclusão e testemunha</div>
+                <p>Para negar uma inclusão, não precisamos mostrar que todos os elementos do primeiro conjunto estão ausentes do segundo. Precisamos mostrar que a exigência de que <strong>todos pertençam</strong> falha.</p>
+                <p class="keep-with-next">Considere</p>
+                <div class="math-line">E={2,4,6}   <span class="math-text">e</span>   F={2,4,5}.</div>
+                <p>Embora <span class="math-inline">2</span> e <span class="math-inline">4</span> pertençam a ambos, o número <span class="math-inline">6</span> pertence a <span class="math-inline">E</span> e não pertence a <span class="math-inline">F</span>. Isso basta para concluir que <span class="math-inline">E</span> não está incluído em <span class="math-inline">F</span>, o que escrevemos como <span class="math-inline">E ⊈ F</span>.</p>
+                <p>O número <span class="math-inline">6</span> é uma <strong>testemunha da não inclusão</strong>: ele torna concreta a falha da condição universal. Também é um contraexemplo à afirmação de que todo elemento de <span class="math-inline">E</span> pertence a <span class="math-inline">F</span>.</p>
+                <p class="keep-with-next">Em geral, negar que todo elemento de <span class="math-inline">A</span> pertence a <span class="math-inline">B</span> equivale a afirmar que existe pelo menos um elemento de <span class="math-inline">A</span> que não pertence a <span class="math-inline">B</span>:</p>
+                <div class="math-structural">A ⊈ B ⇔ ∃ x (x ∈ A ∧ x ∉ B).</div>
+                <p>Essa equivalência resulta da negação da definição de inclusão. A implicação <span class="math-inline">x ∈ A → x ∈ B</span> falha precisamente quando sua hipótese é verdadeira e sua conclusão é falsa. A negação da afirmação universal exige que isso aconteça para algum <span class="math-inline">x</span>.</p>
+                <p>Não inclusão significa, portanto, <strong>“pelo menos um não pertence”</strong>, e não “nenhum pertence”. Os elementos comuns a <span class="math-inline">E</span> e <span class="math-inline">F</span> não anulam o contraexemplo <span class="math-inline">6</span>.</p>
+                <p>A direção também deve ser preservada na escolha da testemunha. Para refutar <span class="math-inline">A ⊆ B</span>, o elemento precisa estar em <span class="math-inline">A</span> e faltar em <span class="math-inline">B</span>. Encontrar um elemento de <span class="math-inline">B</span> ausente de <span class="math-inline">A</span> refuta a inclusão inversa, <span class="math-inline">B ⊆ A</span>.</p>
+                <figure class="visual visual--venn-inclusion" aria-labelledby="venn-inclusion-caption">
+                    <figcaption id="venn-inclusion-caption">Inclusão e não inclusão</figcaption>
+                    <div class="venn-comparison">
+                        <div class="venn-panel">
+                            <div class="venn-caption">Inclusão</div>
+                            <svg viewBox="0 0 280 155" role="img" aria-labelledby="inclusion-title inclusion-desc">
+                                <title id="inclusion-title">A está incluído em B</title>
+                                <desc id="inclusion-desc">O contorno de A está inteiramente no interior de B.</desc>
+                                <ellipse class="venn-set" cx="140" cy="78" rx="115" ry="66" />
+                                <ellipse class="venn-set" cx="120" cy="87" rx="62" ry="41" />
+                                <text x="212" y="49">B</text>
+                                <text x="112" y="92">A</text>
+                            </svg>
+                            <p class="venn-caption math-inline">A ⊆ B</p>
+                        </div>
+                        <div class="venn-panel">
+                            <div class="venn-caption">Não inclusão</div>
+                            <svg viewBox="0 0 280 155" role="img" aria-labelledby="noninclusion-title noninclusion-desc">
+                                <title id="noninclusion-title">Uma testemunha da não inclusão</title>
+                                <desc id="noninclusion-desc">A tem uma parte fora de B. O ponto x está nessa parte: pertence a A e não pertence a B.</desc>
+                                <ellipse class="venn-set" cx="109" cy="78" rx="79" ry="64" />
+                                <ellipse class="venn-set" cx="188" cy="78" rx="67" ry="59" />
+                                <text x="64" y="47">A</text>
+                                <text x="215" y="47">B</text>
+                                <circle class="venn-witness" cx="72" cy="93" r="3" />
+                                <text x="80" y="99">x</text>
+                            </svg>
+                            <p class="venn-caption math-inline">x ∈ A <span class="math-text">e</span> x ∉ B</p>
+                            <p class="venn-caption math-inline">A ⊈ B</p>
+                        </div>
+                    </div>
+                    <p class="venn-caption">Esquema de relações; tamanho e área não representam quantidade de elementos.</p>
+                </figure>
+                <div class="item-title keep-with-next">Como justificar uma inclusão</div>
+                <p>Quando todos os elementos de um conjunto estão enumerados, podemos verificar cada um deles. Foi o que fizemos com <span class="math-inline">A={2,4}</span>. Mas uma inclusão também pode ser justificada diretamente pelas condições que determinam os conjuntos, sem listar seus elementos.</p>
+                <p>A definição indica o caminho. Para provar <span class="math-inline">A ⊆ B</span>, precisamos mostrar que um objeto, <strong>se pertencer a <span class="math-inline">A</span></strong>, necessariamente pertencerá a <span class="math-inline">B</span>. Por isso, começamos com um objeto <span class="math-inline">x</span> arbitrário e supomos <span class="math-inline">x ∈ A</span>. A partir dessa hipótese, procuramos concluir <span class="math-inline">x ∈ B</span>.</p>
+                <p><strong>Arbitrário</strong> significa que não escolhemos um elemento com uma característica especial que favoreça a conclusão. O argumento deve valer para qualquer objeto que satisfaça a hipótese <span class="math-inline">x ∈ A</span>. É isso que permite passar do raciocínio com a letra <span class="math-inline">x</span> à afirmação sobre todos os elementos.</p>
+                <p class="keep-with-next">Considere um domínio <span class="math-inline">D</span> de números inteiros e os conjuntos</p>
+                <div class="math-line">P={x ∈ D ∣ x&gt;5},    Q={x ∈ D ∣ x&gt;2}.</div>
+                <p>Para provar <span class="math-inline">P ⊆ Q</span>, seja <span class="math-inline">x</span> arbitrário e suponha <span class="math-inline">x ∈ P</span>. Pela condição que define <span class="math-inline">P</span>, temos <span class="math-inline">x ∈ D</span> e <span class="math-inline">x&gt;5</span>. Como todo número maior que <span class="math-inline">5</span> também é maior que <span class="math-inline">2</span>, segue que <span class="math-inline">x&gt;2</span>. Logo, <span class="math-inline">x</span> satisfaz as duas condições necessárias para pertencer a <span class="math-inline">Q</span>: está em <span class="math-inline">D</span> e é maior que <span class="math-inline">2</span>. Portanto, <span class="math-inline">x ∈ Q</span>.</p>
+                <p>O raciocínio não dependeu de um valor particular de <span class="math-inline">x</span>. Assim, todo elemento de <span class="math-inline">P</span> pertence a <span class="math-inline">Q</span>, e concluímos <span class="math-inline">P ⊆ Q</span>.</p>
+                <div class="proof-schema" id="prova-inclusao">
+                <div class="proof-step"><div class="proof-step__role">Hipótese</div><div class="math-line">x ∈ P</div></div>
+                <div class="proof-step"><div class="proof-step__role">Interpretação</div><div class="math-line">x ∈ D <span class="math-text">e</span> x &gt; 5</div></div>
+                <div class="proof-step"><div class="proof-step__role">Consequência</div><div class="math-line">x &gt; 2</div></div>
+                <div class="proof-step"><div class="proof-step__role">Conclusão local</div><div class="math-line">x ∈ Q</div></div>
+                <div class="proof-step"><div class="proof-step__role">Conclusão geral</div><div class="math-line">P ⊆ Q</div></div>
+                </div>
+                <p>Verificar apenas que, por exemplo, <span class="math-inline">6</span> e <span class="math-inline">7</span> pertencem aos dois conjuntos não substituiria esse argumento. Isso confirmaria casos particulares, mas não explicaria por que nenhum elemento de <span class="math-inline">P</span> pode ficar fora de <span class="math-inline">Q</span>.</p>
+                <p>Há uma assimetria entre provar e refutar: <strong>uma inclusão exige cobrir todos os elementos do primeiro conjunto; uma única testemunha basta para refutá-la</strong>. Cobrir todos não significa necessariamente enumerá-los. Um argumento que vale para um elemento arbitrário realiza justamente esse trabalho.</p>
+                <div class="item-title keep-with-next" data-keep-count="3">O próprio conjunto e o conjunto vazio</div>
+                <p class="keep-with-next">A inclusão não exige que os conjuntos comparados sejam diferentes. Para qualquer conjunto <span class="math-inline">A</span>,</p>
+                <div class="math-structural">A ⊆ A.</div>
+                <p>De fato, todo elemento de <span class="math-inline">A</span> pertence ao próprio <span class="math-inline">A</span>. A condição da definição está satisfeita. Portanto, o símbolo <span class="math-inline"> ⊆ </span> <strong>permite a igualdade</strong>: afirmar <span class="math-inline">A ⊆ B</span> não obriga <span class="math-inline">B</span> a possuir algum elemento além dos que pertencem a <span class="math-inline">A</span>.</p>
+                <p class="keep-with-next">Outra consequência da definição é que, para qualquer conjunto <span class="math-inline">A</span>,</p>
+                <div class="math-structural">∅ ⊆ A.</div>
+                <p>Para compreender essa afirmação, considere o que seria necessário para refutá-la: encontrar um elemento que pertencesse a <span class="math-inline">∅</span> e não pertencesse a <span class="math-inline">A</span>. Isso é impossível, pois não existe elemento algum em <span class="math-inline">∅</span>. Assim, não há elemento do vazio que viole a condição de inclusão, qualquer que seja o conjunto <span class="math-inline">A</span>.</p>
+                <p>A definição exige que nenhum elemento do primeiro conjunto fique fora do segundo; ela não exige que o primeiro conjunto tenha elementos. Por isso, a conclusão também vale quando <span class="math-inline">A=∅</span>.</p>
+                <p>Esse argumento esclarece igualmente o uso do elemento arbitrário: supor <span class="math-inline">x ∈ A</span> para examinar suas consequências não é afirmar que <span class="math-inline">A</span> possui algum elemento. Se <span class="math-inline">A</span> for vazio, a inclusão já está assegurada pela ausência de qualquer possível contraexemplo.</p>
+                <p class="keep-with-next">É essencial distinguir</p>
+                <div class="math-line">∅ ⊆ A   <span class="math-text">de</span>   ∅ ∈ A.</div>
+                <p class="keep-with-next">A primeira afirmação vale para todo conjunto <span class="math-inline">A</span>. A segunda só vale se o próprio conjunto vazio for um elemento de <span class="math-inline">A</span>. Por exemplo, para <span class="math-inline">A={2,4}</span>, temos <span class="math-inline">∅ ⊆ A</span>, mas <span class="math-inline">∅ ∉ A</span>. Já em <span class="math-inline">{∅}</span>, o vazio aparece como elemento:</p>
+                <div class="math-line">∅ ∈ {∅}.</div>
+                <p>Essa pertinência depende de quais objetos formam o conjunto considerado; a inclusão do vazio não depende disso.</p>
+                <div class="item-title keep-with-next" data-keep-count="3">Encadeando inclusões</div>
+                <p class="keep-with-next">Suponha que <span class="math-inline">A ⊆ B</span> e <span class="math-inline">B ⊆ C</span>. Um elemento de <span class="math-inline">A</span> pertence a <span class="math-inline">B</span> pela primeira inclusão; ao pertencer a <span class="math-inline">B</span>, pertence também a <span class="math-inline">C</span> pela segunda. Portanto,</p>
+                <div class="math-structural">A ⊆ B  <span class="math-text">e</span>  B ⊆ C   ⇒   A ⊆ C.</div>
+                <p class="keep-with-next">Podemos explicitar a demonstração tomando um <span class="math-inline">x</span> arbitrário e supondo <span class="math-inline">x ∈ A</span>. As hipóteses fornecem a cadeia</p>
+                <div class="math-structural">x ∈ A ⇒ x ∈ B ⇒ x ∈ C.</div>
+                <p>Como a conclusão vale para qualquer <span class="math-inline">x</span> que pertença a <span class="math-inline">A</span>, fica demonstrada a inclusão <span class="math-inline">A ⊆ C</span>. Essa propriedade é chamada de <strong>transitividade da inclusão</strong>.</p>
+                <figure class="visual visual--venn-transitivity" aria-labelledby="venn-transitivity-caption">
+                    <figcaption id="venn-transitivity-caption">Transitividade da inclusão</figcaption>
+                    <div class="venn-transitivity">
+                        <svg viewBox="0 0 320 190" role="img" aria-labelledby="transitivity-title transitivity-desc">
+                            <title id="transitivity-title">A dentro de B, e B dentro de C</title>
+                            <desc id="transitivity-desc">Três contornos aninhados. O ponto x está em A, portanto também está em B e em C.</desc>
+                            <ellipse class="venn-set" cx="160" cy="95" rx="147" ry="84" />
+                            <ellipse class="venn-set" cx="145" cy="104" rx="104" ry="60" />
+                            <ellipse class="venn-set" cx="125" cy="113" rx="57" ry="32" />
+                            <text x="271" y="66">C</text>
+                            <text x="212" y="85">B</text>
+                            <text x="139" y="110">A</text>
+                            <circle class="venn-witness" cx="110" cy="120" r="3" />
+                            <text x="116" y="129">x</text>
+                        </svg>
+                        <div class="venn-chain">
+                            <p class="math-inline">x ∈ A ⇒ x ∈ B ⇒ x ∈ C</p>
+                            <p class="math-inline">A ⊆ C</p>
+                        </div>
+                    </div>
+                    <p class="venn-caption">Esquema de relações; tamanho e área não representam quantidade de elementos.</p>
+                </figure>
+                <p>O encadeamento permite comparar o primeiro e o último conjunto por meio de um conjunto intermediário. Outra situação surge quando o percurso retorna ao conjunto inicial: <strong>o que acontece se <span class="math-inline">A ⊆ B</span> e também <span class="math-inline">B ⊆ A</span>?</strong></p>
+            </section>
+
+            <section class="source-section" data-context="TEXTO TEÓRICO • PARTE II">
+                <header class="part-opening keep-with-next" data-keep-count="3"><div class="part-label">Texto Teórico · Parte II</div><h2 class="part-title">Parte II — Igualdade, Dupla Inclusão e Inclusão Própria</h2></header>
+                <div class="item-title keep-with-next">Igualdade: exatamente os mesmos elementos</div>
+                <p>Se <span class="math-inline">A ⊆ B</span>, nenhum elemento de <span class="math-inline">A</span> falta em <span class="math-inline">B</span>. Se também <span class="math-inline">B ⊆ A</span>, nenhum elemento de <span class="math-inline">B</span> falta em <span class="math-inline">A</span>. As duas condições eliminam qualquer possibilidade de um dos conjuntos possuir um elemento que o outro não possua.</p>
+                <p>Como um conjunto é determinado por seus elementos, essa coincidência significa que <span class="math-inline">A</span> e <span class="math-inline">B</span> são o mesmo conjunto.</p>
+                <p class="keep-with-next">O <strong>critério extensional de igualdade</strong> expressa precisamente essa ideia: dois conjuntos são iguais se, e somente se, possuem exatamente os mesmos elementos. Em símbolos,</p>
+                <div class="definition-box"><div class="math-line">A=B ⇔ ∀ x (x ∈ A ↔ x ∈ B).</div></div>
+                <p>O bicondicional reúne as duas direções: pertencer a <span class="math-inline">A</span> implica pertencer a <span class="math-inline">B</span>, e pertencer a <span class="math-inline">B</span> implica pertencer a <span class="math-inline">A</span>. Nenhum objeto pode pertencer a apenas um deles.</p>
+                <p class="keep-with-next">Por isso,</p>
+                <div class="math-line">{1,2,3}={3,1,2}={1,2,2,3}.</div>
+                <p>A ordem e a repetição modificam a escrita, mas não modificam quais objetos pertencem ao conjunto. O mesmo critério vale quando a diferença entre as representações é maior, como na comparação de uma enumeração com uma descrição por propriedade. O que deve coincidir são os elementos determinados por cada representação.</p>
+                <div class="item-title keep-with-next" data-keep-count="3">Dupla inclusão: critério e método de prova</div>
+                <p class="keep-with-next">O critério extensional permite obter um resultado particularmente útil:</p>
+                <div class="math-structural">A=B ⇔ (A ⊆ B ∧ B ⊆ A).</div>
+                <p>Esse é o <strong>critério da dupla inclusão</strong>. Ele decorre do significado de igualdade e de inclusão, e sua demonstração exige verificar as duas direções da equivalência.</p>
+                <p>Primeiro, suponha <span class="math-inline">A=B</span>. Se <span class="math-inline">x ∈ A</span>, então <span class="math-inline">x ∈ B</span>, pois os dois nomes indicam o mesmo conjunto. Logo, <span class="math-inline">A ⊆ B</span>. Pelo mesmo motivo, se <span class="math-inline">x ∈ B</span>, então <span class="math-inline">x ∈ A</span>, de modo que <span class="math-inline">B ⊆ A</span>. Portanto, a igualdade implica as duas inclusões.</p>
+                <p class="keep-with-next">Reciprocamente, suponha <span class="math-inline">A ⊆ B</span> e <span class="math-inline">B ⊆ A</span>. Para qualquer objeto <span class="math-inline">x</span>, a primeira inclusão garante <span class="math-inline">x ∈ A → x ∈ B</span>, e a segunda garante <span class="math-inline">x ∈ B → x ∈ A</span>. Juntas, elas fornecem</p>
+                <div class="math-line">x ∈ A ↔ x ∈ B.</div>
+                <p>Como isso vale para todo <span class="math-inline">x</span>, os conjuntos possuem exatamente os mesmos elementos. Pelo critério extensional, <span class="math-inline">A=B</span>.</p>
+                <p>A demonstração também fornece um método. Para estabelecer uma igualdade entre conjuntos, podemos dividir o trabalho em duas inclusões. Em uma direção, partimos de um elemento arbitrário do primeiro conjunto e mostramos que ele pertence ao segundo. Na outra, partimos de um elemento arbitrário do segundo e mostramos que ele pertence ao primeiro.</p>
+                <p>A segunda direção precisa ser justificada: não é consequência automática da primeira. Uma única inclusão ainda permite que o segundo conjunto possua elementos ausentes do primeiro.</p>
+                <div class="proof-schema" id="prova-dupla-inclusao">
+                <div class="proof-step"><div class="proof-step__role">Direção 1</div><div class="math-line">A ⊆ B</div></div>
+                <div class="proof-step"><div class="proof-step__role">Direção 2</div><div class="math-line">B ⊆ A</div></div>
+                <div class="proof-step"><div class="proof-step__role">Conclusão</div><div class="math-line">A = B</div></div>
+                </div>
+                <p class="keep-with-next">Considere, por exemplo,</p>
+                <div class="math-line">D={1,2,3,4,5},    E={2,3,4},</div>
+                <p class="keep-with-next">e</p>
+                <div class="math-line">F={x ∈ D ∣ 1&lt;x&lt;5}.</div>
+                <p>Para mostrar que <span class="math-inline">E=F</span>, é necessário verificar tanto que os elementos enumerados satisfazem a condição quanto que a condição não seleciona nenhum outro elemento do domínio.</p>
+                <p><strong>De <span class="math-inline">E</span> para <span class="math-inline">F</span>.</strong> Seja <span class="math-inline">x ∈ E</span>. Então <span class="math-inline">x</span> é <span class="math-inline">2</span>, <span class="math-inline">3</span> ou <span class="math-inline">4</span>. Em qualquer desses casos, <span class="math-inline">x ∈ D</span> e <span class="math-inline">1&lt;x&lt;5</span>. Portanto, <span class="math-inline">x ∈ F</span>, o que prova <span class="math-inline">E ⊆ F</span>.</p>
+                <p><strong>De <span class="math-inline">F</span> para <span class="math-inline">E</span>.</strong> Seja <span class="math-inline">x ∈ F</span>. Então <span class="math-inline">x ∈ D</span> e <span class="math-inline">1&lt;x&lt;5</span>. Entre os elementos de <span class="math-inline">D</span>, o número <span class="math-inline">1</span> não satisfaz <span class="math-inline">1&lt;x</span>, e o número <span class="math-inline">5</span> não satisfaz <span class="math-inline">x&lt;5</span>. Restam apenas <span class="math-inline">2</span>, <span class="math-inline">3</span> e <span class="math-inline">4</span>, todos pertencentes a <span class="math-inline">E</span>. Logo, <span class="math-inline">x ∈ E</span>, o que prova <span class="math-inline">F ⊆ E</span>.</p>
+                <p>Pela dupla inclusão, <span class="math-inline">E=F</span>. As duas direções desempenharam funções complementares: a primeira mostrou que a condição não deixa de selecionar nenhum elemento enumerado; a segunda mostrou que ela não seleciona elementos adicionais.</p>
+                <div class="item-title keep-with-next">Inclusão própria: inclusão sem igualdade</div>
+                <p>Uma inclusão <span class="math-inline">A ⊆ B</span> admite duas situações: os conjuntos podem ser iguais, ou <span class="math-inline">B</span> pode possuir algum elemento que não pertence a <span class="math-inline">A</span>. Para distinguir a segunda situação, dizemos que <strong><span class="math-inline">A</span> é subconjunto próprio de <span class="math-inline">B</span></strong> e escrevemos <span class="math-inline">A ⊊ B</span>.</p>
+                <p class="keep-with-next">Por definição,</p>
+                <div class="definition-box"><div class="math-line">A ⊊ B ⇔ (A ⊆ B ∧ A ≠ B).</div></div>
+                <p>Não basta afirmar que os conjuntos são diferentes. É preciso também garantir que todos os elementos de <span class="math-inline">A</span> pertencem a <span class="math-inline">B</span>.</p>
+                <p>Uma vez estabelecido <span class="math-inline">A ⊆ B</span>, a desigualdade só pode ocorrer porque algum elemento de <span class="math-inline">B</span> não pertence a <span class="math-inline">A</span>. De fato, a inclusão já impede que exista um elemento de <span class="math-inline">A</span> ausente de <span class="math-inline">B</span>. Se também não existisse elemento de <span class="math-inline">B</span> ausente de <span class="math-inline">A</span>, teríamos a inclusão inversa e, pela dupla inclusão, a igualdade.</p>
+                <p class="keep-with-next">Obtemos, assim, uma caracterização útil para justificar a inclusão própria:</p>
+                <div class="math-structural">A ⊊ B ⇔ (A ⊆ B ∧ ∃ x (x ∈ B ∧ x ∉ A)).</div>
+                <p>As duas exigências têm funções distintas: a inclusão garante que nenhum elemento de <span class="math-inline">A</span> fica fora de <span class="math-inline">B</span>; a testemunha em <span class="math-inline">B</span> garante que os conjuntos não são iguais.</p>
+                <p class="keep-with-next">Retome</p>
+                <div class="math-line">A={2,4},    B={1,2,3,4,5}.</div>
+                <p>Já sabemos que <span class="math-inline">A ⊆ B</span>. Além disso, <span class="math-inline">1 ∈ B</span> e <span class="math-inline">1 ∉ A</span>. Portanto, <span class="math-inline">A ⊊ B</span>. Bastaria qualquer uma dessas testemunhas: <span class="math-inline">1</span>, <span class="math-inline">3</span> ou <span class="math-inline">5</span>; não é necessário apresentar todas.</p>
+                <p>Observe a direção da testemunha: um elemento de <span class="math-inline">B</span> ausente de <span class="math-inline">A</span> refuta <span class="math-inline">B ⊆ A</span>. Junto de <span class="math-inline">A ⊆ B</span>, isso estabelece a inclusão própria. Se a testemunha estivesse em <span class="math-inline">A</span> e faltasse em <span class="math-inline">B</span>, ela destruiria a própria inclusão que pretendíamos provar.</p>
+                <p>O conjunto vazio também permite reconhecer essa distinção. Se <span class="math-inline">B</span> possui algum elemento, então <span class="math-inline">∅ ⊊ B</span>: o vazio está incluído em <span class="math-inline">B</span>, e qualquer elemento de <span class="math-inline">B</span> testemunha que eles são diferentes. Se <span class="math-inline">B=∅</span>, há inclusão e igualdade, mas não inclusão própria.</p>
+                <p>Portanto, <span class="math-inline">A ⊆ B</span> afirma que todo elemento de <span class="math-inline">A</span> pertence a <span class="math-inline">B</span>, deixando em aberto a possibilidade de igualdade. A inclusão inversa resolve essa possibilidade afirmativamente, produzindo <span class="math-inline">A=B</span>. Já uma testemunha em <span class="math-inline">B</span> ausente de <span class="math-inline">A</span>, acompanhada da inclusão inicial, estabelece <span class="math-inline">A ⊊ B</span>.</p>
+            </section>
+
+            <section class="source-section" data-context="TEXTO PRÁTICO • EXERCÍCIOS">
+                <header class="section-opening keep-with-next" data-keep-count="5"><div class="section-label"><h1 class="outline-root">Texto Prático</h1></div><h2 class="section-title">Exercícios</h2></header>
+                <div class="gabarito-subtitle keep-with-next" data-keep-count="4">1. Pertinência, inclusão e direção</div>
+                <div class="item-title keep-with-next" id="exercicio-01" data-keep-count="3">1. Pertinência ou inclusão?</div>
+                <p class="keep-with-next">Considere</p>
+                <div class="math-line">A={1,2,3}.</div>
+                <p><strong>Nos itens a e b</strong>, complete com <span class="math-inline"> ∈ </span> ou <span class="math-inline"> ∉ </span>.</p>
+                <p class="subitem-label keep-with-next">a)</p>
+                <div class="math-line">1 ___ A</div>
+                <p class="subitem-label keep-with-next">b)</p>
+                <div class="math-line">{1} ___ A</div>
+                <p><strong>Nos itens c e d</strong>, complete com <span class="math-inline"> ⊆ </span> ou <span class="math-inline"> ⊈ </span>.</p>
+                <p class="subitem-label keep-with-next">c)</p>
+                <div class="math-line">{2} ___ A</div>
+                <p class="subitem-label keep-with-next">d)</p>
+                <div class="math-line">{4} ___ A</div>
+                <p>Justifique os itens b e c, distinguindo o objeto que está sendo examinado em cada relação.</p>
+                <div class="item-title keep-with-next" id="exercicio-02" data-keep-count="3">2. A inclusão tem direção</div>
+                <p class="keep-with-next">Considere</p>
+                <div class="math-line">A={2,4},</div>
+                <div class="math-line">B={1,2,3,4}</div>
+                <p class="keep-with-next">e</p>
+                <div class="math-line">C={4,2}.</div>
+                <p>Determine se cada afirmação é verdadeira ou falsa e justifique.</p>
+                <p class="subitem-label keep-with-next">a)</p>
+                <div class="math-line">A ⊆ B</div>
+                <p class="subitem-label keep-with-next">b)</p>
+                <div class="math-line">B ⊆ A</div>
+                <p class="subitem-label keep-with-next">c)</p>
+                <div class="math-line">A ⊆ C</div>
+                <p class="subitem-label keep-with-next">d)</p>
+                <div class="math-line">C ⊆ A</div>
+                <p class="subitem-label keep-with-next">e)</p>
+                <div class="math-line">A=C</div>
+                <div class="item-title keep-with-next" id="exercicio-03" data-keep-count="3">3. O próprio conjunto e o conjunto vazio</div>
+                <p class="keep-with-next">Considere</p>
+                <div class="math-line">A={2,4}.</div>
+                <p>Determine se cada afirmação é verdadeira ou falsa. Justifique sua resposta.</p>
+                <p class="subitem-label keep-with-next">a)</p>
+                <div class="math-line">A ⊆ A</div>
+                <p class="subitem-label keep-with-next">b)</p>
+                <div class="math-line">∅ ⊆ A</div>
+                <p class="subitem-label keep-with-next">c)</p>
+                <div class="math-line">∅ ∈ A</div>
+                <p class="subitem-label keep-with-next">d)</p>
+                <div class="math-line">A ⊆ ∅</div>
+                <p class="subitem-label keep-with-next">e)</p>
+                <div class="math-line">∅ ⊆ ∅</div>
+                <p>Nos itens que envolvem inclusão do conjunto vazio, fundamente a resposta pela definição de inclusão.</p>
+                <div class="item-title keep-with-next" id="exercicio-04" data-keep-count="3">4. Elemento ou subconjunto?</div>
+                <p class="keep-with-next">Considere</p>
+                <div class="math-line">C={{2},4}.</div>
+                <p>Determine se cada afirmação é verdadeira ou falsa. Justifique comparando o objeto à esquerda com os elementos diretamente pertencentes ao conjunto à direita.</p>
+                <p class="subitem-label keep-with-next">a)</p>
+                <div class="math-line">{2} ∈ C</div>
+                <p class="subitem-label keep-with-next">b)</p>
+                <div class="math-line">{2} ⊆ C</div>
+                <p class="subitem-label keep-with-next">c)</p>
+                <div class="math-line">2 ∈ C</div>
+                <p class="subitem-label keep-with-next">d)</p>
+                <div class="math-line">{4} ⊆ C</div>
+                <p class="subitem-label keep-with-next">e)</p>
+                <div class="math-line">{4} ∈ C</div>
+                <div class="gabarito-subtitle keep-with-next" data-keep-count="4">2. Provar e refutar inclusões</div>
+                <div class="item-title keep-with-next" id="exercicio-05" data-keep-count="3">5. Verificando todos os elementos</div>
+                <p class="keep-with-next">Considere</p>
+                <div class="math-line">A={1,3,5}</div>
+                <p class="keep-with-next">e</p>
+                <div class="math-line">B={1,2,3,4,5,6}.</div>
+                <p class="keep-with-next">Determine se</p>
+                <div class="math-line">A ⊆ B.</div>
+                <p>Justifique sua resposta verificando todos os elementos de <span class="math-inline">A</span>.</p>
+                <div class="item-title keep-with-next" id="exercicio-06" data-keep-count="3">6. Uma testemunha da não inclusão</div>
+                <p class="keep-with-next">Considere</p>
+                <div class="math-line">A={2,4,6}</div>
+                <p class="keep-with-next">e</p>
+                <div class="math-line">B={2,4,5,8}.</div>
+                <p class="keep-with-next"><span class="subitem-label">a)</span> Determine se</p>
+                <div class="math-line">A ⊆ B.</div>
+                <p><span class="subitem-label">b)</span> Caso a inclusão seja falsa, identifique um elemento que testemunhe sua falha.</p>
+                <p><span class="subitem-label">c)</span> Registre essa testemunha escrevendo explicitamente as duas relações de pertinência correspondentes.</p>
+                <div class="item-title keep-with-next" id="exercicio-07" data-keep-count="3">7. A testemunha está do lado certo?</div>
+                <p class="keep-with-next">Considere</p>
+                <div class="math-line">A={2,4,6}</div>
+                <p class="keep-with-next">e</p>
+                <div class="math-line">B={2,4,5}.</div>
+                <p class="keep-with-next">Dois estudantes tentaram refutar a afirmação</p>
+                <div class="math-line">A ⊆ B.</div>
+                <p class="keep-with-next"><strong>Ana argumentou:</strong></p>
+                <blockquote class="student-quote">
+                <p class="keep-with-next">Como</p>
+                <div class="math-line">5 ∈ B</div>
+                <p class="keep-with-next">e</p>
+                <div class="math-line">5 ∉ A,</div>
+                <p class="keep-with-next">então</p>
+                <div class="math-line">A ⊈ B.</div>
+                </blockquote>
+                <p class="keep-with-next"><strong>Bruno argumentou:</strong></p>
+                <blockquote class="student-quote">
+                <p class="keep-with-next">Como</p>
+                <div class="math-line">6 ∈ A</div>
+                <p class="keep-with-next">e</p>
+                <div class="math-line">6 ∉ B,</div>
+                <p class="keep-with-next">então</p>
+                <div class="math-line">A ⊈ B.</div>
+                </blockquote>
+                <p><span class="subitem-label">a)</span> Qual dos argumentos refuta corretamente <span class="math-inline">A ⊆ B</span>?</p>
+                <p><span class="subitem-label">b)</span> Explique por que a outra testemunha não serve para refutar essa inclusão.</p>
+                <p><span class="subitem-label">c)</span> Que relação de inclusão a testemunha usada no argumento incorreto permite refutar?</p>
+                <div class="item-title keep-with-next" id="exercicio-08" data-keep-count="3">8. Completando uma prova de inclusão</div>
+                <p class="keep-with-next">Considere</p>
+                <div class="math-line">D={1,2,3,4,5,6,7,8,9,10},</div>
+                <div class="math-line">A={x ∈ D ∣ x&gt;7}</div>
+                <p class="keep-with-next">e</p>
+                <div class="math-line">B={x ∈ D ∣ x&gt;4}.</div>
+                <p class="keep-with-next">Complete a demonstração de que</p>
+                <div class="math-line">A ⊆ B</div>
+                <p class="keep-with-next">a partir do início abaixo:</p>
+                <blockquote>
+                <p class="keep-with-next">Seja <span class="math-inline">x</span> arbitrário e suponha</p>
+                <div class="math-line">x ∈ A.</div>
+                </blockquote>
+                <p>Continue o argumento até obter <span class="math-inline">x ∈ B</span> e concluir a inclusão. Não substitua a demonstração pela enumeração dos elementos de <span class="math-inline">A</span> e <span class="math-inline">B</span>.</p>
+                <div class="item-title keep-with-next" id="exercicio-09" data-keep-count="3">9. Demonstrando uma inclusão</div>
+                <p class="keep-with-next">Considere</p>
+                <div class="math-line">D={1,2,3,…,12},</div>
+                <div class="math-line">P={x ∈ D ∣ x<span class="math-text"> é múltiplo de </span>4}</div>
+                <p class="keep-with-next">e</p>
+                <div class="math-line">Q={x ∈ D ∣ x<span class="math-text"> é par</span>}.</div>
+                <p class="keep-with-next">Demonstre que</p>
+                <div class="math-line">P ⊆ Q.</div>
+                <p>Utilize as propriedades que definem os conjuntos, sem substituir a demonstração pela enumeração de seus elementos.</p>
+                <div class="item-title keep-with-next" id="exercicio-10" data-keep-count="3">10. Encadeando inclusões</div>
+                <p class="keep-with-next">Suponha que</p>
+                <div class="math-line">A ⊆ B</div>
+                <p class="keep-with-next">e</p>
+                <div class="math-line">B ⊆ C.</div>
+                <p class="keep-with-next">Considere um objeto arbitrário <span class="math-inline">x</span> tal que</p>
+                <div class="math-line">x ∈ A.</div>
+                <p><span class="subitem-label">a)</span> O que a relação <span class="math-inline">A ⊆ B</span> permite concluir sobre <span class="math-inline">x</span>?</p>
+                <p><span class="subitem-label">b)</span> A partir dessa conclusão e de <span class="math-inline">B ⊆ C</span>, o que se pode concluir sobre <span class="math-inline">x</span>?</p>
+                <p><span class="subitem-label">c)</span> Utilize esse encadeamento para justificar uma relação de inclusão entre <span class="math-inline">A</span> e <span class="math-inline">C</span>.</p>
+                <div class="gabarito-subtitle keep-with-next" data-keep-count="4">3. Igualdade e dupla inclusão</div>
+                <div class="item-title keep-with-next" id="exercicio-11" data-keep-count="3">11. Representações diferentes, mesmo conjunto?</div>
+                <p class="keep-with-next">Considere</p>
+                <div class="math-line">D={1,2,3,4,5,6},</div>
+                <div class="math-line">A={2,3,4,5}</div>
+                <p class="keep-with-next">e</p>
+                <div class="math-line">B={x ∈ D ∣ 1&lt;x&lt;6}.</div>
+                <p class="keep-with-next">Determine se</p>
+                <div class="math-line">A=B.</div>
+                <p>Justifique comparando os elementos determinados pelas duas representações.</p>
+                <div class="item-title keep-with-next" id="exercicio-12" data-keep-count="3">12. Refutando uma igualdade</div>
+                <p class="keep-with-next">Considere</p>
+                <div class="math-line">D={1,2,3,4},</div>
+                <div class="math-line">A={1,2,3,4}</div>
+                <p class="keep-with-next">e</p>
+                <div class="math-line">B={x ∈ D ∣ x&lt;4}.</div>
+                <p class="keep-with-next">Determine se</p>
+                <div class="math-line">A=B.</div>
+                <p>Se a igualdade for falsa, apresente um único elemento que testemunhe a diferença entre os conjuntos e escreva as relações de pertinência que comprovam isso.</p>
+                <div class="item-title keep-with-next" id="exercicio-13" data-keep-count="3">13. Demonstrando por dupla inclusão</div>
+                <p class="keep-with-next">Considere</p>
+                <div class="math-line">D={1,2,3,…,10},</div>
+                <div class="math-line">A={3,6,9}</div>
+                <p class="keep-with-next">e</p>
+                <div class="math-line">B={x ∈ D ∣ x<span class="math-text"> é múltiplo de </span>3}.</div>
+                <p class="keep-with-next">Demonstre que</p>
+                <div class="math-line">A=B</div>
+                <p class="keep-with-next" data-keep-count="3">realizando separadamente as duas etapas:</p>
+                <p class="keep-with-next"><span class="subitem-label">a)</span> mostre que</p>
+                <div class="math-line">A ⊆ B;</div>
+                <p class="keep-with-next"><span class="subitem-label">b)</span> mostre que</p>
+                <div class="math-line">B ⊆ A;</div>
+                <p><span class="subitem-label">c)</span> utilize os resultados anteriores para concluir a igualdade.</p>
+                <div class="item-title keep-with-next" id="exercicio-14" data-keep-count="3">14. Demonstrando uma igualdade</div>
+                <p class="keep-with-next">Considere</p>
+                <div class="math-line">D={1,2,3,4,5,6,7,8},</div>
+                <div class="math-line">A={x ∈ D ∣ 2&lt;x&lt;7}</div>
+                <p class="keep-with-next">e</p>
+                <div class="math-line">B={3,4,5,6}.</div>
+                <p class="keep-with-next">Demonstre que</p>
+                <div class="math-line">A=B.</div>
+                <div class="item-title keep-with-next" id="exercicio-15" data-keep-count="3">15. O que falta nesta demonstração?</div>
+                <p class="keep-with-next">Considere</p>
+                <div class="math-line">D={1,2,3,4},</div>
+                <div class="math-line">A={2,4}</div>
+                <p class="keep-with-next">e</p>
+                <div class="math-line">B={x ∈ D ∣ x<span class="math-text"> é par</span>}.</div>
+                <p class="keep-with-next">Um estudante apresentou a seguinte demonstração:</p>
+                <div class="attempt-block">
+                <p class="keep-with-next">Seja <span class="math-inline">x ∈ A</span>. Como</p>
+                <div class="math-line">A={2,4},</div>
+                <p class="keep-with-next">então <span class="math-inline">x</span> é <span class="math-inline">2</span> ou <span class="math-inline">4</span>. Em ambos os casos, <span class="math-inline">x ∈ D</span> e <span class="math-inline">x</span> é par. Logo,</p>
+                <div class="math-line">x ∈ B.</div>
+                <p class="keep-with-next">Portanto,</p>
+                <div class="math-line">A ⊆ B.</div>
+                <p class="keep-with-next">Assim,</p>
+                <div class="math-line">A=B.</div>
+                </div>
+                <p>Analise o argumento.</p>
+                <p><span class="subitem-label">a)</span> O que foi efetivamente demonstrado?</p>
+                <p><span class="subitem-label">b)</span> Por que isso ainda não é suficiente para concluir <span class="math-inline">A=B</span>?</p>
+                <p><span class="subitem-label">c)</span> Que relação ainda precisa ser demonstrada?</p>
+                <p><span class="subitem-label">d)</span> Complete a demonstração e estabeleça corretamente a igualdade.</p>
+                <div class="gabarito-subtitle keep-with-next" data-keep-count="3">4. Inclusão própria, diagnóstico e transferência</div>
+                <div class="item-title keep-with-next" id="exercicio-16">16. A relação mais precisa</div>
+                <p>Considere os pares de conjuntos abaixo.</p>
+                <div class="minor-title keep-with-next">Caso I</div>
+                <div class="math-line">A={1,2},    B={2,1}.</div>
+                <div class="minor-title keep-with-next">Caso II</div>
+                <div class="math-line">C={1,2},    D={1,2,3}.</div>
+                <div class="minor-title keep-with-next">Caso III</div>
+                <div class="math-line">E={1,3},    F={1,2}.</div>
+                <p>Para cada caso, determine a relação mais precisa entre os conjuntos e justifique.</p>
+                <p class="keep-with-next">Utilize, conforme necessário,</p>
+                <div class="math-line">=,   ⊆ ,   ⊊ ,   ⊈ .</div>
+                <p>Por <strong>relação mais precisa</strong>, entende-se aquela que registra toda a informação disponível. No Caso III, caso nenhuma inclusão ocorra, registre as duas direções.</p>
+                <div class="item-title keep-with-next" id="exercicio-17" data-keep-count="3">17. Demonstrando uma inclusão própria</div>
+                <p class="keep-with-next">Considere</p>
+                <div class="math-line">D={1,2,3,…,10},</div>
+                <div class="math-line">A={x ∈ D ∣ x<span class="math-text"> é par e </span>x&lt;6}</div>
+                <p class="keep-with-next">e</p>
+                <div class="math-line">B={x ∈ D ∣ x<span class="math-text"> é par</span>}.</div>
+                <p class="keep-with-next">Demonstre que</p>
+                <div class="math-line">A ⊊ B.</div>
+                <p class="keep-with-next" data-keep-count="3">Sua demonstração deve:</p>
+                <p class="keep-with-next"><span class="subitem-label">a)</span> estabelecer que</p>
+                <div class="math-line">A ⊆ B;</div>
+                <p><span class="subitem-label">b)</span> apresentar um elemento que pertença a <span class="math-inline">B</span> e não pertença a <span class="math-inline">A</span>;</p>
+                <p><span class="subitem-label">c)</span> utilizar as duas informações para concluir a inclusão própria.</p>
+                <div class="item-title keep-with-next" id="exercicio-18" data-keep-count="3">18. Quando a inclusão do vazio é própria?</div>
+                <p class="keep-with-next">Considere</p>
+                <div class="math-line">A=∅</div>
+                <p class="keep-with-next">e</p>
+                <div class="math-line">B={5}.</div>
+                <p>Determine se cada afirmação é verdadeira ou falsa e justifique.</p>
+                <p class="subitem-label keep-with-next">a)</p>
+                <div class="math-line">∅ ⊆ A</div>
+                <p class="subitem-label keep-with-next">b)</p>
+                <div class="math-line">∅ ⊊ A</div>
+                <p class="subitem-label keep-with-next">c)</p>
+                <div class="math-line">∅ ⊆ B</div>
+                <p class="subitem-label keep-with-next">d)</p>
+                <div class="math-line">∅ ⊊ B</div>
+                <p class="keep-with-next"><span class="subitem-label">e)</span> A partir desses casos, explique em que situação</p>
+                <div class="math-line">∅ ⊊ X</div>
+                <p>é verdadeira.</p>
+                <div class="item-title keep-with-next" id="exercicio-19" data-keep-count="3">19. Integrando as relações</div>
+                <p class="keep-with-next">Considere</p>
+                <div class="math-line">D={1,2,3,…,12},</div>
+                <div class="math-line">A={x ∈ D ∣ x<span class="math-text"> é múltiplo de </span>4},</div>
+                <div class="math-line">B={x ∈ D ∣ x<span class="math-text"> é par</span>}</div>
+                <p class="keep-with-next">e</p>
+                <div class="math-line">C={2,4,6,8,10,12}.</div>
+                <p><span class="subitem-label">a)</span> Compare <span class="math-inline">B</span> e <span class="math-inline">C</span> e determine a relação entre esses conjuntos.</p>
+                <p><span class="subitem-label">b)</span> Determine a relação entre <span class="math-inline">A</span> e <span class="math-inline">B</span>. Caso a inclusão seja própria, apresente uma testemunha que mostre que os conjuntos não são iguais.</p>
+                <p><span class="subitem-label">c)</span> Utilizando as conclusões anteriores, determine a relação entre <span class="math-inline">A</span> e <span class="math-inline">C</span>. Justifique por encadeamento e, se a inclusão for própria, apresente uma testemunha adequada.</p>
+                <div class="item-title keep-with-next" id="exercicio-20" data-keep-count="3">20. Auditoria de uma solução</div>
+                <p class="keep-with-next">Considere</p>
+                <div class="math-line">A={2,4},</div>
+                <div class="math-line">B={2,4,6}</div>
+                <p class="keep-with-next">e</p>
+                <div class="math-line">C={{2},4}.</div>
+                <p class="keep-with-next">Um estudante escreveu:</p>
+                <div class="attempt-block">
+                <div class="minor-title keep-with-next">I.</div>
+                <p class="keep-with-next">Como</p>
+                <div class="math-line">{2} ∈ C,</div>
+                <p class="keep-with-next">então</p>
+                <div class="math-line">{2} ⊆ C.</div>
+                <div class="minor-title keep-with-next">II.</div>
+                <p class="keep-with-next">Como</p>
+                <div class="math-line">6 ∈ B</div>
+                <p class="keep-with-next">e</p>
+                <div class="math-line">6 ∉ A,</div>
+                <p class="keep-with-next">então</p>
+                <div class="math-line">A ⊈ B.</div>
+                <div class="minor-title keep-with-next">III.</div>
+                <p class="keep-with-next">Os elementos <span class="math-inline">2</span> e <span class="math-inline">4</span> de <span class="math-inline">A</span> pertencem a <span class="math-inline">B</span>. Portanto,</p>
+                <div class="math-line">A ⊆ B.</div>
+                <p class="keep-with-next">Logo,</p>
+                <div class="math-line">A=B.</div>
+                </div>
+                <p class="keep-with-next">A solução contém três erros de raciocínio, um em cada trecho I–III. No trecho III, observe que a afirmação</p>
+                <div class="math-line">A ⊆ B</div>
+                <p>está correta; o erro ocorre somente na conclusão seguinte.</p>
+                <p class="keep-with-next">Para cada erro:</p>
+                <p><span class="subitem-label">a)</span> localize-o;</p>
+                <p><span class="subitem-label">b)</span> explique por que o raciocínio está incorreto;</p>
+                <p><span class="subitem-label">c)</span> escreva a correção matemática correspondente.</p>
+            </section>
+
+            <section class="source-section" data-context="TEXTO PRÁTICO • GABARITO COMENTADO">
+                <header class="section-opening keep-with-next" data-keep-count="5"><div class="section-label">Texto Prático</div><h2 class="section-title">Gabarito Comentado</h2></header>
+                <div class="gabarito-subtitle keep-with-next" data-keep-count="4">1. Pertinência, inclusão e direção</div>
+                <div class="item-title keep-with-next" id="resposta-01" data-keep-count="3">1. Pertinência ou inclusão?</div>
+                <p class="keep-with-next">Considere</p>
+                <div class="math-line">A={1,2,3}.</div>
+                <p class="subitem-label keep-with-next" data-keep-count="3">a)</p>
+                <p class="keep-with-next">Como <span class="math-inline">1</span> é um dos elementos de <span class="math-inline">A</span>,</p>
+                <div class="math-line"><span class="answer-box">1 ∈ A</span>.</div>
+                <p class="subitem-label keep-with-next" data-keep-count="3">b)</p>
+                <p class="keep-with-next">Os elementos de <span class="math-inline">A</span> são <span class="math-inline">1</span>, <span class="math-inline">2</span> e <span class="math-inline">3</span>. O conjunto <span class="math-inline">{1}</span> não aparece como elemento de <span class="math-inline">A</span>. Portanto,</p>
+                <div class="math-line"><span class="answer-box">{1} ∉ A</span>.</div>
+                <p class="subitem-label keep-with-next" data-keep-count="3">c)</p>
+                <p class="keep-with-next">O único elemento de <span class="math-inline">{2}</span> é <span class="math-inline">2</span>, e</p>
+                <div class="math-line">2 ∈ A.</div>
+                <p class="keep-with-next">Logo,</p>
+                <div class="math-line"><span class="answer-box">{2} ⊆ A</span>.</div>
+                <p class="subitem-label keep-with-next" data-keep-count="3">d)</p>
+                <p class="keep-with-next">Para que <span class="math-inline">{4} ⊆ A</span>, seria necessário que</p>
+                <div class="math-line">4 ∈ A.</div>
+                <p class="keep-with-next">Como isso não ocorre,</p>
+                <div class="math-line"><span class="answer-box">{4} ⊈ A</span>.</div>
+                <p class="keep-with-next">Nos itens b e c, a diferença está na relação examinada: em</p>
+                <div class="math-line">{1} ∉ A,</div>
+                <p class="keep-with-next">pergunta-se se o próprio conjunto <span class="math-inline">{1}</span> é elemento de <span class="math-inline">A</span>; em</p>
+                <div class="math-line">{2} ⊆ A,</div>
+                <p>pergunta-se se todo elemento de <span class="math-inline">{2}</span> pertence a <span class="math-inline">A</span>.</p>
+                <div class="item-title keep-with-next" id="resposta-02" data-keep-count="3">2. A inclusão tem direção</div>
+                <p class="keep-with-next">Temos</p>
+                <div class="math-line">A={2,4},    B={1,2,3,4},    C={4,2}.</div>
+                <p class="subitem-label keep-with-next" data-keep-count="4">a)</p>
+                <div class="keep-with-next math-line" data-keep-count="3"><span class="answer-box">A ⊆ B</span></div>
+                <p class="keep-with-next">Verdadeira, pois</p>
+                <div class="math-line">2 ∈ B   <span class="math-text">e</span>   4 ∈ B.</div>
+                <p>Todos os elementos de <span class="math-inline">A</span> pertencem a <span class="math-inline">B</span>.</p>
+                <p class="subitem-label keep-with-next" data-keep-count="4">b)</p>
+                <div class="keep-with-next math-line" data-keep-count="3">B ⊆ A</div>
+                <p class="keep-with-next">Falsa. Por exemplo,</p>
+                <div class="math-line">1 ∈ B   <span class="math-text">e</span>   1 ∉ A.</div>
+                <p class="keep-with-next">Portanto,</p>
+                <div class="math-line"><span class="answer-box">B ⊈ A</span>.</div>
+                <p class="subitem-label keep-with-next" data-keep-count="3">c)</p>
+                <div class="keep-with-next math-line"><span class="answer-box">A ⊆ C</span></div>
+                <p>Verdadeira. Os conjuntos <span class="math-inline">A</span> e <span class="math-inline">C</span> possuem exatamente os mesmos elementos, <span class="math-inline">2</span> e <span class="math-inline">4</span>.</p>
+                <p class="subitem-label keep-with-next" data-keep-count="3">d)</p>
+                <p class="keep-with-next">Pelo mesmo motivo,</p>
+                <div class="math-line"><span class="answer-box">C ⊆ A</span>.</div>
+                <p class="subitem-label keep-with-next" data-keep-count="3">e)</p>
+                <p class="keep-with-next">Como <span class="math-inline">A</span> e <span class="math-inline">C</span> possuem exatamente os mesmos elementos,</p>
+                <div class="math-line"><span class="answer-box">A=C</span>.</div>
+                <div class="item-title keep-with-next" id="resposta-03" data-keep-count="3">3. O próprio conjunto e o conjunto vazio</div>
+                <p class="keep-with-next">Temos</p>
+                <div class="math-line">A={2,4}.</div>
+                <p class="subitem-label keep-with-next" data-keep-count="3">a)</p>
+                <div class="keep-with-next math-line"><span class="answer-box">A ⊆ A</span></div>
+                <p>Verdadeira. Todo elemento de <span class="math-inline">A</span> pertence ao próprio <span class="math-inline">A</span>.</p>
+                <p class="subitem-label keep-with-next" data-keep-count="3">b)</p>
+                <div class="keep-with-next math-line"><span class="answer-box">∅ ⊆ A</span></div>
+                <p>Verdadeira. Para essa inclusão ser falsa, deveria existir algum objeto que pertencesse a <span class="math-inline">∅</span> e não pertencesse a <span class="math-inline">A</span>. Como <span class="math-inline">∅</span> não possui elementos, tal contraexemplo não existe.</p>
+                <p class="subitem-label keep-with-next">c)</p>
+                <div class="math-line"><span class="answer-box">∅ ∉ A</span>.</div>
+                <p>Os elementos de <span class="math-inline">A</span> são <span class="math-inline">2</span> e <span class="math-inline">4</span>; o conjunto vazio não é um deles.</p>
+                <p class="subitem-label keep-with-next">d)</p>
+                <div class="math-line"><span class="answer-box">A ⊈ ∅</span>.</div>
+                <p class="keep-with-next">Por exemplo,</p>
+                <div class="math-line">2 ∈ A   <span class="math-text">e</span>   2 ∉ ∅.</div>
+                <p class="subitem-label keep-with-next">e)</p>
+                <div class="math-line"><span class="answer-box">∅ ⊆ ∅</span>.</div>
+                <p>Também nesse caso não existe elemento do conjunto à esquerda que possa violar a condição de inclusão.</p>
+                <div class="item-title keep-with-next" id="resposta-04" data-keep-count="3">4. Elemento ou subconjunto?</div>
+                <p class="keep-with-next">Considere</p>
+                <div class="math-line">C={{2},4}.</div>
+                <p class="keep-with-next">Os elementos diretamente pertencentes a <span class="math-inline">C</span> são</p>
+                <div class="math-line">{2}   <span class="math-text">e</span>   4.</div>
+                <p class="subitem-label keep-with-next" data-keep-count="3">a)</p>
+                <div class="keep-with-next math-line"><span class="answer-box">{2} ∈ C</span></div>
+                <p>Verdadeira, pois <span class="math-inline">{2}</span> é um dos elementos diretamente indicados em <span class="math-inline">C</span>.</p>
+                <p class="subitem-label keep-with-next" data-keep-count="4">b)</p>
+                <div class="keep-with-next math-line" data-keep-count="3">{2} ⊆ C</div>
+                <p class="keep-with-next">Falsa. O único elemento de <span class="math-inline">{2}</span> é <span class="math-inline">2</span>, mas</p>
+                <div class="math-line">2 ∉ C.</div>
+                <p class="keep-with-next">Portanto,</p>
+                <div class="math-line"><span class="answer-box">{2} ⊈ C</span>.</div>
+                <p class="subitem-label keep-with-next" data-keep-count="3">c)</p>
+                <div class="keep-with-next math-line">2 ∈ C</div>
+                <p>Falsa. O objeto diretamente pertencente a <span class="math-inline">C</span> é <span class="math-inline">{2}</span>, e não <span class="math-inline">2</span>.</p>
+                <p class="keep-with-next">Assim,</p>
+                <div class="math-line"><span class="answer-box">2 ∉ C</span>.</div>
+                <p class="subitem-label keep-with-next" data-keep-count="4">d)</p>
+                <div class="keep-with-next math-line" data-keep-count="3"><span class="answer-box">{4} ⊆ C</span></div>
+                <p class="keep-with-next">Verdadeira, pois o único elemento de <span class="math-inline">{4}</span> é <span class="math-inline">4</span>, e</p>
+                <div class="math-line">4 ∈ C.</div>
+                <p class="subitem-label keep-with-next" data-keep-count="3">e)</p>
+                <div class="keep-with-next math-line">{4} ∈ C</div>
+                <p>Falsa. <span class="math-inline">C</span> contém diretamente <span class="math-inline">4</span>, mas não o conjunto <span class="math-inline">{4}</span>.</p>
+                <p class="keep-with-next">Logo,</p>
+                <div class="math-line"><span class="answer-box">{4} ∉ C</span>.</div>
+                <div class="gabarito-subtitle keep-with-next" data-keep-count="4">2. Provar e refutar inclusões</div>
+                <div class="item-title keep-with-next" id="resposta-05" data-keep-count="3">5. Verificando todos os elementos</div>
+                <p class="keep-with-next">Temos</p>
+                <div class="math-line">A={1,3,5}</div>
+                <p class="keep-with-next">e</p>
+                <div class="math-line">B={1,2,3,4,5,6}.</div>
+                <p class="keep-with-next">Verificando todos os elementos de <span class="math-inline">A</span>,</p>
+                <div class="math-line">1 ∈ B,    3 ∈ B,    5 ∈ B.</div>
+                <p class="keep-with-next">Portanto, nenhum elemento de <span class="math-inline">A</span> fica fora de <span class="math-inline">B</span>. Assim,</p>
+                <div class="math-line"><span class="answer-box">A ⊆ B</span>.</div>
+                <div class="item-title keep-with-next" id="resposta-06" data-keep-count="3">6. Uma testemunha da não inclusão</div>
+                <p class="keep-with-next">Temos</p>
+                <div class="math-line">A={2,4,6}</div>
+                <p class="keep-with-next">e</p>
+                <div class="math-line">B={2,4,5,8}.</div>
+                <p class="subitem-label keep-with-next" data-keep-count="3">a)</p>
+                <p class="keep-with-next">A afirmação</p>
+                <div class="math-line">A ⊆ B</div>
+                <p class="keep-with-next">é falsa. Portanto,</p>
+                <div class="math-line"><span class="answer-box">A ⊈ B</span>.</div>
+                <p class="subitem-label keep-with-next" data-keep-count="3">b)</p>
+                <p class="keep-with-next">Uma testemunha é</p>
+                <div class="math-line"><span class="answer-box">6</span>.</div>
+                <p class="subitem-label keep-with-next" data-keep-count="3">c)</p>
+                <p class="keep-with-next">De fato,</p>
+                <div class="math-line"><span class="answer-box">6 ∈ A</span></div>
+                <p class="keep-with-next">e</p>
+                <div class="math-line"><span class="answer-box">6 ∉ B</span>.</div>
+                <p>Um único elemento com essas duas propriedades basta para refutar <span class="math-inline">A ⊆ B</span>.</p>
+                <div class="item-title keep-with-next" id="resposta-07" data-keep-count="3">7. A testemunha está do lado certo?</div>
+                <p class="keep-with-next">Temos</p>
+                <div class="math-line">A={2,4,6}</div>
+                <p class="keep-with-next">e</p>
+                <div class="math-line">B={2,4,5}.</div>
+                <p class="subitem-label keep-with-next">a)</p>
+                <p>O argumento correto é o de <strong>Bruno</strong>.</p>
+                <p class="keep-with-next">Ele utiliza</p>
+                <div class="math-line">6 ∈ A   <span class="math-text">e</span>   6 ∉ B.</div>
+                <p class="keep-with-next">Portanto,</p>
+                <div class="math-line"><span class="answer-box">A ⊈ B</span>.</div>
+                <p class="subitem-label keep-with-next" data-keep-count="3">b)</p>
+                <p class="keep-with-next">A testemunha utilizada por Ana está na direção oposta:</p>
+                <div class="math-line">5 ∈ B   <span class="math-text">e</span>   5 ∉ A.</div>
+                <p>Isso não contradiz <span class="math-inline">A ⊆ B</span>, pois essa inclusão exige examinar os elementos de <span class="math-inline">A</span>, e não os elementos adicionais de <span class="math-inline">B</span>.</p>
+                <p class="subitem-label keep-with-next" data-keep-count="3">c)</p>
+                <p class="keep-with-next">As relações usadas por Ana permitem refutar</p>
+                <div class="math-line"><span class="answer-box">B ⊆ A</span>.</div>
+                <p class="keep-with-next">Logo,</p>
+                <div class="math-line"><span class="answer-box">B ⊈ A</span>.</div>
+                <div class="item-title keep-with-next" id="resposta-08" data-keep-count="3">8. Completando uma prova de inclusão</div>
+                <p class="keep-with-next">Temos</p>
+                <div class="math-line">A={x ∈ D ∣ x&gt;7}</div>
+                <p class="keep-with-next">e</p>
+                <div class="math-line">B={x ∈ D ∣ x&gt;4}.</div>
+                <p class="keep-with-next">Seja <span class="math-inline">x</span> arbitrário e suponha</p>
+                <div class="math-line">x ∈ A.</div>
+                <p class="keep-with-next">Pela definição de <span class="math-inline">A</span>,</p>
+                <div class="math-line">x ∈ D   <span class="math-text">e</span>   x&gt;7.</div>
+                <p class="keep-with-next">Como</p>
+                <div class="math-line">x&gt;7,</div>
+                <p class="keep-with-next">temos necessariamente</p>
+                <div class="math-line">x&gt;4.</div>
+                <p class="keep-with-next">Assim, <span class="math-inline">x ∈ D</span> e <span class="math-inline">x&gt;4</span>, exatamente as condições que definem <span class="math-inline">B</span>. Portanto,</p>
+                <div class="math-line">x ∈ B.</div>
+                <p class="keep-with-next">Como o argumento vale para qualquer <span class="math-inline">x ∈ A</span>,</p>
+                <div class="math-line"><span class="answer-box">A ⊆ B</span>.</div>
+                <div class="item-title keep-with-next" id="resposta-09" data-keep-count="3">9. Demonstrando uma inclusão</div>
+                <p class="keep-with-next">Temos</p>
+                <div class="math-line">P={x ∈ D ∣ x<span class="math-text"> é múltiplo de </span>4}</div>
+                <p class="keep-with-next">e</p>
+                <div class="math-line">Q={x ∈ D ∣ x<span class="math-text"> é par</span>}.</div>
+                <p class="keep-with-next">Seja <span class="math-inline">x</span> arbitrário e suponha</p>
+                <div class="math-line">x ∈ P.</div>
+                <p>Então <span class="math-inline">x ∈ D</span> e <span class="math-inline">x</span> é múltiplo de <span class="math-inline">4</span>. Todo múltiplo de <span class="math-inline">4</span> é par. Logo, <span class="math-inline">x</span> é par.</p>
+                <p class="keep-with-next">Como <span class="math-inline">x ∈ D</span> e <span class="math-inline">x</span> é par,</p>
+                <div class="math-line">x ∈ Q.</div>
+                <p class="keep-with-next">Portanto, para todo <span class="math-inline">x</span>,</p>
+                <div class="math-line">x ∈ P ⇒ x ∈ Q.</div>
+                <p class="keep-with-next">Assim,</p>
+                <div class="math-line"><span class="answer-box">P ⊆ Q</span>.</div>
+                <div class="item-title keep-with-next" id="resposta-10" data-keep-count="3">10. Encadeando inclusões</div>
+                <p class="keep-with-next">Sabemos que</p>
+                <div class="math-line">A ⊆ B</div>
+                <p class="keep-with-next">e</p>
+                <div class="math-line">B ⊆ C.</div>
+                <p class="keep-with-next">Seja <span class="math-inline">x</span> arbitrário com</p>
+                <div class="math-line">x ∈ A.</div>
+                <p class="subitem-label keep-with-next" data-keep-count="3">a)</p>
+                <p class="keep-with-next">Como</p>
+                <div class="math-line">A ⊆ B,</div>
+                <p class="keep-with-next">segue que</p>
+                <div class="math-line"><span class="answer-box">x ∈ B</span>.</div>
+                <p class="subitem-label keep-with-next" data-keep-count="3">b)</p>
+                <p class="keep-with-next">Como agora <span class="math-inline">x ∈ B</span> e</p>
+                <div class="math-line">B ⊆ C,</div>
+                <p class="keep-with-next">temos</p>
+                <div class="math-line"><span class="answer-box">x ∈ C</span>.</div>
+                <p class="subitem-label keep-with-next" data-keep-count="3">c)</p>
+                <p class="keep-with-next">O encadeamento é</p>
+                <div class="math-line">x ∈ A ⇒ x ∈ B ⇒ x ∈ C.</div>
+                <p class="keep-with-next">Como isso vale para qualquer <span class="math-inline">x ∈ A</span>,</p>
+                <div class="math-line"><span class="answer-box">A ⊆ C</span>.</div>
+                <div class="gabarito-subtitle keep-with-next" data-keep-count="4">3. Igualdade e dupla inclusão</div>
+                <div class="item-title keep-with-next" id="resposta-11" data-keep-count="3">11. Representações diferentes, mesmo conjunto?</div>
+                <p class="keep-with-next">Temos</p>
+                <div class="math-line">D={1,2,3,4,5,6}</div>
+                <p class="keep-with-next">e</p>
+                <div class="math-line">B={x ∈ D ∣ 1&lt;x&lt;6}.</div>
+                <p class="keep-with-next">Dentro de <span class="math-inline">D</span>, os elementos que satisfazem</p>
+                <div class="math-line">1&lt;x&lt;6</div>
+                <p class="keep-with-next">são</p>
+                <div class="math-line">2,3,4,5.</div>
+                <p class="keep-with-next">Logo,</p>
+                <div class="math-line">B={2,3,4,5}.</div>
+                <p class="keep-with-next">Como</p>
+                <div class="math-line">A={2,3,4,5},</div>
+                <p class="keep-with-next">concluímos que</p>
+                <div class="math-line"><span class="answer-box">A=B</span>.</div>
+                <div class="item-title keep-with-next" id="resposta-12" data-keep-count="3">12. Refutando uma igualdade</div>
+                <p class="keep-with-next">Temos</p>
+                <div class="math-line">D={1,2,3,4}</div>
+                <p class="keep-with-next">e</p>
+                <div class="math-line">B={x ∈ D ∣ x&lt;4}.</div>
+                <p class="keep-with-next">Assim,</p>
+                <div class="math-line">B={1,2,3}.</div>
+                <p class="keep-with-next">Já</p>
+                <div class="math-line">A={1,2,3,4}.</div>
+                <p class="keep-with-next">Portanto,</p>
+                <div class="math-line"><span class="answer-box">A ≠ B</span>.</div>
+                <p class="keep-with-next">Uma testemunha é <span class="math-inline">4</span>, pois</p>
+                <div class="math-line"><span class="answer-box">4 ∈ A</span></div>
+                <p class="keep-with-next">e</p>
+                <div class="math-line"><span class="answer-box">4 ∉ B</span>.</div>
+                <p>Essa única discrepância basta para negar a igualdade.</p>
+                <div class="item-title keep-with-next" id="resposta-13" data-keep-count="3">13. Demonstrando por dupla inclusão</div>
+                <p class="keep-with-next">Temos</p>
+                <div class="math-line">A={3,6,9}</div>
+                <p class="keep-with-next">e</p>
+                <div class="math-line">B={x ∈ D ∣ x<span class="math-text"> é múltiplo de </span>3},</div>
+                <p class="keep-with-next">com</p>
+                <div class="math-line">D={1,2,3,…,10}.</div>
+                <div class="proof-schema"><div class="proof-step">
+                <div class="proof-step__role">a) <span class="math-inline">A ⊆ B</span></div>
+                <p class="proof-justification">Os elementos de <span class="math-inline">A</span> são <span class="math-inline">3</span>, <span class="math-inline">6</span> e <span class="math-inline">9</span>.</p>
+                <p class="proof-justification keep-with-next">Todos pertencem a <span class="math-inline">D</span> e todos são múltiplos de <span class="math-inline">3</span>. Logo,</p>
+                <div class="math-line">3 ∈ B,  6 ∈ B,  9 ∈ B.</div>
+                <p class="proof-justification keep-with-next">Portanto,</p>
+                <div class="math-line"><span class="answer-box">A ⊆ B</span>.</div>
+                </div></div>
+                <div class="proof-schema"><div class="proof-step">
+                <div class="proof-step__role">b) <span class="math-inline">B ⊆ A</span></div>
+                <p class="proof-justification">Seja <span class="math-inline">x ∈ B</span>. Então <span class="math-inline">x ∈ D</span> e <span class="math-inline">x</span> é múltiplo de <span class="math-inline">3</span>.</p>
+                <p class="proof-justification keep-with-next">Entre os elementos de</p>
+                <div class="math-line">D={1,2,…,10},</div>
+                <p class="proof-justification keep-with-next">os múltiplos de <span class="math-inline">3</span> são exatamente</p>
+                <div class="math-line">3, 6, 9.</div>
+                <p class="proof-justification keep-with-next">Logo,</p>
+                <div class="math-line">x ∈ {3,6,9}=A.</div>
+                <p class="proof-justification keep-with-next">Assim,</p>
+                <div class="math-line"><span class="answer-box">B ⊆ A</span>.</div>
+                </div></div>
+                <div class="proof-schema"><div class="proof-step">
+                <div class="proof-step__role">c)</div>
+                <p class="proof-justification keep-with-next">Como</p>
+                <div class="math-line">A ⊆ B</div>
+                <p class="proof-justification keep-with-next">e</p>
+                <div class="math-line">B ⊆ A,</div>
+                <p class="proof-justification keep-with-next">pela dupla inclusão,</p>
+                <div class="math-line"><span class="answer-box">A=B</span>.</div>
+                </div></div>
+                <div class="item-title keep-with-next" id="resposta-14" data-keep-count="3">14. Demonstrando uma igualdade</div>
+                <p class="keep-with-next">Temos</p>
+                <div class="math-line">A={x ∈ D ∣ 2&lt;x&lt;7},</div>
+                <div class="math-line">B={3,4,5,6}</div>
+                <p class="keep-with-next">e</p>
+                <div class="math-line">D={1,2,3,4,5,6,7,8}.</div>
+                <div class="minor-title keep-with-next">Resposta-modelo</div>
+                <p>Mostremos as duas inclusões.</p>
+                <p><strong>Primeira direção: <span class="math-inline">A ⊆ B</span>.</strong></p>
+                <p class="keep-with-next">Seja <span class="math-inline">x ∈ A</span>. Então</p>
+                <div class="math-line">x ∈ D</div>
+                <p class="keep-with-next">e</p>
+                <div class="math-line">2&lt;x&lt;7.</div>
+                <p class="keep-with-next">Como os elementos de <span class="math-inline">D</span> são inteiros de <span class="math-inline">1</span> a <span class="math-inline">8</span>, as únicas possibilidades são</p>
+                <div class="math-line">x=3, 4, 5 <span class="math-text">ou</span> 6.</div>
+                <p class="keep-with-next">Portanto,</p>
+                <div class="math-line">x ∈ B.</div>
+                <p class="keep-with-next">Logo,</p>
+                <div class="math-line">A ⊆ B.</div>
+                <p><strong>Segunda direção: <span class="math-inline">B ⊆ A</span>.</strong></p>
+                <p class="keep-with-next">Seja <span class="math-inline">x ∈ B</span>. Então</p>
+                <div class="math-line">x ∈ {3,4,5,6}.</div>
+                <p class="keep-with-next">Em todos esses casos,</p>
+                <div class="math-line">x ∈ D</div>
+                <p class="keep-with-next">e</p>
+                <div class="math-line">2&lt;x&lt;7.</div>
+                <p class="keep-with-next">Portanto,</p>
+                <div class="math-line">x ∈ A.</div>
+                <p class="keep-with-next">Assim,</p>
+                <div class="math-line">B ⊆ A.</div>
+                <p class="keep-with-next">Pela dupla inclusão,</p>
+                <div class="math-line"><span class="answer-box">A=B</span>.</div>
+                <div class="minor-title keep-with-next" data-keep-count="3">Critério de suficiência</div>
+                <p class="keep-with-next">Como o enunciado pede apenas que a igualdade seja demonstrada, também é válida outra argumentação matematicamente correta que estabeleça que os dois conjuntos possuem exatamente os mesmos elementos. Por exemplo, determinar</p>
+                <div class="math-line">A={3,4,5,6}</div>
+                <p>e compará-lo corretamente com <span class="math-inline">B</span> também é suficiente.</p>
+                <div class="item-title keep-with-next" id="resposta-15" data-keep-count="3">15. O que falta nesta demonstração?</div>
+                <p class="keep-with-next">O estudante mostrou que, se</p>
+                <div class="math-line">x ∈ A,</div>
+                <p class="keep-with-next">então</p>
+                <div class="math-line">x ∈ B.</div>
+                <p class="subitem-label keep-with-next" data-keep-count="3">a)</p>
+                <p class="keep-with-next">Portanto, o que foi efetivamente demonstrado é</p>
+                <div class="math-line"><span class="answer-box">A ⊆ B</span>.</div>
+                <p class="subitem-label keep-with-next" data-keep-count="3">b)</p>
+                <p class="keep-with-next">Isso não basta para concluir</p>
+                <div class="math-line">A=B,</div>
+                <p>pois uma única inclusão ainda permite que <span class="math-inline">B</span> possua elementos que não pertencem a <span class="math-inline">A</span>.</p>
+                <p class="subitem-label keep-with-next" data-keep-count="3">c)</p>
+                <p class="keep-with-next">Ainda é necessário demonstrar</p>
+                <div class="math-line"><span class="answer-box">B ⊆ A</span>.</div>
+                <p class="subitem-label keep-with-next" data-keep-count="3">d)</p>
+                <p class="keep-with-next">Seja <span class="math-inline">x ∈ B</span>. Pela definição de <span class="math-inline">B</span>,</p>
+                <div class="math-line">x ∈ D</div>
+                <p>e <span class="math-inline">x</span> é par.</p>
+                <p class="keep-with-next">Como</p>
+                <div class="math-line">D={1,2,3,4},</div>
+                <p class="keep-with-next">os únicos elementos pares de <span class="math-inline">D</span> são <span class="math-inline">2</span> e <span class="math-inline">4</span>. Logo,</p>
+                <div class="math-line">x ∈ {2,4}=A.</div>
+                <p class="keep-with-next">Portanto,</p>
+                <div class="math-line">B ⊆ A.</div>
+                <p class="keep-with-next">Como já havia sido demonstrado que</p>
+                <div class="math-line">A ⊆ B,</div>
+                <p class="keep-with-next">pela dupla inclusão,</p>
+                <div class="math-line"><span class="answer-box">A=B</span>.</div>
+                <div class="gabarito-subtitle keep-with-next" data-keep-count="4">4. Inclusão própria, diagnóstico e transferência</div>
+                <div class="item-title keep-with-next" id="resposta-16" data-keep-count="3">16. A relação mais precisa</div>
+                <div class="minor-title keep-with-next">Caso I</div>
+                <div class="math-line">A={1,2},    B={2,1}.</div>
+                <p class="keep-with-next">Os dois conjuntos possuem exatamente os mesmos elementos. Portanto,</p>
+                <div class="math-line"><span class="answer-box">A=B</span>.</div>
+                <p>Embora também sejam verdadeiras as inclusões <span class="math-inline">A ⊆ B</span> e <span class="math-inline">B ⊆ A</span>, a igualdade registra de forma mais precisa a relação entre eles.</p>
+                <div class="minor-title keep-with-next">Caso II</div>
+                <div class="math-line">C={1,2},    D={1,2,3}.</div>
+                <p class="keep-with-next">Todo elemento de <span class="math-inline">C</span> pertence a <span class="math-inline">D</span>, logo</p>
+                <div class="math-line">C ⊆ D.</div>
+                <p class="keep-with-next">Além disso,</p>
+                <div class="math-line">3 ∈ D   <span class="math-text">e</span>   3 ∉ C.</div>
+                <p class="keep-with-next">Portanto, os conjuntos não são iguais e</p>
+                <div class="math-line"><span class="answer-box">C ⊊ D</span>.</div>
+                <p>A afirmação <span class="math-inline">C ⊆ D</span> também é verdadeira, mas <span class="math-inline"> ⊊ </span> registra adicionalmente que a inclusão é própria.</p>
+                <div class="minor-title keep-with-next">Caso III</div>
+                <div class="math-line">E={1,3},    F={1,2}.</div>
+                <p class="keep-with-next">Como</p>
+                <div class="math-line">3 ∈ E   <span class="math-text">e</span>   3 ∉ F,</div>
+                <p class="keep-with-next">temos</p>
+                <div class="math-line"><span class="answer-box">E ⊈ F</span>.</div>
+                <p class="keep-with-next">Por outro lado,</p>
+                <div class="math-line">2 ∈ F   <span class="math-text">e</span>   2 ∉ E,</div>
+                <p class="keep-with-next">portanto,</p>
+                <div class="math-line"><span class="answer-box">F ⊈ E</span>.</div>
+                <p>Não há inclusão em nenhuma das duas direções.</p>
+                <div class="item-title keep-with-next" id="resposta-17" data-keep-count="3">17. Demonstrando uma inclusão própria</div>
+                <p class="keep-with-next">Temos</p>
+                <div class="math-line">A={x ∈ D ∣ x<span class="math-text"> é par e </span>x&lt;6}</div>
+                <p class="keep-with-next">e</p>
+                <div class="math-line">B={x ∈ D ∣ x<span class="math-text"> é par</span>}.</div>
+                <div class="proof-schema"><div class="proof-step">
+                <div class="proof-step__role">a) Inclusão</div>
+                <p class="proof-justification keep-with-next">Seja <span class="math-inline">x ∈ A</span>. Então</p>
+                <div class="math-line">x ∈ D,</div>
+                <p class="proof-justification"><span class="math-inline">x</span> é par e <span class="math-inline">x&lt;6</span>.</p>
+                <p class="proof-justification keep-with-next">Para pertencer a <span class="math-inline">B</span>, basta que <span class="math-inline">x ∈ D</span> e seja par. Essas condições já são satisfeitas. Logo,</p>
+                <div class="math-line">x ∈ B.</div>
+                <p class="proof-justification keep-with-next">Portanto,</p>
+                <div class="math-line"><span class="answer-box">A ⊆ B</span>.</div>
+                </div></div>
+                <div class="proof-schema"><div class="proof-step">
+                <div class="proof-step__role">b) Testemunha da diferença</div>
+                <p class="proof-justification keep-with-next">O número <span class="math-inline">6</span> satisfaz</p>
+                <div class="math-line"><span class="answer-box">6 ∈ B</span></div>
+                <p class="proof-justification">porque pertence a <span class="math-inline">D</span> e é par.</p>
+                <p class="proof-justification keep-with-next">Porém,</p>
+                <div class="math-line"><span class="answer-box">6 ∉ A</span>,</div>
+                <p class="proof-justification">pois não satisfaz <span class="math-inline">x&lt;6</span>.</p>
+                </div></div>
+                <div class="proof-schema"><div class="proof-step">
+                <div class="proof-step__role">c)</div>
+                <p class="proof-justification keep-with-next">Temos, então,</p>
+                <div class="math-line">A ⊆ B</div>
+                <p class="proof-justification keep-with-next">e existe um elemento de <span class="math-inline">B</span> que não pertence a <span class="math-inline">A</span>. Portanto,</p>
+                <div class="math-line"><span class="answer-box">A ⊊ B</span>.</div>
+                </div></div>
+                <div class="item-title keep-with-next" id="resposta-18" data-keep-count="3">18. Quando a inclusão do vazio é própria?</div>
+                <p class="keep-with-next">Temos</p>
+                <div class="math-line">A=∅</div>
+                <p class="keep-with-next">e</p>
+                <div class="math-line">B={5}.</div>
+                <p class="subitem-label keep-with-next" data-keep-count="4">a)</p>
+                <div class="keep-with-next math-line" data-keep-count="3"><span class="answer-box">∅ ⊆ A</span></div>
+                <p class="keep-with-next">Verdadeira. Como <span class="math-inline">A=∅</span>,</p>
+                <div class="math-line">∅ ⊆ ∅.</div>
+                <p class="subitem-label keep-with-next" data-keep-count="4">b)</p>
+                <div class="keep-with-next math-line" data-keep-count="3">∅ ⊊ A</div>
+                <p class="keep-with-next">Falsa. Como</p>
+                <div class="math-line">A=∅,</div>
+                <p>os dois conjuntos são iguais. Portanto, a inclusão não é própria.</p>
+                <p class="subitem-label keep-with-next" data-keep-count="3">c)</p>
+                <div class="keep-with-next math-line"><span class="answer-box">∅ ⊆ B</span></div>
+                <p>Verdadeira. Não existe elemento de <span class="math-inline">∅</span> que possa deixar de pertencer a <span class="math-inline">B</span>.</p>
+                <p class="subitem-label keep-with-next" data-keep-count="4">d)</p>
+                <div class="keep-with-next math-line" data-keep-count="3"><span class="answer-box">∅ ⊊ B</span></div>
+                <p class="keep-with-next">Verdadeira. Além de</p>
+                <div class="math-line">∅ ⊆ B,</div>
+                <p class="keep-with-next">temos</p>
+                <div class="math-line">5 ∈ B,</div>
+                <p>logo <span class="math-inline">B ≠ ∅</span>.</p>
+                <p class="subitem-label keep-with-next" data-keep-count="3">e)</p>
+                <p class="keep-with-next">Em geral,</p>
+                <div class="math-line"><span class="answer-box">∅ ⊊ X</span></div>
+                <p>é verdadeira quando <span class="math-inline">X</span> <strong>não é vazio</strong>, isto é, quando <span class="math-inline">X</span> possui pelo menos um elemento.</p>
+                <div class="item-title keep-with-next" id="resposta-19" data-keep-count="3">19. Integrando as relações</div>
+                <p class="keep-with-next">O domínio é</p>
+                <div class="math-line">D={1,2,3,…,12}.</div>
+                <p class="keep-with-next">Temos</p>
+                <div class="math-line">A={x ∈ D ∣ x<span class="math-text"> é múltiplo de </span>4} ={4,8,12},</div>
+                <div class="math-line">B={x ∈ D ∣ x<span class="math-text"> é par</span>} ={2,4,6,8,10,12},</div>
+                <p class="keep-with-next">e</p>
+                <div class="math-line">C={2,4,6,8,10,12}.</div>
+                <p class="subitem-label keep-with-next" data-keep-count="3">a)</p>
+                <p class="keep-with-next">Os conjuntos <span class="math-inline">B</span> e <span class="math-inline">C</span> possuem exatamente os mesmos elementos. Portanto,</p>
+                <div class="math-line"><span class="answer-box">B=C</span>.</div>
+                <p class="subitem-label keep-with-next" data-keep-count="3">b)</p>
+                <p class="keep-with-next">Todo múltiplo de <span class="math-inline">4</span> é par. Assim, todo elemento de <span class="math-inline">A</span> pertence a <span class="math-inline">B</span>, e</p>
+                <div class="math-line">A ⊆ B.</div>
+                <p class="keep-with-next">Além disso,</p>
+                <div class="math-line">2 ∈ B</div>
+                <p class="keep-with-next">e</p>
+                <div class="math-line">2 ∉ A.</div>
+                <p class="keep-with-next">Logo,</p>
+                <div class="math-line"><span class="answer-box">A ⊊ B</span>.</div>
+                <p class="subitem-label keep-with-next" data-keep-count="3">c)</p>
+                <p class="keep-with-next">Como</p>
+                <div class="math-line">A ⊆ B</div>
+                <p class="keep-with-next">e</p>
+                <div class="math-line">B=C,</div>
+                <p class="keep-with-next">temos também</p>
+                <div class="math-line">B ⊆ C.</div>
+                <p class="keep-with-next">Pelo encadeamento,</p>
+                <div class="math-line">A ⊆ B ⊆ C,</div>
+                <p class="keep-with-next">portanto,</p>
+                <div class="math-line">A ⊆ C.</div>
+                <p class="keep-with-next">Além disso,</p>
+                <div class="math-line">2 ∈ C   <span class="math-text">e</span>   2 ∉ A.</div>
+                <p class="keep-with-next">Logo,</p>
+                <div class="math-line"><span class="answer-box">A ⊊ C</span>.</div>
+                <div class="item-title keep-with-next" id="resposta-20" data-keep-count="3">20. Auditoria de uma solução</div>
+                <p class="keep-with-next">Temos</p>
+                <div class="math-line">A={2,4},    B={2,4,6},    C={{2},4}.</div>
+                <div class="minor-title keep-with-next">I. Pertinência não implica inclusão</div>
+                <p><strong>Localização do erro</strong></p>
+                <p class="keep-with-next">O estudante parte corretamente de</p>
+                <div class="math-line">{2} ∈ C</div>
+                <p class="keep-with-next">e conclui incorretamente</p>
+                <div class="math-line">{2} ⊆ C.</div>
+                <p><strong>Explicação</strong></p>
+                <p>A primeira relação pergunta se o próprio conjunto <span class="math-inline">{2}</span> é elemento de <span class="math-inline">C</span>. Isso é verdadeiro.</p>
+                <p class="keep-with-next">Já para</p>
+                <div class="math-line">{2} ⊆ C</div>
+                <p>ser verdadeira, o único elemento de <span class="math-inline">{2}</span>, que é <span class="math-inline">2</span>, precisaria pertencer a <span class="math-inline">C</span>.</p>
+                <p class="keep-with-next">Mas os elementos diretamente pertencentes a <span class="math-inline">C</span> são</p>
+                <div class="math-line">{2}   <span class="math-text">e</span>   4.</div>
+                <p class="keep-with-next">Assim,</p>
+                <div class="math-line">2 ∉ C.</div>
+                <p class="keep-with-next"><strong>Correção</strong></p>
+                <div class="math-line"><span class="answer-box">{2} ∈ C</span></div>
+                <p class="keep-with-next">mas</p>
+                <div class="math-line"><span class="answer-box">{2} ⊈ C</span>.</div>
+                <div class="minor-title keep-with-next">II. A testemunha está na direção oposta</div>
+                <p><strong>Localização do erro</strong></p>
+                <p class="keep-with-next">O estudante utiliza</p>
+                <div class="math-line">6 ∈ B   <span class="math-text">e</span>   6 ∉ A</div>
+                <p class="keep-with-next">para concluir</p>
+                <div class="math-line">A ⊈ B.</div>
+                <p><strong>Explicação</strong></p>
+                <p class="keep-with-next">Para refutar</p>
+                <div class="math-line">A ⊆ B,</div>
+                <p class="keep-with-next">seria necessário encontrar um objeto que satisfizesse</p>
+                <div class="math-line">x ∈ A   <span class="math-text">e</span>   x ∉ B.</div>
+                <p class="keep-with-next">O número <span class="math-inline">6</span> satisfaz justamente a situação inversa:</p>
+                <div class="math-line">6 ∈ B   <span class="math-text">e</span>   6 ∉ A.</div>
+                <p>Portanto, ele é testemunha contra <span class="math-inline">B ⊆ A</span>, e não contra <span class="math-inline">A ⊆ B</span>.</p>
+                <p><strong>Correção</strong></p>
+                <p class="keep-with-next">Como <span class="math-inline">2</span> e <span class="math-inline">4</span>, todos os elementos de <span class="math-inline">A</span>, pertencem a <span class="math-inline">B</span>,</p>
+                <div class="math-line"><span class="answer-box">A ⊆ B</span>.</div>
+                <p class="keep-with-next">Já</p>
+                <div class="math-line">6 ∈ B   <span class="math-text">e</span>   6 ∉ A</div>
+                <p class="keep-with-next">mostram que</p>
+                <div class="math-line"><span class="answer-box">B ⊈ A</span>.</div>
+                <div class="minor-title keep-with-next">III. Uma inclusão não basta para concluir igualdade</div>
+                <p><strong>Localização do erro</strong></p>
+                <p class="keep-with-next">A afirmação</p>
+                <div class="math-line">A ⊆ B</div>
+                <p class="keep-with-next">foi corretamente estabelecida. O erro ocorre ao concluir, somente a partir dela, que</p>
+                <div class="math-line">A=B.</div>
+                <p><strong>Explicação</strong></p>
+                <p class="keep-with-next">Para concluir igualdade por dupla inclusão, também seria necessário demonstrar</p>
+                <div class="math-line">B ⊆ A.</div>
+                <p class="keep-with-next">Mas isso é falso, pois</p>
+                <div class="math-line">6 ∈ B   <span class="math-text">e</span>   6 ∉ A.</div>
+                <p><strong>Correção</strong></p>
+                <p class="keep-with-next">Temos</p>
+                <div class="math-line"><span class="answer-box">A ⊆ B</span>,</div>
+                <p class="keep-with-next">mas</p>
+                <div class="math-line"><span class="answer-box">B ⊈ A</span>.</div>
+                <p class="keep-with-next">Consequentemente,</p>
+                <div class="math-line"><span class="answer-box">A ≠ B</span>.</div>
+                <p class="keep-with-next">Como a inclusão <span class="math-inline">A ⊆ B</span> é verdadeira e <span class="math-inline">B</span> possui um elemento que não pertence a <span class="math-inline">A</span>, podemos concluir ainda que</p>
+                <div class="math-line"><span class="answer-box">A ⊊ B</span>.</div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Paginador integral da Base HTML/CSS Canônica V1.0, sem alterações. -->
+    <script>
+        (function () {
+            'use strict';
+
+            const documentRoot = document.getElementById('document');
+            const source = document.getElementById('source-content');
+
+            if (!documentRoot || !source) return;
+
+            const headerIdentity =
+                documentRoot.dataset.headerIdentity || 'PLANO DE ESTUDO — MATEMÁTICA';
+            const footerIdentity =
+                documentRoot.dataset.footerIdentity || 'APOSTILA DE ESTUDO';
+
+            let pageNumber = 2;
+
+            function makePage(context) {
+                const page = document.createElement('section');
+                page.className = 'page page--generated';
+
+                const header = document.createElement('header');
+                header.className = 'page-header';
+
+                const headerBrand = document.createElement('span');
+                headerBrand.textContent = headerIdentity;
+
+                const headerContext = document.createElement('span');
+                headerContext.className = 'header-context';
+                headerContext.textContent = context;
+
+                header.append(headerBrand, headerContext);
+
+                const content = document.createElement('div');
+                content.className = 'page-content';
+
+                const footer = document.createElement('footer');
+                footer.className = 'page-footer';
+
+                const footerBrand = document.createElement('span');
+                footerBrand.textContent = footerIdentity;
+
+                const number = document.createElement('span');
+                number.className = 'page-number';
+                number.textContent = String(pageNumber++);
+
+                footer.append(footerBrand, number);
+                page.append(header, content, footer);
+
+                documentRoot.insertBefore(page, source);
+                return page;
+            }
+
+            function overflows(content) {
+                return content.scrollHeight > content.clientHeight + 1;
+            }
+
+            function appendAtomic(content, nodes) {
+                nodes.forEach((node) => content.appendChild(node));
+            }
+
+            function removeAtomic(content, nodes) {
+                for (let i = nodes.length - 1; i >= 0; i -= 1) {
+                    const node = nodes[i];
+                    if (node.parentNode === content) {
+                        content.removeChild(node);
+                    }
+                }
+            }
+
+            function stripIdsDeep(root) {
+                if (root.nodeType !== Node.ELEMENT_NODE) return;
+                root.removeAttribute('id');
+                root.querySelectorAll('[id]').forEach((element) => {
+                    element.removeAttribute('id');
+                });
+            }
+
+            function tableBlueprint(node) {
+                let wrap = null;
+                let table = null;
+
+                if (node.matches && node.matches('.table-wrap')) {
+                    wrap = node;
+                    const elementChildren = Array.from(wrap.children);
+                    const tables = elementChildren.filter(
+                        (child) => child.tagName === 'TABLE'
+                    );
+
+                    if (tables.length !== 1 || elementChildren.length !== 1) {
+                        return null;
+                    }
+
+                    table = tables[0];
+                } else if (node.tagName === 'TABLE') {
+                    table = node;
+                } else {
+                    return null;
+                }
+
+                if (table.querySelector('table')) return null;
+
+                const rows = Array.from(table.rows);
+                const hasUnsafeRowspan = rows.some((row) =>
+                    Array.from(row.cells).some((cell) => cell.rowSpan > 1)
+                );
+
+                if (hasUnsafeRowspan) {
+                    return {
+                        safe: false,
+                        wrap,
+                        table
+                    };
+                }
+
+                const bodies = Array.from(table.tBodies);
+                if (bodies.length === 0) return null;
+
+                const rowRecords = [];
+                bodies.forEach((body, bodyIndex) => {
+                    Array.from(body.rows).forEach((row) => {
+                        rowRecords.push({ row, body, bodyIndex });
+                    });
+                });
+
+                if (rowRecords.length === 0) return null;
+
+                return {
+                    safe: true,
+                    wrap,
+                    table,
+                    caption: table.caption,
+                    colgroups: Array.from(table.children).filter(
+                        (child) => child.tagName === 'COLGROUP'
+                    ),
+                    thead: table.tHead,
+                    tfoot: table.tFoot,
+                    bodies,
+                    rowRecords
+                };
+            }
+
+            function createTableFragment(blueprint, isFirstFragment) {
+                const root = blueprint.wrap
+                    ? blueprint.wrap.cloneNode(false)
+                    : blueprint.table.cloneNode(false);
+
+                const table = blueprint.wrap
+                    ? blueprint.table.cloneNode(false)
+                    : root;
+
+                if (blueprint.wrap) {
+                    root.appendChild(table);
+                }
+
+                if (!isFirstFragment) {
+                    stripIdsDeep(root);
+                }
+
+                if (blueprint.caption && isFirstFragment) {
+                    table.appendChild(blueprint.caption.cloneNode(true));
+                }
+
+                blueprint.colgroups.forEach((colgroup) => {
+                    const clone = colgroup.cloneNode(true);
+                    if (!isFirstFragment) stripIdsDeep(clone);
+                    table.appendChild(clone);
+                });
+
+                if (blueprint.thead) {
+                    const clone = blueprint.thead.cloneNode(true);
+                    if (!isFirstFragment) stripIdsDeep(clone);
+                    table.appendChild(clone);
+                }
+
+                return {
+                    root,
+                    table,
+                    bodyMap: new Map(),
+                    isFirstFragment
+                };
+            }
+
+            function ensureFragmentBody(fragment, record) {
+                if (fragment.bodyMap.has(record.bodyIndex)) {
+                    return fragment.bodyMap.get(record.bodyIndex);
+                }
+
+                const body = record.body.cloneNode(false);
+                if (!fragment.isFirstFragment) stripIdsDeep(body);
+
+                fragment.table.appendChild(body);
+                fragment.bodyMap.set(record.bodyIndex, body);
+                return body;
+            }
+
+            function appendRow(fragment, record) {
+                const body = ensureFragmentBody(fragment, record);
+                body.appendChild(record.row);
+                return body;
+            }
+
+            function removeRow(fragment, record) {
+                const body = fragment.bodyMap.get(record.bodyIndex);
+                if (!body || record.row.parentNode !== body) return;
+
+                body.removeChild(record.row);
+
+                if (body.rows.length === 0) {
+                    body.remove();
+                    fragment.bodyMap.delete(record.bodyIndex);
+                }
+            }
+
+            function appendFinalFoot(fragment, blueprint) {
+                if (!blueprint.tfoot) return null;
+
+                const foot = blueprint.tfoot.cloneNode(true);
+                fragment.table.appendChild(foot);
+                return foot;
+            }
+
+            function splitTableAcrossPages(
+                blueprint,
+                context,
+                initialPage,
+                initialContent
+            ) {
+                let page = initialPage;
+                let content = initialContent;
+                let rowIndex = 0;
+                let fragmentIndex = 0;
+
+                while (rowIndex < blueprint.rowRecords.length) {
+                    const hadPriorContent = content.children.length > 0;
+                    const fragment = createTableFragment(
+                        blueprint,
+                        fragmentIndex === 0
+                    );
+
+                    content.appendChild(fragment.root);
+
+                    let acceptedRows = 0;
+                    let fragmentClosed = false;
+
+                    while (rowIndex < blueprint.rowRecords.length) {
+                        const record = blueprint.rowRecords[rowIndex];
+                        appendRow(fragment, record);
+
+                        let foot = null;
+                        const isLastRow =
+                            rowIndex === blueprint.rowRecords.length - 1;
+
+                        if (isLastRow) {
+                            foot = appendFinalFoot(fragment, blueprint);
+                        }
+
+                        if (!overflows(content)) {
+                            acceptedRows += 1;
+                            rowIndex += 1;
+                            continue;
+                        }
+
+                        if (foot) foot.remove();
+                        removeRow(fragment, record);
+
+                        if (acceptedRows > 0) {
+                            fragmentClosed = true;
+                            break;
+                        }
+
+                        if (hadPriorContent) {
+                            fragment.root.remove();
+                            page = makePage(context);
+                            content = page.querySelector('.page-content');
+                            fragmentClosed = true;
+                            break;
+                        }
+
+                        appendRow(fragment, record);
+                        if (isLastRow) appendFinalFoot(fragment, blueprint);
+                        page.classList.add('page--overflow-warning');
+                        acceptedRows = 1;
+                        rowIndex += 1;
+                        fragmentClosed = true;
+                        break;
+                    }
+
+                    if (fragment.root.isConnected && acceptedRows > 0) {
+                        fragmentIndex += 1;
+                    }
+
+                    if (rowIndex < blueprint.rowRecords.length) {
+                        if (
+                            fragment.root.isConnected &&
+                            acceptedRows > 0 &&
+                            fragmentClosed
+                        ) {
+                            page = makePage(context);
+                            content = page.querySelector('.page-content');
+                        }
+                    }
+                }
+
+                return { page, content };
+            }
+
+            function placeSingleNode(node, context, page, content) {
+                content.appendChild(node);
+
+                if (!overflows(content)) {
+                    return { page, content };
+                }
+
+                content.removeChild(node);
+
+                const blueprint = tableBlueprint(node);
+                if (blueprint && blueprint.safe) {
+                    return splitTableAcrossPages(
+                        blueprint,
+                        context,
+                        page,
+                        content
+                    );
+                }
+
+                page = makePage(context);
+                content = page.querySelector('.page-content');
+                content.appendChild(node);
+
+                if (overflows(content)) {
+                    page.classList.add('page--overflow-warning');
+                }
+
+                return { page, content };
+            }
+
+            const sections = Array.from(
+                source.querySelectorAll(':scope > .source-section')
+            );
+
+            for (const section of sections) {
+                const nodes = Array.from(section.children);
+                if (nodes.length === 0) continue;
+
+                const context = section.dataset.context || '';
+                let page = makePage(context);
+                let content = page.querySelector('.page-content');
+
+                for (let i = 0; i < nodes.length; i += 1) {
+                    const node = nodes[i];
+                    let count = 1;
+
+                    if (node.dataset && node.dataset.keepCount) {
+                        count = Math.max(
+                            1,
+                            parseInt(node.dataset.keepCount, 10) || 1
+                        );
+                    } else if (
+                        node.classList &&
+                        node.classList.contains('keep-with-next') &&
+                        i + 1 < nodes.length
+                    ) {
+                        count = 2;
+                    }
+
+                    count = Math.min(count, nodes.length - i);
+
+                    if (count === 1) {
+                        const result = placeSingleNode(
+                            node,
+                            context,
+                            page,
+                            content
+                        );
+                        page = result.page;
+                        content = result.content;
+                        continue;
+                    }
+
+                    const atomic = nodes.slice(i, i + count);
+                    appendAtomic(content, atomic);
+
+                    if (overflows(content)) {
+                        removeAtomic(content, atomic);
+
+                        page = makePage(context);
+                        content = page.querySelector('.page-content');
+
+                        appendAtomic(content, atomic);
+
+                        if (overflows(content)) {
+                            page.classList.add('page--overflow-warning');
+                        }
+                    }
+
+                    i += count - 1;
+                }
+            }
+
+            source.remove();
+        })();
+    </script>
+</body>
+</html>
