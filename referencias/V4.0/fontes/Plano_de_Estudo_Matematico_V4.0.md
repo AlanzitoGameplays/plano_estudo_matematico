@@ -1,7 +1,7 @@
 # PLANO DE ESTUDO MATEMÁTICO 4.0
 
 **Documento-mãe do sistema curricular, didático, editorial e produtivo**  
-**Estado: em consolidação para auditoria final**  
+**Estado: definitivo e congelado**  
 **Versão global: 4.0 — 2026**
 
 ## APRESENTAÇÃO — A NOVA GERAÇÃO DO PLANO
