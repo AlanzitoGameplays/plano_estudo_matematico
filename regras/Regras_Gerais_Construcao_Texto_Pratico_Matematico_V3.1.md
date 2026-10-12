@@ -2,7 +2,7 @@
 
 ## Versão 3.1 — 2026
 
-**Estado:** versão candidata para auditoria e congelamento  
+**Estado:** versão definitiva e congelada
 **Plano de Estudo Matemático — 2026**
 
 ---
