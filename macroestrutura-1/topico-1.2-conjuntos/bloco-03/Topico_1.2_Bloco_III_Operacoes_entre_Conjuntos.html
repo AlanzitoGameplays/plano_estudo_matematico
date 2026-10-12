@@ -1,0 +1,1146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Tópico 1.2 — Teoria dos Conjuntos. Bloco III — Operações entre Conjuntos. Texto Teórico, Exercícios e Gabarito Comentado.">
+<title>Tópico 1.2 · Bloco III — Operações entre Conjuntos</title>
+<link rel="stylesheet" href="Plano_Matematico_3_1_Topico_1.2_Bloco_III.css">
+</head>
+<body class="theme--math">
+<!-- Materialização candidata à validação editorial. Textos mestres preservados. -->
+<main class="document" id="document" data-header-identity="PLANO DE ESTUDO — MATEMÁTICA" data-footer-identity="TÓPICO 1.2 · BLOCO III">
+<section class="page page--cover" id="capa" aria-label="Capa">
+<div class="cover-top"><div class="cover-collection">PLANO DE ESTUDO MATEMÁTICO</div></div>
+<div class="cover-bottom"><div class="cover-kicker">TÓPICO 1.2 · TEORIA DOS CONJUNTOS</div><div class="cover-title">BLOCO III<br>OPERAÇÕES ENTRE CONJUNTOS</div><div class="cover-rule" aria-hidden="true"><span></span><span></span></div><div class="cover-version">APOSTILA DE ESTUDO — 2026</div></div>
+</section>
+<div class="source-content" id="source-content">
+<section class="source-section" data-context="TEXTO TEÓRICO • PARTE I">
+<header class="part-opening" data-keep-count="3"><div class="part-label"><h1 class="outline-root">Texto Teórico</h1> · Parte I</div><h2 class="part-title" id="teoria-parte-1">Parte I — Interseção e União</h2></header>
+<p>Comparar dois conjuntos permite investigar relações de inclusão e igualdade, ou reconhecer quando elas não ocorrem. Podemos, porém, fazer algo diferente: utilizar os elementos desses conjuntos para construir uma nova coleção.</p>
+<p>Essa construção depende de uma condição. Podemos selecionar os objetos que pertencem aos dois conjuntos, os que pertencem a pelo menos um deles ou os que pertencem ao primeiro e não ao segundo. Cada condição determina uma operação, e o significado dessas condições permite explicar as propriedades dos conjuntos construídos.</p>
+<div class="item-title keep-with-next" data-keep-count="3" id="teoria-1-1">Selecionar o que pertence aos dois conjuntos</div>
+<p class="keep-with-next">Considere</p>
+<div class="math-line">A={1,2,3}, <span class="math-gap" aria-hidden="true"></span> B={3,4,5}.</div>
+<p>Para construir o conjunto dos elementos comuns a <span class="math-inline">A</span> e <span class="math-inline">B</span>, precisamos exigir duas condições ao mesmo tempo: o objeto deve pertencer a <span class="math-inline">A</span> <strong>e</strong> pertencer a <span class="math-inline">B</span>.</p>
+<p>O número <span class="math-inline">3</span> satisfaz ambas. O número <span class="math-inline">1</span> pertence apenas a <span class="math-inline">A</span>, e o número <span class="math-inline">4</span> pertence apenas a <span class="math-inline">B</span>; por isso, nenhum deles satisfaz a condição conjunta.</p>
+<p>O conjunto dos elementos que pertencem simultaneamente a <span class="math-inline">A</span> e a <span class="math-inline">B</span> é chamado de <strong>interseção de <span class="math-inline">A</span> e <span class="math-inline">B</span></strong>. Sua notação é <span class="math-inline">A ∩ B</span>, lida como “<span class="math-inline">A</span> interseção <span class="math-inline">B</span>”. No exemplo,</p>
+<div class="math-line">A ∩ B={3}.</div>
+<p>A definição se expressa pela condição de pertinência:</p>
+<div class="definition-box atomic-group"><div class="math-structural">x ∈ A ∩ B ⇔ (x ∈ A ∧ x ∈ B).</div></div>
+<p>Essa equivalência fornece tanto um critério para selecionar elementos quanto uma maneira de utilizar a informação de que um elemento pertence à interseção. Se <span class="math-inline">x ∈ A ∩ B</span>, podemos concluir separadamente <span class="math-inline">x ∈ A</span> e <span class="math-inline">x ∈ B</span>. Reciprocamente, as duas pertinências juntas garantem que <span class="math-inline">x ∈ A ∩ B</span>.</p>
+<p>A interseção é um novo conjunto determinado pelos elementos comuns. Não é uma afirmação de que <span class="math-inline">A</span> e <span class="math-inline">B</span> sejam iguais, nem exige que um deles esteja incluído no outro.</p>
+<div class="item-title keep-with-next" id="teoria-1-2">Reunir o que pertence a pelo menos um dos conjuntos</div>
+<p>Podemos utilizar os mesmos conjuntos para outra construção: reunir os elementos que pertencem a <span class="math-inline">A</span> <strong>ou</strong> a <span class="math-inline">B</span>.</p>
+<p>Agora, pertencer a apenas um deles é suficiente. Os números <span class="math-inline">1</span> e <span class="math-inline">2</span> entram por pertencerem a <span class="math-inline">A</span>; <span class="math-inline">4</span> e <span class="math-inline">5</span> entram por pertencerem a <span class="math-inline">B</span>. O número <span class="math-inline">3</span> também entra, pois pertencer aos dois conjuntos satisfaz a exigência de pertencer a pelo menos um.</p>
+<p>Esse conjunto é a <strong>união de <span class="math-inline">A</span> e <span class="math-inline">B</span></strong>, também chamada de reunião. Escrevemos <span class="math-inline">A ∪ B</span>, com a leitura “<span class="math-inline">A</span> união <span class="math-inline">B</span>”. Assim,</p>
+<div class="math-line">A ∪ B={1,2,3,4,5}.</div>
+<p>Por definição,</p>
+<div class="definition-box atomic-group"><div class="math-structural">x ∈ A ∪ B ⇔ (x ∈ A ∨ x ∈ B).</div></div>
+<p>O OU é <strong>inclusivo</strong>: a condição admite que o elemento pertença a <span class="math-inline">A</span>, a <span class="math-inline">B</span> ou aos dois. Excluir <span class="math-inline">3</span> da união seria substituir essa condição por “pertence a exatamente um dos conjuntos”, que tem outro significado.</p>
+<p>O elemento comum não aparece duas vezes no conjunto resultante. Sua presença em ambas as coleções não cria dois objetos distintos: a união contém o próprio número <span class="math-inline">3</span>, assim como contém os demais elementos.</p>
+<figure class="visual visual--venn-operations atomic-group" id="visual-r01"><div class="venn-comparison"><div class="venn-panel"><div class="venn-caption math-inline">A ∩ B</div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 190" role="img" aria-labelledby="visual-r01-0"><title id="visual-r01-0">A ∩ B</title><defs><clipPath id="intersection-a"><circle cx="108" cy="97" r="60"/></clipPath><mask id="intersection-not-b"><rect width="300" height="190" fill="white"/><circle cx="182" cy="97" r="60" fill="black"/></mask><mask id="intersection-not-a"><rect width="300" height="190" fill="white"/><circle cx="108" cy="97" r="60" fill="black"/></mask></defs><circle class="venn-selected" cx="182" cy="97" r="60" clip-path="url(#intersection-a)"/><circle class="venn-set" cx="108" cy="97" r="60"/><circle class="venn-set" cx="182" cy="97" r="60"/><text x="76" y="89">A</text><text x="204" y="89">B</text></svg></div><div class="venn-panel"><div class="venn-caption math-inline">A ∪ B</div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 190" role="img" aria-labelledby="visual-r01-1"><title id="visual-r01-1">A ∪ B</title><defs><clipPath id="union-a"><circle cx="108" cy="97" r="60"/></clipPath><mask id="union-not-b"><rect width="300" height="190" fill="white"/><circle cx="182" cy="97" r="60" fill="black"/></mask><mask id="union-not-a"><rect width="300" height="190" fill="white"/><circle cx="108" cy="97" r="60" fill="black"/></mask></defs><g class="venn-selected"><circle cx="108" cy="97" r="60"/><circle cx="182" cy="97" r="60"/></g><circle class="venn-set" cx="108" cy="97" r="60"/><circle class="venn-set" cx="182" cy="97" r="60"/><text x="76" y="89">A</text><text x="204" y="89">B</text></svg></div></div><figcaption class="venn-caption">Posições indicam pertinência; tamanhos e áreas não representam quantidades de elementos.</figcaption></figure>
+<p>No primeiro diagrama, a região selecionada precisa atender às duas condições. No segundo, basta atender a uma delas. A sobreposição participa de ambos os resultados, mas por razões expressas por condições diferentes.</p>
+<div class="item-title keep-with-next" id="teoria-1-3">Condições de pertinência e formas de representação</div>
+<p>A ligação com os conectivos pode ser examinada para um objeto <span class="math-inline">x</span> qualquer. Cada linha da tabela apresenta uma combinação possível das afirmações de pertinência.</p>
+<div class="table-wrap"><table class="truth-table truth-table--membership"><colgroup><col style="width:19%"><col style="width:19%"><col style="width:29%"><col style="width:33%"></colgroup><thead><tr><th scope="col"><span class="math-inline">x ∈ A</span></th><th scope="col"><span class="math-inline">x ∈ B</span></th><th scope="col"><span class="math-inline">x ∈ A ∩ B</span> — E</th><th scope="col"><span class="math-inline">x ∈ A ∪ B</span> — OU inclusivo</th></tr></thead><tbody><tr><td>V</td><td>V</td><td>V</td><td>V</td></tr>
+<tr><td>V</td><td>F</td><td>F</td><td>V</td></tr>
+<tr><td>F</td><td>V</td><td>F</td><td>V</td></tr>
+<tr><td>F</td><td>F</td><td>F</td><td>F</td></tr></tbody></table></div>
+<p>As linhas representam possibilidades lógicas, não a existência obrigatória de elementos em cada região.</p>
+<p>A primeira linha distingue o OU inclusivo de uma interpretação exclusiva: pertencer aos dois conjuntos torna verdadeira tanto a condição da interseção quanto a da união. A última linha mostra que um objeto ausente de ambos não pertence a nenhum dos dois resultados.</p>
+<p>Quando os conjuntos são enumerados, essas condições permitem examinar os elementos apresentados. Quando são definidos por propriedades, podemos combinar diretamente as condições que os caracterizam.</p>
+<p class="keep-with-next">Considere</p>
+<div class="math-line">D={1,2,3,4,5,6},</div>
+<p class="keep-with-next">e, dentro desse domínio,</p>
+<div class="math-line">P={x ∈ D | x&gt;2}, <span class="math-gap" aria-hidden="true"></span> Q={x ∈ D | x&lt;5}.</div>
+<p class="keep-with-next">Pertencer a <span class="math-inline">P ∩ Q</span> exige estar em <span class="math-inline">D</span> e satisfazer conjuntamente as duas desigualdades:</p>
+<div class="math-line">P ∩ Q={x ∈ D | x&gt;2 ∧ x&lt;5} ={3,4}.</div>
+<p class="keep-with-next">Já a união exige satisfazer pelo menos uma delas:</p>
+<div class="math-line">P ∪ Q={x ∈ D | x&gt;2 ∨ x&lt;5}=D.</div>
+<p>Os elementos <span class="math-inline">1</span> e <span class="math-inline">2</span> satisfazem <span class="math-inline">x&lt;5</span>; <span class="math-inline">5</span> e <span class="math-inline">6</span> satisfazem <span class="math-inline">x&gt;2</span>; <span class="math-inline">3</span> e <span class="math-inline">4</span> satisfazem ambas. Por isso, nenhum elemento de <span class="math-inline">D</span> fica fora da união.</p>
+<p class="keep-with-next">Em geral, se</p>
+<div class="math-line">P={x ∈ D | p(x)}, <span class="math-gap" aria-hidden="true"></span> Q={x ∈ D | q(x)},</div>
+<p class="keep-with-next">então</p>
+<div class="math-line">P ∩ Q={x ∈ D | p(x) ∧ q(x)},</div>
+<p class="keep-with-next">e</p>
+<div class="math-line">P ∪ Q={x ∈ D | p(x) ∨ q(x)}.</div>
+<p>O domínio continua delimitando os objetos considerados. Uma propriedade, isolada dessa delimitação, pode selecionar uma coleção diferente.</p>
+<div class="item-title keep-with-next" id="teoria-1-4">Conjuntos disjuntos e relações com inclusão</div>
+<div class="definition-box atomic-group"><p>Dois conjuntos são <strong>disjuntos</strong> quando não possuem elemento comum. Isso equivale a dizer que sua interseção é vazia:</p><div class="math-line">A ∩ B= ∅ .</div></div>
+<p>Por exemplo, <span class="math-inline">{1,3}</span> e <span class="math-inline">{2,4}</span> são disjuntos. Não existe elemento que satisfaça as duas condições de pertinência simultaneamente.</p>
+<p>Ser diferente não basta para ser disjunto. Os conjuntos <span class="math-inline">{1,2,3}</span> e <span class="math-inline">{3,4,5}</span> são diferentes, mas possuem o elemento <span class="math-inline">3</span> em comum. Além disso, o vazio é disjunto de qualquer conjunto, pois não possui elemento que possa pertencer também à outra coleção.</p>
+<p class="keep-with-next">As definições estabelecem relações imediatas com inclusão:</p>
+<div class="math-line">A ∩ B ⊆ A, <span class="math-gap" aria-hidden="true"></span> A ∩ B ⊆ B.</div>
+<p>De fato, qualquer elemento da interseção pertence aos dois conjuntos e, portanto, a cada um deles. Para a união, a direção se inverte:</p>
+<div class="math-line">A ⊆ A ∪ B, <span class="math-gap" aria-hidden="true"></span> B ⊆ A ∪ B.</div>
+<p>Um elemento de <span class="math-inline">A</span> já satisfaz uma das alternativas exigidas pela união; o mesmo ocorre com um elemento de <span class="math-inline">B</span>. Nenhuma dessas inclusões exige que os conjuntos sejam diferentes.</p>
+<p>Se <span class="math-inline">A ⊆ B</span>, todo elemento de <span class="math-inline">A</span> já pertence a <span class="math-inline">B</span>. Logo, os elementos comuns são exatamente os de <span class="math-inline">A</span>, enquanto reunir os elementos dos dois conjuntos não acrescenta nada a <span class="math-inline">B</span>:</p>
+<div class="math-line">A ∩ B=A, <span class="math-gap" aria-hidden="true"></span> A ∪ B=B.</div>
+<p>Essas relações mostram que o resultado de uma operação depende das pertinências, inclusive quando um conjunto é vazio ou está incluído no outro. Outra construção surge quando, além de exigir uma pertinência, exigimos que a outra não ocorra.</p>
+</section>
+<section class="source-section" data-context="TEXTO TEÓRICO • PARTE II">
+<header class="part-opening" data-keep-count="3"><div class="part-label">Texto Teórico · Parte II</div><h2 class="part-title" id="teoria-parte-2">Parte II — Diferença, Complemento e Conjunto de Referência</h2></header>
+<div class="item-title keep-with-next" data-keep-count="3" id="teoria-2-1">Selecionar os elementos de um conjunto que não pertencem ao outro</div>
+<p class="keep-with-next">Retome</p>
+<div class="math-line">A={1,2,3}, <span class="math-gap" aria-hidden="true"></span> B={3,4,5}.</div>
+<p>Para selecionar os elementos de <span class="math-inline">A</span> que não pertencem a <span class="math-inline">B</span>, começamos pelos elementos de <span class="math-inline">A</span> e excluímos os que também estão em <span class="math-inline">B</span>. O número <span class="math-inline">3</span> não permanece; <span class="math-inline">1</span> e <span class="math-inline">2</span> permanecem.</p>
+<p class="keep-with-next">O resultado é a <strong>diferença de <span class="math-inline">A</span> e <span class="math-inline">B</span></strong>, indicada por <span class="math-inline">A ∖ B</span> e lida como “<span class="math-inline">A</span> menos <span class="math-inline">B</span>”:</p>
+<div class="math-line">A ∖ B={1,2}.</div>
+<p>Por definição,</p>
+<div class="definition-box atomic-group"><div class="math-structural">x ∈ A ∖ B ⇔ (x ∈ A ∧ x ∉ B).</div></div>
+<p>As duas condições são indispensáveis. Não pertencer a <span class="math-inline">B</span> não basta: o objeto precisa pertencer a <span class="math-inline">A</span>. Por exemplo, <span class="math-inline">6 ∉ B</span>, mas <span class="math-inline">6</span> não pertence à diferença porque também não pertence a <span class="math-inline">A</span>.</p>
+<p>A operação não modifica os conjuntos originais. Ela constrói outro conjunto, selecionando entre os elementos do primeiro aqueles que satisfazem a condição de exclusão.</p>
+<div class="item-title keep-with-next" id="teoria-2-2">A direção da diferença</div>
+<p class="keep-with-next">Se invertermos a ordem dos conjuntos, começamos por outra coleção:</p>
+<div class="math-line">B ∖ A={4,5}.</div>
+<p class="keep-with-next">O resultado mudou porque mudaram tanto a pertinência exigida quanto a ausência exigida:</p>
+<div class="math-structural math-aligned">
+<div class="math-row"><span>x ∈ A ∖ B</span><span>⇔ x ∈ A ∧ x ∉ B,</span><span></span></div>
+<div class="math-row"><span>x ∈ B ∖ A</span><span>⇔ x ∈ B ∧ x ∉ A.</span><span></span></div>
+</div>
+<p>O número <span class="math-inline">1</span> testemunha a diferença entre os resultados: pertence a <span class="math-inline">A ∖ B</span>, mas não a <span class="math-inline">B ∖ A</span>. Portanto, não vale, em geral, a igualdade</p>
+<div class="math-line">A ∖ B=B ∖ A.</div>
+<figure class="visual visual--venn-difference atomic-group" id="visual-r04"><div class="venn-comparison"><div class="venn-panel"><div class="venn-caption math-inline">A ∖ B</div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 190" role="img" aria-labelledby="visual-r04-0"><title id="visual-r04-0">A ∖ B</title><defs><clipPath id="difference-ab-a"><circle cx="108" cy="97" r="60"/></clipPath><mask id="difference-ab-not-b"><rect width="300" height="190" fill="white"/><circle cx="182" cy="97" r="60" fill="black"/></mask><mask id="difference-ab-not-a"><rect width="300" height="190" fill="white"/><circle cx="108" cy="97" r="60" fill="black"/></mask></defs><circle class="venn-selected" cx="108" cy="97" r="60" mask="url(#difference-ab-not-b)"/><circle class="venn-set" cx="108" cy="97" r="60"/><circle class="venn-set" cx="182" cy="97" r="60"/><text x="76" y="89">A</text><text x="204" y="89">B</text></svg></div><div class="venn-panel"><div class="venn-caption math-inline">B ∖ A</div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 190" role="img" aria-labelledby="visual-r04-1"><title id="visual-r04-1">B ∖ A</title><defs><clipPath id="difference-ba-a"><circle cx="108" cy="97" r="60"/></clipPath><mask id="difference-ba-not-b"><rect width="300" height="190" fill="white"/><circle cx="182" cy="97" r="60" fill="black"/></mask><mask id="difference-ba-not-a"><rect width="300" height="190" fill="white"/><circle cx="108" cy="97" r="60" fill="black"/></mask></defs><circle class="venn-selected" cx="182" cy="97" r="60" mask="url(#difference-ba-not-a)"/><circle class="venn-set" cx="108" cy="97" r="60"/><circle class="venn-set" cx="182" cy="97" r="60"/><text x="76" y="89">A</text><text x="204" y="89">B</text></svg></div></div><figcaption class="venn-caption">Posições indicam pertinência; tamanhos e áreas não representam quantidades de elementos.</figcaption></figure>
+<p>A diferença é definida para quaisquer dois conjuntos. Não é necessário supor <span class="math-inline">B ⊆ A</span> para formar <span class="math-inline">A ∖ B</span>. No exemplo, <span class="math-inline">4</span> e <span class="math-inline">5</span> pertencem a <span class="math-inline">B</span>, mas estão fora de <span class="math-inline">A</span>; sua presença em <span class="math-inline">B</span> não altera quais elementos de <span class="math-inline">A</span> serão selecionados.</p>
+<p>Se os conjuntos forem disjuntos, nenhum elemento do primeiro será excluído, e <span class="math-inline">A ∖ B=A</span>. Se todo elemento de <span class="math-inline">A</span> pertencer a <span class="math-inline">B</span>, nenhum permanecerá, e <span class="math-inline">A ∖ B= ∅</span>. Assim, a diferença pode ser igual ao conjunto inicial ou ao vazio sem deixar de obedecer à mesma definição.</p>
+<div class="item-title keep-with-next" id="teoria-2-3">Por que o complemento exige uma referência</div>
+<p>Perguntar quais elementos de <span class="math-inline">A</span> não pertencem a <span class="math-inline">B</span> delimita a coleção de partida. Já a pergunta “quais objetos não pertencem a <span class="math-inline">A</span>?” ainda deixa em aberto quais objetos estamos considerando.</p>
+<p>Para responder de maneira determinada, fixamos um <strong>conjunto universo</strong>, ou <strong>universo de referência</strong>, indicado por <span class="math-inline">U</span>. Ele reúne os objetos considerados na situação. Ao definir o complemento de <span class="math-inline">A</span> nesse universo, supomos <span class="math-inline">A ⊆ U</span>.</p>
+<div class="definition-box atomic-group"><p>O <strong>complemento de <span class="math-inline">A</span> relativamente a <span class="math-inline">U</span></strong> é o conjunto dos elementos de <span class="math-inline">U</span> que não pertencem a <span class="math-inline">A</span>. Com o universo definido, utilizamos a notação</p><div class="math-structural">A<sup>c</sup>=U ∖ A.</div><p>Logo, para qualquer objeto <span class="math-inline">x</span>,</p><div class="math-structural">x ∈ A<sup>c</sup> ⇔ (x ∈ U ∧ x ∉ A).</div></div>
+<p class="keep-with-next">Somente quando <span class="math-inline">x</span> já está sendo considerado em <span class="math-inline">U</span> podemos abreviar a leitura para</p>
+<div class="math-structural">x ∈ A<sup>c</sup> ⇔ x ∉ A, <span class="math-gap" aria-hidden="true"></span> <span class="math-text">para </span>x ∈ U.</div>
+<p>O universo não é um conjunto de todos os objetos possíveis. É a referência delimitada da situação. Um objeto fora de <span class="math-inline">U</span> não pertence nem a <span class="math-inline">A</span> nem ao complemento de <span class="math-inline">A</span> nesse universo.</p>
+<div class="item-title keep-with-next" data-keep-count="3" id="teoria-2-4">O mesmo conjunto em universos diferentes</div>
+<p class="keep-with-next">Considere</p>
+<div class="math-line">A={1,3,5},</div>
+<p class="keep-with-next">e duas referências possíveis:</p>
+<div class="math-line">U={1,2,3,4,5}, <span class="math-gap" aria-hidden="true"></span> V={1,2,3,4,5,6,7}.</div>
+<p class="keep-with-next">Em ambos os casos, <span class="math-inline">A</span> é o mesmo conjunto e está incluído na referência. Entretanto,</p>
+<div class="math-line">U ∖ A={2,4}, <span class="math-gap" aria-hidden="true"></span> V ∖ A={2,4,6,7}.</div>
+<p>Os números <span class="math-inline">6</span> e <span class="math-inline">7</span> não pertencem a <span class="math-inline">A</span>, mas só fazem parte do segundo complemento, porque não pertencem a <span class="math-inline">U</span>. A mudança de universo alterou o resultado.</p>
+<figure class="visual visual--reference-complement atomic-group" id="visual-r05"><div class="venn-comparison"><div class="venn-panel"><div class="venn-caption math-inline">U ∖ A = {2, 4}</div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 190" role="img" aria-labelledby="visual-r05-0"><title id="visual-r05-0">U ∖ A = {2, 4}</title><defs><mask id="universe-u-outside"><rect width="300" height="190" fill="white"/><ellipse cx="109" cy="95" rx="65" ry="59" fill="black"/></mask></defs><rect class="venn-selected" x="12" y="15" width="276" height="160" mask="url(#universe-u-outside)"/><rect class="venn-universe" x="12" y="15" width="276" height="160"/><ellipse class="venn-set" cx="109" cy="95" rx="65" ry="59"/><text x="20" y="36">U</text><text x="99" y="54">A</text><text x="83" y="78">1</text><text x="127" y="78">3</text><text x="104" y="118">5</text><text class="venn-element-selected" x="215" y="71">2</text><text class="venn-element-selected" x="235" y="118">4</text></svg></div><div class="venn-panel"><div class="venn-caption math-inline">V ∖ A = {2, 4, 6, 7}</div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 190" role="img" aria-labelledby="visual-r05-1"><title id="visual-r05-1">V ∖ A = {2, 4, 6, 7}</title><defs><mask id="universe-v-outside"><rect width="300" height="190" fill="white"/><ellipse cx="109" cy="95" rx="65" ry="59" fill="black"/></mask></defs><rect class="venn-selected" x="12" y="15" width="276" height="160" mask="url(#universe-v-outside)"/><rect class="venn-universe" x="12" y="15" width="276" height="160"/><ellipse class="venn-set" cx="109" cy="95" rx="65" ry="59"/><text x="20" y="36">V</text><text x="99" y="54">A</text><text x="83" y="78">1</text><text x="127" y="78">3</text><text x="104" y="118">5</text><text class="venn-element-selected" x="215" y="71">2</text><text class="venn-element-selected" x="235" y="118">4</text><text class="venn-element-selected" x="175" y="150">6</text><text class="venn-element-selected" x="264" y="151">7</text></svg></div></div><figcaption class="venn-caption">Posições indicam pertinência; tamanhos e áreas não representam quantidades de elementos.</figcaption></figure>
+<p>Ao comparar universos distintos, escrever explicitamente <span class="math-inline">U ∖ A</span> e <span class="math-inline">V ∖ A</span> evita atribuir ao símbolo <span class="math-inline">A<sup>c</sup></span> dois significados ao mesmo tempo. Em uma expressão que envolva vários complementos, a referência comum deve permanecer fixa.</p>
+<div class="item-title keep-with-next" id="teoria-2-5">Diferença como interseção com um complemento</div>
+<p>Suponha agora <span class="math-inline">A,B ⊆ U</span>, com um mesmo universo definido. Um elemento de <span class="math-inline">A ∖ B</span> pertence a <span class="math-inline">A</span> e não pertence a <span class="math-inline">B</span>. Como pertence a <span class="math-inline">A</span>, também pertence a <span class="math-inline">U</span>; assim, a ausência de <span class="math-inline">B</span> o coloca em <span class="math-inline">B<sup>c</sup></span>.</p>
+<p>Essas condições dizem que ele pertence simultaneamente a <span class="math-inline">A</span> e a <span class="math-inline">B<sup>c</sup></span>. Reciprocamente, um elemento desses dois conjuntos pertence a <span class="math-inline">A</span> e não pertence a <span class="math-inline">B</span>. Portanto,</p>
+<div class="math-structural">A ∖ B=A ∩ B<sup>c</sup>, <span class="math-gap" aria-hidden="true"></span> A,B ⊆ U.</div>
+<p>A diferença não exige, em sua definição, escolher um universo. Já a escrita com <span class="math-inline">B<sup>c</sup></span> exige que esse universo tenha sido fixado e contenha os conjuntos considerados. A igualdade conecta as operações sob essas hipóteses; não elimina a dependência do complemento.</p>
+<p class="keep-with-next">Algumas consequências também são imediatas:</p>
+<div class="math-line">A ∖ ∅ =A, <span class="math-gap" aria-hidden="true"></span> A ∖ A= ∅ , <span class="math-gap" aria-hidden="true"></span> ∅ ∖ A= ∅ .</div>
+<p>No primeiro caso, nenhum elemento de <span class="math-inline">A</span> é excluído. No segundo, a condição exigiria que um objeto pertencesse e não pertencesse a <span class="math-inline">A</span>, o que é impossível. No terceiro, não há elemento na coleção de partida.</p>
+<p class="keep-with-next">Para a referência <span class="math-inline">U</span>, essas mesmas condições fornecem</p>
+<div class="math-line">U<sup>c</sup>= ∅ , <span class="math-gap" aria-hidden="true"></span> ∅ <sup>c</sup>=U.</div>
+<p>Tais igualdades não dependem de uma enumeração particular. Elas decorrem das condições de pertinência, que também permitirão justificar relações mais elaboradas entre as operações.</p>
+</section>
+<section class="source-section" data-context="TEXTO TEÓRICO • PARTE III">
+<header class="part-opening" data-keep-count="3"><div class="part-label">Texto Teórico · Parte III</div><h2 class="part-title" id="teoria-parte-3">Parte III — Identidades e Demonstração com Conjuntos</h2></header>
+<div class="item-title keep-with-next" id="teoria-3-1">De uma verificação particular a uma identidade</div>
+<div class="definition-box atomic-group"><p>Uma <strong>identidade entre conjuntos</strong> é uma igualdade válida para todas as escolhas dos conjuntos que satisfazem as hipóteses indicadas. Ela expressa que duas construções, mesmo descritas de maneiras diferentes, determinam exatamente os mesmos elementos.</p></div>
+<p>Verificar que uma igualdade funciona com certos conjuntos confirma aquele caso. Demonstrá-la exige explicar por que funciona em todos os casos admitidos. Por exemplo, a coincidência entre <span class="math-inline">{1,2} ∪ {2,3}</span> e <span class="math-inline">{2,3} ∪ {1,2}</span> sugere uma propriedade, mas sua validade geral depende do significado do OU na união.</p>
+<p class="keep-with-next">O critério de igualdade orienta as demonstrações:</p>
+<div class="math-structural">X=Y ⇔ ∀ x (x ∈ X ↔ x ∈ Y).</div>
+<p>Podemos traduzir as pertinências em condições lógicas e mostrar que elas são equivalentes. Também podemos separar o trabalho nas implicações que provam <span class="math-inline">X ⊆ Y</span> e <span class="math-inline">Y ⊆ X</span>. Nos dois métodos, o elemento é arbitrário: nenhum passo pode depender de uma escolha particular que favoreça a conclusão.</p>
+<p>Quando uma identidade envolver <span class="math-inline">U</span> ou complementos, os conjuntos considerados serão subconjuntos de um mesmo universo <span class="math-inline">U</span>. Para comparar pertinências nesses casos, podemos trabalhar com <span class="math-inline">x ∈ U</span>; objetos externos ao universo não pertencem a nenhum dos conjuntos dos dois lados.</p>
+<div class="item-title keep-with-next" id="teoria-3-2">Repetir uma condição e combiná-la com vazio ou universo</div>
+<p>Exigir duas vezes a mesma pertinência não seleciona uma coleção diferente. Também não acrescenta elementos permitir duas vezes a mesma alternativa:</p>
+<div class="math-line">A ∩ A=A, <span class="math-gap" aria-hidden="true"></span> A ∪ A=A.</div>
+<p>Essas são as propriedades de <strong>idempotência</strong>. A condição <span class="math-inline">x ∈ A ∧ x ∈ A</span> equivale a <span class="math-inline">x ∈ A</span>, assim como <span class="math-inline">x ∈ A ∨ x ∈ A</span>. A repetição não altera o critério.</p>
+<p class="keep-with-next">Na união, o vazio é um <strong>elemento neutro</strong>:</p>
+<div class="math-line">A ∪ ∅ =A.</div>
+<p class="keep-with-next">Ele não acrescenta nenhum elemento. Na interseção, o universo é neutro, para <span class="math-inline">A ⊆ U</span>:</p>
+<div class="math-line">A ∩ U=A.</div>
+<p>Todo elemento de <span class="math-inline">A</span> já está em <span class="math-inline">U</span>, de modo que essa exigência adicional não exclui nada.</p>
+<p class="keep-with-next">As combinações inversas têm outro efeito:</p>
+<div class="math-line">A ∩ ∅ = ∅ , <span class="math-gap" aria-hidden="true"></span> A ∪ U=U, <span class="math-gap" aria-hidden="true"></span> A ⊆ U.</div>
+<p>A primeira condição é impossível, pois nenhum objeto pertence ao conjunto vazio. A segunda seleciona todo elemento de <span class="math-inline">U</span>, pois pertencer a <span class="math-inline">U</span> já satisfaz uma das alternativas. Dizemos, nesse sentido, que o vazio é <strong>dominante</strong> para a interseção e o universo é dominante para a união.</p>
+<p>Neutro e dominante descrevem comportamentos relativos à operação. O mesmo vazio que preserva <span class="math-inline">A</span> em uma união produz o vazio em uma interseção.</p>
+<div class="item-title keep-with-next" id="teoria-3-3">Ordem dos conjuntos e agrupamento das operações</div>
+<p>A ordem dos conjuntos não altera uma condição conjunta nem uma alternativa inclusiva. Por isso, união e interseção são <strong>comutativas</strong>:</p>
+<div class="math-line">A ∩ B=B ∩ A, <span class="math-gap" aria-hidden="true"></span> A ∪ B=B ∪ A.</div>
+<p>No primeiro caso, as condições <span class="math-inline">x ∈ A ∧ x ∈ B</span> e <span class="math-inline">x ∈ B ∧ x ∈ A</span> são equivalentes. No segundo, o mesmo vale para as condições ligadas por OU. Essa justificação vale para qualquer elemento e quaisquer conjuntos.</p>
+<p>O agrupamento também não altera o resultado quando se repete uma mesma operação. As propriedades <strong>associativas</strong> são</p>
+<div class="math-line">(A ∩ B) ∩ C=A ∩ (B ∩ C),</div>
+<p class="keep-with-next">e</p>
+<div class="math-line">(A ∪ B) ∪ C=A ∪ (B ∪ C).</div>
+<p>Na interseção, qualquer um dos agrupamentos exige pertencer aos três conjuntos. Na união, qualquer um deles exige pertencer a pelo menos um dos três. As igualdades resultam da associatividade dos conectivos correspondentes.</p>
+<p>Por isso, podemos escrever <span class="math-inline">A ∩ B ∩ C</span> ou <span class="math-inline">A ∪ B ∪ C</span> sem indicar o agrupamento. Quando as operações são diferentes, entretanto, precisamos explicitar o que será combinado primeiro.</p>
+<p class="keep-with-next">Considere</p>
+<div class="math-line">A={1}, <span class="math-gap" aria-hidden="true"></span> B={2}, <span class="math-gap" aria-hidden="true"></span> C={2}.</div>
+<p class="keep-with-next">Então</p>
+<div class="math-line">(A ∪ B) ∩ C={2}, <span class="math-gap" aria-hidden="true"></span> A ∪ (B ∩ C)={1,2}.</div>
+<p>Esse contraexemplo mostra que alterar o agrupamento de operações diferentes pode alterar o conjunto. A associatividade de cada operação não autoriza esse deslocamento.</p>
+<div class="item-title keep-with-next" id="teoria-3-4">Absorção: reconhecer uma condição redundante</div>
+<p>Considere a construção <span class="math-inline">A ∩ (A ∪ B)</span>. Para pertencer a ela, um objeto precisa estar em <span class="math-inline">A</span> e também em <span class="math-inline">A ∪ B</span>. Mas a primeira exigência já garante a segunda. A união acrescenta uma condição que, nesse contexto, é redundante.</p>
+<p class="keep-with-next">Essa observação conduz à identidade de <strong>absorção</strong>:</p>
+<div class="math-structural">A ∩ (A ∪ B)=A.</div>
+<p class="keep-with-next">Para demonstrá-la por pertinência, seja <span class="math-inline">x</span> um objeto arbitrário. Pelas definições,</p>
+<div class="math-structural math-aligned">
+<div class="math-row"><span>x ∈ A ∩ (A ∪ B)</span><span>⇔ (x ∈ A) ∧ (x ∈ A ∪ B)</span><span></span></div>
+<div class="math-row"><span></span><span>⇔ (x ∈ A) ∧ ((x ∈ A) ∨ (x ∈ B))</span><span></span></div>
+<div class="math-row"><span></span><span>⇔ x ∈ A.</span><span></span></div>
+</div>
+<p>A última equivalência pode ser reconstruída nos dois sentidos. Se a condição composta é verdadeira, sua primeira parte fornece <span class="math-inline">x ∈ A</span>. Se <span class="math-inline">x ∈ A</span>, a alternativa <span class="math-inline">x ∈ A ∨ x ∈ B</span> também é verdadeira, e a condição composta fica satisfeita.</p>
+<p>Assim, a pertinência no conjunto da esquerda equivale à pertinência em <span class="math-inline">A</span> para qualquer <span class="math-inline">x</span>. Isso demonstra a igualdade.</p>
+<p class="keep-with-next">A outra identidade de absorção é</p>
+<div class="math-line">A ∪ (A ∩ B)=A.</div>
+<p>Todo elemento de <span class="math-inline">A ∩ B</span> já pertence a <span class="math-inline">A</span>. Reuni-lo aos elementos de <span class="math-inline">A</span> não acrescenta elemento algum. Em condições lógicas, a equivalência é</p>
+<div class="math-structural">(x ∈ A) ∨ ((x ∈ A) ∧ (x ∈ B)) ⇔ x ∈ A.</div>
+<p>Nas duas identidades, reconhecer a redundância simplifica a construção sem perder informação sobre seus elementos.</p>
+<div class="item-title keep-with-next" id="teoria-3-5">Distributividade: combinar uma exigência com alternativas</div>
+<p>Pertencer a <span class="math-inline">A ∩ (B ∪ C)</span> significa atender a uma exigência fixa — pertencer a <span class="math-inline">A</span> — e a uma alternativa: pertencer a <span class="math-inline">B</span> ou a <span class="math-inline">C</span>.</p>
+<p>Podemos distribuir a exigência fixa pelas alternativas. O objeto deverá pertencer a <span class="math-inline">A</span> e a <span class="math-inline">B</span>, ou pertencer a <span class="math-inline">A</span> e a <span class="math-inline">C</span>. Isso sugere:</p>
+<div class="math-structural">A ∩ (B ∪ C)=(A ∩ B) ∪ (A ∩ C).</div>
+<p>Vamos demonstrar essa propriedade por <strong>dupla inclusão</strong>, mantendo visíveis as duas direções do raciocínio.</p>
+<div class="proof-step proof-justification proof-schema" data-proof="teoria-distributividade"><p><strong class="proof-step__role">Primeira inclusão.</strong> Seja <span class="math-inline">x</span> arbitrário e suponha</p></div>
+<div class="proof-step proof-justification" data-proof="teoria-distributividade"><div class="math-line">x ∈ A ∩ (B ∪ C).</div></div>
+<div class="proof-step proof-justification" data-proof="teoria-distributividade"><p>Pela definição de interseção, <span class="math-inline">x ∈ A</span> e <span class="math-inline">x ∈ B ∪ C</span>. A segunda pertinência significa que <span class="math-inline">x ∈ B</span> ou <span class="math-inline">x ∈ C</span>.</p></div>
+<div class="proof-step proof-justification" data-proof="teoria-distributividade"><p>Se <span class="math-inline">x ∈ B</span>, sua pertinência a <span class="math-inline">A</span> fornece <span class="math-inline">x ∈ A ∩ B</span>. Se <span class="math-inline">x ∈ C</span>, fornece <span class="math-inline">x ∈ A ∩ C</span>. Em qualquer dessas alternativas,</p></div>
+<div class="proof-step proof-justification" data-proof="teoria-distributividade"><div class="math-line">x ∈ (A ∩ B) ∪ (A ∩ C).</div></div>
+<div class="proof-step proof-justification" data-proof="teoria-distributividade"><p>As alternativas podem ocorrer simultaneamente; isso não prejudica a conclusão, pois a união utiliza OU inclusivo. Logo,</p></div>
+<div class="proof-step proof-justification" data-proof="teoria-distributividade"><div class="math-line">A ∩ (B ∪ C) ⊆ (A ∩ B) ∪ (A ∩ C).</div></div>
+<div class="proof-step proof-justification" data-proof="teoria-distributividade"><p><strong class="proof-step__role">Inclusão inversa.</strong> Seja <span class="math-inline">x</span> arbitrário e suponha</p></div>
+<div class="proof-step proof-justification" data-proof="teoria-distributividade"><div class="math-line">x ∈ (A ∩ B) ∪ (A ∩ C).</div></div>
+<div class="proof-step proof-justification" data-proof="teoria-distributividade"><p>Então <span class="math-inline">x ∈ A ∩ B</span> ou <span class="math-inline">x ∈ A ∩ C</span>. Na primeira alternativa, <span class="math-inline">x ∈ A</span> e <span class="math-inline">x ∈ B</span>; na segunda, <span class="math-inline">x ∈ A</span> e <span class="math-inline">x ∈ C</span>.</p></div>
+<div class="proof-step proof-justification" data-proof="teoria-distributividade"><p>Em ambas, <span class="math-inline">x ∈ A</span>. Além disso, <span class="math-inline">x</span> pertence a pelo menos um dos conjuntos <span class="math-inline">B</span> e <span class="math-inline">C</span>, de modo que <span class="math-inline">x ∈ B ∪ C</span>. Portanto,</p></div>
+<div class="proof-step proof-justification" data-proof="teoria-distributividade"><div class="math-line">x ∈ A ∩ (B ∪ C),</div></div>
+<div class="proof-step proof-justification" data-proof="teoria-distributividade"><p>e</p></div>
+<div class="proof-step proof-justification" data-proof="teoria-distributividade"><div class="math-line">(A ∩ B) ∪ (A ∩ C) ⊆ A ∩ (B ∪ C).</div></div>
+<div class="proof-step proof-justification" data-proof="teoria-distributividade"><p>As duas inclusões demonstram a igualdade. A prova não depende da existência de elementos em uma região particular nem de os conjuntos serem diferentes ou não vazios.</p></div>
+<figure class="visual visual--venn-distributivity atomic-group" id="visual-r06"><div class="venn-comparison"><div class="venn-panel"><div class="venn-caption math-inline">A ∩ (B ∪ C)</div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 190" role="img" aria-labelledby="visual-r06-0"><title id="visual-r06-0">A ∩ (B ∪ C)</title><defs><clipPath id="distribution-left-a"><circle cx="150" cy="72" r="53"/></clipPath></defs><g class="venn-selected" clip-path="url(#distribution-left-a)"><circle cx="113" cy="119" r="53"/><circle cx="187" cy="119" r="53"/></g><g class="venn-set"><circle cx="150" cy="72" r="53"/><circle cx="113" cy="119" r="53"/><circle cx="187" cy="119" r="53"/></g><text x="144" y="39">A</text><text x="77" y="141">B</text><text x="217" y="141">C</text></svg></div><div class="venn-panel"><div class="venn-caption math-inline">(A ∩ B) ∪ (A ∩ C)</div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 190" role="img" aria-labelledby="visual-r06-1"><title id="visual-r06-1">(A ∩ B) ∪ (A ∩ C)</title><defs><clipPath id="distribution-right-a"><circle cx="150" cy="72" r="53"/></clipPath></defs><g class="venn-selected" clip-path="url(#distribution-right-a)"><circle cx="113" cy="119" r="53"/><circle cx="187" cy="119" r="53"/></g><g class="venn-set"><circle cx="150" cy="72" r="53"/><circle cx="113" cy="119" r="53"/><circle cx="187" cy="119" r="53"/></g><text x="144" y="39">A</text><text x="77" y="141">B</text><text x="217" y="141">C</text></svg></div></div><figcaption class="venn-caption">O esquema representa condições possíveis, sem afirmar que todas as regiões possuem elementos, e não substitui a demonstração.</figcaption></figure>
+<p class="keep-with-next">A união também se distribui em relação à interseção:</p>
+<div class="math-line">A ∪ (B ∩ C)=(A ∪ B) ∩ (A ∪ C).</div>
+<p>No lado esquerdo, basta pertencer a <span class="math-inline">A</span>; fora de <span class="math-inline">A</span>, é necessário pertencer tanto a <span class="math-inline">B</span> quanto a <span class="math-inline">C</span>. O lado direito expressa a mesma seleção: pertencer a <span class="math-inline">A</span> satisfaz as duas uniões; sem essa pertinência, a primeira exige <span class="math-inline">B</span>, e a segunda exige <span class="math-inline">C</span>.</p>
+<p class="keep-with-next">A equivalência lógica que formaliza essa interpretação é</p>
+<div class="math-structural math-aligned">
+<div class="math-row"><span></span><span>(x ∈ A) ∨ ((x ∈ B) ∧ (x ∈ C))</span><span></span></div>
+<div class="math-row"><span></span><span><span class="math-gap" aria-hidden="true"></span> ⇔ ((x ∈ A) ∨ (x ∈ B)) ∧ ((x ∈ A) ∨ (x ∈ C)).</span><span></span></div>
+</div>
+<p>Traduzindo cada condição pelas definições das operações, obtemos a identidade para qualquer <span class="math-inline">x</span>.</p>
+<div class="item-title keep-with-next" id="teoria-3-6">Complementação dentro de um universo fixo</div>
+<p class="keep-with-next">Fixe <span class="math-inline">U</span> e suponha <span class="math-inline">A ⊆ U</span>. Nenhum objeto pode pertencer a <span class="math-inline">A</span> e ao seu complemento ao mesmo tempo:</p>
+<div class="math-line">A ∩ A<sup>c</sup>= ∅ .</div>
+<p>A condição exigiria <span class="math-inline">x ∈ A</span> e <span class="math-inline">x ∉ A</span>. Já todo elemento de <span class="math-inline">U</span> pertence a <span class="math-inline">A</span> ou não pertence a <span class="math-inline">A</span>. Na segunda situação, pertence a <span class="math-inline">A<sup>c</sup></span>. Portanto,</p>
+<div class="math-line">A ∪ A<sup>c</sup>=U.</div>
+<p>A união não contém objetos externos ao universo, pois tanto <span class="math-inline">A</span> quanto <span class="math-inline">A<sup>c</sup></span> estão incluídos em <span class="math-inline">U</span>. Isso explica por que o resultado é precisamente a referência escolhida.</p>
+<p class="keep-with-next">Complementar novamente, sem mudar o universo, recupera o conjunto inicial:</p>
+<div class="math-structural">(A<sup>c</sup>)<sup>c</sup>=A.</div>
+<p class="keep-with-next">Para <span class="math-inline">x ∈ U</span>, a condição pode ser acompanhada por</p>
+<div class="math-structural math-aligned">
+<div class="math-row"><span>x ∈ (A<sup>c</sup>)<sup>c</sup></span><span>⇔ x ∉ A<sup>c</sup></span><span></span></div>
+<div class="math-row"><span></span><span>⇔ ¬ (x ∉ A)</span><span></span></div>
+<div class="math-row"><span></span><span>⇔ x ∈ A.</span><span></span></div>
+</div>
+<p>Todos os conjuntos dessa comparação estão em <span class="math-inline">U</span>. A equivalência vale para cada elemento da referência e estabelece a igualdade. Mudar o universo entre as duas complementações alteraria a operação e não estaria coberto por essa propriedade.</p>
+<div class="item-title keep-with-next" id="teoria-3-7">Leis de De Morgan: negar condições de pertinência</div>
+<p>Suponha <span class="math-inline">A,B ⊆ U</span>, com os complementos tomados no mesmo universo. Para pertencer ao complemento de <span class="math-inline">A ∪ B</span>, um objeto de <span class="math-inline">U</span> não pode pertencer à união.</p>
+<p>Como a união admite a pertinência a qualquer um dos dois conjuntos, ficar fora dela exige ficar fora <strong>de ambos</strong>. Obtemos a primeira lei de De Morgan:</p>
+<div class="math-structural">(A ∪ B)<sup>c</sup>=A<sup>c</sup> ∩ B<sup>c</sup>.</div>
+<p>Para demonstrá-la, tome <span class="math-inline">x ∈ U</span> arbitrário. A definição de complemento, a definição de união e a lei lógica de De Morgan fornecem:</p>
+<div class="math-structural math-aligned">
+<div class="math-row"><span>x ∈ (A ∪ B)<sup>c</sup></span><span>⇔ x ∉ A ∪ B</span><span></span></div>
+<div class="math-row"><span></span><span>⇔ ¬ ((x ∈ A) ∨ (x ∈ B))</span><span></span></div>
+<div class="math-row"><span></span><span>⇔ ¬ (x ∈ A) ∧ ¬ (x ∈ B)</span><span></span></div>
+<div class="math-row"><span></span><span>⇔ (x ∉ A) ∧ (x ∉ B)</span><span></span></div>
+<div class="math-row"><span></span><span>⇔ (x ∈ A<sup>c</sup>) ∧ (x ∈ B<sup>c</sup>)</span><span></span></div>
+<div class="math-row"><span></span><span>⇔ x ∈ A<sup>c</sup> ∩ B<sup>c</sup>.</span><span></span></div>
+</div>
+<p>O passo central é lógico: negar uma alternativa inclusiva exige negar as duas possibilidades. A passagem da não pertinência para a pertinência aos complementos é legítima porque <span class="math-inline">x ∈ U</span>.</p>
+<p>Como a equivalência vale para qualquer <span class="math-inline">x ∈ U</span>, e ambos os conjuntos estão incluídos em <span class="math-inline">U</span>, a igualdade está demonstrada.</p>
+<p>Para o complemento de uma interseção, a exigência é diferente. Um elemento de <span class="math-inline">U</span> fica fora de <span class="math-inline">A ∩ B</span> quando falha pelo menos uma das duas pertinências necessárias. Ele pode pertencer a apenas um dos conjuntos ou a nenhum deles. A segunda lei é:</p>
+<div class="math-structural">(A ∩ B)<sup>c</sup>=A<sup>c</sup> ∪ B<sup>c</sup>.</div>
+<p class="keep-with-next">O argumento se condensa na equivalência</p>
+<div class="math-structural">¬ ((x ∈ A) ∧ (x ∈ B)) ⇔ (x ∉ A) ∨ (x ∉ B),</div>
+<p>que, para <span class="math-inline">x ∈ U</span>, equivale a <span class="math-inline">x ∈ A<sup>c</sup> ∪ B<sup>c</sup></span>. Essa tradução demonstra a segunda identidade sem exigir uma repetição integral do procedimento anterior.</p>
+<p>Não seria correto substituir a união por interseção nessa segunda lei. Se um objeto pertence a <span class="math-inline">A</span> e não pertence a <span class="math-inline">B</span>, ele já está fora de <span class="math-inline">A ∩ B</span>, embora não esteja fora dos dois conjuntos. Uma única condição que falhe basta para negar a condição conjunta.</p>
+<div class="item-title keep-with-next" id="teoria-3-8">Diferença, interseção e inclusão</div>
+<p class="keep-with-next">A diferença permite reconhecer a inclusão pela ausência de exceções:</p>
+<div class="math-structural">A ∖ B= ∅ ⇔ A ⊆ B.</div>
+<p>Se <span class="math-inline">A ⊆ B</span>, todo elemento de <span class="math-inline">A</span> pertence a <span class="math-inline">B</span>. Não há objeto que pertença a <span class="math-inline">A</span> e falte em <span class="math-inline">B</span>; portanto, a diferença é vazia.</p>
+<p>Reciprocamente, suponha <span class="math-inline">A ∖ B= ∅</span>. Para um elemento arbitrário <span class="math-inline">x ∈ A</span>, não é possível <span class="math-inline">x ∉ B</span>, pois isso o colocaria em <span class="math-inline">A ∖ B</span>, contrariando o fato de esse conjunto ser vazio. Assim, <span class="math-inline">x ∈ B</span>. Como isso vale para qualquer elemento de <span class="math-inline">A</span>, temos <span class="math-inline">A ⊆ B</span>.</p>
+<p>Essa equivalência não exige universo nem complementos. Ela retoma exatamente a condição que caracteriza uma inclusão e mostra como uma operação pode expressar a inexistência de testemunhas de sua falha.</p>
+<p class="keep-with-next">Também podemos reconhecer a inclusão pela interseção ou pela união:</p>
+<div class="math-structural">A ⊆ B ⇔ A ∩ B=A ⇔ A ∪ B=B.</div>
+<p>A inclusão implica as duas igualdades, como já foi justificado pelas definições. No sentido inverso, se <span class="math-inline">A ∩ B=A</span>, todo elemento de <span class="math-inline">A</span> pertence à interseção e, portanto, a <span class="math-inline">B</span>. Se <span class="math-inline">A ∪ B=B</span>, todo elemento de <span class="math-inline">A</span> pertence à união, que é o próprio <span class="math-inline">B</span>. Cada igualdade implica, assim, <span class="math-inline">A ⊆ B</span>.</p>
+<p class="keep-with-next">A interseção e a diferença ainda permitem recompor <span class="math-inline">A</span>:</p>
+<div class="math-line">A=(A ∩ B) ∪ (A ∖ B).</div>
+<p>De fato, um elemento de <span class="math-inline">A</span> pertence a <span class="math-inline">B</span> ou não pertence a <span class="math-inline">B</span>. Na primeira alternativa, pertence a <span class="math-inline">A ∩ B</span>; na segunda, a <span class="math-inline">A ∖ B</span>. Reciprocamente, qualquer elemento dessas duas construções pertence a <span class="math-inline">A</span>. A dupla inclusão estabelece a igualdade.</p>
+<p class="keep-with-next">As duas parcelas não possuem elemento comum:</p>
+<div class="math-line">(A ∩ B) ∩ (A ∖ B)= ∅ ,</div>
+<p>pois pertencer a ambas exigiria simultaneamente <span class="math-inline">x ∈ B</span> e <span class="math-inline">x ∉ B</span>. A decomposição separa, portanto, os elementos de <span class="math-inline">A</span> segundo duas condições incompatíveis e que, juntas, abrangem todos eles.</p>
+<p>As operações constroem conjuntos por condições de pertinência. Quando essas condições são traduzidas em afirmações lógicas, podemos reconhecer exigências redundantes, reorganizar alternativas e justificar igualdades. Uma demonstração mostra por que duas construções selecionam os mesmos objetos; seu alcance vem do raciocínio com elementos arbitrários e das hipóteses preservadas em cada passo.</p>
+</section>
+<section class="source-section" data-context="TEXTO PRÁTICO • EXERCÍCIOS">
+<header class="section-opening" data-keep-count="4"><div class="section-label"><h1 class="outline-root">Texto Prático</h1></div><h2 class="section-title" id="exercicios">Exercícios</h2></header>
+<div class="gabarito-subtitle keep-with-next" data-keep-count="3">1. Interseção, União e Condições de Pertinência</div>
+<div class="item-title keep-with-next" id="exercises-1">1. Duas condições, duas seleções</div>
+<p>Complete as duas últimas colunas com V ou F, de acordo com as definições das operações.</p>
+<div class="table-wrap"><table class="truth-table worksheet-table"><colgroup><col style="width:19%"><col style="width:19%"><col style="width:29%"><col style="width:33%"></colgroup><thead><tr><th scope="col"><span class="math-inline">x ∈ A</span></th><th scope="col"><span class="math-inline">x ∈ B</span></th><th scope="col"><span class="math-inline">x ∈ A ∩ B</span></th><th scope="col"><span class="math-inline">x ∈ A ∪ B</span></th></tr></thead><tbody><tr><td>V</td><td>V</td><td></td><td></td></tr>
+<tr><td>V</td><td>F</td><td></td><td></td></tr>
+<tr><td>F</td><td>V</td><td></td><td></td></tr>
+<tr><td>F</td><td>F</td><td></td><td></td></tr></tbody></table></div>
+<p><span class="subitem-label">a)</span> Explique por que a primeira linha satisfaz a condição da união.</p>
+<p><span class="subitem-label">b)</span> Um estudante afirma: “Para quaisquer conjuntos <span class="math-inline">A</span> e <span class="math-inline">B</span> e qualquer objeto <span class="math-inline">x</span>, se <span class="math-inline">x ∈ A ∪ B</span>, então <span class="math-inline">x ∈ A ∩ B</span>”. Identifique uma linha da tabela incompatível com essa afirmação. Em seguida, escolha conjuntos <span class="math-inline">A</span> e <span class="math-inline">B</span> e um elemento que realizem essa possibilidade e refutem a afirmação.</p>
+<p>As linhas descrevem possibilidades de pertinência; não afirmam que todas elas ocorrem em quaisquer conjuntos escolhidos.</p>
+<div class="item-title keep-with-next" data-keep-count="3" id="exercises-2">2. Operar sem confundir os objetos</div>
+<p class="keep-with-next">Considere</p>
+<div class="math-line">A={1,{1},2}, <span class="math-gap" aria-hidden="true"></span> B={{1},2,3}.</div>
+<p><span class="subitem-label">a)</span> Determine <span class="math-inline">A ∩ B</span> e <span class="math-inline">A ∪ B</span> por enumeração.</p>
+<p><span class="subitem-label">b)</span> Determine se <span class="math-inline">{1} ∈ A ∩ B</span> e se <span class="math-inline">1 ∈ A ∩ B</span>. Justifique distinguindo os objetos examinados.</p>
+<div class="item-title keep-with-next" data-keep-count="3" id="exercises-3">3. Da propriedade à operação</div>
+<p class="keep-with-next">Considere</p>
+<div class="math-line">D={1,2,3,4,5,6,7,8},</div>
+<div class="math-line">P={x ∈ D | x&gt;3}, <span class="math-gap" aria-hidden="true"></span> Q={x ∈ D | x&lt;6}.</div>
+<p><span class="subitem-label">a)</span> Escreva <span class="math-inline">P ∩ Q</span> e <span class="math-inline">P ∪ Q</span> por propriedade, mantendo o domínio <span class="math-inline">D</span> explícito.</p>
+<p><span class="subitem-label">b)</span> Determine os dois resultados por enumeração.</p>
+<p><span class="subitem-label">c)</span> Existe algum elemento de <span class="math-inline">D</span> fora de <span class="math-inline">P ∪ Q</span>? Justifique examinando as condições que selecionam os elementos do domínio.</p>
+<div class="item-title keep-with-next" data-keep-count="3" id="exercises-4">4. Reconstruindo um conjunto e um diagrama</div>
+<p class="keep-with-next">Sabe-se que</p>
+<div class="math-line">U={a,b,c,d,e,f}, <span class="math-gap" aria-hidden="true"></span> A={a,b,c}, <span class="math-gap" aria-hidden="true"></span> B ⊆ U,</div>
+<div class="math-line">A ∩ B={b,c}, <span class="math-gap" aria-hidden="true"></span> A ∪ B={a,b,c,d,e}.</div>
+<p><span class="subitem-label">a)</span> Determine <span class="math-inline">B</span>. Explique como cada informação restringe seus elementos.</p>
+<p><span class="subitem-label">b)</span> Construa um diagrama de Venn com o universo <span class="math-inline">U</span> e os conjuntos <span class="math-inline">A</span> e <span class="math-inline">B</span>. Posicione cada elemento de <span class="math-inline">U</span> uma única vez, na região correspondente às suas pertinências.</p>
+<p><span class="subitem-label">c)</span> Justifique por que <span class="math-inline">f</span> não pode pertencer a <span class="math-inline">B</span>.</p>
+<p>No diagrama, a posição registra pertinência; tamanhos e áreas das regiões não fornecem informação quantitativa.</p>
+<div class="item-title keep-with-next" id="exercises-5">5. Casos particulares sob a mesma definição</div>
+<p>Complete a tabela para conjuntos arbitrários que satisfaçam a condição de cada linha. Simplifique cada resultado quando a condição permitir; quando ela não determinar uma redução da expressão, registre essa limitação.</p>
+<div class="table-wrap"><table class="analysis-table worksheet-table"><colgroup><col style="width:40%"><col style="width:30%"><col style="width:30%"></colgroup><thead><tr><th scope="col">Condição</th><th scope="col"><span class="math-inline">A ∩ B</span></th><th scope="col"><span class="math-inline">A ∪ B</span></th></tr></thead><tbody><tr><td><span class="math-inline">A ⊆ B</span></td><td></td><td></td></tr>
+<tr><td><span class="math-inline">A ∩ B= ∅</span></td><td></td><td></td></tr>
+<tr><td><span class="math-inline">A= ∅</span></td><td></td><td></td></tr></tbody></table></div>
+<p><span class="subitem-label">a)</span> Justifique os dois resultados da primeira linha usando a inclusão dada.</p>
+<p><span class="subitem-label">b)</span> Na segunda linha, é possível substituir sempre <span class="math-inline">A ∪ B</span> por <span class="math-inline">A</span> ou por <span class="math-inline">B</span>? Justifique.</p>
+<p><span class="subitem-label">c)</span> Dois conjuntos disjuntos precisam ser diferentes? Apresente um exemplo que sustente sua resposta.</p>
+<div class="item-title keep-with-next" data-keep-count="3" id="exercises-6">6. O agrupamento faz diferença?</div>
+<p class="keep-with-next">Considere</p>
+<div class="math-line">A={1,2}, <span class="math-gap" aria-hidden="true"></span> B={2,3}, <span class="math-gap" aria-hidden="true"></span> C={3,4}.</div>
+<p class="keep-with-next"><span class="subitem-label">a)</span> Determine</p>
+<div class="math-line">X=(A ∪ B) ∩ C <span class="math-gap" aria-hidden="true"></span> <span class="math-text">e</span> <span class="math-gap" aria-hidden="true"></span> Y=A ∪ (B ∩ C).</div>
+<p><span class="subitem-label">b)</span> Decida se <span class="math-inline">X=Y</span>. Se forem diferentes, indique um elemento que testemunhe a diferença e registre suas duas relações de pertinência.</p>
+<p><span class="subitem-label">c)</span> Para um objeto arbitrário <span class="math-inline">x</span>, escreva as condições de pertinência a <span class="math-inline">X</span> e a <span class="math-inline">Y</span> usando apenas pertinências a <span class="math-inline">A</span>, <span class="math-inline">B</span> e <span class="math-inline">C</span>, conectivos lógicos e parênteses.</p>
+<div class="gabarito-subtitle keep-with-next" data-keep-count="3">2. Diferença, Complemento e Universo</div>
+<div class="item-title keep-with-next" data-keep-count="3" id="exercises-7">7. De qual conjunto partimos?</div>
+<p class="keep-with-next">Considere</p>
+<div class="math-line">U={a,b,c,d,e,f}, <span class="math-gap" aria-hidden="true"></span> A={a,b,c,d}, <span class="math-gap" aria-hidden="true"></span> B={c,d,e}.</div>
+<p><span class="subitem-label">a)</span> Determine <span class="math-inline">A ∖ B</span> e <span class="math-inline">B ∖ A</span>.</p>
+<p><span class="subitem-label">b)</span> Um estudante argumenta: “Como <span class="math-inline">f ∉ B</span>, temos <span class="math-inline">f ∈ A ∖ B</span>”. Localize a condição que ele deixou de verificar e corrija a conclusão.</p>
+<p><span class="subitem-label">c)</span> A definição de <span class="math-inline">A ∖ B</span> exige <span class="math-inline">B ⊆ A</span>? Responda usando os conjuntos dados e o significado da diferença.</p>
+<div class="item-title keep-with-next" data-keep-count="3" id="exercises-8">8. Um conjunto, duas referências</div>
+<p class="keep-with-next">Considere</p>
+<div class="math-line">U={1,2,3,4,5,6}, <span class="math-gap" aria-hidden="true"></span> V={1,2,3,4,5,6,7,8}, <span class="math-gap" aria-hidden="true"></span> A={2,4}.</div>
+<p><span class="subitem-label">a)</span> Determine <span class="math-inline">U ∖ A</span> e <span class="math-inline">V ∖ A</span>.</p>
+<p class="keep-with-next"><span class="subitem-label">b)</span> Determine</p>
+<div class="math-line">U ∖ (U ∖ A) <span class="math-gap" aria-hidden="true"></span> <span class="math-text">e</span> <span class="math-gap" aria-hidden="true"></span> V ∖ (U ∖ A).</div>
+<p><span class="subitem-label">c)</span> Um estudante utiliza a identidade de dupla complementação para afirmar que os dois resultados do item b são iguais a <span class="math-inline">A</span>. Explique por que a identidade não justifica essa conclusão e apresente uma testemunha da igualdade que falha.</p>
+<div class="item-title keep-with-next" id="exercises-9">9. Traduzindo condições de exclusão</div>
+<p>Fixe um universo <span class="math-inline">U</span> e suponha <span class="math-inline">A,B ⊆ U</span>. Todos os complementos desta atividade são relativos a <span class="math-inline">U</span>.</p>
+<p><span class="subitem-label">a)</span> Para <span class="math-inline">x ∈ U</span>, escreva as condições de pertinência a cada conjunto abaixo usando somente <span class="math-inline">x ∈ A</span>, <span class="math-inline">x ∈ B</span> e conectivos lógicos:</p>
+<div class="math-line">X=A ∖ B, <span class="math-gap" aria-hidden="true"></span> Y=U ∖ (A ∩ B), <span class="math-gap" aria-hidden="true"></span> Z=(U ∖ A) ∩ B.</div>
+<p><span class="subitem-label">b)</span> Reescreva <span class="math-inline">X</span> como uma interseção com um complemento e <span class="math-inline">Z</span> como uma diferença. Justifique as duas reescritas pelas condições encontradas.</p>
+<p><span class="subitem-label">c)</span> Qual das condições do item a admite um elemento de <span class="math-inline">U</span> que não pertença nem a <span class="math-inline">A</span> nem a <span class="math-inline">B</span>? Justifique.</p>
+<div class="item-title keep-with-next" data-keep-count="3" id="exercises-10">10. As duas partes de um conjunto</div>
+<p class="keep-with-next">Sabe-se que</p>
+<div class="math-line">A={p,q,r,s}, <span class="math-gap" aria-hidden="true"></span> A ∩ B={q,s}, <span class="math-gap" aria-hidden="true"></span> B ∖ A={t}.</div>
+<p><span class="subitem-label">a)</span> Determine <span class="math-inline">A ∖ B</span> e <span class="math-inline">B</span>. Explique por que as informações determinam esses resultados.</p>
+<p class="keep-with-next"><span class="subitem-label">b)</span> Verifique, com os conjuntos encontrados, que</p>
+<div class="math-line">A=(A ∩ B) ∪ (A ∖ B).</div>
+<p><span class="subitem-label">c)</span> As duas parcelas do lado direito possuem algum elemento comum? Justifique pelas condições de pertinência a <span class="math-inline">B</span>.</p>
+<div class="item-title keep-with-next" id="exercises-11">11. O que permanece após uma restrição?</div>
+<p class="exercise-source"><em>Baseada/adaptada de FATEC, vestibular do 2º semestre de 2025, questão 37, página 14.</em></p>
+<p>Fixe o universo <span class="math-inline">U</span> dos alimentos de um cardápio. Sejam <span class="math-inline">A ⊆ U</span> o conjunto dos alimentos que uma pessoa consumia regularmente e <span class="math-inline">C ⊆ U</span> o conjunto dos alimentos que contêm carne.</p>
+<p>A pessoa passa a excluir de sua alimentação todos os alimentos de <span class="math-inline">A</span> que contêm carne. Nenhum alimento é acrescentado, e todos os demais alimentos de <span class="math-inline">A</span> permanecem. Denote o novo conjunto por <span class="math-inline">B</span>.</p>
+<p><span class="subitem-label">a)</span> Expresse <span class="math-inline">B</span> em termos de <span class="math-inline">A</span> e <span class="math-inline">C</span> e explique a condição que um alimento deve satisfazer para permanecer.</p>
+<p><span class="subitem-label">b)</span> Reescreva a expressão com interseção e complemento relativo a <span class="math-inline">U</span>.</p>
+<p><span class="subitem-label">c)</span> Outra pessoa afirma que <span class="math-inline">B=C<sup>c</sup></span>, com complemento em <span class="math-inline">U</span>. Essa igualdade é garantida? Construa um exemplo com conjuntos finitos <span class="math-inline">U</span>, <span class="math-inline">A</span> e <span class="math-inline">C</span> que sustente sua resposta e explique o papel de um alimento que não era consumido anteriormente.</p>
+<div class="gabarito-subtitle keep-with-next" data-keep-count="5">3. Identidades e Relações entre Operações</div>
+<div class="item-title keep-with-next" id="exercises-12">12. O efeito de repetir, acrescentar e complementar</div>
+<p>Fixe <span class="math-inline">U</span>, suponha <span class="math-inline">A ⊆ U</span> e tome todos os complementos relativamente a <span class="math-inline">U</span>.</p>
+<p>Determine o resultado de cada expressão. Ao lado de cada resposta, identifique a propriedade correspondente: idempotência, neutralidade, dominância ou complementação. Para <span class="math-inline">U<sup>c</sup></span> e <span class="math-inline">∅ <sup>c</sup></span>, registre diretamente o significado do complemento.</p>
+<div class="table-wrap"><table class="analysis-table worksheet-table"><colgroup><col style="width:30%"><col style="width:22%"><col style="width:48%"></colgroup><thead><tr><th scope="col">Expressão</th><th scope="col">Resultado</th><th scope="col">Propriedade ou significado</th></tr></thead><tbody><tr><td><span class="math-inline">A ∩ A</span></td><td></td><td></td></tr>
+<tr><td><span class="math-inline">A ∪ A</span></td><td></td><td></td></tr>
+<tr><td><span class="math-inline">A ∪ ∅</span></td><td></td><td></td></tr>
+<tr><td><span class="math-inline">A ∩ U</span></td><td></td><td></td></tr>
+<tr><td><span class="math-inline">A ∩ ∅</span></td><td></td><td></td></tr>
+<tr><td><span class="math-inline">A ∪ U</span></td><td></td><td></td></tr>
+<tr><td><span class="math-inline">A ∩ A<sup>c</sup></span></td><td></td><td></td></tr>
+<tr><td><span class="math-inline">A ∪ A<sup>c</sup></span></td><td></td><td></td></tr>
+<tr><td><span class="math-inline">(A<sup>c</sup>)<sup>c</sup></span></td><td></td><td></td></tr>
+<tr><td><span class="math-inline">U<sup>c</sup></span></td><td></td><td></td></tr>
+<tr><td><span class="math-inline">∅ <sup>c</sup></span></td><td></td><td></td></tr></tbody></table></div>
+<p>Explique por que <span class="math-inline">∅</span> preserva <span class="math-inline">A</span> em uma das operações e determina um resultado vazio na outra.</p>
+<div class="item-title keep-with-next" id="exercises-13">13. Reorganizar sem alterar a seleção</div>
+<p>Para conjuntos arbitrários <span class="math-inline">A</span>, <span class="math-inline">B</span> e <span class="math-inline">C</span>, simplifique cada expressão até que cada letra apareça uma única vez.</p>
+<div class="math-line">X=(A ∪ B) ∪ (C ∪ A),</div>
+<div class="math-line">Y=(B ∩ A) ∩ (A ∩ C).</div>
+<p>Apresente uma cadeia de igualdades e identifique as propriedades que autorizam o reagrupamento, a troca de ordem e a retirada de uma repetição.</p>
+<div class="item-title keep-with-next" id="exercises-14">14. Uma exigência já está contida na outra?</div>
+<p class="keep-with-next">Para conjuntos arbitrários <span class="math-inline">A</span>, <span class="math-inline">B</span> e <span class="math-inline">C</span>, simplifique</p>
+<div class="math-line">E=(A ∩ (A ∪ B)) ∪ (A ∩ C).</div>
+<p><span class="subitem-label">a)</span> Apresente as igualdades usadas e justifique cada transformação.</p>
+<p><span class="subitem-label">b)</span> Explique, por condições de pertinência, por que o resultado não depende da escolha de <span class="math-inline">B</span> e <span class="math-inline">C</span>.</p>
+<div class="item-title keep-with-next" id="exercises-15">15. Duas maneiras de distribuir</div>
+<p class="keep-with-next">Considere conjuntos arbitrários <span class="math-inline">A</span>, <span class="math-inline">B</span> e <span class="math-inline">C</span> e as expressões</p>
+<div class="math-line">X=(A ∩ B) ∪ (A ∩ C), <span class="math-gap" aria-hidden="true"></span> Y=(A ∪ B) ∩ (A ∪ C).</div>
+<p><span class="subitem-label">a)</span> Reescreva <span class="math-inline">X</span> e <span class="math-inline">Y</span> de modo que <span class="math-inline">A</span> apareça uma única vez em cada expressão. Identifique as identidades utilizadas.</p>
+<p><span class="subitem-label">b)</span> É sempre verdade que <span class="math-inline">X=Y</span>? Demonstre, se a afirmação for verdadeira, ou construa e verifique um contraexemplo, se for falsa.</p>
+<div class="item-title keep-with-next" id="exercises-16">16. O complemento de uma construção composta</div>
+<p>Fixe <span class="math-inline">U</span>, suponha <span class="math-inline">A,B,C ⊆ U</span> e tome todos os complementos em <span class="math-inline">U</span>.</p>
+<p>Reescreva as expressões abaixo de modo que o complemento apareça somente sobre conjuntos individuais, sem complementar uniões, interseções ou diferenças:</p>
+<div class="math-line">E=(A ∪ (B ∩ C))<sup>c</sup>, <span class="math-gap" aria-hidden="true"></span> F=(A ∖ B)<sup>c</sup>.</div>
+<p>Justifique as transformações.</p>
+<div class="item-title keep-with-next" id="exercises-17">17. Identidades propostas: refutar e reparar</div>
+<p class="keep-with-next">Um estudante propõe as duas igualdades abaixo para quaisquer conjuntos <span class="math-inline">A</span>, <span class="math-inline">B</span> e <span class="math-inline">C</span>:</p>
+<div class="math-line"><span class="math-text">I.</span> <span class="math-gap" aria-hidden="true"></span> A ∖ (B ∖ C)=(A ∖ B) ∖ C;</div>
+<div class="math-line"><span class="math-text">II.</span> <span class="math-gap" aria-hidden="true"></span> A ∖ (B ∩ C)=(A ∖ B) ∩ (A ∖ C).</div>
+<p><span class="subitem-label">a)</span> Para cada proposta, construa um contraexemplo. Calcule os dois lados e identifique uma testemunha da desigualdade.</p>
+<p><span class="subitem-label">b)</span> Na proposta II, substitua apenas a operação entre as duas diferenças do lado direito para obter uma identidade válida. Justifique a correção por condições de pertinência.</p>
+<div class="gabarito-subtitle keep-with-next" data-keep-count="3">4. Demonstração, Integração e Transferência</div>
+<div class="item-title keep-with-next" id="exercises-18">18. Completando uma demonstração por pertinência</div>
+<p>Sejam <span class="math-inline">A</span>, <span class="math-inline">B</span> e <span class="math-inline">C</span> conjuntos arbitrários. Para um objeto <span class="math-inline">x</span> arbitrário, complete as lacunas da demonstração, mantendo as equivalências válidas:</p>
+<div class="math-structural math-aligned">
+<div class="math-row"><span>x ∈ A ∖ (B ∪ C)</span><span>⇔ (x ∈ A) ∧ ¬ ((x ∈ B) ∨ (x ∈ C))</span><span></span></div>
+<div class="math-row"><span></span><span>⇔ (x ∈ A) ∧ (<span class="math-blank" style="width:1.5cm" role="img" aria-label="Lacuna para preenchimento"></span> ∧ <span class="math-blank" style="width:1.5cm" role="img" aria-label="Lacuna para preenchimento"></span>)</span><span></span></div>
+<div class="math-row"><span></span><span>⇔ ((x ∈ A) ∧ <span class="math-blank" style="width:1.5cm" role="img" aria-label="Lacuna para preenchimento"></span>) ∧ ((x ∈ A) ∧ <span class="math-blank" style="width:1.5cm" role="img" aria-label="Lacuna para preenchimento"></span>)</span><span></span></div>
+<div class="math-row"><span></span><span>⇔ x ∈ <span class="math-blank" style="width:2cm" role="img" aria-label="Lacuna para preenchimento"></span> ∩ <span class="math-blank" style="width:2cm" role="img" aria-label="Lacuna para preenchimento"></span>.</span><span></span></div>
+</div>
+<p><span class="subitem-label">a)</span> Identifique a lei lógica utilizada na primeira transformação que você completou.</p>
+<p><span class="subitem-label">b)</span> Explique por que repetir a exigência <span class="math-inline">x ∈ A</span> não muda a condição.</p>
+<p><span class="subitem-label">c)</span> Escreva a igualdade entre conjuntos demonstrada e explique por que a argumentação estabelece uma identidade, em vez de verificar apenas um caso.</p>
+<div class="item-title keep-with-next" id="exercises-19">19. Demonstrando por dupla inclusão</div>
+<p class="keep-with-next">Para conjuntos arbitrários <span class="math-inline">A</span>, <span class="math-inline">B</span> e <span class="math-inline">C</span>, demonstre por dupla inclusão que</p>
+<div class="math-line">A ∪ (B ∩ C)=(A ∪ B) ∩ (A ∪ C).</div>
+<p>Apresente separadamente as duas inclusões. Em cada direção, explicite o que pode ser concluído sobre um elemento arbitrário e justifique a passagem ao conjunto do outro lado.</p>
+<div class="item-title keep-with-next" id="exercises-20">20. A conclusão está sustentada?</div>
+<p>Fixe <span class="math-inline">U</span> e suponha <span class="math-inline">A,B ⊆ U</span>. Todos os complementos são relativos a <span class="math-inline">U</span>. Dois estudantes tentam demonstrar a identidade</p>
+<div class="math-line">(A ∩ B)<sup>c</sup>=A<sup>c</sup> ∪ B<sup>c</sup>.</div>
+<p class="subitem-label keep-with-next"><strong>Argumento I</strong></p>
+<blockquote class="student-quote atomic-group"><p>Tomei <span class="math-inline">U={1,2,3}</span>, <span class="math-inline">A={1,2}</span> e <span class="math-inline">B={2,3}</span>. Obtive <span class="math-inline">(A ∩ B)<sup>c</sup>={1,3}</span> e <span class="math-inline">A<sup>c</sup> ∪ B<sup>c</sup>={1,3}</span>. Portanto, a igualdade vale para quaisquer conjuntos no mesmo universo.</p></blockquote>
+<p class="subitem-label keep-with-next"><strong>Argumento II</strong></p>
+<blockquote class="student-quote atomic-group"><p>Seja <span class="math-inline">x ∈ A<sup>c</sup> ∪ B<sup>c</sup></span> arbitrário. Então <span class="math-inline">x ∈ U</span> e, além disso, <span class="math-inline">x ∉ A</span> ou <span class="math-inline">x ∉ B</span>. Logo, <span class="math-inline">x ∉ A ∩ B</span>, de modo que <span class="math-inline">x ∈ (A ∩ B)<sup>c</sup></span>. Portanto, os dois conjuntos são iguais.</p></blockquote>
+<p><span class="subitem-label">a)</span> Determine o que foi efetivamente estabelecido em cada argumento e localize a passagem que não está justificada.</p>
+<p><span class="subitem-label">b)</span> Complete o Argumento II com o raciocínio que falta para demonstrar a identidade.</p>
+<div class="item-title keep-with-next" id="exercises-21">21. Reconhecendo a inclusão por operações</div>
+<p class="keep-with-next">Para conjuntos arbitrários <span class="math-inline">A</span> e <span class="math-inline">B</span>, demonstre que as quatro afirmações são equivalentes:</p>
+<div class="math-line"><span class="math-text">I. </span>A ⊆ B; <span class="math-gap" aria-hidden="true"></span> <span class="math-text">II. </span>A ∖ B= ∅ ;</div>
+<div class="math-line"><span class="math-text">III. </span>A ∩ B=A; <span class="math-gap" aria-hidden="true"></span> <span class="math-text">IV. </span>A ∪ B=B.</div>
+<p>Organize uma demonstração que estabeleça todas as equivalências. Não basta listar propriedades ou verificar conjuntos particulares. Você pode escolher a ordem das implicações que utilizará.</p>
+<div class="item-title keep-with-next" id="exercises-22">22. O que uma inclusão permite concluir?</div>
+<p class="keep-with-next">Sejam <span class="math-inline">A</span>, <span class="math-inline">B</span> e <span class="math-inline">C</span> conjuntos arbitrários, com <span class="math-inline">A ⊆ B</span>. Avalie as afirmações:</p>
+<div class="math-line"><span class="math-text">I. </span>A ∩ C ⊆ B ∩ C;</div>
+<div class="math-line"><span class="math-text">II. </span>A ∖ C ⊆ B ∖ C;</div>
+<div class="math-line"><span class="math-text">III. </span>C ∖ A ⊆ C ∖ B.</div>
+<p><span class="subitem-label">a)</span> Demonstre cada afirmação que seja válida sob a hipótese dada, usando um elemento arbitrário.</p>
+<p><span class="subitem-label">b)</span> Para cada afirmação inválida, construa e verifique um contraexemplo que preserve <span class="math-inline">A ⊆ B</span>.</p>
+<p><span class="subitem-label">c)</span> Para cada afirmação inválida, investigue se inverter a direção da inclusão produz uma relação válida sob a hipótese dada. Justifique sua resposta.</p>
+<div class="item-title keep-with-next" id="exercises-23">23. Traduzir uma regra e controlar sua simplificação</div>
+<p>Em um sistema de inscrições, o universo <span class="math-inline">U</span> reúne as pessoas cadastradas. Sejam:</p>
+<ul><li><span class="math-inline">S</span>: pessoas inscritas em uma atividade;</li><li><span class="math-inline">R</span>: pessoas com cadastro regular;</li><li><span class="math-inline">D</span>: pessoas com a documentação completa.</li></ul>
+<p>Os três conjuntos estão incluídos em <span class="math-inline">U</span>. O sistema envia um aviso exatamente às pessoas inscritas que <strong>não satisfazem conjuntamente</strong> as condições de cadastro regular e documentação completa. Denote o conjunto das pessoas avisadas por <span class="math-inline">E</span>.</p>
+<p><span class="subitem-label">a)</span> Expresse <span class="math-inline">E</span> usando operações entre <span class="math-inline">S</span>, <span class="math-inline">R</span> e <span class="math-inline">D</span>. Reescreva-o como uma união de diferenças e justifique a equivalência.</p>
+<p><span class="subitem-label">b)</span> Um programador usa <span class="math-inline">S ∖ (R ∪ D)</span> para executar a regra. Determine se essa expressão é adequada. Se não for, apresente uma combinação de pertinências que produza resultados diferentes e explique o erro.</p>
+<p><span class="subitem-label">c)</span> Suponha agora que todas as pessoas inscritas tenham cadastro regular, isto é, <span class="math-inline">S ⊆ R</span>. Simplifique <span class="math-inline">E</span> sob essa hipótese e demonstre sua resposta.</p>
+<div class="item-title keep-with-next" id="exercises-24">24. Reconstruir, verificar e decidir se os dados são possíveis</div>
+<p class="keep-with-next">São dados três conjuntos <span class="math-inline">B</span>, <span class="math-inline">P</span> e <span class="math-inline">Q</span>. Procura-se um conjunto <span class="math-inline">A</span> que satisfaça simultaneamente</p>
+<div class="math-line">A ∩ B=P <span class="math-gap" aria-hidden="true"></span> <span class="math-text">e</span> <span class="math-gap" aria-hidden="true"></span> A ∖ B=Q.</div>
+<p><span class="subitem-label">a)</span> Demonstre que, se existir um conjunto <span class="math-inline">A</span> com essas propriedades, ele deverá ser <span class="math-inline">P ∪ Q</span>.</p>
+<p><span class="subitem-label">b)</span> Tomar <span class="math-inline">A=P ∪ Q</span> garante as duas propriedades para quaisquer <span class="math-inline">B</span>, <span class="math-inline">P</span> e <span class="math-inline">Q</span>? Determine condições necessárias e suficientes sobre <span class="math-inline">P</span> e <span class="math-inline">Q</span> em relação a <span class="math-inline">B</span> para que essa construção funcione. Demonstre tanto a necessidade quanto a suficiência das condições.</p>
+<p><span class="subitem-label">c)</span> Aplique seu resultado aos dois registros abaixo. Quando houver solução, determine <span class="math-inline">A</span>; quando não houver, identifique a incompatibilidade.</p>
+<div class="math-structural math-aligned">
+<div class="math-row"><span><span class="math-text">Registro I: </span></span><span>B={b,d}, <span class="math-gap" aria-hidden="true"></span> P={b}, <span class="math-gap" aria-hidden="true"></span> Q={a,c};</span><span></span></div>
+<div class="math-row"><span><span class="math-text">Registro II: </span></span><span>B={b,d}, <span class="math-gap" aria-hidden="true"></span> P={b}, <span class="math-gap" aria-hidden="true"></span> Q={a,d}.</span><span></span></div>
+</div>
+</section>
+<section class="source-section" data-context="TEXTO PRÁTICO • GABARITO COMENTADO">
+<header class="section-opening" data-keep-count="4"><div class="section-label">Texto Prático</div><h2 class="section-title" id="gabarito">Gabarito Comentado</h2></header>
+<div class="gabarito-subtitle keep-with-next" data-keep-count="3">1. Interseção, União e Condições de Pertinência</div>
+<div class="item-title keep-with-next" id="answers-1">1. Duas condições, duas seleções</div>
+<div class="table-wrap"><table class="truth-table"><colgroup><col style="width:19%"><col style="width:19%"><col style="width:29%"><col style="width:33%"></colgroup><thead><tr><th scope="col"><span class="math-inline">x ∈ A</span></th><th scope="col"><span class="math-inline">x ∈ B</span></th><th scope="col"><span class="math-inline">x ∈ A ∩ B</span></th><th scope="col"><span class="math-inline">x ∈ A ∪ B</span></th></tr></thead><tbody><tr><td>V</td><td>V</td><td>V</td><td>V</td></tr>
+<tr><td>V</td><td>F</td><td>F</td><td>V</td></tr>
+<tr><td>F</td><td>V</td><td>F</td><td>V</td></tr>
+<tr><td>F</td><td>F</td><td>F</td><td>F</td></tr></tbody></table></div>
+<p><strong>a)</strong> A união exige pertencer a pelo menos um dos conjuntos. Quem pertence aos dois satisfaz essa exigência. O OU é inclusivo.</p>
+<p><strong>b)</strong> A segunda linha apresenta uma possibilidade incompatível com a afirmação: um elemento que pertence a <span class="math-inline">A</span>, mas não a <span class="math-inline">B</span>, pertence à união e não à interseção. Para realizá-la, podemos tomar</p>
+<div class="math-line">A={1}, <span class="math-gap" aria-hidden="true"></span> B={2}, <span class="math-gap" aria-hidden="true"></span> x=1.</div>
+<p>Nesse caso, <span class="math-inline">1 ∈ A ∪ B</span>, mas <span class="math-inline">1 ∉ A ∩ B</span>. Esse contraexemplo refuta a afirmação universal. A terceira linha também pode ser utilizada, com um elemento que pertença apenas a <span class="math-inline">B</span>. Não é necessário que a possibilidade escolhida ocorra em todos os pares de conjuntos: basta uma escolha que contradiga a afirmação.</p>
+<div class="item-title keep-with-next" id="answers-2">2. Operar sem confundir os objetos</div>
+<p class="keep-with-next"><strong>a)</strong> Os objetos comuns são o conjunto <span class="math-inline">{1}</span> e o número <span class="math-inline">2</span>. Portanto,</p>
+<div class="math-structural"><span class="answer-box">A ∩ B={{1},2}, <span class="math-gap" aria-hidden="true"></span> A ∪ B={1,{1},2,3}.</span></div>
+<p class="keep-with-next"><strong>b)</strong> Temos</p>
+<div class="math-structural"><span class="answer-box">{1} ∈ A ∩ B <span class="math-gap" aria-hidden="true"></span> <span class="math-text">e</span> <span class="math-gap" aria-hidden="true"></span> 1 ∉ A ∩ B.</span></div>
+<p>O conjunto <span class="math-inline">{1}</span> é um elemento de ambos os conjuntos dados. O número <span class="math-inline">1</span> pertence a <span class="math-inline">A</span>, mas não a <span class="math-inline">B</span>. A presença de <span class="math-inline">{1}</span> em <span class="math-inline">B</span> não torna <span class="math-inline">1</span> elemento de <span class="math-inline">B</span>.</p>
+<div class="item-title keep-with-next" id="answers-3">3. Da propriedade à operação</div>
+<p class="subitem-label keep-with-next"><strong>a)</strong></p>
+<div class="math-structural">P ∩ Q={x ∈ D | x&gt;3 ∧ x&lt;6},</div>
+<div class="math-structural">P ∪ Q={x ∈ D | x&gt;3 ∨ x&lt;6}.</div>
+<p class="keep-with-next"><strong>b)</strong> Como <span class="math-inline">P={4,5,6,7,8}</span> e <span class="math-inline">Q={1,2,3,4,5}</span>,</p>
+<div class="math-structural">P ∩ Q={4,5}, <span class="math-gap" aria-hidden="true"></span> P ∪ Q={1,2,3,4,5,6,7,8}=D.</div>
+<p><strong>c)</strong> Não existe elemento de <span class="math-inline">D</span> fora da união. Dentro de <span class="math-inline">D</span>, os elementos <span class="math-inline">1,2,3</span> satisfazem <span class="math-inline">x&lt;6</span>; <span class="math-inline">4,5</span> satisfazem as duas condições; e <span class="math-inline">6,7,8</span> satisfazem <span class="math-inline">x&gt;3</span>. Todo elemento do domínio atende a pelo menos uma condição. Nenhum objeto externo a <span class="math-inline">D</span> entra, pois ambos os conjuntos foram definidos dentro dele. Portanto, <span class="math-inline">P ∪ Q=D</span>.</p>
+<div class="item-title keep-with-next" id="answers-4">4. Reconstruindo um conjunto e um diagrama</div>
+<p><strong>a)</strong> A interseção determina que <span class="math-inline">b,c ∈ B</span> e que <span class="math-inline">a ∉ B</span>, pois <span class="math-inline">a ∈ A</span>, mas não aparece na interseção. Os elementos <span class="math-inline">d,e</span> aparecem na união e não pertencem a <span class="math-inline">A</span>, logo precisam pertencer a <span class="math-inline">B</span>. O elemento <span class="math-inline">f</span> não aparece na união. Assim,</p>
+<div class="math-structural"><span class="answer-box">B={b,c,d,e}.</span></div>
+<p><strong>b)</strong> O diagrama deve registrar as seguintes posições:</p>
+<div class="table-wrap"><table class="analysis-table"><colgroup><col style="width:60%"><col style="width:40%"></colgroup><thead><tr><th scope="col">Região</th><th scope="col">Elementos</th></tr></thead><tbody><tr><td>Em <span class="math-inline">A</span>, fora de <span class="math-inline">B</span></td><td><span class="math-inline">a</span></td></tr>
+<tr><td>Em <span class="math-inline">A</span> e em <span class="math-inline">B</span></td><td><span class="math-inline">b,c</span></td></tr>
+<tr><td>Em <span class="math-inline">B</span>, fora de <span class="math-inline">A</span></td><td><span class="math-inline">d,e</span></td></tr>
+<tr><td>Em <span class="math-inline">U</span>, fora de ambos</td><td><span class="math-inline">f</span></td></tr></tbody></table></div>
+<p>Qualquer desenho legível com essas pertinências, os rótulos dos conjuntos e o limite de <span class="math-inline">U</span> atende ao comando. A tabela permite conferir o desenho; não atribui significado às áreas.</p>
+<p><strong>c)</strong> Se <span class="math-inline">f ∈ B</span>, então <span class="math-inline">f ∈ A ∪ B</span>, contrariando a união fornecida. Portanto, <span class="math-inline">f ∉ B</span>.</p>
+<div class="item-title keep-with-next" id="answers-5">5. Casos particulares sob a mesma definição</div>
+<div class="table-wrap"><table class="analysis-table"><colgroup><col style="width:40%"><col style="width:30%"><col style="width:30%"></colgroup><thead><tr><th scope="col">Condição</th><th scope="col"><span class="math-inline">A ∩ B</span></th><th scope="col"><span class="math-inline">A ∪ B</span></th></tr></thead><tbody><tr><td><span class="math-inline">A ⊆ B</span></td><td><span class="math-inline">A</span></td><td><span class="math-inline">B</span></td></tr>
+<tr><td><span class="math-inline">A ∩ B= ∅</span></td><td><span class="math-inline">∅</span></td><td><span class="math-inline">A ∪ B</span></td></tr>
+<tr><td><span class="math-inline">A= ∅</span></td><td><span class="math-inline">∅</span></td><td><span class="math-inline">B</span></td></tr></tbody></table></div>
+<p>Na segunda linha, a informação de que os conjuntos são disjuntos não determina uma redução da união a um dos dois conjuntos.</p>
+<p><strong>a)</strong> Se <span class="math-inline">A ⊆ B</span>, todo elemento de <span class="math-inline">A</span> também pertence a <span class="math-inline">B</span>, de modo que os elementos comuns são exatamente os de <span class="math-inline">A</span>. Reunir os elementos de <span class="math-inline">A</span> aos de <span class="math-inline">B</span> não acrescenta nada a <span class="math-inline">B</span>.</p>
+<p><strong>b)</strong> Não. Por exemplo, <span class="math-inline">A={1}</span> e <span class="math-inline">B={2}</span> são disjuntos, mas sua união é <span class="math-inline">{1,2}</span>, diferente de ambos.</p>
+<p><strong>c)</strong> Não. Tomando <span class="math-inline">A=B= ∅</span>, temos <span class="math-inline">A ∩ B= ∅</span> e <span class="math-inline">A=B</span>. Se dois conjuntos iguais forem disjuntos, eles terão necessariamente de ser vazios, pois <span class="math-inline">A ∩ A=A</span>.</p>
+<div class="item-title keep-with-next" id="answers-6">6. O agrupamento faz diferença?</div>
+<p class="subitem-label keep-with-next"><strong>a)</strong></p>
+<div class="math-structural">A ∪ B={1,2,3}, <span class="math-gap" aria-hidden="true"></span> X={3};</div>
+<div class="math-structural">B ∩ C={3}, <span class="math-gap" aria-hidden="true"></span> Y={1,2,3}.</div>
+<p><strong>b)</strong> <span class="math-inline">X ≠ Y</span>. Uma testemunha é <span class="math-inline">1</span>, pois <span class="math-inline">1 ∈ Y</span> e <span class="math-inline">1 ∉ X</span>. O número <span class="math-inline">2</span> também serve.</p>
+<p class="subitem-label keep-with-next"><strong>c)</strong></p>
+<div class="math-structural">x ∈ X ⇔ ((x ∈ A) ∨ (x ∈ B)) ∧ (x ∈ C),</div>
+<div class="math-structural">x ∈ Y ⇔ (x ∈ A) ∨ ((x ∈ B) ∧ (x ∈ C)).</div>
+<p>As condições são diferentes: em <span class="math-inline">X</span>, pertencer a <span class="math-inline">C</span> é obrigatório; em <span class="math-inline">Y</span>, pertencer a <span class="math-inline">A</span> já basta. A associatividade de uma operação isolada não permite deslocar parênteses livremente entre operações diferentes.</p>
+<div class="gabarito-subtitle keep-with-next" data-keep-count="3">2. Diferença, Complemento e Universo</div>
+<div class="item-title keep-with-next" id="answers-7">7. De qual conjunto partimos?</div>
+<p class="subitem-label keep-with-next"><strong>a)</strong></p>
+<div class="math-structural"><span class="answer-box">A ∖ B={a,b}, <span class="math-gap" aria-hidden="true"></span> B ∖ A={e}.</span></div>
+<p class="keep-with-next"><strong>b)</strong> Falta verificar <span class="math-inline">f ∈ A</span>. Na realidade, <span class="math-inline">f ∉ A</span>, portanto</p>
+<div class="math-structural"><span class="answer-box">f ∉ A ∖ B.</span></div>
+<p>A diferença exige as duas condições: pertencer ao primeiro conjunto e não pertencer ao segundo.</p>
+<p><strong>c)</strong> Não. Neste caso, <span class="math-inline">e ∈ B</span> e <span class="math-inline">e ∉ A</span>, logo <span class="math-inline">B ⊈ A</span>, mas <span class="math-inline">A ∖ B</span> está perfeitamente definida. Os elementos de <span class="math-inline">B</span> externos a <span class="math-inline">A</span> não excluem nenhum elemento adicional da coleção de partida.</p>
+<div class="item-title keep-with-next" id="answers-8">8. Um conjunto, duas referências</div>
+<p class="subitem-label keep-with-next"><strong>a)</strong></p>
+<div class="math-structural">U ∖ A={1,3,5,6}, <span class="math-gap" aria-hidden="true"></span> V ∖ A={1,3,5,6,7,8}.</div>
+<p class="subitem-label keep-with-next"><strong>b)</strong></p>
+<div class="math-structural">U ∖ (U ∖ A)={2,4}=A,</div>
+<div class="math-structural">V ∖ (U ∖ A)={2,4,7,8}.</div>
+<p><strong>c)</strong> A dupla complementação recupera <span class="math-inline">A</span> quando as duas complementações usam o mesmo universo. A primeira expressão preserva <span class="math-inline">U</span>; a segunda começa com o complemento em <span class="math-inline">U</span> e depois toma o complemento desse resultado em <span class="math-inline">V</span>. O número <span class="math-inline">7</span> testemunha a falha da segunda igualdade: pertence a <span class="math-inline">V ∖ (U ∖ A)</span>, mas não a <span class="math-inline">A</span>. O número <span class="math-inline">8</span> também serve.</p>
+<div class="item-title keep-with-next" id="answers-9">9. Traduzindo condições de exclusão</div>
+<p class="keep-with-next"><strong>a)</strong> Para <span class="math-inline">x ∈ U</span>,</p>
+<div class="math-structural math-aligned">
+<div class="math-row"><span>x ∈ X</span><span>⇔ (x ∈ A) ∧ ¬ (x ∈ B);</span><span></span></div>
+<div class="math-row"><span>x ∈ Y</span><span>⇔ ¬ ((x ∈ A) ∧ (x ∈ B))</span><span></span></div>
+<div class="math-row"><span></span><span>⇔ ¬ (x ∈ A) ∨ ¬ (x ∈ B);</span><span></span></div>
+<div class="math-row"><span>x ∈ Z</span><span>⇔ ¬ (x ∈ A) ∧ (x ∈ B).</span><span></span></div>
+</div>
+<p class="subitem-label keep-with-next"><strong>b)</strong></p>
+<div class="math-structural">X=A ∩ B<sup>c</sup>, <span class="math-gap" aria-hidden="true"></span> Z=B ∖ A.</div>
+<p>Como <span class="math-inline">x ∈ U</span>, não pertencer a <span class="math-inline">B</span> equivale a pertencer a <span class="math-inline">B<sup>c</sup></span>. A condição de <span class="math-inline">Z</span> exige pertencer a <span class="math-inline">B</span> e não a <span class="math-inline">A</span>, exatamente na direção da diferença indicada.</p>
+<p><strong>c)</strong> Somente <span class="math-inline">Y</span>. Para um elemento fora de ambos, as duas pertinências são falsas e a negação da condição conjunta é verdadeira. Já <span class="math-inline">X</span> exige pertencer a <span class="math-inline">A</span>, e <span class="math-inline">Z</span> exige pertencer a <span class="math-inline">B</span>.</p>
+<div class="item-title keep-with-next" id="answers-10">10. As duas partes de um conjunto</div>
+<p class="keep-with-next"><strong>a)</strong> Em <span class="math-inline">A</span>, os elementos <span class="math-inline">q,s</span> pertencem a <span class="math-inline">B</span>, enquanto <span class="math-inline">p,r</span> não pertencem a <span class="math-inline">B</span>. Portanto,</p>
+<div class="math-structural">A ∖ B={p,r}.</div>
+<p class="keep-with-next">Os elementos de <span class="math-inline">B</span> que pertencem a <span class="math-inline">A</span> são <span class="math-inline">q,s</span>, e o único elemento de <span class="math-inline">B</span> externo a <span class="math-inline">A</span> é <span class="math-inline">t</span>. Assim,</p>
+<div class="math-structural">B={q,s,t}.</div>
+<p class="subitem-label keep-with-next"><strong>b)</strong></p>
+<div class="math-line">(A ∩ B) ∪ (A ∖ B) ={q,s} ∪ {p,r} ={p,q,r,s}=A.</div>
+<p>Essa enumeração verifica a igualdade para os conjuntos da atividade.</p>
+<p><strong>c)</strong> Não. Um elemento da primeira parcela pertence a <span class="math-inline">B</span>; um elemento da segunda não pertence a <span class="math-inline">B</span>. Pertencer às duas exigiria simultaneamente essas condições incompatíveis. Logo, as parcelas são disjuntas.</p>
+<div class="item-title keep-with-next" id="answers-11">11. O que permanece após uma restrição?</div>
+<p class="subitem-label keep-with-next"><strong>a)</strong></p>
+<div class="math-structural"><span class="answer-box">B=A ∖ C.</span></div>
+<p>Um alimento permanece exatamente quando era consumido antes e não contém carne: <span class="math-inline">x ∈ A</span> e <span class="math-inline">x ∉ C</span>. A hipótese de que não há acréscimos preserva a coleção de partida <span class="math-inline">A</span>.</p>
+<p class="keep-with-next"><strong>b)</strong> Com complemento em <span class="math-inline">U</span>,</p>
+<div class="math-structural"><span class="answer-box">B=A ∩ C<sup>c</sup>.</span></div>
+<p><strong>c)</strong> A igualdade <span class="math-inline">B=C<sup>c</sup></span> não é garantida. Como exemplo, denote por <span class="math-inline">a</span> e <span class="math-inline">b</span> dois alimentos sem carne e por <span class="math-inline">c</span> um alimento com carne. Tome</p>
+<div class="math-line">U={a,b,c}, <span class="math-gap" aria-hidden="true"></span> A={a,c}, <span class="math-gap" aria-hidden="true"></span> C={c}.</div>
+<p class="keep-with-next">Então</p>
+<div class="math-line">B=A ∖ C={a}, <span class="math-gap" aria-hidden="true"></span> C<sup>c</sup>={a,b}.</div>
+<p>O alimento <span class="math-inline">b</span> está no cardápio e não contém carne, mas não era consumido anteriormente. Ele pertence a <span class="math-inline">C<sup>c</sup></span>, porém não entra em <span class="math-inline">B</span>. Qualquer exemplo que respeite o universo e apresente um elemento de <span class="math-inline">C<sup>c</sup></span> externo a <span class="math-inline">A</span> refuta a igualdade proposta.</p>
+<div class="gabarito-subtitle keep-with-next" data-keep-count="3">3. Identidades e Relações entre Operações</div>
+<div class="item-title keep-with-next" id="answers-12">12. O efeito de repetir, acrescentar e complementar</div>
+<div class="table-wrap"><table class="analysis-table"><colgroup><col style="width:30%"><col style="width:22%"><col style="width:48%"></colgroup><thead><tr><th scope="col">Expressão</th><th scope="col">Resultado</th><th scope="col">Propriedade ou significado</th></tr></thead><tbody><tr><td><span class="math-inline">A ∩ A</span></td><td><span class="math-inline">A</span></td><td>Idempotência</td></tr>
+<tr><td><span class="math-inline">A ∪ A</span></td><td><span class="math-inline">A</span></td><td>Idempotência</td></tr>
+<tr><td><span class="math-inline">A ∪ ∅</span></td><td><span class="math-inline">A</span></td><td>Neutralidade do vazio na união</td></tr>
+<tr><td><span class="math-inline">A ∩ U</span></td><td><span class="math-inline">A</span></td><td>Neutralidade do universo na interseção</td></tr>
+<tr><td><span class="math-inline">A ∩ ∅</span></td><td><span class="math-inline">∅</span></td><td>Dominância do vazio na interseção</td></tr>
+<tr><td><span class="math-inline">A ∪ U</span></td><td><span class="math-inline">U</span></td><td>Dominância do universo na união</td></tr>
+<tr><td><span class="math-inline">A ∩ A<sup>c</sup></span></td><td><span class="math-inline">∅</span></td><td>Complementação: condições incompatíveis</td></tr>
+<tr><td><span class="math-inline">A ∪ A<sup>c</sup></span></td><td><span class="math-inline">U</span></td><td>Complementação: todas as possibilidades em <span class="math-inline">U</span></td></tr>
+<tr><td><span class="math-inline">(A<sup>c</sup>)<sup>c</sup></span></td><td><span class="math-inline">A</span></td><td>Dupla complementação no mesmo universo</td></tr>
+<tr><td><span class="math-inline">U<sup>c</sup></span></td><td><span class="math-inline">∅</span></td><td>Nenhum elemento de <span class="math-inline">U</span> está fora de <span class="math-inline">U</span></td></tr>
+<tr><td><span class="math-inline">∅ <sup>c</sup></span></td><td><span class="math-inline">U</span></td><td>Todo elemento de <span class="math-inline">U</span> está fora do vazio</td></tr></tbody></table></div>
+<p>Na união, o vazio não acrescenta elementos a <span class="math-inline">A</span>. Na interseção, a exigência de pertencer também ao vazio não pode ser satisfeita por nenhum objeto. O comportamento depende da operação.</p>
+<div class="item-title keep-with-next" id="answers-13">13. Reorganizar sem alterar a seleção</div>
+<p class="keep-with-next">Uma cadeia possível para <span class="math-inline">X</span> é</p>
+<div class="math-structural math-aligned">
+<div class="math-row"><span>(A ∪ B) ∪ (C ∪ A)</span><span>=((A ∪ B) ∪ C) ∪ A</span><span><span class="math-text">(associatividade)</span></span></div>
+<div class="math-row"><span></span><span>=A ∪ ((A ∪ B) ∪ C)</span><span><span class="math-text">(comutatividade)</span></span></div>
+<div class="math-row"><span></span><span>=((A ∪ A) ∪ B) ∪ C</span><span><span class="math-text">(associatividade)</span></span></div>
+<div class="math-row"><span></span><span>=(A ∪ B) ∪ C</span><span><span class="math-text">(idempotência)</span>.</span></div>
+</div>
+<p>Portanto, <span class="math-inline">X=A ∪ B ∪ C</span>.</p>
+<p class="keep-with-next">Para <span class="math-inline">Y</span>,</p>
+<div class="math-structural math-aligned">
+<div class="math-row"><span>(B ∩ A) ∩ (A ∩ C)</span><span>=(A ∩ B) ∩ (A ∩ C)</span><span><span class="math-text">(comutatividade)</span></span></div>
+<div class="math-row"><span></span><span>=((A ∩ B) ∩ A) ∩ C</span><span><span class="math-text">(associatividade)</span></span></div>
+<div class="math-row"><span></span><span>=(A ∩ (B ∩ A)) ∩ C</span><span><span class="math-text">(associatividade)</span></span></div>
+<div class="math-row"><span></span><span>=(A ∩ (A ∩ B)) ∩ C</span><span><span class="math-text">(comutatividade)</span></span></div>
+<div class="math-row"><span></span><span>=((A ∩ A) ∩ B) ∩ C</span><span><span class="math-text">(associatividade)</span></span></div>
+<div class="math-row"><span></span><span>=(A ∩ B) ∩ C</span><span><span class="math-text">(idempotência)</span>.</span></div>
+</div>
+<p>Assim, <span class="math-inline">Y=A ∩ B ∩ C</span>. Outras cadeias são válidas quando as transformações preservam os conjuntos e suas justificativas são identificáveis.</p>
+<div class="item-title keep-with-next" id="answers-14">14. Uma exigência já está contida na outra?</div>
+<p class="keep-with-next"><strong>a)</strong> Pela absorção,</p>
+<div class="math-structural math-aligned">
+<div class="math-row"><span>E</span><span>=(A ∩ (A ∪ B)) ∪ (A ∩ C)</span><span></span></div>
+<div class="math-row"><span></span><span>=A ∪ (A ∩ C)</span><span></span></div>
+<div class="math-row"><span></span><span>=A.</span><span></span></div>
+</div>
+<p>A primeira transformação utiliza <span class="math-inline">A ∩ (A ∪ B)=A</span>; a segunda utiliza <span class="math-inline">A ∪ (A ∩ C)=A</span>.</p>
+<p><strong>b)</strong> Se <span class="math-inline">x ∈ E</span>, então <span class="math-inline">x ∈ A ∩ (A ∪ B)</span> ou <span class="math-inline">x ∈ A ∩ C</span>. Em ambos os casos, <span class="math-inline">x ∈ A</span>. Reciprocamente, se <span class="math-inline">x ∈ A</span>, então <span class="math-inline">x ∈ A ∪ B</span>, logo <span class="math-inline">x ∈ A ∩ (A ∪ B) ⊆ E</span>. Portanto, <span class="math-inline">x ∈ E ⇔ x ∈ A</span> para qualquer <span class="math-inline">x</span>, independentemente de <span class="math-inline">B</span> e <span class="math-inline">C</span>.</p>
+<div class="item-title keep-with-next" id="answers-15">15. Duas maneiras de distribuir</div>
+<p class="keep-with-next"><strong>a)</strong> Pelas duas identidades distributivas,</p>
+<div class="math-structural">X=A ∩ (B ∪ C), <span class="math-gap" aria-hidden="true"></span> Y=A ∪ (B ∩ C).</div>
+<p class="keep-with-next"><strong>b)</strong> Não é sempre verdade que <span class="math-inline">X=Y</span>. Tome</p>
+<div class="math-line">A={1}, <span class="math-gap" aria-hidden="true"></span> B=C= ∅ .</div>
+<p class="keep-with-next">Então</p>
+<div class="math-line">X=(A ∩ ∅ ) ∪ (A ∩ ∅ )= ∅ ,</div>
+<div class="math-line">Y=(A ∪ ∅ ) ∩ (A ∪ ∅ )={1}.</div>
+<p>Assim, <span class="math-inline">1 ∈ Y</span> e <span class="math-inline">1 ∉ X</span>. O uso do vazio é legítimo: a afirmação proposta não restringe os conjuntos a serem não vazios.</p>
+<div class="item-title keep-with-next" id="answers-16">16. O complemento de uma construção composta</div>
+<p class="keep-with-next">Aplicando sucessivamente as duas leis de De Morgan,</p>
+<div class="math-structural math-aligned">
+<div class="math-row"><span>E</span><span>=(A ∪ (B ∩ C))<sup>c</sup></span><span></span></div>
+<div class="math-row"><span></span><span>=A<sup>c</sup> ∩ (B ∩ C)<sup>c</sup></span><span></span></div>
+<div class="math-row"><span></span><span>=A<sup>c</sup> ∩ (B<sup>c</sup> ∪ C<sup>c</sup>).</span><span></span></div>
+</div>
+<p>Para <span class="math-inline">F</span>, escrevemos a diferença como interseção com o complemento e usamos De Morgan e dupla complementação:</p>
+<div class="math-structural math-aligned">
+<div class="math-row"><span>F</span><span>=(A ∖ B)<sup>c</sup></span><span></span></div>
+<div class="math-row"><span></span><span>=(A ∩ B<sup>c</sup>)<sup>c</sup></span><span></span></div>
+<div class="math-row"><span></span><span>=A<sup>c</sup> ∪ (B<sup>c</sup>)<sup>c</sup></span><span></span></div>
+<div class="math-row"><span></span><span>=A<sup>c</sup> ∪ B.</span><span></span></div>
+</div>
+<p>O universo permanece <span class="math-inline">U</span> em todas as transformações, e todos os conjuntos envolvidos estão incluídos nele.</p>
+<div class="item-title keep-with-next" id="answers-17">17. Identidades propostas: refutar e reparar</div>
+<p class="keep-with-next"><strong>a) Proposta I.</strong> Tome <span class="math-inline">A=B=C={1}</span>. Então</p>
+<div class="math-line">A ∖ (B ∖ C)={1} ∖ ∅ ={1},</div>
+<div class="math-line">(A ∖ B) ∖ C= ∅ ∖ {1}= ∅ .</div>
+<p>O elemento <span class="math-inline">1</span> pertence ao lado esquerdo e não ao direito. Logo, a diferença não admite o reagrupamento proposto.</p>
+<p class="keep-with-next"><strong>Proposta II.</strong> Tome <span class="math-inline">A=B={1}</span> e <span class="math-inline">C={2}</span>. Temos</p>
+<div class="math-line">A ∖ (B ∩ C)={1} ∖ ∅ ={1},</div>
+<div class="math-line">(A ∖ B) ∩ (A ∖ C) = ∅ ∩ {1}= ∅ .</div>
+<p>Novamente, <span class="math-inline">1</span> testemunha a desigualdade. Outros contraexemplos são suficientes se os resultados e a testemunha forem corretamente verificados.</p>
+<p class="keep-with-next"><strong>b)</strong> A operação correta é a união:</p>
+<div class="math-structural">A ∖ (B ∩ C)=(A ∖ B) ∪ (A ∖ C).</div>
+<p class="keep-with-next">Para <span class="math-inline">x</span> arbitrário,</p>
+<div class="math-structural math-aligned">
+<div class="math-row"><span>x ∈ A ∖ (B ∩ C)</span><span>⇔ (x ∈ A) ∧ ¬ ((x ∈ B) ∧ (x ∈ C))</span><span></span></div>
+<div class="math-row"><span></span><span>⇔ (x ∈ A) ∧ ((x ∉ B) ∨ (x ∉ C))</span><span></span></div>
+<div class="math-row"><span></span><span>⇔ ((x ∈ A) ∧ (x ∉ B)) ∨ ((x ∈ A) ∧ (x ∉ C))</span><span></span></div>
+<div class="math-row"><span></span><span>⇔ x ∈ (A ∖ B) ∪ (A ∖ C).</span><span></span></div>
+</div>
+<p>Foram usadas a lei lógica de De Morgan e a distributividade lógica. A equivalência de pertinência para todo objeto demonstra a identidade, sem necessidade de definir complementos ou escolher um universo.</p>
+<div class="gabarito-subtitle keep-with-next" data-keep-count="3">4. Demonstração, Integração e Transferência</div>
+<div class="item-title keep-with-next" id="answers-18">18. Completando uma demonstração por pertinência</div>
+<p class="keep-with-next">A cadeia completa é</p>
+<div class="math-structural math-aligned">
+<div class="math-row"><span>x ∈ A ∖ (B ∪ C)</span><span>⇔ (x ∈ A) ∧ ¬ ((x ∈ B) ∨ (x ∈ C))</span><span></span></div>
+<div class="math-row"><span></span><span>⇔ (x ∈ A) ∧ ((x ∉ B) ∧ (x ∉ C))</span><span></span></div>
+<div class="math-row"><span></span><span>⇔ ((x ∈ A) ∧ (x ∉ B)) ∧ ((x ∈ A) ∧ (x ∉ C))</span><span></span></div>
+<div class="math-row"><span></span><span>⇔ x ∈ (A ∖ B) ∩ (A ∖ C).</span><span></span></div>
+</div>
+<p><strong>a)</strong> Foi usada a lei lógica de De Morgan para a negação de uma disjunção.</p>
+<p><strong>b)</strong> A condição composta exige <span class="math-inline">x ∈ A</span>, <span class="math-inline">x ∉ B</span> e <span class="math-inline">x ∉ C</span>. Repetir a primeira exigência não a fortalece: <span class="math-inline">p ∧ p ⇔ p</span>. Associatividade, comutatividade e idempotência da conjunção autorizam o reagrupamento mostrado.</p>
+<p class="keep-with-next"><strong>c)</strong> A identidade demonstrada é</p>
+<div class="math-structural">A ∖ (B ∪ C)=(A ∖ B) ∩ (A ∖ C).</div>
+<p>O objeto <span class="math-inline">x</span> e os conjuntos são arbitrários. Cada equivalência decorre das definições e de leis lógicas, sem depender de elementos particulares ou de conjuntos não vazios. Assim, os dois lados possuem exatamente os mesmos elementos em todos os casos admitidos.</p>
+<div class="item-title keep-with-next" id="answers-19">19. Demonstrando por dupla inclusão</div>
+<div class="proof-step proof-justification proof-schema" data-proof="gabarito-19"><p><strong class="proof-step__role">Primeira inclusão.</strong> Seja <span class="math-inline">x ∈ A ∪ (B ∩ C)</span> arbitrário. Então <span class="math-inline">x ∈ A</span> ou <span class="math-inline">x ∈ B ∩ C</span>.</p></div>
+<div class="proof-step proof-justification" data-proof="gabarito-19"><p>Se <span class="math-inline">x ∈ A</span>, ele pertence tanto a <span class="math-inline">A ∪ B</span> quanto a <span class="math-inline">A ∪ C</span>. Se <span class="math-inline">x ∈ B ∩ C</span>, ele pertence a <span class="math-inline">B</span> e a <span class="math-inline">C</span>, o que também garante as duas uniões. Em qualquer alternativa,</p></div>
+<div class="proof-step proof-justification" data-proof="gabarito-19"><div class="math-line">x ∈ (A ∪ B) ∩ (A ∪ C).</div></div>
+<div class="proof-step proof-justification" data-proof="gabarito-19"><p>Portanto,</p></div>
+<div class="proof-step proof-justification" data-proof="gabarito-19"><div class="math-line">A ∪ (B ∩ C) ⊆ (A ∪ B) ∩ (A ∪ C).</div></div>
+<div class="proof-step proof-justification" data-proof="gabarito-19"><p><strong class="proof-step__role">Inclusão inversa.</strong> Seja <span class="math-inline">x ∈ (A ∪ B) ∩ (A ∪ C)</span> arbitrário. Então</p></div>
+<div class="proof-step proof-justification" data-proof="gabarito-19"><div class="math-line">x ∈ A ∪ B <span class="math-gap" aria-hidden="true"></span> <span class="math-text">e</span> <span class="math-gap" aria-hidden="true"></span> x ∈ A ∪ C.</div></div>
+<div class="proof-step proof-justification" data-proof="gabarito-19"><p>Se <span class="math-inline">x ∈ A</span>, já temos <span class="math-inline">x ∈ A ∪ (B ∩ C)</span>. Se <span class="math-inline">x ∉ A</span>, a primeira união exige <span class="math-inline">x ∈ B</span>, e a segunda exige <span class="math-inline">x ∈ C</span>. Logo, <span class="math-inline">x ∈ B ∩ C</span> e, novamente, <span class="math-inline">x ∈ A ∪ (B ∩ C)</span>. Assim,</p></div>
+<div class="proof-step proof-justification" data-proof="gabarito-19"><div class="math-line">(A ∪ B) ∩ (A ∪ C) ⊆ A ∪ (B ∩ C).</div></div>
+<div class="proof-step proof-justification" data-proof="gabarito-19"><p>Pela dupla inclusão,</p></div>
+<div class="proof-step proof-justification" data-proof="gabarito-19"><div class="math-structural">A ∪ (B ∩ C)=(A ∪ B) ∩ (A ∪ C).</div></div>
+<div class="proof-step proof-justification" data-proof="gabarito-19"><p>Outras demonstrações por dupla inclusão são válidas se estabelecem as duas direções para elementos arbitrários. Verificar exemplos ou citar apenas o nome da identidade não atende ao comando desta atividade.</p></div>
+<div class="item-title keep-with-next" id="answers-20">20. A conclusão está sustentada?</div>
+<p><strong>a) Argumento I.</strong> O cálculo está correto: naquele universo e com aqueles conjuntos, os dois lados são <span class="math-inline">{1,3}</span>. Foi estabelecida uma igualdade particular. A passagem desse caso para “quaisquer conjuntos” não está justificada. Conjuntos escolhidos favoravelmente não substituem um raciocínio geral.</p>
+<p class="keep-with-next"><strong>Argumento II.</strong> O raciocínio com <span class="math-inline">x</span> é válido até a conclusão</p>
+<div class="math-structural">A<sup>c</sup> ∪ B<sup>c</sup> ⊆ (A ∩ B)<sup>c</sup>.</div>
+<p>O erro está em concluir a igualdade a partir dessa única inclusão. Falta estabelecer a inclusão inversa.</p>
+<p><strong>b)</strong> Seja <span class="math-inline">x ∈ (A ∩ B)<sup>c</sup></span> arbitrário. Então <span class="math-inline">x ∈ U</span> e <span class="math-inline">x ∉ A ∩ B</span>. Pelas definições e pela lei lógica de De Morgan,</p>
+<div class="math-structural">¬ ((x ∈ A) ∧ (x ∈ B)) ⇔ (x ∉ A) ∨ (x ∉ B).</div>
+<p class="keep-with-next">Como <span class="math-inline">x ∈ U</span>, a condição equivale a <span class="math-inline">x ∈ A<sup>c</sup></span> ou <span class="math-inline">x ∈ B<sup>c</sup></span>. Portanto, <span class="math-inline">x ∈ A<sup>c</sup> ∪ B<sup>c</sup></span>, mostrando que</p>
+<div class="math-line">(A ∩ B)<sup>c</sup> ⊆ A<sup>c</sup> ∪ B<sup>c</sup>.</div>
+<p>Junto com a inclusão demonstrada no Argumento II, obtemos a igualdade por dupla inclusão. Não basta repetir a igualdade pretendida: é necessário justificar essa direção ausente.</p>
+<div class="item-title keep-with-next" id="answers-21">21. Reconhecendo a inclusão por operações</div>
+<p class="keep-with-next">Uma possibilidade é estabelecer o ciclo</p>
+<div class="math-structural"><span class="math-text">I</span> ⇒ <span class="math-text">II</span> ⇒ <span class="math-text">III</span> ⇒ <span class="math-text">IV</span> ⇒ <span class="math-text">I</span>.</div>
+<p><strong>I <span class="math-inline">⇒</span> II.</strong> Se <span class="math-inline">A ⊆ B</span>, não existe elemento que pertença a <span class="math-inline">A</span> e não pertença a <span class="math-inline">B</span>. Essa é precisamente a condição exigida pela diferença. Logo, <span class="math-inline">A ∖ B= ∅</span>.</p>
+<p><strong>II <span class="math-inline">⇒</span> III.</strong> Suponha <span class="math-inline">A ∖ B= ∅</span>. Para <span class="math-inline">x ∈ A</span> arbitrário, não pode ocorrer <span class="math-inline">x ∉ B</span>, pois isso colocaria <span class="math-inline">x</span> na diferença vazia. Assim, <span class="math-inline">x ∈ B</span>, e portanto <span class="math-inline">x ∈ A ∩ B</span>. Logo, <span class="math-inline">A ⊆ A ∩ B</span>. A inclusão <span class="math-inline">A ∩ B ⊆ A</span> decorre diretamente da definição de interseção. Pela dupla inclusão, <span class="math-inline">A ∩ B=A</span>.</p>
+<p><strong>III <span class="math-inline">⇒</span> IV.</strong> Suponha <span class="math-inline">A ∩ B=A</span>. Todo elemento de <span class="math-inline">A</span> pertence à interseção e, portanto, a <span class="math-inline">B</span>. Agora, se <span class="math-inline">x ∈ A ∪ B</span>, ele pertence a <span class="math-inline">A</span> ou a <span class="math-inline">B</span>; em ambos os casos, pertence a <span class="math-inline">B</span>. Assim, <span class="math-inline">A ∪ B ⊆ B</span>. Como <span class="math-inline">B ⊆ A ∪ B</span> pela definição de união, temos <span class="math-inline">A ∪ B=B</span>.</p>
+<p><strong>IV <span class="math-inline">⇒</span> I.</strong> Suponha <span class="math-inline">A ∪ B=B</span>. Para <span class="math-inline">x ∈ A</span> arbitrário, temos <span class="math-inline">x ∈ A ∪ B</span>, logo <span class="math-inline">x ∈ B</span>. Portanto, <span class="math-inline">A ⊆ B</span>.</p>
+<p class="keep-with-next">O ciclo garante que qualquer uma das afirmações implica todas as outras. Isso demonstra</p>
+<div class="math-structural">A ⊆ B ⇔ A ∖ B= ∅ ⇔ A ∩ B=A ⇔ A ∪ B=B.</div>
+<p>Também é suficiente demonstrar a equivalência entre I e cada uma das demais, com os dois sentidos justificados. O raciocínio continua válido se algum conjunto for vazio; nenhuma passagem exige a existência de um elemento de <span class="math-inline">A</span>.</p>
+<div class="item-title keep-with-next" id="answers-22">22. O que uma inclusão permite concluir?</div>
+<p><strong>a) Afirmação I — válida.</strong> Seja <span class="math-inline">x ∈ A ∩ C</span> arbitrário. Então <span class="math-inline">x ∈ A</span> e <span class="math-inline">x ∈ C</span>. Como <span class="math-inline">A ⊆ B</span>, também <span class="math-inline">x ∈ B</span>. Portanto, <span class="math-inline">x ∈ B ∩ C</span>, demonstrando</p>
+<div class="math-structural">A ∩ C ⊆ B ∩ C.</div>
+<p><strong>Afirmação II — válida.</strong> Seja <span class="math-inline">x ∈ A ∖ C</span> arbitrário. Temos <span class="math-inline">x ∈ A</span> e <span class="math-inline">x ∉ C</span>. A inclusão dada fornece <span class="math-inline">x ∈ B</span>; preservando <span class="math-inline">x ∉ C</span>, concluímos <span class="math-inline">x ∈ B ∖ C</span>. Logo,</p>
+<div class="math-structural">A ∖ C ⊆ B ∖ C.</div>
+<p class="keep-with-next"><strong>b) Afirmação III — inválida em geral.</strong> Tome</p>
+<div class="math-line">A={1}, <span class="math-gap" aria-hidden="true"></span> B={1,2}, <span class="math-gap" aria-hidden="true"></span> C={2}.</div>
+<p class="keep-with-next">A hipótese <span class="math-inline">A ⊆ B</span> é satisfeita, mas</p>
+<div class="math-line">C ∖ A={2}, <span class="math-gap" aria-hidden="true"></span> C ∖ B= ∅ .</div>
+<p>O elemento <span class="math-inline">2</span> pertence ao conjunto da esquerda e não ao da direita, refutando a inclusão proposta.</p>
+<p class="keep-with-next"><strong>c)</strong> A direção correta é</p>
+<div class="math-structural">C ∖ B ⊆ C ∖ A.</div>
+<p>Seja <span class="math-inline">x ∈ C ∖ B</span> arbitrário. Então <span class="math-inline">x ∈ C</span> e <span class="math-inline">x ∉ B</span>. Não pode ocorrer <span class="math-inline">x ∈ A</span>, pois <span class="math-inline">A ⊆ B</span> implicaria <span class="math-inline">x ∈ B</span>. Logo, <span class="math-inline">x ∉ A</span>, e portanto <span class="math-inline">x ∈ C ∖ A</span>. Ao excluir o conjunto maior <span class="math-inline">B</span> da mesma coleção <span class="math-inline">C</span>, nenhum elemento adicional pode permanecer.</p>
+<div class="item-title keep-with-next" id="answers-23">23. Traduzir uma regra e controlar sua simplificação</div>
+<p class="keep-with-next"><strong>a)</strong> A pessoa deve pertencer a <span class="math-inline">S</span> e não satisfazer a condição conjunta de pertinência a <span class="math-inline">R</span> e <span class="math-inline">D</span>. Assim,</p>
+<div class="math-structural"><span class="answer-box">E=S ∖ (R ∩ D).</span></div>
+<p class="keep-with-next">Por condições de pertinência, para <span class="math-inline">x</span> arbitrário,</p>
+<div class="math-structural math-aligned">
+<div class="math-row"><span>x ∈ E</span><span>⇔ (x ∈ S) ∧ ¬ ((x ∈ R) ∧ (x ∈ D))</span><span></span></div>
+<div class="math-row"><span></span><span>⇔ (x ∈ S) ∧ ((x ∉ R) ∨ (x ∉ D))</span><span></span></div>
+<div class="math-row"><span></span><span>⇔ ((x ∈ S) ∧ (x ∉ R)) ∨ ((x ∈ S) ∧ (x ∉ D))</span><span></span></div>
+<div class="math-row"><span></span><span>⇔ x ∈ (S ∖ R) ∪ (S ∖ D).</span><span></span></div>
+</div>
+<p class="keep-with-next">Portanto,</p>
+<div class="math-structural"><span class="answer-box">E=(S ∖ R) ∪ (S ∖ D).</span></div>
+<p>Basta faltar uma das condições para a pessoa inscrita receber o aviso; podem faltar ambas.</p>
+<p class="keep-with-next"><strong>b)</strong> A expressão do programador não é adequada em geral. Considere uma pessoa com</p>
+<div class="math-line">x ∈ S, <span class="math-gap" aria-hidden="true"></span> x ∈ R, <span class="math-gap" aria-hidden="true"></span> x ∉ D.</div>
+<p>Ela deve receber o aviso porque não atende à condição conjunta. Entretanto, <span class="math-inline">x ∈ R ∪ D</span>, logo <span class="math-inline">x ∉ S ∖ (R ∪ D)</span>. A expressão incorreta seleciona apenas as pessoas inscritas que estão fora de <span class="math-inline">R</span> <strong>e</strong> fora de <span class="math-inline">D</span>, excluindo quem tem apenas uma pendência.</p>
+<p>Também refuta a expressão a combinação <span class="math-inline">x ∈ S</span>, <span class="math-inline">x ∉ R</span> e <span class="math-inline">x ∈ D</span>. Um registro concreto possível para a primeira combinação é <span class="math-inline">U=S=R={x}</span> e <span class="math-inline">D= ∅</span>.</p>
+<p><strong>c)</strong> Sob <span class="math-inline">S ⊆ R</span>, todo elemento de <span class="math-inline">S</span> já satisfaz a regularidade do cadastro. A única condição que pode faltar é a documentação. Para <span class="math-inline">x</span> arbitrário,</p>
+<div class="math-structural math-aligned">
+<div class="math-row"><span>x ∈ E</span><span>⇔ (x ∈ S) ∧ ¬ ((x ∈ R) ∧ (x ∈ D))</span><span></span></div>
+<div class="math-row"><span></span><span>⇔ (x ∈ S) ∧ (x ∉ D)</span><span></span></div>
+<div class="math-row"><span></span><span>⇔ x ∈ S ∖ D.</span><span></span></div>
+</div>
+<p>Na segunda equivalência, quando <span class="math-inline">x ∈ S</span>, a pertinência a <span class="math-inline">R</span> está garantida pela hipótese; quando <span class="math-inline">x ∉ S</span>, ambas as condições compostas são falsas. Portanto,</p>
+<div class="math-structural"><span class="answer-box">E=S ∖ D.</span></div>
+<p>Também é válida a simplificação <span class="math-inline">(S ∖ R) ∪ (S ∖ D)= ∅ ∪ (S ∖ D)</span>, pois <span class="math-inline">S ⊆ R</span>.</p>
+<div class="item-title keep-with-next" id="answers-24">24. Reconstruir, verificar e decidir se os dados são possíveis</div>
+<p class="keep-with-next"><strong>a)</strong> Se existe <span class="math-inline">A</span> com as propriedades dadas, sua decomposição fornece</p>
+<div class="math-structural">A=(A ∩ B) ∪ (A ∖ B)=P ∪ Q.</div>
+<p>Para justificar a decomposição, tome <span class="math-inline">x ∈ A</span> arbitrário. Ele pertence a <span class="math-inline">B</span> ou não pertence a <span class="math-inline">B</span>; logo, pertence a <span class="math-inline">A ∩ B=P</span> ou a <span class="math-inline">A ∖ B=Q</span>. Isso mostra <span class="math-inline">A ⊆ P ∪ Q</span>. Reciprocamente, <span class="math-inline">P=A ∩ B ⊆ A</span> e <span class="math-inline">Q=A ∖ B ⊆ A</span>, portanto <span class="math-inline">P ∪ Q ⊆ A</span>. A dupla inclusão estabelece a igualdade. Consequentemente, não pode haver duas soluções diferentes para os mesmos dados.</p>
+<p class="keep-with-next"><strong>b)</strong> A construção não funciona para dados arbitrários. As condições necessárias e suficientes são</p>
+<div class="math-structural">P ⊆ B <span class="math-gap" aria-hidden="true"></span> <span class="math-text">e</span> <span class="math-gap" aria-hidden="true"></span> Q ∩ B= ∅.</div>
+<p><strong>Necessidade.</strong> Se existe uma solução, temos <span class="math-inline">P=A ∩ B</span>, de modo que todo elemento de <span class="math-inline">P</span> pertence a <span class="math-inline">B</span>. Assim, <span class="math-inline">P ⊆ B</span>. Além disso, <span class="math-inline">Q=A ∖ B</span>; todo elemento de <span class="math-inline">Q</span> está fora de <span class="math-inline">B</span>. Logo, <span class="math-inline">Q ∩ B= ∅</span>.</p>
+<p><strong>Suficiência.</strong> Suponha agora essas duas condições e defina <span class="math-inline">A=P ∪ Q</span>. Vamos conferir separadamente os dois requisitos.</p>
+<p>Se <span class="math-inline">x ∈ A ∩ B</span>, então <span class="math-inline">x ∈ P ∪ Q</span> e <span class="math-inline">x ∈ B</span>. Ele não pode pertencer a <span class="math-inline">Q</span>, pois <span class="math-inline">Q ∩ B= ∅</span>. Portanto, <span class="math-inline">x ∈ P</span>. Reciprocamente, se <span class="math-inline">x ∈ P</span>, então <span class="math-inline">x ∈ A</span> e, por <span class="math-inline">P ⊆ B</span>, também <span class="math-inline">x ∈ B</span>. Logo, <span class="math-inline">x ∈ A ∩ B</span>. Assim,</p>
+<div class="math-line">A ∩ B=P.</div>
+<p>Se <span class="math-inline">x ∈ A ∖ B</span>, então <span class="math-inline">x ∈ P ∪ Q</span> e <span class="math-inline">x ∉ B</span>. Ele não pode pertencer a <span class="math-inline">P</span>, pois <span class="math-inline">P ⊆ B</span>. Portanto, <span class="math-inline">x ∈ Q</span>. Reciprocamente, se <span class="math-inline">x ∈ Q</span>, então <span class="math-inline">x ∈ A</span> e, por <span class="math-inline">Q ∩ B= ∅</span>, <span class="math-inline">x ∉ B</span>. Logo, <span class="math-inline">x ∈ A ∖ B</span>. Portanto,</p>
+<div class="math-line">A ∖ B=Q.</div>
+<p>As condições são suficientes e, pelo item a, a solução é única. Não é preciso acrescentar a condição <span class="math-inline">P ∩ Q= ∅</span>: ela já decorre de <span class="math-inline">P ⊆ B</span> e <span class="math-inline">Q ∩ B= ∅</span>.</p>
+<p class="keep-with-next"><strong>c) Registro I.</strong> Temos <span class="math-inline">{b} ⊆ {b,d}</span> e <span class="math-inline">{a,c} ∩ {b,d}= ∅</span>. As condições são satisfeitas, e</p>
+<div class="math-structural">A={a,b,c}.</div>
+<p>De fato, <span class="math-inline">A ∩ B={b}=P</span> e <span class="math-inline">A ∖ B={a,c}=Q</span>.</p>
+<p><strong>Registro II.</strong> O elemento <span class="math-inline">d</span> pertence a <span class="math-inline">Q</span> e a <span class="math-inline">B</span>, logo <span class="math-inline">Q ∩ B ≠ ∅</span>. Não existe solução: se <span class="math-inline">Q=A ∖ B</span>, nenhum elemento de <span class="math-inline">Q</span> poderia pertencer a <span class="math-inline">B</span>. Tomar apenas <span class="math-inline">A=P ∪ Q={a,b,d}</span> não corrige os dados, pois nesse caso <span class="math-inline">A ∩ B={b,d} ≠ P</span> e <span class="math-inline">A ∖ B={a} ≠ Q</span>.</p>
+<p>Uma resposta alternativa é suficiente se prova a reconstrução, justifica a necessidade e a suficiência das condições e resolve os dois registros. A enumeração dos registros particulares, sozinha, não demonstra o resultado geral do item b.</p>
+</section>
+</div>
+</main>
+    <script>
+        (function () {
+            'use strict';
+
+            const documentRoot = document.getElementById('document');
+            const source = document.getElementById('source-content');
+
+            if (!documentRoot || !source) return;
+
+            const headerIdentity =
+                documentRoot.dataset.headerIdentity || 'PLANO DE ESTUDO — MATEMÁTICA';
+            const footerIdentity =
+                documentRoot.dataset.footerIdentity || 'APOSTILA DE ESTUDO';
+
+            let pageNumber = 2;
+
+            function makePage(context) {
+                const page = document.createElement('section');
+                page.className = 'page page--generated';
+
+                const header = document.createElement('header');
+                header.className = 'page-header';
+
+                const headerBrand = document.createElement('span');
+                headerBrand.textContent = headerIdentity;
+
+                const headerContext = document.createElement('span');
+                headerContext.className = 'header-context';
+                headerContext.textContent = context;
+
+                header.append(headerBrand, headerContext);
+
+                const content = document.createElement('div');
+                content.className = 'page-content';
+
+                const footer = document.createElement('footer');
+                footer.className = 'page-footer';
+
+                const footerBrand = document.createElement('span');
+                footerBrand.textContent = footerIdentity;
+
+                const number = document.createElement('span');
+                number.className = 'page-number';
+                number.textContent = String(pageNumber++);
+
+                footer.append(footerBrand, number);
+                page.append(header, content, footer);
+
+                documentRoot.insertBefore(page, source);
+                return page;
+            }
+
+            function overflows(content) {
+                return content.scrollHeight > content.clientHeight + 1;
+            }
+
+            function appendAtomic(content, nodes) {
+                nodes.forEach((node) => content.appendChild(node));
+            }
+
+            function removeAtomic(content, nodes) {
+                for (let i = nodes.length - 1; i >= 0; i -= 1) {
+                    const node = nodes[i];
+                    if (node.parentNode === content) {
+                        content.removeChild(node);
+                    }
+                }
+            }
+
+            function stripIdsDeep(root) {
+                if (root.nodeType !== Node.ELEMENT_NODE) return;
+                root.removeAttribute('id');
+                root.querySelectorAll('[id]').forEach((element) => {
+                    element.removeAttribute('id');
+                });
+            }
+
+            function tableBlueprint(node) {
+                let wrap = null;
+                let table = null;
+
+                if (node.matches && node.matches('.table-wrap')) {
+                    wrap = node;
+                    const elementChildren = Array.from(wrap.children);
+                    const tables = elementChildren.filter(
+                        (child) => child.tagName === 'TABLE'
+                    );
+
+                    if (tables.length !== 1 || elementChildren.length !== 1) {
+                        return null;
+                    }
+
+                    table = tables[0];
+                } else if (node.tagName === 'TABLE') {
+                    table = node;
+                } else {
+                    return null;
+                }
+
+                if (table.querySelector('table')) return null;
+
+                const rows = Array.from(table.rows);
+                const hasUnsafeRowspan = rows.some((row) =>
+                    Array.from(row.cells).some((cell) => cell.rowSpan > 1)
+                );
+
+                if (hasUnsafeRowspan) {
+                    return {
+                        safe: false,
+                        wrap,
+                        table
+                    };
+                }
+
+                const bodies = Array.from(table.tBodies);
+                if (bodies.length === 0) return null;
+
+                const rowRecords = [];
+                bodies.forEach((body, bodyIndex) => {
+                    Array.from(body.rows).forEach((row) => {
+                        rowRecords.push({ row, body, bodyIndex });
+                    });
+                });
+
+                if (rowRecords.length === 0) return null;
+
+                return {
+                    safe: true,
+                    wrap,
+                    table,
+                    caption: table.caption,
+                    colgroups: Array.from(table.children).filter(
+                        (child) => child.tagName === 'COLGROUP'
+                    ),
+                    thead: table.tHead,
+                    tfoot: table.tFoot,
+                    bodies,
+                    rowRecords
+                };
+            }
+
+            function createTableFragment(blueprint, isFirstFragment) {
+                const root = blueprint.wrap
+                    ? blueprint.wrap.cloneNode(false)
+                    : blueprint.table.cloneNode(false);
+
+                const table = blueprint.wrap
+                    ? blueprint.table.cloneNode(false)
+                    : root;
+
+                if (blueprint.wrap) {
+                    root.appendChild(table);
+                }
+
+                if (!isFirstFragment) {
+                    stripIdsDeep(root);
+                }
+
+                if (blueprint.caption && isFirstFragment) {
+                    table.appendChild(blueprint.caption.cloneNode(true));
+                }
+
+                blueprint.colgroups.forEach((colgroup) => {
+                    const clone = colgroup.cloneNode(true);
+                    if (!isFirstFragment) stripIdsDeep(clone);
+                    table.appendChild(clone);
+                });
+
+                if (blueprint.thead) {
+                    const clone = blueprint.thead.cloneNode(true);
+                    if (!isFirstFragment) stripIdsDeep(clone);
+                    table.appendChild(clone);
+                }
+
+                return {
+                    root,
+                    table,
+                    bodyMap: new Map(),
+                    isFirstFragment
+                };
+            }
+
+            function ensureFragmentBody(fragment, record) {
+                if (fragment.bodyMap.has(record.bodyIndex)) {
+                    return fragment.bodyMap.get(record.bodyIndex);
+                }
+
+                const body = record.body.cloneNode(false);
+                if (!fragment.isFirstFragment) stripIdsDeep(body);
+
+                fragment.table.appendChild(body);
+                fragment.bodyMap.set(record.bodyIndex, body);
+                return body;
+            }
+
+            function appendRow(fragment, record) {
+                const body = ensureFragmentBody(fragment, record);
+                body.appendChild(record.row);
+                return body;
+            }
+
+            function removeRow(fragment, record) {
+                const body = fragment.bodyMap.get(record.bodyIndex);
+                if (!body || record.row.parentNode !== body) return;
+
+                body.removeChild(record.row);
+
+                if (body.rows.length === 0) {
+                    body.remove();
+                    fragment.bodyMap.delete(record.bodyIndex);
+                }
+            }
+
+            function appendFinalFoot(fragment, blueprint) {
+                if (!blueprint.tfoot) return null;
+
+                const foot = blueprint.tfoot.cloneNode(true);
+                fragment.table.appendChild(foot);
+                return foot;
+            }
+
+            function splitTableAcrossPages(
+                blueprint,
+                context,
+                initialPage,
+                initialContent
+            ) {
+                let page = initialPage;
+                let content = initialContent;
+                let rowIndex = 0;
+                let fragmentIndex = 0;
+
+                while (rowIndex < blueprint.rowRecords.length) {
+                    const hadPriorContent = content.children.length > 0;
+                    const fragment = createTableFragment(
+                        blueprint,
+                        fragmentIndex === 0
+                    );
+
+                    content.appendChild(fragment.root);
+
+                    let acceptedRows = 0;
+                    let fragmentClosed = false;
+
+                    while (rowIndex < blueprint.rowRecords.length) {
+                        const record = blueprint.rowRecords[rowIndex];
+                        appendRow(fragment, record);
+
+                        let foot = null;
+                        const isLastRow =
+                            rowIndex === blueprint.rowRecords.length - 1;
+
+                        if (isLastRow) {
+                            foot = appendFinalFoot(fragment, blueprint);
+                        }
+
+                        if (!overflows(content)) {
+                            acceptedRows += 1;
+                            rowIndex += 1;
+                            continue;
+                        }
+
+                        if (foot) foot.remove();
+                        removeRow(fragment, record);
+
+                        if (acceptedRows > 0) {
+                            fragmentClosed = true;
+                            break;
+                        }
+
+                        if (hadPriorContent) {
+                            fragment.root.remove();
+                            page = makePage(context);
+                            content = page.querySelector('.page-content');
+                            fragmentClosed = true;
+                            break;
+                        }
+
+                        appendRow(fragment, record);
+                        if (isLastRow) appendFinalFoot(fragment, blueprint);
+                        page.classList.add('page--overflow-warning');
+                        acceptedRows = 1;
+                        rowIndex += 1;
+                        fragmentClosed = true;
+                        break;
+                    }
+
+                    if (fragment.root.isConnected && acceptedRows > 0) {
+                        fragmentIndex += 1;
+                    }
+
+                    if (rowIndex < blueprint.rowRecords.length) {
+                        if (
+                            fragment.root.isConnected &&
+                            acceptedRows > 0 &&
+                            fragmentClosed
+                        ) {
+                            page = makePage(context);
+                            content = page.querySelector('.page-content');
+                        }
+                    }
+                }
+
+                return { page, content };
+            }
+
+            function placeSingleNode(node, context, page, content) {
+                content.appendChild(node);
+
+                if (!overflows(content)) {
+                    return { page, content };
+                }
+
+                content.removeChild(node);
+
+                const blueprint = tableBlueprint(node);
+                if (blueprint && blueprint.safe) {
+                    return splitTableAcrossPages(
+                        blueprint,
+                        context,
+                        page,
+                        content
+                    );
+                }
+
+                page = makePage(context);
+                content = page.querySelector('.page-content');
+                content.appendChild(node);
+
+                if (overflows(content)) {
+                    page.classList.add('page--overflow-warning');
+                }
+
+                return { page, content };
+            }
+
+            const sections = Array.from(
+                source.querySelectorAll(':scope > .source-section')
+            );
+
+            for (const section of sections) {
+                const nodes = Array.from(section.children);
+                if (nodes.length === 0) continue;
+
+                const context = section.dataset.context || '';
+                let page = makePage(context);
+                let content = page.querySelector('.page-content');
+
+                for (let i = 0; i < nodes.length; i += 1) {
+                    const node = nodes[i];
+                    let count = 1;
+
+                    if (node.dataset && node.dataset.keepCount) {
+                        count = Math.max(
+                            1,
+                            parseInt(node.dataset.keepCount, 10) || 1
+                        );
+                    } else if (
+                        node.classList &&
+                        node.classList.contains('keep-with-next') &&
+                        i + 1 < nodes.length
+                    ) {
+                        count = 2;
+                    }
+
+                    count = Math.min(count, nodes.length - i);
+
+                    if (count === 1) {
+                        const result = placeSingleNode(
+                            node,
+                            context,
+                            page,
+                            content
+                        );
+                        page = result.page;
+                        content = result.content;
+                        continue;
+                    }
+
+                    const atomic = nodes.slice(i, i + count);
+                    appendAtomic(content, atomic);
+
+                    if (overflows(content)) {
+                        removeAtomic(content, atomic);
+
+                        page = makePage(context);
+                        content = page.querySelector('.page-content');
+
+                        appendAtomic(content, atomic);
+
+                        if (overflows(content)) {
+                            page.classList.add('page--overflow-warning');
+                        }
+                    }
+
+                    i += count - 1;
+                }
+            }
+
+            source.remove();
+        })();
+    </script>
+</body>
+</html>
