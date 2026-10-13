@@ -1,0 +1,1218 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Tópico 1.2 — Teoria dos Conjuntos. Bloco IV — Cardinalidade Finita e Contagem. Texto Teórico, Exercícios e Gabarito Comentado.">
+<title>Tópico 1.2 · Bloco IV — Cardinalidade Finita e Contagem</title>
+<link rel="stylesheet" href="Plano_Matematico_3_1_Topico_1.2_Bloco_IV.css"></head>
+<body class="theme--math">
+<!-- Materialização candidata à validação editorial. Textos mestres preservados. -->
+<main class="document" id="document" data-header-identity="PLANO DE ESTUDO — MATEMÁTICA" data-footer-identity="TÓPICO 1.2 · BLOCO IV">
+<section class="page page--cover" id="capa" aria-label="Capa">
+<div class="cover-top"><div class="cover-collection">PLANO DE ESTUDO MATEMÁTICO</div></div>
+<div class="cover-bottom"><div class="cover-kicker">TÓPICO 1.2 · TEORIA DOS CONJUNTOS</div><div class="cover-title">BLOCO IV<br>CARDINALIDADE FINITA E CONTAGEM</div><div class="cover-rule" aria-hidden="true"><span></span><span></span></div><div class="cover-version">APOSTILA DE ESTUDO — 2026</div></div></section>
+<div class="source-content" id="source-content">
+<section class="source-section" data-context="TEXTO TEÓRICO • PARTE I">
+<header class="part-opening" data-keep-count="3"><div class="part-label"><h1 class="outline-root">Texto Teórico</h1> · Parte I</div><h2 class="part-title" id="teoria-parte-1">Parte I — Conjuntos Finitos e Cardinalidade</h2></header>
+<p>Nos Blocos anteriores, estudamos como identificar elementos, comparar conjuntos e construir novos conjuntos por meio de operações. Essas relações permitem determinar quais objetos pertencem a uma coleção, quais são comuns a duas coleções e quais ficam de fora de uma determinada seleção.</p>
+<p>Podemos, entretanto, investigar outra característica dos conjuntos: <strong>a quantidade de elementos que possuem</strong>.</p>
+<p>Considere <span class="math-inline">A={2,4,6,8}</span>. Sabemos identificar seus elementos e verificar relações de pertinência, mas também podemos afirmar que <span class="math-inline">A</span> possui quatro elementos. Essa informação não descreve individualmente os objetos da coleção: ela expressa uma quantidade associada ao conjunto.</p>
+<p>A passagem da identificação dos elementos à determinação de sua quantidade introduz a noção de <strong>cardinalidade</strong>. Com ela, poderemos compreender como a quantidade de elementos se relaciona com a igualdade, a inclusão e as operações entre conjuntos.</p>
+<div class="item-title keep-with-next" data-keep-count="3" id="teoria-1-1">Conjuntos finitos e quantidade de elementos</div>
+<p class="keep-with-next">Considere o conjunto</p>
+<div class="math-line">A={3,5,7,9}.</div>
+<p>Seus elementos são <span class="math-inline">3</span>, <span class="math-inline">5</span>, <span class="math-inline">7</span> e <span class="math-inline">9</span>. Podemos contá-los individualmente e concluir que existem quatro elementos em <span class="math-inline">A</span>.</p>
+<p>Essa contagem termina porque o conjunto possui uma quantidade limitada de elementos. Dizemos, nesse caso, que <span class="math-inline">A</span> é um <strong>conjunto finito</strong>.</p>
+<div class="definition-box atomic-group"><p>Um conjunto é finito quando seus elementos podem ser completamente contados, obtendo-se uma quantidade determinada e finita. Isso não significa que todos precisem estar escritos entre chaves. Um conjunto descrito por uma propriedade também pode ser finito, desde que a condição selecione apenas uma quantidade finita de objetos.</p></div>
+<p class="keep-with-next">Por exemplo, considere</p>
+<div class="math-line">B={x ∈ {1,2,3,4,5,6} | x&gt;3}.</div>
+<p class="keep-with-next">A condição seleciona os números <span class="math-inline">4</span>, <span class="math-inline">5</span> e <span class="math-inline">6</span>. Portanto,</p>
+<div class="math-line">B={4,5,6}.</div>
+<p>Embora <span class="math-inline">A</span> esteja apresentado diretamente por enumeração e <span class="math-inline">B</span> por uma propriedade, ambos são finitos. A diferença entre suas representações não altera o significado da contagem.</p>
+<p>Existem também conjuntos que não possuem uma quantidade finita de elementos. A coleção formada por todos os números da sequência <span class="math-inline">1,2,3, …</span>, sem último termo, é um exemplo. Não é possível terminar sua contagem após uma quantidade finita de passos.</p>
+<p>Neste Bloco, trabalharemos exclusivamente com <strong>conjuntos finitos</strong>. Isso nos permitirá associar a cada conjunto estudado uma quantidade inteira não negativa de elementos.</p>
+<div class="item-title keep-with-next" id="teoria-1-2">Cardinalidade: contar elementos distintos</div>
+<div class="definition-box atomic-group"><p>A quantidade de elementos de um conjunto finito é chamada de <strong>cardinalidade</strong>.</p><p>Para representar essa quantidade, utilizamos duas barras verticais envolvendo o nome do conjunto. Assim,</p><div class="math-line">|A|</div></div>
+<p>é a notação da cardinalidade de <span class="math-inline">A</span>, lida como “cardinalidade de <span class="math-inline">A</span>” ou “número de elementos de <span class="math-inline">A</span>”.</p>
+<p class="keep-with-next">No exemplo anterior,</p>
+<div class="math-line">A={3,5,7,9},</div>
+<p class="keep-with-next">temos</p>
+<div class="math-structural">|A|=4.</div>
+<p>O número <span class="math-inline">4</span> não é um elemento adicional de <span class="math-inline">A</span>. Ele expressa quantos elementos distintos pertencem à coleção.</p>
+<p>Essa distinção importa porque a cardinalidade é uma característica do conjunto considerado, não um objeto que passa a pertencer a ele. Em nosso exemplo, <span class="math-inline">4 ∉ A</span>, embora <span class="math-inline">|A|=4</span>.</p>
+<p class="keep-with-next">A contagem também não depende da ordem em que os elementos aparecem. Se escrevermos</p>
+<div class="math-line">C={9,3,7,5},</div>
+<p class="keep-with-next">teremos exatamente os mesmos elementos de <span class="math-inline">A</span>, apenas apresentados em outra ordem. Logo,</p>
+<div class="math-line">C=A <span class="math-gap" aria-hidden="true"></span> <span class="math-text">e</span> <span class="math-gap" aria-hidden="true"></span> |C|=|A|=4.</div>
+<p class="keep-with-next">Da mesma maneira, repetir um elemento na representação não cria novos elementos. A escrita</p>
+<div class="math-line">D={3,5,5,7,9,9}</div>
+<p>determina o mesmo conjunto que <span class="math-inline">A</span>. Embora apareçam seis entradas entre as chaves, existem apenas quatro elementos distintos:</p>
+<div class="math-line">D={3,5,7,9}, <span class="math-gap" aria-hidden="true"></span> |D|=4.</div>
+<p>Portanto, <strong>determinar a cardinalidade não significa contar quantas vezes algo foi escrito, mas quantos objetos distintos pertencem ao conjunto</strong>.</p>
+<p>Essa propriedade será essencial quando estudarmos a quantidade de elementos de uma união: um objeto que pertence a dois conjuntos não se transforma em dois elementos diferentes quando eles são reunidos.</p>
+<div class="item-title keep-with-next" id="teoria-1-3">Cardinalidade do vazio e dos conjuntos unitários</div>
+<p class="keep-with-next">O conjunto vazio é um caso fundamental. Como não possui elemento algum, sua cardinalidade é zero:</p>
+<div class="math-structural">| ∅ |=0.</div>
+<p>O número zero expressa precisamente a ausência de elementos. Ele não indica que a contagem falhou ou que desconhecemos a quantidade; indica que essa quantidade é nula.</p>
+<p class="keep-with-next">Já um conjunto unitário possui exatamente um elemento. Por exemplo,</p>
+<div class="math-line">E={5}</div>
+<p class="keep-with-next">possui cardinalidade</p>
+<div class="math-line">|E|=1.</div>
+<p>A distinção entre o conjunto vazio e um conjunto que contém o próprio vazio, estabelecida no Bloco I, também se manifesta na cardinalidade.</p>
+<p class="keep-with-next">Compare:</p>
+<div class="math-line">∅ <span class="math-gap" aria-hidden="true"></span> <span class="math-text">e</span> <span class="math-gap" aria-hidden="true"></span> { ∅ }.</div>
+<p>O primeiro conjunto não possui elementos. O segundo possui um elemento, que é justamente o conjunto vazio.</p>
+<p class="keep-with-next">Consequentemente,</p>
+<div class="math-structural">| ∅ |=0, <span class="math-gap" aria-hidden="true"></span> |{ ∅ }|=1.</div>
+<p>Não devemos interpretar o segundo conjunto como vazio apenas porque seu único elemento é <span class="math-inline">∅</span>. A cardinalidade considera <strong>a quantidade de objetos que pertencem diretamente ao conjunto</strong>, independentemente da natureza desses objetos.</p>
+<p class="keep-with-next">O mesmo princípio vale quando os elementos são outros conjuntos. Por exemplo,</p>
+<div class="math-line">F={{1,2},{3}, ∅ }</div>
+<p class="keep-with-next">possui três elementos: o conjunto <span class="math-inline">{1,2}</span>, o conjunto <span class="math-inline">{3}</span> e o conjunto vazio. Portanto,</p>
+<div class="math-line">|F|=3.</div>
+<p>Os números <span class="math-inline">1</span>, <span class="math-inline">2</span> e <span class="math-inline">3</span> não são elementos diretos de <span class="math-inline">F</span>; eles pertencem a conjuntos que, por sua vez, são elementos de <span class="math-inline">F</span>. A contagem precisa respeitar essa organização.</p>
+<div class="item-title keep-with-next" id="teoria-1-4">Igualdade de conjuntos e igualdade de cardinalidades</div>
+<p>No Bloco II, estabelecemos que dois conjuntos são iguais quando possuem exatamente os mesmos elementos.</p>
+<p>Essa condição fornece uma consequência imediata: <strong>conjuntos iguais possuem a mesma cardinalidade</strong>, desde que sejam finitos.</p>
+<p>Se <span class="math-inline">A=B</span>, não existe elemento pertencente a apenas um deles. Como a quantidade de elementos é determinada pelos próprios elementos do conjunto, não pode haver diferença entre suas cardinalidades.</p>
+<p class="keep-with-next">Assim,</p>
+<div class="math-structural">A=B ⇒ |A|=|B|.</div>
+<p>Entretanto, a implicação inversa não é verdadeira em geral.</p>
+<p class="keep-with-next">Considere</p>
+<div class="math-line">A={1,2,3} <span class="math-gap" aria-hidden="true"></span> <span class="math-text">e</span> <span class="math-gap" aria-hidden="true"></span> B={4,5,6}.</div>
+<p class="keep-with-next">Temos</p>
+<div class="math-line">|A|=3 <span class="math-gap" aria-hidden="true"></span> <span class="math-text">e</span> <span class="math-gap" aria-hidden="true"></span> |B|=3.</div>
+<p>Os dois conjuntos possuem a mesma cardinalidade, mas não são iguais. O número <span class="math-inline">1</span>, por exemplo, pertence a <span class="math-inline">A</span> e não pertence a <span class="math-inline">B</span>.</p>
+<p class="keep-with-next">Portanto,</p>
+<div class="math-line">|A|=|B| <span class="math-gap" aria-hidden="true"></span> <span class="math-text">mas</span> <span class="math-gap" aria-hidden="true"></span> A ≠ B.</div>
+<p>A igualdade entre conjuntos exige a coincidência de todos os elementos. A igualdade entre cardinalidades exige apenas a coincidência das quantidades.</p>
+<p>A cardinalidade, por isso, não fornece uma descrição completa de um conjunto. Ela informa quantos elementos existem, mas não determina quais são esses elementos.</p>
+<p>Essa diferença permite comparar conjuntos de naturezas distintas. O conjunto <span class="math-inline">{2,4,6}</span>, por exemplo, possui a mesma cardinalidade que <span class="math-inline">{<span class="math-text">a</span>,<span class="math-text">b</span>,<span class="math-text">c</span>}</span>, embora seus elementos sejam diferentes.</p>
+<div class="item-title keep-with-next" id="teoria-1-5">Inclusão e comparação de cardinalidades</div>
+<p>A inclusão também estabelece relações entre quantidades.</p>
+<p class="keep-with-next">Considere</p>
+<div class="math-line">A={2,4} <span class="math-gap" aria-hidden="true"></span> <span class="math-text">e</span> <span class="math-gap" aria-hidden="true"></span> B={1,2,3,4,5}.</div>
+<p class="keep-with-next">Como todos os elementos de <span class="math-inline">A</span> pertencem a <span class="math-inline">B</span>,</p>
+<div class="math-line">A ⊆ B.</div>
+<p class="keep-with-next">Além disso,</p>
+<div class="math-line">|A|=2, <span class="math-gap" aria-hidden="true"></span> |B|=5.</div>
+<p>A quantidade de elementos de <span class="math-inline">A</span> é menor que a quantidade de elementos de <span class="math-inline">B</span>. Isso não ocorre por uma coincidência numérica: resulta da própria relação de inclusão.</p>
+<p>Quando <span class="math-inline">A ⊆ B</span>, todos os elementos de <span class="math-inline">A</span> já estão entre os elementos de <span class="math-inline">B</span>. Assim, ao contar os elementos de <span class="math-inline">B</span>, necessariamente encontramos todos os elementos de <span class="math-inline">A</span>, podendo encontrar outros.</p>
+<p class="keep-with-next">Para conjuntos finitos, concluímos que</p>
+<div class="math-structural">A ⊆ B ⇒ |A| ≤ |B|.</div>
+<p>A desigualdade permite a igualdade. Se <span class="math-inline">A=B</span>, os dois conjuntos possuem a mesma quantidade de elementos e a inclusão continua válida.</p>
+<p>A situação muda quando a inclusão é própria.</p>
+<p>Se <span class="math-inline">A ⊊ B</span>, sabemos que todos os elementos de <span class="math-inline">A</span> pertencem a <span class="math-inline">B</span>, mas existe pelo menos um elemento de <span class="math-inline">B</span> que não pertence a <span class="math-inline">A</span>.</p>
+<p class="keep-with-next">Esse elemento adicional aumenta a quantidade de elementos de <span class="math-inline">B</span>. Como os conjuntos são finitos, temos</p>
+<div class="math-structural">A ⊊ B ⇒ |A|&lt;|B|.</div>
+<p>A justificativa utiliza as duas condições da inclusão própria. A inclusão garante que nenhum elemento de <span class="math-inline">A</span> está ausente de <span class="math-inline">B</span>; a diferença entre os conjuntos garante que <span class="math-inline">B</span> possui pelo menos um elemento adicional.</p>
+<p>Há também uma consequência importante. Se <span class="math-inline">A ⊆ B</span> e os conjuntos finitos possuem a mesma cardinalidade, então necessariamente <span class="math-inline">A=B</span>.</p>
+<p>De fato, se a inclusão fosse própria, <span class="math-inline">B</span> teria mais elementos que <span class="math-inline">A</span>, contrariando a igualdade das cardinalidades. Logo,</p>
+<div class="math-structural">A ⊆ B <span class="math-gap" aria-hidden="true"></span> <span class="math-text">e</span> <span class="math-gap" aria-hidden="true"></span> |A|=|B| ⇒ A=B.</div>
+<p>Não devemos inverter indiscriminadamente essas relações. Saber apenas que <span class="math-inline">|A|&lt;|B|</span> não garante que <span class="math-inline">A</span> esteja incluído em <span class="math-inline">B</span>. Por exemplo,</p>
+<div class="math-line">A={8}, <span class="math-gap" aria-hidden="true"></span> B={1,2}</div>
+<p>satisfazem <span class="math-inline">|A|&lt;|B|</span>, mas <span class="math-inline">A ⊈ B</span>, pois <span class="math-inline">8 ∉ B</span>.</p>
+<p>A inclusão compara os elementos; a cardinalidade compara suas quantidades. Uma relação pode fornecer informações sobre a outra, mas não devemos tratá-las como equivalentes.</p>
+<div class="item-title keep-with-next" id="teoria-1-6">Decomposição de conjuntos finitos</div>
+<p>Até aqui, determinamos a cardinalidade de conjuntos apresentados diretamente e relacionamos essa quantidade com igualdade e inclusão.</p>
+<p>Podemos avançar utilizando as operações do Bloco III.</p>
+<p class="keep-with-next">Considere</p>
+<div class="math-line">S={1,2,3,4,5,6}.</div>
+<p class="keep-with-next">Esse conjunto possui seis elementos:</p>
+<div class="math-line">|S|=6.</div>
+<p class="keep-with-next">Agora, separe seus elementos em dois conjuntos:</p>
+<div class="math-line">P={1,3,5} <span class="math-gap" aria-hidden="true"></span> <span class="math-text">e</span> <span class="math-gap" aria-hidden="true"></span> Q={2,4,6}.</div>
+<p class="keep-with-next">Todos os elementos de <span class="math-inline">S</span> aparecem em <span class="math-inline">P</span> ou em <span class="math-inline">Q</span>. Portanto,</p>
+<div class="math-line">S=P ∪ Q.</div>
+<p class="keep-with-next">Além disso, nenhum elemento pertence simultaneamente aos dois conjuntos:</p>
+<div class="math-line">P ∩ Q= ∅ .</div>
+<p>Dizemos que <span class="math-inline">S</span> foi <strong>decomposto em duas partes disjuntas</strong>, porque a união das partes recupera o conjunto original e não existe elemento comum a elas.</p>
+<p>Essa decomposição não altera os elementos de <span class="math-inline">S</span>. Apenas permite organizar sua contagem em duas parcelas.</p>
+<p>O conjunto <span class="math-inline">P</span> possui três elementos e <span class="math-inline">Q</span> também possui três. Como nenhum elemento aparece nas duas parcelas, podemos somar suas quantidades:</p>
+<div class="math-line">|S|=|P|+|Q|=3+3=6.</div>
+<p>A igualdade é válida porque cada elemento de <span class="math-inline">S</span> foi contado exatamente uma vez: os elementos ímpares apresentados estão em <span class="math-inline">P</span>, e os elementos pares apresentados estão em <span class="math-inline">Q</span>.</p>
+<p>A ideia fundamental não depende de os elementos serem números pares ou ímpares. Qualquer decomposição de um conjunto finito em partes disjuntas permite realizar o mesmo raciocínio.</p>
+<div class="item-title keep-with-next" id="teoria-1-7">Aditividade das cardinalidades de conjuntos disjuntos</div>
+<p>A decomposição anterior revela uma propriedade geral.</p>
+<p class="keep-with-next">Se <span class="math-inline">A</span> e <span class="math-inline">B</span> são conjuntos finitos e disjuntos, então</p>
+<div class="math-line">A ∩ B= ∅ .</div>
+<p>A união <span class="math-inline">A ∪ B</span> contém todos os elementos de <span class="math-inline">A</span> e todos os elementos de <span class="math-inline">B</span>. Como não existe elemento comum, as duas contagens não se sobrepõem.</p>
+<p>Podemos contar primeiro todos os elementos de <span class="math-inline">A</span> e, em seguida, todos os elementos de <span class="math-inline">B</span>. Nenhum objeto será contado novamente, pois nenhum elemento pertence aos dois conjuntos.</p>
+<p class="keep-with-next">Consequentemente,</p>
+<div class="math-structural">A ∩ B= ∅ ⇒ |A ∪ B|=|A|+|B|,</div>
+<p>para conjuntos finitos <span class="math-inline">A</span> e <span class="math-inline">B</span>.</p>
+<p>Essa é a <strong>propriedade aditiva da cardinalidade para conjuntos disjuntos</strong>.</p>
+<p>Ela não afirma simplesmente que a cardinalidade de uma união é sempre a soma das cardinalidades dos conjuntos envolvidos. A condição de disjunção é essencial à justificativa: é ela que garante a ausência de contagens repetidas.</p>
+<figure class="visual visual--venn-disjoint-count atomic-group" id="visual-r02"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 240" role="img" aria-label="P e Q disjuntos, contendo uma única vez os seis elementos de S."><rect class="venn-universe" x="10" y="10" width="500" height="220"/><text x="28" y="34">S</text><circle class="venn-set" cx="155" cy="115" r="83"/><circle class="venn-set" cx="365" cy="115" r="83"/><text x="155" y="60">P</text><text x="365" y="60">Q</text><text x="126" y="105">1</text><text x="183" y="105">3</text><text x="155" y="159">5</text><text x="336" y="105">2</text><text x="393" y="105">4</text><text x="365" y="159">6</text></svg><figcaption class="venn-caption">P ∩ Q = ∅ · P ∪ Q = S · |P| = 3 · |Q| = 3 · 3 + 3 = 6<span class="venn-area-note">Áreas não representam proporções quantitativas.</span></figcaption></figure>
+<p>A propriedade também permanece válida em casos particulares.</p>
+<p class="keep-with-next">Se <span class="math-inline">A= ∅</span>, então <span class="math-inline">A</span> é disjunto de qualquer conjunto finito <span class="math-inline">B</span>, e sua união com <span class="math-inline">B</span> é o próprio <span class="math-inline">B</span>. Assim,</p>
+<div class="math-line">| ∅ ∪ B| = | ∅ |+|B| = 0+|B| = |B|.</div>
+<p>O caso confirma que a propriedade não exige que as duas parcelas possuam elementos. Exige apenas que não compartilhem elementos.</p>
+<p>Há, entretanto, uma diferença importante entre a ausência e a presença de sobreposição.</p>
+<p class="keep-with-next">Considere agora</p>
+<div class="math-line">C={1,2,3} <span class="math-gap" aria-hidden="true"></span> <span class="math-text">e</span> <span class="math-gap" aria-hidden="true"></span> D={3,4}.</div>
+<p class="keep-with-next">Temos</p>
+<div class="math-line">|C|=3, <span class="math-gap" aria-hidden="true"></span> |D|=2.</div>
+<p class="keep-with-next">Se somássemos diretamente as duas cardinalidades, obteríamos <span class="math-inline">3+2=5</span>. Mas a união é</p>
+<div class="math-line">C ∪ D={1,2,3,4},</div>
+<p class="keep-with-next">e possui apenas quatro elementos:</p>
+<div class="math-line">|C ∪ D|=4.</div>
+<p>O problema está no elemento <span class="math-inline">3</span>, que pertence aos dois conjuntos. Ao contar separadamente os elementos de <span class="math-inline">C</span> e os de <span class="math-inline">D</span>, contabilizamos o número <span class="math-inline">3</span> duas vezes. Na união, entretanto, ele continua sendo um único elemento.</p>
+<p>Portanto, a soma direta das cardinalidades funciona quando os conjuntos são disjuntos, mas pode produzir um resultado incorreto quando existe sobreposição.</p>
+<p>Para contar os elementos de uma união sem cometer duplicações, precisamos levar em consideração não apenas quantos elementos pertencem a cada conjunto, mas também <strong>quantos pertencem simultaneamente aos conjuntos considerados</strong>.</p>
+<p>Essa relação entre a quantidade total e os elementos comuns será o ponto de partida para a contagem de uniões e sobreposições.</p>
+</section>
+<section class="source-section" data-context="TEXTO TEÓRICO • PARTE II">
+<header class="part-opening" data-keep-count="3"><div class="part-label">Texto Teórico · Parte II</div><h2 class="part-title" id="teoria-parte-2">Parte II — Contagem de Uniões e Sobreposições</h2></header>
+<div class="item-title keep-with-next" id="teoria-2-1">Quando a soma das cardinalidades produz uma contagem duplicada</div>
+<p>No exemplo que encerrou a Parte anterior, os conjuntos <span class="math-inline">C={1,2,3}</span> e <span class="math-inline">D={3,4}</span> possuem, respectivamente, três e dois elementos. A soma dessas quantidades é cinco, mas sua união contém apenas quatro elementos distintos.</p>
+<p>A diferença decorre do elemento <span class="math-inline">3</span>, que pertence aos dois conjuntos e foi contado duas vezes. Como <span class="math-inline">C ∩ D={3}</span>, subtrair uma ocorrência desse elemento corrige o resultado:</p>
+<div class="math-line">|C ∪ D|=3+2-1=4.</div>
+<p>Essa dificuldade não é particular do exemplo. Sempre que dois conjuntos finitos compartilham elementos, a soma de suas cardinalidades contabiliza os elementos comuns duas vezes. Para determinar corretamente a cardinalidade da união, precisamos identificar e corrigir essa duplicação.</p>
+<div class="item-title keep-with-next" id="teoria-2-2">Inclusão-exclusão para dois conjuntos</div>
+<p>Considere agora dois conjuntos finitos quaisquer, <span class="math-inline">A</span> e <span class="math-inline">B</span>.</p>
+<p>Os elementos de sua união podem ser distribuídos em três regiões distintas: aqueles que pertencem somente a <span class="math-inline">A</span>, aqueles que pertencem simultaneamente a <span class="math-inline">A</span> e <span class="math-inline">B</span> e aqueles que pertencem somente a <span class="math-inline">B</span>.</p>
+<p class="keep-with-next">Em linguagem conjuntista, essas regiões são representadas por</p>
+<div class="math-line">A ∖ B, <span class="math-gap" aria-hidden="true"></span> A ∩ B, <span class="math-gap" aria-hidden="true"></span> B ∖ A.</div>
+<p>Elas são disjuntas duas a duas: nenhum elemento pode pertencer simultaneamente a duas dessas regiões. Além disso, sua união recupera exatamente <span class="math-inline">A ∪ B</span>.</p>
+<p class="keep-with-next">Portanto, utilizando a propriedade aditiva construída na Parte I, podemos escrever</p>
+<div class="math-structural math-aligned">
+<div class="math-row"><span>|A ∪ B| =</span><span>|A ∖ B|</span><span></span></div>
+<div class="math-row"><span></span><span>+|A ∩ B|</span><span></span></div>
+<div class="math-row"><span></span><span>+|B ∖ A|.</span><span></span></div>
+</div>
+<p>Essa decomposição permite justificar a contagem sem depender de um exemplo particular.</p>
+<figure class="visual visual--venn-two-counting atomic-group" id="visual-r03"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 240" role="img" aria-label="Regiões A menos B, A interseção B e B menos A com quantidades a, c e b."><circle class="venn-set" cx="203" cy="117" r="96"/><circle class="venn-set" cx="317" cy="117" r="96"/><text x="168" y="59">A</text><text x="353" y="59">B</text><text x="151" y="112">a</text><text x="260" y="112">c</text><text x="369" y="112">b</text><text class="venn-region-label" x="151" y="142">A ∖ B</text><text class="venn-region-label" x="260" y="142">A ∩ B</text><text class="venn-region-label" x="369" y="142">B ∖ A</text></svg><figcaption class="venn-caption">|A| = a + c · |B| = b + c · |A ∪ B| = a + b + c<div class="venn-caption math-inline">|A| + |B| = a + 2c + b<br>|A ∪ B| = a + c + b</div><span class="venn-area-note">Áreas não representam proporções quantitativas.</span></figcaption></figure>
+<p>A partir dessas três regiões, também podemos reconstruir individualmente os conjuntos <span class="math-inline">A</span> e <span class="math-inline">B</span>.</p>
+<p>O conjunto <span class="math-inline">A</span> é formado pelos elementos exclusivos de <span class="math-inline">A</span> e pelos elementos comuns aos dois conjuntos. Como essas partes são disjuntas,</p>
+<div class="math-line">|A|=|A ∖ B|+|A ∩ B|.</div>
+<p class="keep-with-next">Pelo mesmo raciocínio,</p>
+<div class="math-line">|B|=|B ∖ A|+|A ∩ B|.</div>
+<p class="keep-with-next">Ao somar as duas igualdades, obtemos</p>
+<div class="math-structural math-aligned">
+<div class="math-row"><span>|A|+|B| =</span><span>|A ∖ B|</span><span></span></div>
+<div class="math-row"><span></span><span>+2|A ∩ B|</span><span></span></div>
+<div class="math-row"><span></span><span>+|B ∖ A|.</span><span></span></div>
+</div>
+<p>Observe que a cardinalidade da interseção aparece multiplicada por <span class="math-inline">2</span>. Isso acontece porque seus elementos pertencem a <span class="math-inline">A</span> e também a <span class="math-inline">B</span>, sendo contabilizados nas duas parcelas da soma inicial.</p>
+<p class="keep-with-next">Já a cardinalidade da união é</p>
+<div class="math-structural math-aligned">
+<div class="math-row"><span>|A ∪ B| =</span><span>|A ∖ B|</span><span></span></div>
+<div class="math-row"><span></span><span>+|A ∩ B|</span><span></span></div>
+<div class="math-row"><span></span><span>+|B ∖ A|.</span><span></span></div>
+</div>
+<p>Comparando as expressões, vemos que a soma <span class="math-inline">|A|+|B|</span> contém exatamente uma contagem adicional dos elementos comuns.</p>
+<p class="keep-with-next">Assim,</p>
+<div class="math-line">|A|+|B|=|A ∪ B|+|A ∩ B|.</div>
+<p class="keep-with-next">Isolando a cardinalidade da união, concluímos que</p>
+<div class="math-structural">|A ∪ B| = |A|+|B|-|A ∩ B|.</div>
+<p>Essa igualdade é conhecida como <strong>princípio da inclusão-exclusão para dois conjuntos</strong>.</p>
+<p>A soma inicial inclui os elementos dos dois conjuntos, mas conta duas vezes aqueles que pertencem à interseção. A subtração exclui uma dessas duas ocorrências, preservando a outra. Desse modo, cada elemento da união é contabilizado exatamente uma vez.</p>
+<p>A demonstração não depende dos valores das cardinalidades, da disposição dos conjuntos em um diagrama ou da natureza de seus elementos. Depende apenas das relações de pertinência que determinam as três regiões disjuntas.</p>
+<p class="keep-with-next">A fórmula também permanece válida quando os conjuntos não possuem elementos comuns. Nesse caso,</p>
+<div class="math-line">A ∩ B= ∅ , <span class="math-gap" aria-hidden="true"></span> |A ∩ B|=0,</div>
+<p class="keep-with-next">e a igualdade se reduz a</p>
+<div class="math-line">|A ∪ B|=|A|+|B|.</div>
+<p>Recuperamos, portanto, a propriedade aditiva dos conjuntos disjuntos como um caso particular da inclusão-exclusão.</p>
+<p>O mesmo ocorre quando um conjunto está incluído no outro. Se <span class="math-inline">A ⊆ B</span>, então <span class="math-inline">A ∪ B=B</span> e <span class="math-inline">A ∩ B=A</span>. A fórmula fornece</p>
+<div class="math-line">|B|=|A|+|B|-|A|,</div>
+<p>confirmando que a inclusão-exclusão continua válida mesmo quando um dos conjuntos não possui região exclusiva.</p>
+<p>A subtração da interseção não é, portanto, um procedimento reservado a diagramas com círculos parcialmente sobrepostos. Ela expressa uma propriedade geral da cardinalidade de uniões finitas.</p>
+<div class="item-title keep-with-next" id="teoria-2-3">Interpretação das regiões e das quantidades desconhecidas</div>
+<p>A inclusão-exclusão permite determinar a quantidade total de elementos de uma união, mas sua justificativa também fornece informações sobre as regiões que a constituem.</p>
+<p>Considere um grupo de <span class="math-inline">32</span> estudantes. Entre eles, <span class="math-inline">18</span> estudam uma língua estrangeira <span class="math-inline">A</span>, <span class="math-inline">15</span> estudam uma língua estrangeira <span class="math-inline">B</span> e <span class="math-inline">6</span> estudam ambas.</p>
+<p class="keep-with-next">Representando por <span class="math-inline">U</span> o conjunto de todos os estudantes considerados, temos</p>
+<div class="math-line">|U|=32, <span class="math-gap" aria-hidden="true"></span> |A|=18, <span class="math-gap" aria-hidden="true"></span> |B|=15,</div>
+<p class="keep-with-next">e</p>
+<div class="math-line">|A ∩ B|=6.</div>
+<p class="keep-with-next">A quantidade de estudantes que estudam pelo menos uma das duas línguas é</p>
+<div class="math-structural math-aligned">
+<div class="math-row"><span>|A ∪ B|</span><span>=18+15-6</span><span></span></div>
+<div class="math-row"><span></span><span>=27.</span><span></span></div>
+</div>
+<p>O resultado corresponde à união, portanto inclui tanto quem estuda apenas uma língua quanto quem estuda as duas.</p>
+<p>Para identificar quem estuda somente a língua <span class="math-inline">A</span>, precisamos retirar de <span class="math-inline">A</span> os estudantes que também pertencem a <span class="math-inline">B</span>. Essa região é <span class="math-inline">A ∖ B</span>, cuja cardinalidade vale</p>
+<div class="math-line">|A ∖ B|=18-6=12.</div>
+<p class="keep-with-next">Da mesma maneira,</p>
+<div class="math-line">|B ∖ A|=15-6=9.</div>
+<p>Assim, os <span class="math-inline">27</span> estudantes da união estão distribuídos em três regiões disjuntas: <span class="math-inline">12</span> estudam somente <span class="math-inline">A</span>, <span class="math-inline">6</span> estudam ambas e <span class="math-inline">9</span> estudam somente <span class="math-inline">B</span>.</p>
+<p class="keep-with-next">A soma dessas quantidades confirma a contagem:</p>
+<div class="math-line">12+6+9=27.</div>
+<p>Ainda existem estudantes do universo <span class="math-inline">U</span> que não pertencem à união. Como <span class="math-inline">|U|=32</span>, a quantidade de estudantes que não estudam nenhuma das duas línguas é</p>
+<div class="math-line">32-27=5.</div>
+<p class="keep-with-next">A decomposição completa do universo fica, portanto, representada pelas quantidades</p>
+<div class="math-structural count-decomposition atomic-group"><div class="count-group"><span>12+6+9</span><span class="count-group__label math-text">estudam pelo menos uma</span></div><span>+</span><div class="count-group"><span>5</span><span class="count-group__label math-text">não estudam nenhuma</span></div><span>=32.</span></div>
+<p>Essa última verificação mostra que todas as regiões consideradas são disjuntas e que, reunidas, abrangem o universo.</p>
+<p>O exemplo evidencia ainda uma diferença entre determinar uma região exclusiva e determinar uma interseção.</p>
+<p>A expressão <span class="math-inline">A ∩ B</span> representa todos os elementos comuns. Já <span class="math-inline">A ∖ B</span> representa os elementos de <span class="math-inline">A</span> que não pertencem a <span class="math-inline">B</span>. Confundir essas condições modifica a região que está sendo contada.</p>
+<p>As relações também podem ser utilizadas no sentido inverso. Se conhecemos <span class="math-inline">|A|</span>, <span class="math-inline">|B|</span> e <span class="math-inline">|A ∪ B|</span>, podemos determinar a quantidade de elementos comuns:</p>
+<div class="math-line">|A ∩ B|=|A|+|B|-|A ∪ B|.</div>
+<p>Não se trata de uma nova propriedade, mas da mesma igualdade reorganizada para determinar uma quantidade diferente.</p>
+<p>Em contrapartida, conhecer apenas <span class="math-inline">|A|</span> e <span class="math-inline">|B|</span> geralmente não basta para determinar <span class="math-inline">|A ∪ B|</span>. Dois conjuntos com as mesmas cardinalidades individuais podem ser disjuntos, possuir alguns elementos comuns ou estar relacionados por inclusão. Cada situação pode produzir uma cardinalidade diferente para a união.</p>
+<p>A quantidade de elementos comuns é, portanto, uma informação indispensável quando a sobreposição ainda não está determinada.</p>
+<div class="item-title keep-with-next" id="teoria-2-4">Cardinalidade da diferença e do complemento</div>
+<p>A contagem de regiões exclusivas pode ser expressa de maneira geral utilizando a decomposição de conjuntos já estabelecida no Bloco III:</p>
+<div class="math-line">A=(A ∖ B) ∪ (A ∩ B).</div>
+<p>As duas parcelas são disjuntas. Um elemento da diferença não pertence a <span class="math-inline">B</span>, enquanto um elemento da interseção necessariamente pertence a <span class="math-inline">B</span>. Portanto, nenhum objeto pode pertencer simultaneamente às duas parcelas.</p>
+<p class="keep-with-next">Como <span class="math-inline">A</span> é finito, a aditividade das cardinalidades fornece</p>
+<div class="math-line">|A|=|A ∖ B|+|A ∩ B|.</div>
+<p class="keep-with-next">Subtraindo a cardinalidade da interseção, obtemos</p>
+<div class="math-structural">|A ∖ B|=|A|-|A ∩ B|.</div>
+<p>Essa igualdade expressa uma operação quantitativa correspondente à diferença entre conjuntos. Começamos com todos os elementos de <span class="math-inline">A</span> e retiramos aqueles que também pertencem a <span class="math-inline">B</span>. O resultado é a quantidade de elementos exclusivos de <span class="math-inline">A</span>.</p>
+<p>A direção da diferença continua sendo importante. Para determinar a cardinalidade de <span class="math-inline">B ∖ A</span>, partimos da quantidade de elementos de <span class="math-inline">B</span>:</p>
+<div class="math-line">|B ∖ A|=|B|-|A ∩ B|.</div>
+<p>As duas diferenças excluem os mesmos elementos comuns, mas partem de conjuntos que podem possuir cardinalidades distintas.</p>
+<p>A complementação apresenta uma relação semelhante, agora envolvendo um universo de referência.</p>
+<p>Considere um conjunto finito <span class="math-inline">U</span> e um subconjunto <span class="math-inline">A ⊆ U</span>. O complemento de <span class="math-inline">A</span> em relação a esse universo contém os elementos de <span class="math-inline">U</span> que não pertencem a <span class="math-inline">A</span>:</p>
+<div class="math-line">A<sup>c</sup>=U ∖ A.</div>
+<p class="keep-with-next">As operações estudadas anteriormente garantem que</p>
+<div class="math-line">U=A ∪ A<sup>c</sup></div>
+<p class="keep-with-next">e</p>
+<div class="math-line">A ∩ A<sup>c</sup>= ∅ .</div>
+<p>Assim, o universo está decomposto em duas partes disjuntas: os elementos que pertencem a <span class="math-inline">A</span> e os que não pertencem a <span class="math-inline">A</span>.</p>
+<p class="keep-with-next">Pela aditividade,</p>
+<div class="math-line">|U|=|A|+|A<sup>c</sup>|.</div>
+<p class="keep-with-next">Consequentemente,</p>
+<div class="math-structural">|A<sup>c</sup>|=|U|-|A|.</div>
+<p>A fórmula não determina uma quantidade absoluta de objetos que estão fora de <span class="math-inline">A</span>. Ela determina quantos elementos do universo escolhido não pertencem a <span class="math-inline">A</span>.</p>
+<p>Se o universo mudar, a cardinalidade do complemento também poderá mudar, mesmo que o conjunto <span class="math-inline">A</span> permaneça inalterado.</p>
+<p>Essa distinção já era necessária para definir corretamente o complemento. Agora, torna-se igualmente necessária para realizar sua contagem.</p>
+<div class="item-title keep-with-next" id="teoria-2-5">Contagem envolvendo três conjuntos</div>
+<p>A inclusão-exclusão para dois conjuntos corrige a duplicação provocada pelos elementos comuns. Entretanto, quando três conjuntos são considerados simultaneamente, um mesmo elemento pode pertencer a um, a dois ou aos três conjuntos.</p>
+<p>Isso exige um cuidado adicional: a quantidade de vezes que um elemento aparece na soma inicial depende de quantos conjuntos o contêm.</p>
+<p class="keep-with-next">Considere três conjuntos finitos <span class="math-inline">A</span>, <span class="math-inline">B</span> e <span class="math-inline">C</span>. Desejamos determinar</p>
+<div class="math-line">|A ∪ B ∪ C|.</div>
+<p class="keep-with-next">Se somarmos diretamente suas cardinalidades,</p>
+<div class="math-line">|A|+|B|+|C|,</div>
+<p>estaremos contando todos os elementos dos três conjuntos, mas alguns deles poderão aparecer mais de uma vez.</p>
+<p>Um elemento que pertence somente a <span class="math-inline">A</span>, por exemplo, aparece uma única vez na soma. Já um elemento que pertence a <span class="math-inline">A</span> e <span class="math-inline">B</span>, mas não a <span class="math-inline">C</span>, aparece duas vezes: uma na contagem de <span class="math-inline">A</span> e outra na contagem de <span class="math-inline">B</span>.</p>
+<p>Um elemento pertencente simultaneamente aos três conjuntos aparece três vezes.</p>
+<p class="keep-with-next">Podemos começar a corrigir essas repetições subtraindo as cardinalidades das interseções duplas:</p>
+<div class="math-structural math-aligned">
+<div class="math-row"><span></span><span>|A|+|B|+|C|</span><span></span></div>
+<div class="math-row"><span></span><span><span class="math-gap" aria-hidden="true"></span> -|A ∩ B|-|A ∩ C|-|B ∩ C|.</span><span></span></div>
+</div>
+<p>Para compreender o efeito dessas subtrações, precisamos examinar separadamente os elementos conforme suas condições de pertinência.</p>
+<p><strong>Um elemento que pertence a exatamente um conjunto</strong> aparece uma vez na soma inicial e não pertence a nenhuma interseção dupla. Portanto, continua contado uma vez.</p>
+<p><strong>Um elemento que pertence a exatamente dois conjuntos</strong> aparece duas vezes na soma inicial. Entretanto, pertence a uma única interseção dupla: a interseção dos dois conjuntos que o contêm. Sua contagem é reduzida de duas ocorrências para uma.</p>
+<p><strong>Um elemento que pertence aos três conjuntos</strong> apresenta uma situação diferente. Ele aparece três vezes na soma inicial, mas também pertence às três interseções duplas:</p>
+<div class="math-line">A ∩ B, <span class="math-gap" aria-hidden="true"></span> A ∩ C, <span class="math-gap" aria-hidden="true"></span> B ∩ C.</div>
+<p class="keep-with-next">Consequentemente, as subtrações retiram esse elemento três vezes. Sua contribuição à contagem passa a ser</p>
+<div class="math-line">3-3=0.</div>
+<p>Isso significa que a correção das interseções duplas eliminou todas as ocorrências dos elementos da interseção tripla, quando deveria preservar uma.</p>
+<p class="keep-with-next">Para reparar essa exclusão excessiva, precisamos acrescentar uma vez a cardinalidade de</p>
+<div class="math-line">A ∩ B ∩ C.</div>
+<p class="keep-with-next">A contagem desses elementos torna-se, então,</p>
+<div class="math-line">3-3+1=1.</div>
+<p>Desse modo, todos os elementos pertencentes à união são finalmente contados exatamente uma vez, independentemente de pertencerem a um, dois ou três conjuntos.</p>
+<p class="keep-with-next">Obtemos o <strong>princípio da inclusão-exclusão para três conjuntos finitos</strong>:</p>
+<div class="math-structural math-aligned">
+<div class="math-row"><span>|A ∪ B ∪ C| =</span><span>|A|+|B|+|C|</span><span></span></div>
+<div class="math-row"><span></span><span>-|A ∩ B|-|A ∩ C|-|B ∩ C|</span><span></span></div>
+<div class="math-row"><span></span><span>+|A ∩ B ∩ C|.</span><span></span></div>
+</div>
+<p>A fórmula não resulta de uma alternância arbitrária entre adições e subtrações. Cada operação possui uma função precisa: a soma inicial reúne as contagens, as subtrações corrigem as duplicações entre pares e a adição final recupera a contribuição dos elementos que pertencem aos três conjuntos.</p>
+<p>É importante observar que uma interseção dupla pode conter elementos da interseção tripla.</p>
+<p>Por exemplo, <span class="math-inline">A ∩ B</span> reúne <strong>todos</strong> os elementos comuns a <span class="math-inline">A</span> e <span class="math-inline">B</span>, inclusive aqueles que também pertencem a <span class="math-inline">C</span>. Já a região dos elementos que pertencem a <span class="math-inline">A</span> e <span class="math-inline">B</span>, mas não a <span class="math-inline">C</span>, é</p>
+<div class="math-line">(A ∩ B) ∖ C.</div>
+<p>Esses dois conjuntos não são necessariamente iguais. Confundi-los altera a quantidade que deve ser subtraída na fórmula.</p>
+<div class="minor-title keep-with-next">Interpretando as regiões de três conjuntos</div>
+<p class="keep-with-next">Considere os conjuntos</p>
+<div class="math-structural math-aligned">
+<div class="math-row"><span>A</span><span>={1,2,3,4},</span><span></span></div>
+<div class="math-row"><span>B</span><span>={3,4,5,6},</span><span></span></div>
+<div class="math-row"><span>C</span><span>={4,6,7}.</span><span></span></div>
+</div>
+<p class="keep-with-next">Suas cardinalidades são</p>
+<div class="math-line">|A|=4, <span class="math-gap" aria-hidden="true"></span> |B|=4, <span class="math-gap" aria-hidden="true"></span> |C|=3.</div>
+<p class="keep-with-next">As interseções duplas são</p>
+<div class="math-structural math-aligned">
+<div class="math-row"><span>A ∩ B</span><span>={3,4},</span><span></span></div>
+<div class="math-row"><span>A ∩ C</span><span>={4},</span><span></span></div>
+<div class="math-row"><span>B ∩ C</span><span>={4,6}.</span><span></span></div>
+</div>
+<p class="keep-with-next">Portanto,</p>
+<div class="math-line">|A ∩ B|=2, <span class="math-gap" aria-hidden="true"></span> |A ∩ C|=1, <span class="math-gap" aria-hidden="true"></span> |B ∩ C|=2.</div>
+<p class="keep-with-next">A interseção tripla possui somente o elemento <span class="math-inline">4</span>:</p>
+<div class="math-line">A ∩ B ∩ C={4},</div>
+<p class="keep-with-next">de modo que</p>
+<div class="math-line">|A ∩ B ∩ C|=1.</div>
+<p class="keep-with-next">Aplicando a inclusão-exclusão,</p>
+<div class="math-structural math-aligned">
+<div class="math-row"><span>|A ∪ B ∪ C|</span><span>=4+4+3-2-1-2+1</span><span></span></div>
+<div class="math-row"><span></span><span>=7.</span><span></span></div>
+</div>
+<p class="keep-with-next">Podemos conferir o resultado diretamente:</p>
+<div class="math-line">A ∪ B ∪ C={1,2,3,4,5,6,7}.</div>
+<p>Assim, a união possui realmente sete elementos distintos.</p>
+<figure class="visual visual--venn-three-counting atomic-group" id="visual-r05"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 590 410" role="img" aria-label="Sete regiões de A, B e C com os elementos do exemplo e suas cardinalidades, incluindo a região vazia."><g class="venn-set"><circle cx="220" cy="150" r="130"/><circle cx="370" cy="150" r="130"/><circle cx="295" cy="265" r="130"/></g><text x="180" y="47">A</text><text x="410" y="47">B</text><text x="295" y="382">C</text><text x="140" y="151">{1, 2}</text><text class="venn-region-label" x="140" y="172">n = 2</text><text x="452" y="151">{5}</text><text class="venn-region-label" x="452" y="172">n = 1</text><text x="295" y="325">{7}</text><text class="venn-region-label" x="295" y="346">n = 1</text><text x="295" y="92">{3}</text><text class="venn-region-label" x="295" y="113">n = 1</text><text x="211" y="237">∅</text><text class="venn-region-label" x="211" y="258">n = 0</text><text x="380" y="237">{6}</text><text class="venn-region-label" x="380" y="258">n = 1</text><text x="295" y="197">{4}</text><text class="venn-region-label" x="295" y="218">n = 1</text></svg><figcaption class="venn-caption">Sete regiões disjuntas: 2 + 1 + 1 + 1 + 0 + 1 + 1 = 7. A região (A ∩ C) ∖ B está vazia.<span class="venn-area-note">Áreas não representam proporções quantitativas.</span></figcaption></figure>
+<p class="keep-with-next">A distribuição também permite verificar a cardinalidade da união pela soma das sete regiões disjuntas:</p>
+<div class="math-line">2+1+1+1+0+1+1=7.</div>
+<p>As duas contagens chegam ao mesmo resultado, mas utilizam informações organizadas de maneiras diferentes.</p>
+<p>Na primeira, trabalhamos com as cardinalidades dos conjuntos e de suas interseções, corrigindo os elementos repetidos.</p>
+<p>Na segunda, contamos diretamente as regiões disjuntas, nas quais nenhum elemento pode aparecer mais de uma vez.</p>
+<p>Essa correspondência revela o fundamento da inclusão-exclusão: <strong>contar corretamente uma união significa garantir que cada elemento que lhe pertence contribua exatamente uma vez para a quantidade total</strong>.</p>
+<div class="item-title keep-with-next" id="teoria-2-6">Da contagem à interpretação dos conjuntos</div>
+<p>As relações de cardinalidade permitem conferir resultados e reconhecer quando uma informação quantitativa é incompatível com a estrutura dos conjuntos.</p>
+<p>Para dois conjuntos finitos, por exemplo, a interseção não pode possuir mais elementos que qualquer um dos conjuntos que a formam:</p>
+<div class="math-line">|A ∩ B| ≤ |A| <span class="math-gap" aria-hidden="true"></span> <span class="math-text">e</span> <span class="math-gap" aria-hidden="true"></span> |A ∩ B| ≤ |B|.</div>
+<p class="keep-with-next">Isso decorre das inclusões</p>
+<div class="math-line">A ∩ B ⊆ A, <span class="math-gap" aria-hidden="true"></span> A ∩ B ⊆ B.</div>
+<p class="keep-with-next">Pelo mesmo motivo, a união não pode possuir menos elementos que qualquer um dos conjuntos reunidos:</p>
+<div class="math-line">|A| ≤ |A ∪ B|, <span class="math-gap" aria-hidden="true"></span> |B| ≤ |A ∪ B|.</div>
+<p>Também não pode possuir mais elementos que a soma das duas cardinalidades, pois a inclusão-exclusão apenas retira da soma inicial uma quantidade não negativa:</p>
+<div class="math-line">|A ∪ B| ≤ |A|+|B|.</div>
+<p>Essas relações permitem reconhecer erros de contagem antes mesmo de examinar detalhadamente todos os elementos envolvidos.</p>
+<p>Se um cálculo indicar, por exemplo, que a interseção possui mais elementos que um dos conjuntos, ou que a união possui menos elementos que algum deles, o resultado não pode estar correto sob as condições estabelecidas.</p>
+<p>O controle quantitativo depende, portanto, da interpretação das relações conjuntistas, e não apenas da execução de operações aritméticas.</p>
+<p>Ao longo do Tópico 1.2, a pertinência permitiu identificar elementos; a inclusão e a igualdade permitiram comparar conjuntos; as operações permitiram construir novas coleções a partir de condições de pertencimento. A cardinalidade acrescentou a possibilidade de determinar e relacionar suas quantidades.</p>
+<p>Esses conhecimentos se articulam: a quantidade de elementos de uma união depende das condições que determinam quais objetos pertencem a cada conjunto e de como essas condições se sobrepõem.</p>
+<p>Assim, a contagem de conjuntos finitos não consiste apenas em somar números. Ela exige compreender <strong>o que está sendo contado, quais elementos são comuns e como organizar a contagem para não duplicar nem omitir objetos</strong>.</p>
+</section>
+<section class="source-section" data-context="TEXTO PRÁTICO • EXERCÍCIOS">
+<header class="section-opening" data-keep-count="2"><div class="section-label"><h1 class="outline-root">Texto Prático</h1></div><h2 class="section-title" id="exercicios">Exercícios</h2></header>
+<p>Todos os conjuntos considerados nas atividades são finitos. Os complementos e as regiões externas devem ser tomados no universo indicado em cada situação.</p>
+<div class="gabarito-subtitle keep-with-next" data-keep-count="3">1. Cardinalidade e Relações entre Conjuntos</div>
+<div class="item-title keep-with-next" data-keep-count="3" id="exercises-1">1. Quantos objetos distintos?</div>
+<p class="keep-with-next">Considere</p>
+<div class="math-line">A={2,2,5,7,5}, <span class="math-gap" aria-hidden="true"></span> E= ∅ , <span class="math-gap" aria-hidden="true"></span> F={ ∅ },</div>
+<div class="math-line">G={1,{1}, ∅ ,{1},{ ∅ }}.</div>
+<p><span class="subitem-label">a)</span> Determine <span class="math-inline">|A|</span>, <span class="math-inline">|E|</span>, <span class="math-inline">|F|</span> e <span class="math-inline">|G|</span>.</p>
+<p><span class="subitem-label">b)</span> Identifique os elementos distintos que pertencem diretamente a <span class="math-inline">G</span> e explique por que <span class="math-inline">∅</span> e <span class="math-inline">{ ∅ }</span> não devem ser contados como o mesmo objeto.</p>
+<div class="item-title keep-with-next" data-keep-count="3" id="exercises-2">2. A quantidade não identifica os elementos</div>
+<p class="keep-with-next">Considere</p>
+<div class="math-line">D={1,2,3,4,5,6,7,8,9},</div>
+<div class="math-line">P={x ∈ D | x&lt;5}, <span class="math-gap" aria-hidden="true"></span> Q={x ∈ D | x&gt;5}.</div>
+<p><span class="subitem-label">a)</span> Determine <span class="math-inline">P</span>, <span class="math-inline">Q</span>, <span class="math-inline">|P|</span> e <span class="math-inline">|Q|</span>.</p>
+<p><span class="subitem-label">b)</span> Decida se <span class="math-inline">P=Q</span>. Justifique sua resposta por pertinência, mesmo que as cardinalidades coincidam.</p>
+<p><span class="subitem-label">c)</span> O número que expressa <span class="math-inline">|Q|</span> pertence necessariamente a <span class="math-inline">Q</span>? Responda examinando este caso.</p>
+<div class="item-title keep-with-next" id="exercises-3">3. Quais implicações são válidas?</div>
+<p>Avalie as afirmações abaixo para conjuntos finitos arbitrários <span class="math-inline">A</span> e <span class="math-inline">B</span>. Justifique as válidas e refute as inválidas com conjuntos concretos.</p>
+<div class="math-structural"><span class="math-text">I. </span>A=B ⇒ |A|=|B|;</div>
+<div class="math-structural"><span class="math-text">II. </span>|A|=|B| ⇒ A=B;</div>
+<div class="math-structural"><span class="math-text">III. </span>|A|&lt;|B| ⇒ A ⊆ B;</div>
+<div class="math-structural"><span class="math-text">IV. </span>A ⊆ B<span class="math-text"> e </span>|A|=|B| ⇒ A=B.</div>
+<p>Nos contraexemplos, confira a hipótese numérica e indique uma relação de pertinência que contradiga a conclusão.</p>
+<div class="item-title keep-with-next" id="exercises-4">4. Contar sob uma hipótese de inclusão</div>
+<p>Sabe-se que <span class="math-inline">A ⊆ B</span> e <span class="math-inline">|A|=7</span>.</p>
+<p><span class="subitem-label">a)</span> Se <span class="math-inline">|B|=11</span>, determine <span class="math-inline">|B ∖ A|</span>. Justifique utilizando uma decomposição de <span class="math-inline">B</span> em partes disjuntas.</p>
+<p><span class="subitem-label">b)</span> Se, em outro caso, <span class="math-inline">|B|=7</span>, o que se pode concluir sobre a relação entre <span class="math-inline">A</span> e <span class="math-inline">B</span>? Justifique.</p>
+<p><span class="subitem-label">c)</span> É possível manter <span class="math-inline">A ⊆ B</span> e <span class="math-inline">|A|=7</span> com <span class="math-inline">|B|=6</span>? Explique.</p>
+<div class="item-title keep-with-next" id="exercises-5">5. Uma decomposição sem sobreposições</div>
+<p class="keep-with-next">Um conjunto <span class="math-inline">S</span> é a união de três partes <span class="math-inline">P</span>, <span class="math-inline">Q</span> e <span class="math-inline">R</span>, disjuntas duas a duas. Sabe-se que</p>
+<div class="math-line">|S|=19, <span class="math-gap" aria-hidden="true"></span> |P|=6, <span class="math-gap" aria-hidden="true"></span> |Q|=8.</div>
+<p><span class="subitem-label">a)</span> Determine <span class="math-inline">|R|</span>.</p>
+<p><span class="subitem-label">b)</span> Explique por que a soma das cardinalidades das três partes conta cada elemento de <span class="math-inline">S</span> exatamente uma vez. Identifique o papel da disjunção e o papel da igualdade <span class="math-inline">S=P ∪ Q ∪ R</span>.</p>
+<div class="item-title keep-with-next" id="exercises-6">6. Duas maneiras de uma contagem falhar</div>
+<p>Analise separadamente as situações.</p>
+<p><strong>Situação I.</strong> Um estudante sabe apenas que <span class="math-inline">S=P ∪ Q</span> e conclui que <span class="math-inline">|S|=|P|+|Q|</span>.</p>
+<p><span class="subitem-label">a)</span> A conclusão é garantida? Construa um exemplo com <span class="math-inline">P ∩ Q ≠ ∅</span> e confira a contagem que refuta o argumento.</p>
+<p><strong>Situação II.</strong> Sabe-se que <span class="math-inline">P,Q ⊆ S</span>, <span class="math-inline">P ∩ Q= ∅</span>, <span class="math-inline">|P|=3</span>, <span class="math-inline">|Q|=4</span> e <span class="math-inline">|S|=10</span>. Outro estudante conclui que <span class="math-inline">|S|=7</span>.</p>
+<p><span class="subitem-label">b)</span> Localize a informação que falta para justificar essa conclusão e determine quantos elementos de <span class="math-inline">S</span> ficam fora de <span class="math-inline">P ∪ Q</span>.</p>
+<p><span class="subitem-label">c)</span> Compare os dois erros: em qual situação podem ocorrer contagens repetidas e em qual situação a contagem omite elementos?</p>
+<div class="gabarito-subtitle keep-with-next" data-keep-count="3">2. Uniões, Diferenças e Complementos: Contagem de Dois Conjuntos</div>
+<div class="item-title keep-with-next" data-keep-count="3" id="exercises-7">7. Dos elementos às quantidades</div>
+<p class="keep-with-next">Considere</p>
+<div class="math-line">U={1,2,3,4,5,6,7,8,9,10},</div>
+<div class="math-line">A={1,2,3,4,5,6}, <span class="math-gap" aria-hidden="true"></span> B={4,5,6,7,8}.</div>
+<p><span class="subitem-label">a)</span> Determine as cardinalidades de <span class="math-inline">A ∩ B</span>, <span class="math-inline">A ∪ B</span>, <span class="math-inline">A ∖ B</span>, <span class="math-inline">B ∖ A</span> e <span class="math-inline">U ∖ (A ∪ B)</span>.</p>
+<p><span class="subitem-label">b)</span> Compare <span class="math-inline">|A|+|B|</span> com <span class="math-inline">|A ∪ B|</span>. Identifique os elementos responsáveis pela diferença entre os resultados.</p>
+<p><span class="subitem-label">c)</span> Confira <span class="math-inline">|U|</span> somando as quantidades das quatro regiões disjuntas: somente <span class="math-inline">A</span>, ambos, somente <span class="math-inline">B</span> e nenhum.</p>
+<div class="item-title keep-with-next" data-keep-count="3" id="exercises-8">8. Duas línguas e uma pesquisa</div>
+<p class="exercise-source keep-with-next"><em>Baseada/adaptada de Iezzi e Murakami, Fundamentos de Matemática Elementar, vol. 1, cap. II, exercício 52, p. 36.</em></p>
+<p>Uma pesquisa considera todos os <span class="math-inline">80</span> estudantes de uma turma ampliada. Entre eles, <span class="math-inline">46</span> estudam inglês, <span class="math-inline">35</span> estudam francês e <span class="math-inline">17</span> estudam ambas as línguas. Denote por <span class="math-inline">U</span> o conjunto dos estudantes pesquisados, por <span class="math-inline">I</span> os que estudam inglês e por <span class="math-inline">F</span> os que estudam francês.</p>
+<p><span class="subitem-label">a)</span> Determine quantos estudam somente inglês e quantos estudam somente francês.</p>
+<p><span class="subitem-label">b)</span> Determine quantos estudam pelo menos uma dessas línguas e quantos não estudam nenhuma delas.</p>
+<p><span class="subitem-label">c)</span> Determine quantos estudam exatamente uma das duas línguas. Represente essa seleção por operações entre <span class="math-inline">I</span> e <span class="math-inline">F</span>, sem introduzir uma nova operação.</p>
+<p>d) Apresente uma verificação de que sua distribuição abrange os <span class="math-inline">80</span> estudantes sem repetição.</p>
+<div class="item-title keep-with-next" id="exercises-9">9. Reconstruindo a parte comum</div>
+<p class="keep-with-next">Em um universo <span class="math-inline">U</span> com <span class="math-inline">60</span> elementos, dois subconjuntos <span class="math-inline">A</span> e <span class="math-inline">B</span> satisfazem</p>
+<div class="math-line">|A|=34, <span class="math-gap" aria-hidden="true"></span> |B|=29, <span class="math-gap" aria-hidden="true"></span> |U ∖ (A ∪ B)|=12.</div>
+<p><span class="subitem-label">a)</span> Determine <span class="math-inline">|A ∪ B|</span> e <span class="math-inline">|A ∩ B|</span>.</p>
+<p><span class="subitem-label">b)</span> Determine as quantidades dos elementos que pertencem somente a <span class="math-inline">A</span> e somente a <span class="math-inline">B</span>.</p>
+<p><span class="subitem-label">c)</span> Compare as quantidades de elementos que <strong>não pertencem a nenhum dos dois conjuntos</strong> e que <strong>não pertencem aos dois simultaneamente</strong>. Represente as duas seleções em relação a <span class="math-inline">U</span> e explique a diferença.</p>
+<div class="item-title keep-with-next" data-keep-count="3" id="exercises-10">10. O que se retira do primeiro conjunto?</div>
+<p class="keep-with-next">Sabe-se que</p>
+<div class="math-line">|A|=14, <span class="math-gap" aria-hidden="true"></span> |B|=9, <span class="math-gap" aria-hidden="true"></span> |A ∩ B|=4.</div>
+<p><span class="subitem-label">a)</span> Determine <span class="math-inline">|A ∖ B|</span> e <span class="math-inline">|B ∖ A|</span>.</p>
+<p><span class="subitem-label">b)</span> Um estudante calcula <span class="math-inline">|A ∖ B|=14-9=5</span>. Explique por que o cálculo não corresponde à diferença dada e corrija o procedimento.</p>
+<p><span class="subitem-label">c)</span> Sob que relação de inclusão entre <span class="math-inline">A</span> e <span class="math-inline">B</span> a expressão <span class="math-inline">|A|-|B|</span> seria uma maneira válida de calcular <span class="math-inline">|A ∖ B|</span>? Justifique.</p>
+<div class="item-title keep-with-next" id="exercises-11">11. A referência muda a quantidade externa</div>
+<p class="keep-with-next">Considere universos finitos <span class="math-inline">U ⊆ V</span>, com</p>
+<div class="math-line">|U|=36, <span class="math-gap" aria-hidden="true"></span> |V|=41,</div>
+<p>e o mesmo conjunto <span class="math-inline">A ⊆ U</span>, com <span class="math-inline">|A|=14</span>.</p>
+<p><span class="subitem-label">a)</span> Determine <span class="math-inline">|U ∖ A|</span> e <span class="math-inline">|V ∖ A|</span>.</p>
+<p><span class="subitem-label">b)</span> Determine <span class="math-inline">|V ∖ U|</span> e explique como seus elementos participam da diferença entre as respostas do item a.</p>
+<p><span class="subitem-label">c)</span> Uma anotação registra apenas “<span class="math-inline">|A<sup>c</sup>|=22</span>”. Qual referência deve acompanhar a anotação para que ela descreva corretamente um dos resultados desta atividade?</p>
+<div class="item-title keep-with-next" data-keep-count="3" id="exercises-12">12. Justificando a correção da dupla contagem</div>
+<p class="exercise-source keep-with-next"><em>Baseada/adaptada de Iezzi e Murakami, Fundamentos de Matemática Elementar, vol. 1, cap. II, exercício 48, p. 36.</em></p>
+<p class="keep-with-next">Sejam <span class="math-inline">A</span> e <span class="math-inline">B</span> conjuntos finitos arbitrários. Considere as três regiões</p>
+<div class="math-line">P=A ∖ B, <span class="math-gap" aria-hidden="true"></span> Q=A ∩ B, <span class="math-gap" aria-hidden="true"></span> R=B ∖ A.</div>
+<p><span class="subitem-label">a)</span> Escreva <span class="math-inline">A</span>, <span class="math-inline">B</span> e <span class="math-inline">A ∪ B</span> como uniões das regiões indicadas. Justifique por que a aditividade das cardinalidades pode ser aplicada a essas decomposições.</p>
+<p><span class="subitem-label">b)</span> Compare <span class="math-inline">|A|+|B|</span> com <span class="math-inline">|A ∪ B|</span> e obtenha uma igualdade que determine a cardinalidade da união.</p>
+<p><span class="subitem-label">c)</span> Explique o que essa igualdade fornece se <span class="math-inline">A ∩ B= ∅</span> e se <span class="math-inline">A ⊆ B</span>. A demonstração continua válida nesses casos?</p>
+<div class="gabarito-subtitle keep-with-next" data-keep-count="5">3. Contagem com Três Conjuntos e Sobreposições</div>
+<div class="item-title keep-with-next" data-keep-count="3" id="exercises-13">13. Quantas vezes cada elemento é contado?</div>
+<p class="exercise-source keep-with-next"><em>Baseada/adaptada de Iezzi e Murakami, Fundamentos de Matemática Elementar, vol. 1, cap. II, exercício 50, p. 36.</em></p>
+<p>Sejam <span class="math-inline">A</span>, <span class="math-inline">B</span> e <span class="math-inline">C</span> conjuntos finitos. Para um elemento fixo, complete a tabela indicando sua contribuição a cada contagem. A última coluna corresponde à primeira contagem menos a segunda.</p>
+<div class="table-wrap"><table class="worksheet-table worksheet-table--counting"><colgroup><col style="width:30%"><col style="width:21%"><col style="width:29%"><col style="width:20%"></colgroup><thead><tr><th scope="col">Situação do elemento</th><th scope="col">Em <span class="math-inline">| A | + | B | + | C |</span></th><th scope="col">Em <span class="math-inline">| A ∩ B | + | A ∩ C | + | B ∩ C |</span></th><th scope="col">Saldo após as subtrações</th></tr></thead><tbody><tr><td>Não pertence a nenhum dos três</td><td></td><td></td><td></td></tr><tr><td>Pertence a exatamente um</td><td></td><td></td><td></td></tr><tr><td>Pertence a exatamente dois</td><td></td><td></td><td></td></tr><tr><td>Pertence aos três</td><td></td><td></td><td></td></tr></tbody></table></div>
+<p><span class="subitem-label">a)</span> Qual parcela deve ser acrescentada para que todos os elementos da união contribuam exatamente uma vez? Justifique pela tabela.</p>
+<p><span class="subitem-label">b)</span> Escreva e justifique a fórmula resultante para <span class="math-inline">|A ∪ B ∪ C|</span>, incluindo a hipótese de finitude.</p>
+<div class="item-title keep-with-next" id="exercises-14">14. Lendo quantidades em um diagrama</div>
+<p>No diagrama, cada número indica a <strong>quantidade de elementos da região em que está escrito</strong>, e não o nome de um elemento. Os conjuntos <span class="math-inline">A</span>, <span class="math-inline">B</span> e <span class="math-inline">C</span> estão incluídos no universo <span class="math-inline">U</span>. As áreas não representam proporções quantitativas.</p>
+<figure class="visual visual--exercise-venn-counting atomic-group" id="visual-exercicio-14"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 460" width="620" height="460" role="img" aria-label="Universo U com três conjuntos A, B e C. Cada número indica a quantidade de elementos de uma região disjunta."> <rect x="20" y="20" width="580" height="420" rx="2" fill="white" stroke="#263341" stroke-width="2"/> <g fill="none" stroke="#263341" stroke-width="2.2"> <circle cx="240" cy="180" r="130"/> <circle cx="390" cy="180" r="130"/> <circle cx="315" cy="295" r="130"/> </g> <g font-family="Arial, sans-serif" font-size="23" fill="#18232d" text-anchor="middle"> <text x="42" y="49">U</text> <text x="202" y="78">A</text> <text x="429" y="78">B</text> <text x="315" y="417">C</text> <text x="165" y="185">6</text> <text x="465" y="185">5</text> <text x="315" y="370">4</text> <text x="315" y="125">3</text> <text x="230" y="277">2</text> <text x="400" y="277">1</text> <text x="315" y="229">2</text> <text x="72" y="395">7</text> </g> </svg></figure>
+<p><span class="subitem-label">a)</span> Determine <span class="math-inline">|A|</span>, <span class="math-inline">|B|</span>, <span class="math-inline">|C|</span> e as cardinalidades das três interseções duplas. Compare <span class="math-inline">|A ∩ B|</span> com <span class="math-inline">|(A ∩ B) ∖ C|</span>.</p>
+<p><span class="subitem-label">b)</span> Determine quantos elementos pertencem a exatamente um conjunto, a exatamente dois, aos três, a pelo menos um e a nenhum deles.</p>
+<p><span class="subitem-label">c)</span> Determine <span class="math-inline">|U|</span> e confira a cardinalidade da união pela inclusão-exclusão.</p>
+<div class="item-title keep-with-next" id="exercises-15">15. Dos totais às regiões exclusivas</div>
+<p class="keep-with-next">Em um universo <span class="math-inline">U</span>, com <span class="math-inline">|U|=70</span>, os subconjuntos <span class="math-inline">A</span>, <span class="math-inline">B</span> e <span class="math-inline">C</span> satisfazem:</p>
+<div class="math-line">|A|=32, <span class="math-gap" aria-hidden="true"></span> |B|=28, <span class="math-gap" aria-hidden="true"></span> |C|=24,</div>
+<div class="math-line">|A ∩ B|=12, <span class="math-gap" aria-hidden="true"></span> |A ∩ C|=10, <span class="math-gap" aria-hidden="true"></span> |B ∩ C|=8,</div>
+<div class="math-line">|A ∩ B ∩ C|=4.</div>
+<p>As interseções duplas dadas incluem os elementos pertencentes aos três conjuntos.</p>
+<p><span class="subitem-label">a)</span> Construa um diagrama de Venn e determine a quantidade em cada uma das sete regiões interiores e na região externa.</p>
+<p><span class="subitem-label">b)</span> Determine quantos elementos pertencem a exatamente dois conjuntos e quantos pertencem a pelo menos dois.</p>
+<p><span class="subitem-label">c)</span> Apresente uma conferência que recupere as cardinalidades individuais e o total de <span class="math-inline">U</span> a partir das regiões reconstruídas.</p>
+<div class="item-title keep-with-next" id="exercises-16">16. A sobreposição tripla está escondida</div>
+<p class="keep-with-next">Uma pesquisa considera um universo <span class="math-inline">U</span> de <span class="math-inline">80</span> pessoas. Para três conjuntos <span class="math-inline">A,B,C ⊆ U</span>, os registros fornecem</p>
+<div class="math-line">|A|=35, <span class="math-gap" aria-hidden="true"></span> |B|=32, <span class="math-gap" aria-hidden="true"></span> |C|=28,</div>
+<div class="math-line">|A ∩ B|=15, <span class="math-gap" aria-hidden="true"></span> |A ∩ C|=12, <span class="math-gap" aria-hidden="true"></span> |B ∩ C|=9.</div>
+<p>Além disso, <span class="math-inline">16</span> pessoas não pertencem a nenhum dos três conjuntos. As interseções duplas são completas, incluindo quem pertence aos três.</p>
+<p><span class="subitem-label">a)</span> Determine <span class="math-inline">|A ∩ B ∩ C|</span>, explicando como a informação sobre a região externa participa do cálculo.</p>
+<p><span class="subitem-label">b)</span> Determine quantas pessoas pertencem somente a <span class="math-inline">C</span> e quantas pertencem a exatamente dois conjuntos.</p>
+<p><span class="subitem-label">c)</span> Confira se as regiões interiores reconstruídas somam a cardinalidade da união obtida no item a.</p>
+<div class="item-title keep-with-next" data-keep-count="3" id="exercises-17">17. Contar uma região composta com os dados disponíveis</div>
+<p class="exercise-source keep-with-next"><em>Baseada/adaptada de Matemática para o Ensino Médio, vol. I, cap. II, exercício de revisão 24, p. 93.</em></p>
+<p class="keep-with-next">Sejam <span class="math-inline">A</span>, <span class="math-inline">B</span> e <span class="math-inline">C</span> conjuntos finitos com</p>
+<div class="math-line">|A ∩ B|=12, <span class="math-gap" aria-hidden="true"></span> |A ∩ C|=9, <span class="math-gap" aria-hidden="true"></span> |A ∩ B ∩ C|=4.</div>
+<p><span class="subitem-label">a)</span> Determine <span class="math-inline">|A ∩ (B ∪ C)|</span>. Justifique usando operações e uma contagem adequada, sem supor cardinalidades de <span class="math-inline">A</span>, <span class="math-inline">B</span> ou <span class="math-inline">C</span> que não foram fornecidas.</p>
+<p><span class="subitem-label">b)</span> Qual região seria contada duas vezes se as duas primeiras quantidades fossem simplesmente somadas?</p>
+<div class="item-title keep-with-next" id="exercises-18">18. “Somente os dois” não significa a interseção inteira</div>
+<p>Uma pesquisa registra as quantidades abaixo para <span class="math-inline">A,B,C ⊆ U</span>:</p>
+<div class="table-wrap"><table class="analysis-table"><colgroup><col style="width:69%"><col style="width:31%"></colgroup><thead><tr><th scope="col">Região</th><th scope="col">Quantidade</th></tr></thead><tbody><tr><td>Somente <span class="math-inline">A</span></td><td>7</td></tr><tr><td>Somente <span class="math-inline">B</span></td><td>8</td></tr><tr><td>Somente <span class="math-inline">C</span></td><td>9</td></tr><tr><td><span class="math-inline">A</span> e <span class="math-inline">B</span>, mas não <span class="math-inline">C</span></td><td>6</td></tr><tr><td><span class="math-inline">A</span> e <span class="math-inline">C</span>, mas não <span class="math-inline">B</span></td><td>4</td></tr><tr><td><span class="math-inline">B</span> e <span class="math-inline">C</span>, mas não <span class="math-inline">A</span></td><td>5</td></tr><tr><td>Os três conjuntos</td><td>3</td></tr><tr><td>Nenhum dos três</td><td>2</td></tr></tbody></table></div>
+<p class="keep-with-next">Um estudante determina corretamente <span class="math-inline">|A|=20</span>, <span class="math-inline">|B|=22</span> e <span class="math-inline">|C|=21</span>, mas calcula</p>
+<div class="math-line">|A ∪ B ∪ C|=20+22+21-6-4-5+3=51.</div>
+<p><span class="subitem-label">a)</span> Determine as cardinalidades das interseções completas <span class="math-inline">A ∩ B</span>, <span class="math-inline">A ∩ C</span> e <span class="math-inline">B ∩ C</span>.</p>
+<p><span class="subitem-label">b)</span> Localize o erro no cálculo apresentado e obtenha a cardinalidade correta da união.</p>
+<p><span class="subitem-label">c)</span> No cálculo incorreto, quantas vezes cada elemento da interseção tripla acaba contado? Use essa informação para explicar a diferença entre <span class="math-inline">51</span> e o resultado correto.</p>
+<div class="item-title keep-with-next" data-keep-count="3" id="exercises-19">19. Seleções em um catálogo de veículos</div>
+<p class="exercise-source keep-with-next"><em>Baseada/adaptada de OpenStax, Contemporary Mathematics, seção 1.5, exercício 30, p. 50.</em></p>
+<p>Uma concessionária registra os <span class="math-inline">31</span> veículos de um modelo vendidos em determinado mês. Cada veículo pode incluir os pacotes de entretenimento <span class="math-inline">E</span>, reboque <span class="math-inline">R</span> e esportivo <span class="math-inline">S</span>. No universo <span class="math-inline">U</span> desses veículos,</p>
+<div class="math-line">|E|=18, <span class="math-gap" aria-hidden="true"></span> |R|=11, <span class="math-gap" aria-hidden="true"></span> |S|=16,</div>
+<div class="math-line">|E ∩ R|=8, <span class="math-gap" aria-hidden="true"></span> |E ∩ S|=11, <span class="math-gap" aria-hidden="true"></span> |R ∩ S|=7,</div>
+<div class="math-line">|E ∩ R ∩ S|=5.</div>
+<p>As interseções duplas incluem os veículos com os três pacotes. Há veículos sem nenhum dos pacotes.</p>
+<p>Para cada seleção abaixo, represente o conjunto por operações e determine sua cardinalidade. Organize os dados como considerar adequado e apresente uma verificação de sua contagem.</p>
+<p><span class="subitem-label">a)</span> Veículos com exatamente dois pacotes.</p>
+<p><span class="subitem-label">b)</span> Veículos com entretenimento ou pacote esportivo, mas sem reboque.</p>
+<p><span class="subitem-label">c)</span> Veículos sem nenhum dos três pacotes.</p>
+<p>d) Veículos com reboque, mas sem pacote esportivo, independentemente de possuírem entretenimento.</p>
+<div class="gabarito-subtitle keep-with-next" data-keep-count="3">4. Integração, Consistência e Transferência</div>
+<div class="item-title keep-with-next" id="exercises-20">20. A união está determinada?</div>
+<p>Sabe-se apenas que <span class="math-inline">A,B ⊆ U</span>, <span class="math-inline">|U|=6</span>, <span class="math-inline">|A|=3</span> e <span class="math-inline">|B|=4</span>.</p>
+<p><span class="subitem-label">a)</span> É possível determinar uma única cardinalidade para <span class="math-inline">A ∪ B</span>? Sustente sua resposta construindo dois pares de conjuntos, no mesmo universo, que respeitem os dados e produzam resultados diferentes.</p>
+<p><span class="subitem-label">b)</span> Determine todos os valores possíveis de <span class="math-inline">|A ∪ B|</span>. Justifique por que não há outros e apresente uma configuração para cada valor indicado.</p>
+<p><span class="subitem-label">c)</span> Indique uma informação numérica adicional que permita determinar a cardinalidade da união e explique como ela seria utilizada.</p>
+<div class="item-title keep-with-next" data-keep-count="3" id="exercises-21">21. Um relatório cabe no universo?</div>
+<p class="exercise-source keep-with-next"><em>Baseada/adaptada de Matemática para o Ensino Médio, vol. I, cap. II, exercício de revisão 19, p. 92.</em></p>
+<p>Uma pesquisa considera exatamente <span class="math-inline">40</span> participantes. O relatório afirma que <span class="math-inline">28</span> participam da atividade <span class="math-inline">A</span>, <span class="math-inline">24</span> participam da atividade <span class="math-inline">B</span> e <span class="math-inline">9</span> participam de ambas. Denote por <span class="math-inline">U</span> o conjunto dos participantes pesquisados.</p>
+<p><span class="subitem-label">a)</span> Verifique se essas informações são compatíveis. Identifique a relação quantitativa que falha.</p>
+<p><span class="subitem-label">b)</span> Suponha que apenas o registro de quem participa de ambas possa estar errado. Mantendo os outros dados, determine todos os valores inteiros que esse registro pode assumir para tornar a pesquisa possível.</p>
+<p><span class="subitem-label">c)</span> Escolha o menor desses valores e reconstrua as quatro regiões de <span class="math-inline">U</span>, conferindo o total de participantes.</p>
+<div class="item-title keep-with-next" id="exercises-22">22. Uma união plausível pode esconder dados impossíveis</div>
+<p class="keep-with-next">Um relatório propõe <span class="math-inline">A,B,C ⊆ U</span>, com <span class="math-inline">|U|=30</span>, e fornece</p>
+<div class="math-line">|A|=10, <span class="math-gap" aria-hidden="true"></span> |B|=9, <span class="math-gap" aria-hidden="true"></span> |C|=8,</div>
+<div class="math-line">|A ∩ B|=8, <span class="math-gap" aria-hidden="true"></span> |A ∩ C|=7, <span class="math-gap" aria-hidden="true"></span> |B ∩ C|=3,</div>
+<div class="math-line">|A ∩ B ∩ C|=2.</div>
+<p>As interseções duplas são completas.</p>
+<p><span class="subitem-label">a)</span> A aplicação da inclusão-exclusão fornece qual valor para a união?</p>
+<p><span class="subitem-label">b)</span> Um estudante considera o relatório possível porque esse valor não é negativo e não excede <span class="math-inline">|U|</span>. A justificativa é suficiente? Verifique os dados e apresente uma incompatibilidade concreta, caso exista.</p>
+<div class="item-title keep-with-next" id="exercises-23">23. A quantidade precisa ser inteira</div>
+<p class="keep-with-next">Um grupo finito <span class="math-inline">U</span> foi organizado em três conjuntos <span class="math-inline">A,B,C ⊆ U</span>. Afirma-se que</p>
+<div class="math-line">|A|=|B|=|C|=3</div>
+<p>e que cada pessoa de <span class="math-inline">U</span> pertence a <strong>exatamente dois</strong> dos três conjuntos.</p>
+<p>Essa distribuição pode existir? Justifique examinando quantas vezes cada pessoa é contada na soma <span class="math-inline">|A|+|B|+|C|</span>. Se a distribuição for possível, apresente uma realização; se não for, identifique a contradição.</p>
+<div class="item-title keep-with-next" id="exercises-24">24. Conhecer todas as interseções duplas basta?</div>
+<p class="keep-with-next">Em um universo <span class="math-inline">U</span> com <span class="math-inline">|U|=8</span>, são propostos três subconjuntos <span class="math-inline">A</span>, <span class="math-inline">B</span> e <span class="math-inline">C</span>, com</p>
+<div class="math-line">|A|=|B|=|C|=4,</div>
+<div class="math-line">|A ∩ B|=|A ∩ C|=|B ∩ C|=2.</div>
+<p>Não foi informada a cardinalidade da interseção tripla. As interseções duplas são completas.</p>
+<p><span class="subitem-label">a)</span> A cardinalidade da união está determinada? Apresente duas distribuições pelas regiões disjuntas que respeitem todos os dados, mas produzam respostas diferentes.</p>
+<p><span class="subitem-label">b)</span> Determine todos os valores possíveis para a interseção tripla, para a união e para a região externa. Justifique a possibilidade de cada distribuição e a exclusão de outros valores.</p>
+<p><span class="subitem-label">c)</span> Se uma verificação adicional revelar exatamente um elemento fora dos três conjuntos, determine a distribuição completa pelas oito regiões de <span class="math-inline">U</span>.</p>
+<div class="item-title keep-with-next" id="exercises-25">25. Uma inclusão pode reduzir o trabalho</div>
+<p>Um centro cultural registra um universo <span class="math-inline">U</span> de <span class="math-inline">50</span> participantes e três conjuntos de inscrições <span class="math-inline">A</span>, <span class="math-inline">B</span> e <span class="math-inline">C</span>. Sabe-se que</p>
+<div class="math-line">|A|=26, <span class="math-gap" aria-hidden="true"></span> |B|=20, <span class="math-gap" aria-hidden="true"></span> |C|=8,</div>
+<div class="math-line">|A ∩ B|=10, <span class="math-gap" aria-hidden="true"></span> |A ∩ C|=5,</div>
+<p>e que toda pessoa inscrita em <span class="math-inline">C</span> também está inscrita em <span class="math-inline">B</span>: <span class="math-inline">C ⊆ B</span>.</p>
+<p><span class="subitem-label">a)</span> Um aviso deve ser enviado exatamente a quem está inscrito em <span class="math-inline">A</span> ou em <span class="math-inline">C</span>, mas não em <span class="math-inline">B</span>. Represente a seleção e determine quantas pessoas recebem o aviso.</p>
+<p><span class="subitem-label">b)</span> Determine quantas pessoas estão inscritas nos três conjuntos.</p>
+<p><span class="subitem-label">c)</span> Determine quantas não estão inscritas em nenhum dos três.</p>
+<p>Escolha uma estratégia e justifique em que passagens utiliza a inclusão dada.</p>
+<div class="item-title keep-with-next" id="exercises-26">26. Reconstruindo um registro incompleto</div>
+<p>Uma pesquisa considera <span class="math-inline">60</span> pessoas, das quais <span class="math-inline">8</span> não pertencem a nenhum dos três conjuntos <span class="math-inline">A</span>, <span class="math-inline">B</span> e <span class="math-inline">C</span>. O registro contém</p>
+<div class="math-line">|A|=30, <span class="math-gap" aria-hidden="true"></span> |B|=26, <span class="math-gap" aria-hidden="true"></span> |C|=22,</div>
+<p class="keep-with-next">e as seguintes quantidades <strong>exclusivamente duplas</strong>:</p>
+<div class="math-line">|(A ∩ B) ∖ C|=6,</div>
+<div class="math-line">|(A ∩ C) ∖ B|=4,</div>
+<div class="math-line">|(B ∩ C) ∖ A|=10.</div>
+<p><span class="subitem-label">a)</span> Determine quantas pessoas pertencem aos três conjuntos. Justifique a relação quantitativa utilizada para reconstruir essa informação.</p>
+<p><span class="subitem-label">b)</span> Determine as quantidades em todas as regiões disjuntas do universo e confira todos os dados do registro.</p>
+<p><span class="subitem-label">c)</span> Determine quantas pessoas pertencem a <span class="math-inline">(A ∪ B) ∖ C</span> e quantas pertencem a <span class="math-inline">A ∩ (B ∪ C)</span>. Justifique selecionando as regiões correspondentes.</p>
+</section>
+<section class="source-section" data-context="TEXTO PRÁTICO • GABARITO COMENTADO">
+<header class="section-opening" data-keep-count="3"><div class="section-label">Texto Prático</div><h2 class="section-title" id="gabarito">Gabarito Comentado</h2></header>
+<div class="gabarito-subtitle keep-with-next" data-keep-count="3">1. Cardinalidade e Relações entre Conjuntos</div>
+<div class="item-title keep-with-next" id="answers-1">1. Quantos objetos distintos?</div>
+<p class="subitem-label keep-with-next"><strong>a)</strong></p>
+<div class="math-structural">|A|=3, <span class="math-gap" aria-hidden="true"></span> |E|=0, <span class="math-gap" aria-hidden="true"></span> |F|=1, <span class="math-gap" aria-hidden="true"></span> |G|=4.</div>
+<p>Em <span class="math-inline">A</span>, os elementos distintos são <span class="math-inline">2,5,7</span>; as repetições na escrita não acrescentam elementos. O conjunto <span class="math-inline">E</span> não possui elementos, enquanto <span class="math-inline">F</span> possui um elemento: <span class="math-inline">∅</span>.</p>
+<p class="keep-with-next"><strong>b)</strong> Os elementos distintos de <span class="math-inline">G</span> são</p>
+<div class="math-line">1, <span class="math-gap" aria-hidden="true"></span> {1}, <span class="math-gap" aria-hidden="true"></span> ∅ , <span class="math-gap" aria-hidden="true"></span> { ∅ }.</div>
+<p>A segunda ocorrência de <span class="math-inline">{1}</span> não altera o conjunto. Já <span class="math-inline">∅</span> não possui elementos, e <span class="math-inline">{ ∅ }</span> possui um; portanto, são objetos diferentes. A cardinalidade de <span class="math-inline">G</span> conta esses objetos diretamente, sem reunir os elementos dos conjuntos que aparecem dentro dele.</p>
+<div class="item-title keep-with-next" id="answers-2">2. A quantidade não identifica os elementos</div>
+<p class="subitem-label keep-with-next"><strong>a)</strong></p>
+<div class="math-line">P={1,2,3,4}, <span class="math-gap" aria-hidden="true"></span> Q={6,7,8,9},</div>
+<div class="math-structural">|P|=|Q|=4.</div>
+<p><strong>b)</strong> <span class="math-inline">P ≠ Q</span>. Por exemplo, <span class="math-inline">1 ∈ P</span> e <span class="math-inline">1 ∉ Q</span>. A coincidência das quantidades não estabelece a coincidência dos elementos.</p>
+<p><strong>c)</strong> Não. Neste caso, <span class="math-inline">|Q|=4</span>, mas <span class="math-inline">4 ∉ Q</span>. A cardinalidade informa uma quantidade e não adiciona esse número à coleção.</p>
+<div class="item-title keep-with-next" id="answers-3">3. Quais implicações são válidas?</div>
+<p><strong>I — válida.</strong> Se <span class="math-inline">A=B</span>, os dois conjuntos possuem exatamente os mesmos elementos. Contar os objetos distintos de cada um fornece a mesma quantidade.</p>
+<p><strong>II — inválida.</strong> Tome <span class="math-inline">A={1,2}</span> e <span class="math-inline">B={3,4}</span>. Temos <span class="math-inline">|A|=|B|=2</span>, mas <span class="math-inline">1 ∈ A</span> e <span class="math-inline">1 ∉ B</span>; logo, <span class="math-inline">A ≠ B</span>.</p>
+<p><strong>III — inválida.</strong> Tome <span class="math-inline">A={1}</span> e <span class="math-inline">B={2,3}</span>. A hipótese <span class="math-inline">|A|=1&lt;2=|B|</span> é satisfeita, mas <span class="math-inline">1 ∈ A</span> e <span class="math-inline">1 ∉ B</span>, de modo que <span class="math-inline">A ⊈ B</span>.</p>
+<p><strong>IV — válida.</strong> Se <span class="math-inline">A ⊆ B</span>, todos os elementos de <span class="math-inline">A</span> já estão em <span class="math-inline">B</span>. Se existisse um elemento de <span class="math-inline">B</span> externo a <span class="math-inline">A</span>, a inclusão seria própria, e a finitude garantiria <span class="math-inline">|A|&lt;|B|</span>, contrariando a hipótese. Portanto, <span class="math-inline">A=B</span>.</p>
+<p>Outros contraexemplos são suficientes quando preservam a hipótese e contradizem efetivamente a conclusão.</p>
+<div class="item-title keep-with-next" id="answers-4">4. Contar sob uma hipótese de inclusão</div>
+<p class="keep-with-next"><strong>a)</strong> Como <span class="math-inline">A ⊆ B</span>,</p>
+<div class="math-line">B=A ∪ (B ∖ A), <span class="math-gap" aria-hidden="true"></span> A ∩ (B ∖ A)= ∅ .</div>
+<p class="keep-with-next">Pela aditividade,</p>
+<div class="math-structural">11=7+|B ∖ A|, <span class="math-gap" aria-hidden="true"></span> |B ∖ A|=4.</div>
+<p><strong>b)</strong> <span class="math-inline">A=B</span>. A inclusão, junto com a igualdade das cardinalidades finitas, exclui a possibilidade de elementos adicionais em <span class="math-inline">B</span>. Pela mesma decomposição, <span class="math-inline">|B ∖ A|=7-7=0</span>.</p>
+<p><strong>c)</strong> Não. De <span class="math-inline">A ⊆ B</span> decorre <span class="math-inline">|A| ≤ |B|</span>. Os valores propostos exigiriam <span class="math-inline">7 ≤ 6</span>, o que é falso. A hipótese de inclusão não pode ser mantida com essas quantidades.</p>
+<div class="item-title keep-with-next" id="answers-5">5. Uma decomposição sem sobreposições</div>
+<p class="keep-with-next"><strong>a)</strong> Como as três partes são disjuntas e sua união é <span class="math-inline">S</span>,</p>
+<div class="math-structural">19=6+8+|R|, <span class="math-gap" aria-hidden="true"></span> |R|=5.</div>
+<p><strong>b)</strong> A disjunção duas a duas garante que um elemento não seja contado em duas parcelas. A igualdade <span class="math-inline">S=P ∪ Q ∪ R</span> garante que todo elemento de <span class="math-inline">S</span> apareça em alguma delas. Assim, não há duplicações nem omissões.</p>
+<div class="item-title keep-with-next" id="answers-6">6. Duas maneiras de uma contagem falhar</div>
+<p class="keep-with-next"><strong>a)</strong> A conclusão não é garantida. Tome</p>
+<div class="math-line">P={a,b}, <span class="math-gap" aria-hidden="true"></span> Q={b,c}, <span class="math-gap" aria-hidden="true"></span> S={a,b,c}.</div>
+<p>Temos <span class="math-inline">S=P ∪ Q</span>, mas <span class="math-inline">|P|+|Q|=2+2=4</span> e <span class="math-inline">|S|=3</span>. O elemento <span class="math-inline">b</span> foi contado duas vezes na soma. Falta a hipótese de disjunção para justificar a adição sem correção.</p>
+<p><strong>b)</strong> A disjunção fornece <span class="math-inline">|P ∪ Q|=3+4=7</span>, mas não foi dada a igualdade <span class="math-inline">S=P ∪ Q</span>. Como a união é um subconjunto de <span class="math-inline">S</span>,</p>
+<div class="math-structural">|S ∖ (P ∪ Q)|=10-7=3.</div>
+<p><strong>c)</strong> Na Situação I, a cobertura é conhecida, mas a sobreposição pode provocar duplicações. Na Situação II, não há sobreposição entre as partes, mas existem elementos de <span class="math-inline">S</span> que não foram incluídos na soma. As condições de cobertura e disjunção realizam funções diferentes.</p>
+<div class="gabarito-subtitle keep-with-next" data-keep-count="3">2. Uniões, Diferenças e Complementos: Contagem de Dois Conjuntos</div>
+<div class="item-title keep-with-next" id="answers-7">7. Dos elementos às quantidades</div>
+<p class="subitem-label keep-with-next"><strong>a)</strong></p>
+<div class="table-wrap"><table class="analysis-table"><colgroup><col style="width:33%"><col style="width:48%"><col style="width:19%"></colgroup><thead><tr><th scope="col">Conjunto</th><th scope="col">Elementos</th><th scope="col">Cardinalidade</th></tr></thead><tbody><tr><td><span class="math-inline">A ∩ B</span></td><td><span class="math-inline">{4,5,6}</span></td><td>3</td></tr><tr><td><span class="math-inline">A ∪ B</span></td><td><span class="math-inline">{1,2,3,4,5,6,7,8}</span></td><td>8</td></tr><tr><td><span class="math-inline">A ∖ B</span></td><td><span class="math-inline">{1,2,3}</span></td><td>3</td></tr><tr><td><span class="math-inline">B ∖ A</span></td><td><span class="math-inline">{7,8}</span></td><td>2</td></tr><tr><td><span class="math-inline">U ∖ (A ∪ B)</span></td><td><span class="math-inline">{9,10}</span></td><td>2</td></tr></tbody></table></div>
+<p><strong>b)</strong> <span class="math-inline">|A|+|B|=6+5=11</span>, enquanto <span class="math-inline">|A ∪ B|=8</span>. Os elementos <span class="math-inline">4,5,6</span> aparecem nas duas contagens individuais. Retirando uma ocorrência de cada um, obtemos <span class="math-inline">11-3=8</span>.</p>
+<p><strong>c)</strong> As quatro regiões têm cardinalidades <span class="math-inline">3,3,2,2</span>. Sua soma é <span class="math-inline">3+3+2+2=10=|U|</span>, sem elementos comuns entre parcelas distintas.</p>
+<div class="item-title keep-with-next" id="answers-8">8. Duas línguas e uma pesquisa</div>
+<p class="keep-with-next"><strong>a)</strong> Somente inglês:</p>
+<div class="math-structural">|I ∖ F|=46-17=29.</div>
+<p class="keep-with-next">Somente francês:</p>
+<div class="math-structural">|F ∖ I|=35-17=18.</div>
+<p class="keep-with-next"><strong>b)</strong> Pelo menos uma língua:</p>
+<div class="math-structural">|I ∪ F|=46+35-17=64.</div>
+<p class="keep-with-next">Nenhuma das duas:</p>
+<div class="math-structural">|U ∖ (I ∪ F)|=80-64=16.</div>
+<p class="keep-with-next"><strong>c)</strong> A seleção é</p>
+<div class="math-line">(I ∖ F) ∪ (F ∖ I).</div>
+<p>As duas parcelas são disjuntas, pois a primeira exige pertencer a <span class="math-inline">I</span> e não a <span class="math-inline">F</span>, enquanto a segunda exige o contrário. Portanto, a quantidade é <span class="math-inline">29+18=47</span>.</p>
+<p><strong>d)</strong> A distribuição é <span class="math-inline">29</span> somente em inglês, <span class="math-inline">17</span> em ambas, <span class="math-inline">18</span> somente em francês e <span class="math-inline">16</span> em nenhuma. A soma <span class="math-inline">29+17+18+16=80</span> abrange o universo. Também recuperamos <span class="math-inline">29+17=46</span> e <span class="math-inline">18+17=35</span>, conferindo as cardinalidades individuais.</p>
+<div class="item-title keep-with-next" id="answers-9">9. Reconstruindo a parte comum</div>
+<p class="keep-with-next"><strong>a)</strong> A união e sua região externa decompõem <span class="math-inline">U</span>. Logo,</p>
+<div class="math-structural"><span class="answer-box">|A ∪ B|=60-12=48.</span></div>
+<p class="keep-with-next">Reorganizando a inclusão-exclusão,</p>
+<div class="math-structural"><span class="answer-box">|A ∩ B|=34+29-48=15.</span></div>
+<p><strong>b)</strong> Somente <span class="math-inline">A</span>: <span class="math-inline">34-15=19</span>. Somente <span class="math-inline">B</span>: <span class="math-inline">29-15=14</span>.</p>
+<p class="keep-with-next"><strong>c)</strong> Não pertencer a nenhum dos conjuntos significa pertencer a</p>
+<div class="math-line">U ∖ (A ∪ B),</div>
+<p class="keep-with-next">com <span class="math-inline">12</span> elementos. Não pertencer aos dois simultaneamente significa pertencer a</p>
+<div class="math-line">U ∖ (A ∩ B),</div>
+<p>com <span class="math-inline">60-15=45</span> elementos. Esta última seleção inclui quem está somente em <span class="math-inline">A</span>, somente em <span class="math-inline">B</span> ou fora de ambos: <span class="math-inline">19+14+12=45</span>. A primeira inclui apenas a região externa à união.</p>
+<div class="item-title keep-with-next" id="answers-10">10. O que se retira do primeiro conjunto?</div>
+<p class="subitem-label keep-with-next"><strong>a)</strong></p>
+<div class="math-structural">|A ∖ B|=14-4=10, <span class="math-gap" aria-hidden="true"></span> |B ∖ A|=9-4=5.</div>
+<p><strong>b)</strong> De <span class="math-inline">A</span>, devem ser retirados apenas seus elementos que também pertencem a <span class="math-inline">B</span>, isto é, os <span class="math-inline">4</span> elementos de <span class="math-inline">A ∩ B</span>. Os demais <span class="math-inline">5</span> elementos de <span class="math-inline">B</span> já estão fora de <span class="math-inline">A</span> e não podem ser retirados de sua contagem. O procedimento correto é <span class="math-inline">14-4=10</span>.</p>
+<p class="keep-with-next"><strong>c)</strong> A relação é <span class="math-inline">B ⊆ A</span>. Sob essa hipótese, <span class="math-inline">A ∩ B=B</span>, e portanto</p>
+<div class="math-line">|A ∖ B|=|A|-|A ∩ B|=|A|-|B|.</div>
+<p>A hipótese não se verifica nos dados iniciais, pois a interseção tem <span class="math-inline">4</span> elementos e <span class="math-inline">B</span> tem <span class="math-inline">9</span>.</p>
+<div class="item-title keep-with-next" id="answers-11">11. A referência muda a quantidade externa</div>
+<p class="subitem-label keep-with-next"><strong>a)</strong></p>
+<div class="math-structural">|U ∖ A|=36-14=22, <span class="math-gap" aria-hidden="true"></span> |V ∖ A|=41-14=27.</div>
+<p class="keep-with-next"><strong>b)</strong> Como <span class="math-inline">U ⊆ V</span>,</p>
+<div class="math-structural">|V ∖ U|=41-36=5.</div>
+<p class="keep-with-next">Esses elementos estão fora de <span class="math-inline">A</span>, pois <span class="math-inline">A ⊆ U</span>. A decomposição</p>
+<div class="math-line">V ∖ A=(U ∖ A) ∪ (V ∖ U)</div>
+<p>é disjunta: a primeira parcela está em <span class="math-inline">U</span>, e a segunda está fora dele. Assim, o complemento em <span class="math-inline">V</span> tem os <span class="math-inline">22</span> elementos do complemento em <span class="math-inline">U</span>, acrescidos dos <span class="math-inline">5</span> novos elementos da referência.</p>
+<p><strong>c)</strong> A anotação deve informar que o complemento é relativo a <span class="math-inline">U</span>. A escrita explícita <span class="math-inline">|U ∖ A|=22</span> também elimina a ambiguidade.</p>
+<div class="item-title keep-with-next" id="answers-12">12. Justificando a correção da dupla contagem</div>
+<p class="keep-with-next"><strong>a)</strong> As decomposições são</p>
+<div class="math-line">A=P ∪ Q, <span class="math-gap" aria-hidden="true"></span> B=Q ∪ R, <span class="math-gap" aria-hidden="true"></span> A ∪ B=P ∪ Q ∪ R.</div>
+<p>As regiões <span class="math-inline">P,Q,R</span> são disjuntas duas a duas. Por exemplo, <span class="math-inline">P</span> exige não pertencer a <span class="math-inline">B</span>, enquanto <span class="math-inline">Q</span> exige pertencer a <span class="math-inline">B</span>; <span class="math-inline">R</span> exige não pertencer a <span class="math-inline">A</span>, enquanto <span class="math-inline">P</span> e <span class="math-inline">Q</span> estão em <span class="math-inline">A</span>. A finitude e a ausência de sobreposições legitimam a aditividade.</p>
+<p class="keep-with-next"><strong>b)</strong> Temos</p>
+<div class="math-line">|A|=|P|+|Q|, <span class="math-gap" aria-hidden="true"></span> |B|=|Q|+|R|,</div>
+<div class="math-line">|A ∪ B|=|P|+|Q|+|R|.</div>
+<p class="keep-with-next">Consequentemente,</p>
+<div class="math-line">|A|+|B|=|P|+2|Q|+|R|=|A ∪ B|+|Q|.</div>
+<p class="keep-with-next">Como <span class="math-inline">Q=A ∩ B</span>,</p>
+<div class="math-structural">|A ∪ B|=|A|+|B|-|A ∩ B|.</div>
+<p>A parcela subtraída corrige exatamente a ocorrência adicional dos elementos comuns. A demonstração vale para quaisquer conjuntos finitos, e não apenas para uma enumeração escolhida.</p>
+<p><strong>c)</strong> Se <span class="math-inline">A ∩ B= ∅</span>, sua cardinalidade é zero, e obtemos <span class="math-inline">|A ∪ B|=|A|+|B|-0</span>. Se <span class="math-inline">A ⊆ B</span>, temos <span class="math-inline">A ∩ B=A</span> e <span class="math-inline">A ∪ B=B</span>; a fórmula fornece <span class="math-inline">|A|+|B|-|A|=|B|</span>. Regiões vazias não invalidam a decomposição nem a aditividade, portanto a demonstração permanece válida.</p>
+<div class="gabarito-subtitle keep-with-next" data-keep-count="3">3. Contagem com Três Conjuntos e Sobreposições</div>
+<div class="item-title keep-with-next" id="answers-13">13. Quantas vezes cada elemento é contado?</div>
+<div class="table-wrap"><table class="worksheet-table worksheet-table--counting"><colgroup><col style="width:30%"><col style="width:21%"><col style="width:29%"><col style="width:20%"></colgroup><thead><tr><th scope="col">Situação do elemento</th><th scope="col">Na soma individual</th><th scope="col">Na soma das interseções duplas</th><th scope="col">Saldo após as subtrações</th></tr></thead><tbody><tr><td>Nenhum dos três</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Exatamente um</td><td>1</td><td>0</td><td>1</td></tr><tr><td>Exatamente dois</td><td>2</td><td>1</td><td>1</td></tr><tr><td>Os três</td><td>3</td><td>3</td><td>0</td></tr></tbody></table></div>
+<p><strong>a)</strong> Deve-se acrescentar <span class="math-inline">|A ∩ B ∩ C|</span>. Um elemento dos três conjuntos aparece nas três parcelas individuais e nas três interseções duplas. Depois das subtrações, seu saldo é <span class="math-inline">3-3=0</span>. A adição final recupera uma ocorrência. Os demais elementos não pertencem à interseção tripla e não têm sua contribuição alterada por essa adição.</p>
+<p class="keep-with-next"><strong>b)</strong> Para conjuntos finitos <span class="math-inline">A,B,C</span>,</p>
+<div class="math-structural math-aligned">
+<div class="math-row"><span>|A ∪ B ∪ C| =</span><span>|A|+|B|+|C|</span><span></span></div>
+<div class="math-row"><span></span><span>-|A ∩ B|-|A ∩ C|-|B ∩ C|</span><span></span></div>
+<div class="math-row"><span></span><span>+|A ∩ B ∩ C|.</span><span></span></div>
+</div>
+<p>A tabela abrange todas as possibilidades de pertinência quanto à quantidade de conjuntos que contêm um elemento. Na expressão final, cada elemento da união contribui exatamente uma vez; um elemento externo contribui zero. Como os conjuntos são finitos, essa conferência das contribuições estabelece a igualdade das contagens. Não se pressupõe que todas as regiões contenham elementos.</p>
+<div class="item-title keep-with-next" id="answers-14">14. Lendo quantidades em um diagrama</div>
+<p class="keep-with-next"><strong>a)</strong> Somando as regiões que constituem cada conjunto,</p>
+<div class="math-structural">|A|=6+3+2+2=13,</div>
+<div class="math-structural">|B|=5+3+1+2=11,</div>
+<div class="math-structural">|C|=4+2+1+2=9.</div>
+<p class="keep-with-next">As interseções completas incluem a região central:</p>
+<div class="math-structural">|A ∩ B|=3+2=5, <span class="math-gap" aria-hidden="true"></span> |A ∩ C|=2+2=4, <span class="math-gap" aria-hidden="true"></span> |B ∩ C|=1+2=3.</div>
+<p>Já <span class="math-inline">|(A ∩ B) ∖ C|=3</span>. A diferença entre <span class="math-inline">5</span> e <span class="math-inline">3</span> corresponde aos dois elementos que também pertencem a <span class="math-inline">C</span>.</p>
+<p class="subitem-label keep-with-next"><strong>b)</strong></p>
+<div class="table-wrap"><table class="analysis-table"><colgroup><col style="width:69%"><col style="width:31%"></colgroup><thead><tr><th scope="col">Seleção</th><th scope="col">Quantidade</th></tr></thead><tbody><tr><td>Exatamente um conjunto</td><td><span class="math-inline">6+5+4=15</span></td></tr><tr><td>Exatamente dois conjuntos</td><td><span class="math-inline">3+2+1=6</span></td></tr><tr><td>Os três conjuntos</td><td>2</td></tr><tr><td>Pelo menos um conjunto</td><td><span class="math-inline">15+6+2=23</span></td></tr><tr><td>Nenhum dos três</td><td>7</td></tr></tbody></table></div>
+<p>As parcelas de cada soma são regiões disjuntas. Em particular, o centro não entra na contagem de exatamente dois.</p>
+<p class="keep-with-next"><strong>c)</strong> <span class="math-inline">|U|=23+7=30</span>. Pela inclusão-exclusão,</p>
+<div class="math-structural">|A ∪ B ∪ C|=13+11+9-5-4-3+2=23,</div>
+<p>confirmando a soma direta das sete regiões interiores.</p>
+<div class="item-title keep-with-next" id="answers-15">15. Dos totais às regiões exclusivas</div>
+<p class="keep-with-next"><strong>a)</strong> Começando pela região tripla, as regiões exclusivamente duplas são</p>
+<div class="math-line">12-4=8, <span class="math-gap" aria-hidden="true"></span> 10-4=6, <span class="math-gap" aria-hidden="true"></span> 8-4=4.</div>
+<p>Retirando de cada conjunto as regiões de sobreposição que lhe pertencem, obtemos:</p>
+<div class="table-wrap"><table class="analysis-table"><colgroup><col style="width:69%"><col style="width:31%"></colgroup><thead><tr><th scope="col">Região</th><th scope="col">Quantidade</th></tr></thead><tbody><tr><td><span class="math-inline">A ∖ (B ∪ C)</span></td><td><span class="math-inline">32-8-6-4=14</span></td></tr><tr><td><span class="math-inline">B ∖ (A ∪ C)</span></td><td><span class="math-inline">28-8-4-4=12</span></td></tr><tr><td><span class="math-inline">C ∖ (A ∪ B)</span></td><td><span class="math-inline">24-6-4-4=10</span></td></tr><tr><td><span class="math-inline">(A ∩ B) ∖ C</span></td><td>8</td></tr><tr><td><span class="math-inline">(A ∩ C) ∖ B</span></td><td>6</td></tr><tr><td><span class="math-inline">(B ∩ C) ∖ A</span></td><td>4</td></tr><tr><td><span class="math-inline">A ∩ B ∩ C</span></td><td>4</td></tr><tr><td><span class="math-inline">U ∖ (A ∪ B ∪ C)</span></td><td>12</td></tr></tbody></table></div>
+<p>A união tem <span class="math-inline">14+12+10+8+6+4+4=58</span> elementos. A região externa tem <span class="math-inline">70-58=12</span>. O diagrama construído deve posicionar cada quantidade na região indicada, mantendo a referência <span class="math-inline">U</span>. Um diagrama legível com essas informações atende ao comando, sem exigir proporção entre áreas e quantidades.</p>
+<p><strong>b)</strong> Exatamente dois: <span class="math-inline">8+6+4=18</span>. Pelo menos dois: <span class="math-inline">18+4=22</span>. A segunda seleção inclui a interseção tripla, uma única vez.</p>
+<p class="keep-with-next"><strong>c)</strong> As cardinalidades individuais são recuperadas por</p>
+<div class="math-line">14+8+6+4=32, <span class="math-gap" aria-hidden="true"></span> 12+8+4+4=28, <span class="math-gap" aria-hidden="true"></span> 10+6+4+4=24.</div>
+<p>Também recuperamos as interseções completas: <span class="math-inline">8+4=12</span>, <span class="math-inline">6+4=10</span> e <span class="math-inline">4+4=8</span>. Todas as regiões têm quantidades inteiras não negativas, e a soma das oito quantidades é <span class="math-inline">58+12=70</span>. A reconstrução é compatível com os dados.</p>
+<div class="item-title keep-with-next" id="answers-16">16. A sobreposição tripla está escondida</div>
+<p class="keep-with-next"><strong>a)</strong> Como <span class="math-inline">16</span> pessoas estão fora dos três conjuntos,</p>
+<div class="math-line">|A ∪ B ∪ C|=80-16=64.</div>
+<p class="keep-with-next">Denotando por <span class="math-inline">t</span> a cardinalidade tripla, a inclusão-exclusão fornece</p>
+<div class="math-line">64=35+32+28-15-12-9+t=59+t.</div>
+<p>Portanto, <span class="math-inline">t=5</span>. A informação sobre a região externa permite obter o total da união, necessário para reconstruir a sobreposição desconhecida.</p>
+<p class="keep-with-next"><strong>b)</strong> As regiões exclusivamente duplas têm quantidades <span class="math-inline">15-5=10</span>, <span class="math-inline">12-5=7</span> e <span class="math-inline">9-5=4</span>. Somente <span class="math-inline">C</span> contém</p>
+<div class="math-structural">28-7-4-5=12</div>
+<p>pessoas. Exatamente dois conjuntos contêm <span class="math-inline">10+7+4=21</span> pessoas.</p>
+<p class="keep-with-next"><strong>c)</strong> Somente <span class="math-inline">A</span>: <span class="math-inline">35-10-7-5=13</span>. Somente <span class="math-inline">B</span>: <span class="math-inline">32-10-4-5=13</span>. As sete regiões interiores somam</p>
+<div class="math-line">13+13+12+10+7+4+5=64.</div>
+<p>Acrescentando os <span class="math-inline">16</span> externos, recuperamos <span class="math-inline">80</span>. A região tripla não foi subtraída duas vezes ao reconstruir as regiões individuais: depois de separar as interseções exclusivamente duplas, ela é retirada uma única vez de cada total.</p>
+<div class="item-title keep-with-next" id="answers-17">17. Contar uma região composta com os dados disponíveis</div>
+<p class="keep-with-next"><strong>a)</strong> Pela distributividade,</p>
+<div class="math-line">A ∩ (B ∪ C)=(A ∩ B) ∪ (A ∩ C).</div>
+<p class="keep-with-next">Podemos aplicar a inclusão-exclusão a esses dois conjuntos finitos. A interseção entre eles é</p>
+<div class="math-line">(A ∩ B) ∩ (A ∩ C)=A ∩ B ∩ C.</div>
+<p class="keep-with-next">Assim,</p>
+<div class="math-structural"><span class="answer-box">|A ∩ (B ∪ C)|=12+9-4=17.</span></div>
+<p>Não são necessários os totais de <span class="math-inline">A</span>, <span class="math-inline">B</span> ou <span class="math-inline">C</span>: os dados fornecidos descrevem precisamente as duas parcelas da união relevante e sua sobreposição.</p>
+<p><strong>b)</strong> A região contada duas vezes seria <span class="math-inline">A ∩ B ∩ C</span>, com <span class="math-inline">4</span> elementos. Cada um deles está em <span class="math-inline">A ∩ B</span> e em <span class="math-inline">A ∩ C</span>.</p>
+<div class="item-title keep-with-next" id="answers-18">18. “Somente os dois” não significa a interseção inteira</div>
+<p class="subitem-label keep-with-next"><strong>a)</strong></p>
+<div class="math-structural">|A ∩ B|=6+3=9, <span class="math-gap" aria-hidden="true"></span> |A ∩ C|=4+3=7, <span class="math-gap" aria-hidden="true"></span> |B ∩ C|=5+3=8.</div>
+<p><strong>b)</strong> O estudante substituiu as interseções completas pelas regiões exclusivamente duplas. A fórmula exige as primeiras, que também contêm os três elementos da região central. Corrigindo,</p>
+<div class="math-structural">|A ∪ B ∪ C|=20+22+21-9-7-8+3=42.</div>
+<p>A soma das sete regiões interiores confirma: <span class="math-inline">7+8+9+6+4+5+3=42</span>. Com os dois elementos externos, <span class="math-inline">|U|=44</span>.</p>
+<p><strong>c)</strong> No cálculo incorreto, cada elemento central aparece três vezes na soma individual, não é retirado pelas parcelas exclusivamente duplas e é acrescentado mais uma vez pela parcela final. Seu saldo é <span class="math-inline">3-0+1=4</span>, quando deveria ser <span class="math-inline">1</span>. São três ocorrências adicionais de cada um dos três elementos centrais, produzindo o excesso <span class="math-inline">3 · 3=9</span>. Isso explica <span class="math-inline">51-42=9</span>.</p>
+<div class="item-title keep-with-next" id="answers-19">19. Seleções em um catálogo de veículos</div>
+<p>Uma organização possível é reconstruir as regiões disjuntas:</p>
+<div class="table-wrap"><table class="analysis-table"><colgroup><col style="width:69%"><col style="width:31%"></colgroup><thead><tr><th scope="col">Região</th><th scope="col">Quantidade</th></tr></thead><tbody><tr><td>Somente <span class="math-inline">E</span></td><td><span class="math-inline">18-3-6-5=4</span></td></tr><tr><td>Somente <span class="math-inline">R</span></td><td><span class="math-inline">11-3-2-5=1</span></td></tr><tr><td>Somente <span class="math-inline">S</span></td><td><span class="math-inline">16-6-2-5=3</span></td></tr><tr><td><span class="math-inline">(E ∩ R) ∖ S</span></td><td><span class="math-inline">8-5=3</span></td></tr><tr><td><span class="math-inline">(E ∩ S) ∖ R</span></td><td><span class="math-inline">11-5=6</span></td></tr><tr><td><span class="math-inline">(R ∩ S) ∖ E</span></td><td><span class="math-inline">7-5=2</span></td></tr><tr><td><span class="math-inline">E ∩ R ∩ S</span></td><td>5</td></tr><tr><td>Nenhum pacote</td><td>7</td></tr></tbody></table></div>
+<p>As regiões interiores somam <span class="math-inline">4+1+3+3+6+2+5=24</span>. Logo, há <span class="math-inline">31-24=7</span> veículos externos à união.</p>
+<p class="keep-with-next"><strong>a)</strong> Exatamente dois pacotes correspondem a</p>
+<div class="math-line">((E ∩ R) ∖ S) ∪ ((E ∩ S) ∖ R) ∪ ((R ∩ S) ∖ E).</div>
+<p>Essas parcelas são disjuntas e fornecem <span class="math-inline">3+6+2=11</span> veículos.</p>
+<p><strong>b)</strong> A seleção é <span class="math-inline">(E ∪ S) ∖ R</span>. Entram somente <span class="math-inline">E</span>, somente <span class="math-inline">S</span> e <span class="math-inline">E ∩ S</span> sem <span class="math-inline">R</span>, totalizando <span class="math-inline">4+3+6=13</span>.</p>
+<p><strong>c)</strong> A seleção é <span class="math-inline">U ∖ (E ∪ R ∪ S)</span>, com <span class="math-inline">7</span> veículos.</p>
+<p><strong>d)</strong> A seleção é <span class="math-inline">R ∖ S</span>, que inclui somente <span class="math-inline">R</span> e <span class="math-inline">E ∩ R</span> sem <span class="math-inline">S</span>. São <span class="math-inline">1+3=4</span> veículos. Também podemos obter <span class="math-inline">11-7=4</span>, retirando de <span class="math-inline">R</span> a interseção completa com <span class="math-inline">S</span>.</p>
+<p><strong>Verificação.</strong> A soma das oito regiões é <span class="math-inline">24+7=31</span>. Recuperamos os totais individuais por <span class="math-inline">4+3+6+5=18</span>, <span class="math-inline">1+3+2+5=11</span> e <span class="math-inline">3+6+2+5=16</span>, e os totais das interseções por <span class="math-inline">3+5=8</span>, <span class="math-inline">6+5=11</span> e <span class="math-inline">2+5=7</span>. Cada seleção foi contada como união de regiões disjuntas. Outras organizações corretas são válidas se preservam esses dados e as condições de cada seleção.</p>
+<div class="gabarito-subtitle keep-with-next" data-keep-count="3">4. Integração, Consistência e Transferência</div>
+<div class="item-title keep-with-next" id="answers-20">20. A união está determinada?</div>
+<p><strong>a)</strong> Não. Tome o mesmo universo <span class="math-inline">U={1,2,3,4,5,6}</span> e <span class="math-inline">A={1,2,3}</span>. Se <span class="math-inline">B={1,2,3,4}</span>, a união tem <span class="math-inline">4</span> elementos. Se <span class="math-inline">B={3,4,5,6}</span>, tem <span class="math-inline">6</span>. Em ambos os casos, <span class="math-inline">|A|=3</span> e <span class="math-inline">|B|=4</span>; a sobreposição é diferente.</p>
+<p class="keep-with-next"><strong>b)</strong> Como <span class="math-inline">B ⊆ A ∪ B ⊆ U</span>,</p>
+<div class="math-line">4 ≤ |A ∪ B| ≤ 6.</div>
+<p>A cardinalidade é inteira, portanto só pode ser <span class="math-inline">4</span>, <span class="math-inline">5</span> ou <span class="math-inline">6</span>. Todos esses valores são realizáveis:</p>
+<div class="table-wrap"><table class="comparison-table"><colgroup><col style="width:21%"><col style="width:24%"><col style="width:29%"><col style="width:26%"></colgroup><thead><tr><th scope="col"><span class="math-inline">A</span></th><th scope="col"><span class="math-inline">B</span></th><th scope="col">União</th><th scope="col">Cardinalidade da união</th></tr></thead><tbody><tr><td><span class="math-inline">{1,2,3}</span></td><td><span class="math-inline">{1,2,3,4}</span></td><td><span class="math-inline">{1,2,3,4}</span></td><td>4</td></tr><tr><td><span class="math-inline">{1,2,3}</span></td><td><span class="math-inline">{2,3,4,5}</span></td><td><span class="math-inline">{1,2,3,4,5}</span></td><td>5</td></tr><tr><td><span class="math-inline">{1,2,3}</span></td><td><span class="math-inline">{3,4,5,6}</span></td><td><span class="math-inline">{1,2,3,4,5,6}</span></td><td>6</td></tr></tbody></table></div>
+<p><strong>c)</strong> Uma informação suficiente é <span class="math-inline">|A ∩ B|</span>. Conhecendo-a, obtemos <span class="math-inline">|A ∪ B|=3+4-|A ∩ B|</span>. Também serve conhecer a quantidade externa à união, pois ela pode ser subtraída de <span class="math-inline">6</span>. Outras respostas são válidas quando explicam como a informação adicional determina a quantidade pedida.</p>
+<div class="item-title keep-with-next" id="answers-21">21. Um relatório cabe no universo?</div>
+<p class="keep-with-next"><strong>a)</strong> Os dados são incompatíveis. A soma corrigida produziria</p>
+<div class="math-line">28+24-9=43,</div>
+<p>excedendo os <span class="math-inline">40</span> participantes do universo. Como <span class="math-inline">A ∪ B ⊆ U</span>, uma união com <span class="math-inline">43</span> elementos não pode existir nesse universo. A contagem externa seria <span class="math-inline">40-43=-3</span>, também impossível.</p>
+<p class="keep-with-next"><strong>b)</strong> Denote por <span class="math-inline">x</span> o registro corrigido da interseção. As quatro regiões precisariam ter as quantidades</p>
+<div class="math-line">28-x, <span class="math-gap" aria-hidden="true"></span> x, <span class="math-gap" aria-hidden="true"></span> 24-x, <span class="math-gap" aria-hidden="true"></span> 40-(28+24-x)=x-12.</div>
+<p>Para que todas sejam inteiras não negativas, é necessário que <span class="math-inline">x ≥ 12</span> e <span class="math-inline">x ≤ 24</span>. Assim, os valores possíveis são</p>
+<div class="math-structural">x=12,13,14, … ,24.</div>
+<p>Essas condições também são suficientes: para qualquer inteiro nesse intervalo, as quatro quantidades são não negativas e somam <span class="math-inline">40</span>. Podemos distribuir os participantes em quatro grupos disjuntos com essas quantidades e definir <span class="math-inline">A</span> e <span class="math-inline">B</span> pelas regiões correspondentes. Os totais serão <span class="math-inline">28</span> e <span class="math-inline">24</span>, com interseção <span class="math-inline">x</span>.</p>
+<p><strong>c)</strong> Para o menor valor, <span class="math-inline">x=12</span>, a distribuição é:</p>
+<div class="table-wrap"><table class="analysis-table"><colgroup><col style="width:69%"><col style="width:31%"></colgroup><thead><tr><th scope="col">Região</th><th scope="col">Quantidade</th></tr></thead><tbody><tr><td>Somente <span class="math-inline">A</span></td><td><span class="math-inline">28-12=16</span></td></tr><tr><td>Ambos</td><td>12</td></tr><tr><td>Somente <span class="math-inline">B</span></td><td><span class="math-inline">24-12=12</span></td></tr><tr><td>Nenhum</td><td>0</td></tr></tbody></table></div>
+<p>A soma é <span class="math-inline">16+12+12+0=40</span>. Recuperamos <span class="math-inline">16+12=28</span> e <span class="math-inline">12+12=24</span>. Uma região externa vazia é um caso legítimo.</p>
+<div class="item-title keep-with-next" id="answers-22">22. Uma união plausível pode esconder dados impossíveis</div>
+<p class="keep-with-next"><strong>a)</strong> A substituição dos números na expressão da inclusão-exclusão fornece</p>
+<div class="math-structural">10+9+8-8-7-3+2=11.</div>
+<p>Esse valor formal, isoladamente, não demonstra que os conjuntos descritos possam existir.</p>
+<p><strong>b)</strong> A justificativa é insuficiente, e os dados são incompatíveis. Dentro de <span class="math-inline">A</span>, as regiões exclusivamente duplas deveriam conter <span class="math-inline">8-2=6</span> elementos em <span class="math-inline">A ∩ B</span> sem <span class="math-inline">C</span> e <span class="math-inline">7-2=5</span> em <span class="math-inline">A ∩ C</span> sem <span class="math-inline">B</span>. Acrescentando os dois elementos centrais, já seriam necessários</p>
+<div class="math-line">6+5+2=13</div>
+<p>elementos de <span class="math-inline">A</span>, embora <span class="math-inline">|A|=10</span>. A região somente em <span class="math-inline">A</span> exigiria <span class="math-inline">10-13=-3</span>, o que é impossível.</p>
+<p class="keep-with-next">Equivalentemente,</p>
+<div class="math-line">|A ∩ (B ∪ C)|=8+7-2=13</div>
+<p>contradiz a inclusão <span class="math-inline">A ∩ (B ∪ C) ⊆ A</span>, que exigiria uma cardinalidade no máximo igual a <span class="math-inline">10</span>. Conferir somente o total da união não garante a não negatividade de todas as regiões.</p>
+<div class="item-title keep-with-next" id="answers-23">23. A quantidade precisa ser inteira</div>
+<p class="keep-with-next">A distribuição não pode existir. A soma das cardinalidades é</p>
+<div class="math-line">|A|+|B|+|C|=3+3+3=9.</div>
+<p>Sob a condição proposta, cada pessoa de <span class="math-inline">U</span> contribui exatamente duas vezes a essa soma. Portanto, seria necessário</p>
+<div class="math-line">2|U|=9, <span class="math-gap" aria-hidden="true"></span> |U|=9/2.</div>
+<p>Esse resultado não é inteiro. A cardinalidade de um conjunto finito conta pessoas distintas e precisa ser inteira não negativa. A contradição decorre das próprias condições do registro, não de uma preferência por números maiores ou menores.</p>
+<div class="item-title keep-with-next" id="answers-24">24. Conhecer todas as interseções duplas basta?</div>
+<p>Denote por <span class="math-inline">t=|A ∩ B ∩ C|</span> a quantidade desconhecida. Cada região exclusivamente dupla tem <span class="math-inline">2-t</span> elementos. Cada região somente em um dos conjuntos tem</p>
+<div class="math-line">4-(2-t)-(2-t)-t=t</div>
+<p class="keep-with-next">elementos. Pela inclusão-exclusão,</p>
+<div class="math-line">|A ∪ B ∪ C|=4+4+4-2-2-2+t=6+t.</div>
+<p>A região externa tem <span class="math-inline">8-(6+t)=2-t</span> elementos.</p>
+<p><strong>a)</strong> A união não está determinada. Duas distribuições possíveis são dadas pelas colunas <span class="math-inline">t=0</span> e <span class="math-inline">t=2</span> da tabela abaixo. Elas produzem uniões com <span class="math-inline">6</span> e <span class="math-inline">8</span> elementos, respectivamente, mantendo todos os totais individuais e todas as interseções duplas.</p>
+<div class="table-wrap"><table class="comparison-table"><colgroup><col style="width:46%"><col style="width:18%"><col style="width:18%"><col style="width:18%"></colgroup><thead><tr><th scope="col">Região ou total</th><th scope="col"><span class="math-inline">t=0</span></th><th scope="col"><span class="math-inline">t=1</span></th><th scope="col"><span class="math-inline">t=2</span></th></tr></thead><tbody><tr><td>Somente <span class="math-inline">A</span></td><td>0</td><td>1</td><td>2</td></tr><tr><td>Somente <span class="math-inline">B</span></td><td>0</td><td>1</td><td>2</td></tr><tr><td>Somente <span class="math-inline">C</span></td><td>0</td><td>1</td><td>2</td></tr><tr><td><span class="math-inline">A ∩ B</span>, sem <span class="math-inline">C</span></td><td>2</td><td>1</td><td>0</td></tr><tr><td><span class="math-inline">A ∩ C</span>, sem <span class="math-inline">B</span></td><td>2</td><td>1</td><td>0</td></tr><tr><td><span class="math-inline">B ∩ C</span>, sem <span class="math-inline">A</span></td><td>2</td><td>1</td><td>0</td></tr><tr><td>Os três</td><td>0</td><td>1</td><td>2</td></tr><tr><td>Nenhum</td><td>2</td><td>1</td><td>0</td></tr><tr><td>União dos três</td><td>6</td><td>7</td><td>8</td></tr></tbody></table></div>
+<p><strong>b)</strong> Como a interseção tripla está incluída em cada interseção dupla, <span class="math-inline">0 ≤ t ≤ 2</span>. A cardinalidade é inteira, logo os únicos candidatos são <span class="math-inline">0,1,2</span>. Para cada candidato, a tabela fornece quantidades inteiras não negativas nas oito regiões, somando <span class="math-inline">8</span>. Cada total individual é <span class="math-inline">t+(2-t)+(2-t)+t=4</span>, e cada interseção dupla tem <span class="math-inline">(2-t)+t=2</span>. Assim, todas as distribuições são realizáveis, bastando repartir os oito elementos do universo pelas regiões indicadas.</p>
+<p>Os valores possíveis da união são <span class="math-inline">6,7,8</span>, com quantidades externas correspondentes <span class="math-inline">2,1,0</span>. Não é válido combinar esses totais independentemente: cada coluna descreve uma distribuição completa.</p>
+<p><strong>c)</strong> Se a região externa contém exatamente um elemento, <span class="math-inline">2-t=1</span>, portanto <span class="math-inline">t=1</span>. A coluna central fornece a distribuição completa: <span class="math-inline">1</span> elemento em cada uma das oito regiões. A união tem <span class="math-inline">7</span> elementos.</p>
+<div class="item-title keep-with-next" id="answers-25">25. Uma inclusão pode reduzir o trabalho</div>
+<p class="keep-with-next"><strong>a)</strong> O conjunto selecionado é</p>
+<div class="math-line">E=(A ∪ C) ∖ B.</div>
+<p>Um elemento selecionado pertence a <span class="math-inline">A</span> ou a <span class="math-inline">C</span> e não pertence a <span class="math-inline">B</span>. Como <span class="math-inline">C ⊆ B</span>, ele não pode vir de <span class="math-inline">C</span> estando fora de <span class="math-inline">B</span>; precisa pertencer a <span class="math-inline">A ∖ B</span>. Reciprocamente, todo elemento de <span class="math-inline">A ∖ B</span> satisfaz a seleção. Assim,</p>
+<div class="math-structural"><span class="answer-box">E=A ∖ B, <span class="math-gap" aria-hidden="true"></span> |E|=26-10=16.</span></div>
+<p class="keep-with-next"><strong>b)</strong> A inclusão <span class="math-inline">C ⊆ B</span> garante que um elemento comum a <span class="math-inline">A</span> e <span class="math-inline">C</span> já pertence também a <span class="math-inline">B</span>. Logo,</p>
+<div class="math-structural">A ∩ B ∩ C=A ∩ C, <span class="math-gap" aria-hidden="true"></span> |A ∩ B ∩ C|=5.</div>
+<p class="keep-with-next"><strong>c)</strong> Como <span class="math-inline">C ⊆ B</span>, reunir <span class="math-inline">C</span> a <span class="math-inline">A ∪ B</span> não acrescenta elementos:</p>
+<div class="math-line">A ∪ B ∪ C=A ∪ B.</div>
+<p class="keep-with-next">Portanto,</p>
+<div class="math-line">|A ∪ B ∪ C|=26+20-10=36,</div>
+<div class="math-structural"><span class="answer-box">|U ∖ (A ∪ B ∪ C)|=50-36=14.</span></div>
+<p>É possível reconstruir as regiões, mas a hipótese de inclusão permite resolver as três seleções sem determinar toda a distribuição. Uma solução alternativa é válida se respeita essa hipótese e justifica as contagens pedidas.</p>
+<div class="item-title keep-with-next" id="answers-26">26. Reconstruindo um registro incompleto</div>
+<p><strong>a)</strong> A união contém <span class="math-inline">60-8=52</span> pessoas. Seja <span class="math-inline">t</span> a quantidade que pertence aos três conjuntos. As interseções completas têm cardinalidades <span class="math-inline">6+t</span>, <span class="math-inline">4+t</span> e <span class="math-inline">10+t</span>. Pela inclusão-exclusão,</p>
+<div class="math-structural math-aligned">
+<div class="math-row"><span>52</span><span>=30+26+22-(6+t)-(4+t)-(10+t)+t</span><span></span></div>
+<div class="math-row"><span></span><span>=58-2t.</span><span></span></div>
+</div>
+<p>Logo, <span class="math-inline">2t=6</span> e <span class="math-inline">t=3</span>.</p>
+<p>Também podemos comparar diretamente a soma das contagens individuais com a união. A soma <span class="math-inline">30+26+22=78</span> excede <span class="math-inline">52</span> em <span class="math-inline">26</span> ocorrências. As pessoas de regiões exclusivamente duplas geram <span class="math-inline">6+4+10=20</span> ocorrências adicionais, uma por pessoa. As <span class="math-inline">6</span> ocorrências adicionais restantes vêm da região tripla, que gera duas por pessoa. Portanto, ela contém <span class="math-inline">6 ÷ 2=3</span> pessoas.</p>
+<p class="subitem-label keep-with-next"><strong>b)</strong></p>
+<div class="table-wrap"><table class="analysis-table"><colgroup><col style="width:69%"><col style="width:31%"></colgroup><thead><tr><th scope="col">Região</th><th scope="col">Quantidade</th></tr></thead><tbody><tr><td>Somente <span class="math-inline">A</span></td><td><span class="math-inline">30-6-4-3=17</span></td></tr><tr><td>Somente <span class="math-inline">B</span></td><td><span class="math-inline">26-6-10-3=7</span></td></tr><tr><td>Somente <span class="math-inline">C</span></td><td><span class="math-inline">22-4-10-3=5</span></td></tr><tr><td><span class="math-inline">A</span> e <span class="math-inline">B</span>, sem <span class="math-inline">C</span></td><td>6</td></tr><tr><td><span class="math-inline">A</span> e <span class="math-inline">C</span>, sem <span class="math-inline">B</span></td><td>4</td></tr><tr><td><span class="math-inline">B</span> e <span class="math-inline">C</span>, sem <span class="math-inline">A</span></td><td>10</td></tr><tr><td>Os três</td><td>3</td></tr><tr><td>Nenhum</td><td>8</td></tr></tbody></table></div>
+<p class="keep-with-next">As oito quantidades são inteiras não negativas e somam</p>
+<div class="math-line">17+7+5+6+4+10+3+8=60.</div>
+<p>Recuperamos <span class="math-inline">|A|=17+6+4+3=30</span>, <span class="math-inline">|B|=7+6+10+3=26</span> e <span class="math-inline">|C|=5+4+10+3=22</span>. As regiões exclusivamente duplas coincidem com as quantidades dadas, e a região externa possui <span class="math-inline">8</span> pessoas. Assim, todos os registros foram conferidos.</p>
+<p class="keep-with-next"><strong>c)</strong> Para pertencer a <span class="math-inline">(A ∪ B) ∖ C</span>, a pessoa deve estar somente em <span class="math-inline">A</span>, somente em <span class="math-inline">B</span> ou em <span class="math-inline">A ∩ B</span> sem <span class="math-inline">C</span>. Portanto,</p>
+<div class="math-structural">|(A ∪ B) ∖ C|=17+7+6=30.</div>
+<p class="keep-with-next">Para pertencer a <span class="math-inline">A ∩ (B ∪ C)</span>, deve estar em <span class="math-inline">A ∩ B</span> sem <span class="math-inline">C</span>, em <span class="math-inline">A ∩ C</span> sem <span class="math-inline">B</span> ou nos três conjuntos. Logo,</p>
+<div class="math-structural">|A ∩ (B ∪ C)|=6+4+3=13.</div>
+<p>As parcelas de cada contagem são disjuntas. A interseção tripla foi excluída na primeira seleção e incluída uma única vez na segunda, conforme as condições solicitadas.</p>
+</section>
+</div>
+</main>
+    <script>
+        (function () {
+            'use strict';
+
+            const documentRoot = document.getElementById('document');
+            const source = document.getElementById('source-content');
+
+            if (!documentRoot || !source) return;
+
+            const headerIdentity =
+                documentRoot.dataset.headerIdentity || 'PLANO DE ESTUDO — MATEMÁTICA';
+            const footerIdentity =
+                documentRoot.dataset.footerIdentity || 'APOSTILA DE ESTUDO';
+
+            let pageNumber = 2;
+
+            function makePage(context) {
+                const page = document.createElement('section');
+                page.className = 'page page--generated';
+
+                const header = document.createElement('header');
+                header.className = 'page-header';
+
+                const headerBrand = document.createElement('span');
+                headerBrand.textContent = headerIdentity;
+
+                const headerContext = document.createElement('span');
+                headerContext.className = 'header-context';
+                headerContext.textContent = context;
+
+                header.append(headerBrand, headerContext);
+
+                const content = document.createElement('div');
+                content.className = 'page-content';
+
+                const footer = document.createElement('footer');
+                footer.className = 'page-footer';
+
+                const footerBrand = document.createElement('span');
+                footerBrand.textContent = footerIdentity;
+
+                const number = document.createElement('span');
+                number.className = 'page-number';
+                number.textContent = String(pageNumber++);
+
+                footer.append(footerBrand, number);
+                page.append(header, content, footer);
+
+                documentRoot.insertBefore(page, source);
+                return page;
+            }
+
+            function overflows(content) {
+                return content.scrollHeight > content.clientHeight + 1;
+            }
+
+            function appendAtomic(content, nodes) {
+                nodes.forEach((node) => content.appendChild(node));
+            }
+
+            function removeAtomic(content, nodes) {
+                for (let i = nodes.length - 1; i >= 0; i -= 1) {
+                    const node = nodes[i];
+                    if (node.parentNode === content) {
+                        content.removeChild(node);
+                    }
+                }
+            }
+
+            function stripIdsDeep(root) {
+                if (root.nodeType !== Node.ELEMENT_NODE) return;
+                root.removeAttribute('id');
+                root.querySelectorAll('[id]').forEach((element) => {
+                    element.removeAttribute('id');
+                });
+            }
+
+            function tableBlueprint(node) {
+                let wrap = null;
+                let table = null;
+
+                if (node.matches && node.matches('.table-wrap')) {
+                    wrap = node;
+                    const elementChildren = Array.from(wrap.children);
+                    const tables = elementChildren.filter(
+                        (child) => child.tagName === 'TABLE'
+                    );
+
+                    if (tables.length !== 1 || elementChildren.length !== 1) {
+                        return null;
+                    }
+
+                    table = tables[0];
+                } else if (node.tagName === 'TABLE') {
+                    table = node;
+                } else {
+                    return null;
+                }
+
+                if (table.querySelector('table')) return null;
+
+                const rows = Array.from(table.rows);
+                const hasUnsafeRowspan = rows.some((row) =>
+                    Array.from(row.cells).some((cell) => cell.rowSpan > 1)
+                );
+
+                if (hasUnsafeRowspan) {
+                    return {
+                        safe: false,
+                        wrap,
+                        table
+                    };
+                }
+
+                const bodies = Array.from(table.tBodies);
+                if (bodies.length === 0) return null;
+
+                const rowRecords = [];
+                bodies.forEach((body, bodyIndex) => {
+                    Array.from(body.rows).forEach((row) => {
+                        rowRecords.push({ row, body, bodyIndex });
+                    });
+                });
+
+                if (rowRecords.length === 0) return null;
+
+                return {
+                    safe: true,
+                    wrap,
+                    table,
+                    caption: table.caption,
+                    colgroups: Array.from(table.children).filter(
+                        (child) => child.tagName === 'COLGROUP'
+                    ),
+                    thead: table.tHead,
+                    tfoot: table.tFoot,
+                    bodies,
+                    rowRecords
+                };
+            }
+
+            function createTableFragment(blueprint, isFirstFragment) {
+                const root = blueprint.wrap
+                    ? blueprint.wrap.cloneNode(false)
+                    : blueprint.table.cloneNode(false);
+
+                const table = blueprint.wrap
+                    ? blueprint.table.cloneNode(false)
+                    : root;
+
+                if (blueprint.wrap) {
+                    root.appendChild(table);
+                }
+
+                if (!isFirstFragment) {
+                    stripIdsDeep(root);
+                }
+
+                if (blueprint.caption && isFirstFragment) {
+                    table.appendChild(blueprint.caption.cloneNode(true));
+                }
+
+                blueprint.colgroups.forEach((colgroup) => {
+                    const clone = colgroup.cloneNode(true);
+                    if (!isFirstFragment) stripIdsDeep(clone);
+                    table.appendChild(clone);
+                });
+
+                if (blueprint.thead) {
+                    const clone = blueprint.thead.cloneNode(true);
+                    if (!isFirstFragment) stripIdsDeep(clone);
+                    table.appendChild(clone);
+                }
+
+                return {
+                    root,
+                    table,
+                    bodyMap: new Map(),
+                    isFirstFragment
+                };
+            }
+
+            function ensureFragmentBody(fragment, record) {
+                if (fragment.bodyMap.has(record.bodyIndex)) {
+                    return fragment.bodyMap.get(record.bodyIndex);
+                }
+
+                const body = record.body.cloneNode(false);
+                if (!fragment.isFirstFragment) stripIdsDeep(body);
+
+                fragment.table.appendChild(body);
+                fragment.bodyMap.set(record.bodyIndex, body);
+                return body;
+            }
+
+            function appendRow(fragment, record) {
+                const body = ensureFragmentBody(fragment, record);
+                body.appendChild(record.row);
+                return body;
+            }
+
+            function removeRow(fragment, record) {
+                const body = fragment.bodyMap.get(record.bodyIndex);
+                if (!body || record.row.parentNode !== body) return;
+
+                body.removeChild(record.row);
+
+                if (body.rows.length === 0) {
+                    body.remove();
+                    fragment.bodyMap.delete(record.bodyIndex);
+                }
+            }
+
+            function appendFinalFoot(fragment, blueprint) {
+                if (!blueprint.tfoot) return null;
+
+                const foot = blueprint.tfoot.cloneNode(true);
+                fragment.table.appendChild(foot);
+                return foot;
+            }
+
+            function splitTableAcrossPages(
+                blueprint,
+                context,
+                initialPage,
+                initialContent
+            ) {
+                let page = initialPage;
+                let content = initialContent;
+                let rowIndex = 0;
+                let fragmentIndex = 0;
+
+                while (rowIndex < blueprint.rowRecords.length) {
+                    const hadPriorContent = content.children.length > 0;
+                    const fragment = createTableFragment(
+                        blueprint,
+                        fragmentIndex === 0
+                    );
+
+                    content.appendChild(fragment.root);
+
+                    let acceptedRows = 0;
+                    let fragmentClosed = false;
+
+                    while (rowIndex < blueprint.rowRecords.length) {
+                        const record = blueprint.rowRecords[rowIndex];
+                        appendRow(fragment, record);
+
+                        let foot = null;
+                        const isLastRow =
+                            rowIndex === blueprint.rowRecords.length - 1;
+
+                        if (isLastRow) {
+                            foot = appendFinalFoot(fragment, blueprint);
+                        }
+
+                        if (!overflows(content)) {
+                            acceptedRows += 1;
+                            rowIndex += 1;
+                            continue;
+                        }
+
+                        if (foot) foot.remove();
+                        removeRow(fragment, record);
+
+                        if (acceptedRows > 0) {
+                            fragmentClosed = true;
+                            break;
+                        }
+
+                        if (hadPriorContent) {
+                            fragment.root.remove();
+                            page = makePage(context);
+                            content = page.querySelector('.page-content');
+                            fragmentClosed = true;
+                            break;
+                        }
+
+                        appendRow(fragment, record);
+                        if (isLastRow) appendFinalFoot(fragment, blueprint);
+                        page.classList.add('page--overflow-warning');
+                        acceptedRows = 1;
+                        rowIndex += 1;
+                        fragmentClosed = true;
+                        break;
+                    }
+
+                    if (fragment.root.isConnected && acceptedRows > 0) {
+                        fragmentIndex += 1;
+                    }
+
+                    if (rowIndex < blueprint.rowRecords.length) {
+                        if (
+                            fragment.root.isConnected &&
+                            acceptedRows > 0 &&
+                            fragmentClosed
+                        ) {
+                            page = makePage(context);
+                            content = page.querySelector('.page-content');
+                        }
+                    }
+                }
+
+                return { page, content };
+            }
+
+            function placeSingleNode(node, context, page, content) {
+                content.appendChild(node);
+
+                if (!overflows(content)) {
+                    return { page, content };
+                }
+
+                content.removeChild(node);
+
+                const blueprint = tableBlueprint(node);
+                if (blueprint && blueprint.safe) {
+                    return splitTableAcrossPages(
+                        blueprint,
+                        context,
+                        page,
+                        content
+                    );
+                }
+
+                page = makePage(context);
+                content = page.querySelector('.page-content');
+                content.appendChild(node);
+
+                if (overflows(content)) {
+                    page.classList.add('page--overflow-warning');
+                }
+
+                return { page, content };
+            }
+
+            const sections = Array.from(
+                source.querySelectorAll(':scope > .source-section')
+            );
+
+            for (const section of sections) {
+                const nodes = Array.from(section.children);
+                if (nodes.length === 0) continue;
+
+                const context = section.dataset.context || '';
+                let page = makePage(context);
+                let content = page.querySelector('.page-content');
+
+                for (let i = 0; i < nodes.length; i += 1) {
+                    const node = nodes[i];
+                    let count = 1;
+
+                    if (node.dataset && node.dataset.keepCount) {
+                        count = Math.max(
+                            1,
+                            parseInt(node.dataset.keepCount, 10) || 1
+                        );
+                    } else if (
+                        node.classList &&
+                        node.classList.contains('keep-with-next') &&
+                        i + 1 < nodes.length
+                    ) {
+                        count = 2;
+                    }
+
+                    count = Math.min(count, nodes.length - i);
+
+                    if (count === 1) {
+                        const result = placeSingleNode(
+                            node,
+                            context,
+                            page,
+                            content
+                        );
+                        page = result.page;
+                        content = result.content;
+                        continue;
+                    }
+
+                    const atomic = nodes.slice(i, i + count);
+                    appendAtomic(content, atomic);
+
+                    if (overflows(content)) {
+                        removeAtomic(content, atomic);
+
+                        page = makePage(context);
+                        content = page.querySelector('.page-content');
+
+                        appendAtomic(content, atomic);
+
+                        if (overflows(content)) {
+                            page.classList.add('page--overflow-warning');
+                        }
+                    }
+
+                    i += count - 1;
+                }
+            }
+
+            source.remove();
+        })();
+    </script>
+</body>
+</html>
