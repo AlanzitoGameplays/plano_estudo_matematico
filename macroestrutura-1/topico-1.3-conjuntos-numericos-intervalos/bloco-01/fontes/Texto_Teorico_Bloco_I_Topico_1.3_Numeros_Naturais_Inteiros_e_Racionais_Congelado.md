@@ -1,13 +1,3 @@
-# BLOCO I — NÚMEROS NATURAIS, INTEIROS E RACIONAIS
-
-Os números podem ser organizados em conjuntos de acordo com as características que os definem. Alguns são utilizados para contar quantidades inteiras; outros permitem representar valores negativos ou quantidades que não correspondem a um número inteiro. Essas diferenças determinam os chamados **conjuntos numéricos**.
-
-A organização desses conjuntos não consiste apenas em separar números por sua aparência. Um mesmo número pode pertencer a diferentes conjuntos, e diferentes escritas podem representar exatamente o mesmo número. Para compreender essa organização, precisamos estabelecer quais números pertencem a cada conjunto e quais relações existem entre eles.
-
-Começaremos pelos números naturais, ampliaremos esse domínio aos inteiros e, em seguida, aos racionais. Cada ampliação conservará os números anteriores e acrescentará outros, permitindo compreender as relações de inclusão que estruturam esses três conjuntos.
-
----
-
 # PARTE I — NÚMEROS NATURAIS E INTEIROS
 
 ## O conjunto dos números naturais
