@@ -615,7 +615,7 @@ x\in A\ \text{e}\ x\notin B.
 }
 \]
 
-A ordem dos conjuntos é importante: \(A\setminus B\) representa os elementos retirados de \(A\) porque pertencem a \(B\), não o contrário.
+A ordem dos conjuntos é importante: \(A\setminus B\) representa os elementos de \(A\) que não pertencem a \(B\); trocar a ordem pode alterar o resultado.
 
 Considere
 
